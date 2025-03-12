@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dodoslav - eblog</title>
+    <link rel="stylesheet" href="/default.css">
+</head>
+<body>
+  <div class="sidebar">
+    <img src="/logo.png">
+<h3>Obsah</h3>
+<ul>
+  <li><a class="" href="/">Novinky</a></li>
+  <li><a href="/clanky/">Články</a></li>
+  <li><a href="/projekty/">Projekty</a></li>
+  <li><a href="/o_stranke/">O stránke</a></li>
+</ul>
+
+
+<h3>Témy</h3>
+<ul>
+  
+</ul>
+
+
+<h3>Kľúčové slová</h3>
+<ul>
+  
+</ul>
+  
+  </div>
+  <div class="content">
+    <h3>NtopNG - inštalácia na Debian</h3>
+    <span>Mar 8, 2025</span>
+    Ako nainštalovať Ntopng na Debian.
+    <p>Stiahnutie balíka
+$ wget <a href="https://packages.ntop.org/apt/$(lsb_release">https://packages.ntop.org/apt/$(lsb_release</a> -cs)/all/apt-ntop.deb -O /tmp/apt-ntop.deb
+Inštalácia repozitára</p>
+<h1 id="apt-install-tmpapt-ntopdeb">apt install /tmp/apt-ntop.deb</h1>
+<h1 id="apt-update">apt update</h1>
+<p>Inštalácia</p>
+<h1 id="apt-install-ntopng">apt install ntopng</h1>
+<p>Nastavenie
+Vytvoríme nový konfiguračný súbor v zložke kde sa načítavajú konfigurácie automaticky.</p>
+<h1 id="vi-etcntopngntopngconfdmy_ownconf">vi /etc/ntopng/ntopng.conf.d/my_own.conf</h1>
+<p>Obsah môže vyzerať napríklad takto, pozor - port má rovnaký ako používa Grafana.</p>
+<h1 id="port">port</h1>
+<p>-w=3001</p>
+<h1 id="interface">interface</h1>
+<p>-i=enp8s0</p>
+<h1></h1>
+<p>#&ndash;local-networks &ldquo;192.168.0.0/24&rdquo;
+Zapnúť službu:</p>
+<h1 id="systemctl-restart-ntopngservice">systemctl restart ntopng.service</h1>
+<p>Proxy
+Pristupovať na webové rozhranie cez Apache Reverse-Proxy je jednoduché, a nevyžaduje žiadne špeciálne pravidlá.
+/etc/fstab ramfs /tmp/ntopng ramfs defaults,mode=1777 0 0 cat /etc/tmpfiles.d/ramdrive_ntopng.conf d /tmp/ntopng 1777 ntopng ntop - ln -s /tmp/ntopng/ /var/lib/ntopng</p>
+
+  </div>
+</body>
+</html>
