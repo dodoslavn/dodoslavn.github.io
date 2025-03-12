@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dodoslav - eblog</title>
+    <link rel="stylesheet" href="/default.css">
+</head>
+<body>
+  <div class="sidebar">
+    <img src="/logo.png">
+<h3>Obsah</h3>
+<ul>
+  <li><a class="" href="/">Novinky</a></li>
+  <li><a href="/clanky/">Články</a></li>
+  <li><a href="/projekty/">Projekty</a></li>
+  <li><a href="/o_stranke/">O stránke</a></li>
+</ul>
+
+
+<h3>Témy</h3>
+<ul>
+  
+</ul>
+
+
+<h3>Kľúčové slová</h3>
+<ul>
+  
+</ul>
+  
+  </div>
+  <div class="content">
+    <h3>Delphi - Ako pracovať s MySQL - Prípravy</h3>
+    <span>Jan 1, 0001</span>
+    Tu si ukážeme ako si nastaviť ODBC, a ako pracovať s MySQL pod Microsoft Windows XP.
+
+    <p>Ešte pred tým ako začneme, sa uistíme či máme všetko potrebné.</p>
+<!-- raw HTML omitted -->
+<p>MySQL server, si môžte stiahnuť z oficiálnej stránky (<!-- raw HTML omitted -->mysql.com/downloads/<!-- raw HTML omitted -->) a k nemu ODBC connector, ktorý zase stiahnete odtiaľto (<!-- raw HTML omitted -->mysql.com/downloads/<!-- raw HTML omitted -->). Ďalej čo sa týka Delphi a jeho komponentov, budeme potrebovať triedu komponentov ADO. Vo verzie  Delphi 7 Enterprise sa už nachádza, no vlastníkov verzie Delphi 5 asi moc nepoteším, kedže sa v zozname pred inštalovaných nenachádza. Buď teda prejdu na inú verziu alebo sa ju pokúsia doinštalovať. Pri písaní tohto článku som použil operačný systém Microsoft Windows XP, takže u iných to niekedy môže byť trochu odlišné.<!-- raw HTML omitted --><!-- raw HTML omitted -->
+Pokiaľ bola inštalácia úspešna môžme začať s predprípravou.<!-- raw HTML omitted -->
+Najskôr si vložíme do databáz nejaké dáta, aby sme mali na čom skúšať. Pre tých čo nemajú na Microsoft Windows skúsenosti s MySQL databázami, v krátkosti poviem ako sa pripojíme, vytvoríme databázu a tabuľku a vložíme dáta.<!-- raw HTML omitted --></p>
+<!-- raw HTML omitted -->
+<p>Pokiaľ inštalácia MySQL ovládača ODBC prebehla úspešne môžme začať. Otvoríme si <!-- raw HTML omitted -->Ovládací panel<!-- raw HTML omitted --> , a <!-- raw HTML omitted -->Administrátorské nástroje<!-- raw HTML omitted --> . Tam otvoríme <!-- raw HTML omitted -->Dátové zdroje (ODBC)<!-- raw HTML omitted --> . Otvorí sa nám okno, a hneď v prvej karte (User DSN) klikneme na <!-- raw HTML omitted -->Pridať<!-- raw HTML omitted --> . Otvorí  nám ďalšie okno.
+<!-- raw HTML omitted -->
+V ňom označíme: <!-- raw HTML omitted -->MySQL ODBC Driver<!-- raw HTML omitted --> a potvrdíme. Za <!-- raw HTML omitted -->Názov dátového zdroja<!-- raw HTML omitted --> vložíme: <!-- raw HTML omitted -->skusobny<!-- raw HTML omitted -->. Popis je nepovinný. Za <!-- raw HTML omitted -->TCP/IP server<!-- raw HTML omitted --> vložíme <!-- raw HTML omitted -->localhost<!-- raw HTML omitted -->, kedže stále sme len na našom stroji. Užívateľ bude <!-- raw HTML omitted -->root<!-- raw HTML omitted --> a heslo zadáme aké sme dali pri inštalácii MySQL. Klikneme na <!-- raw HTML omitted -->TEST<!-- raw HTML omitted -->.
+<!-- raw HTML omitted -->
+Ak prebehlo úspešne zvolíme databázu, akú sme si vytvorili v MySQL, teda databáza s názvom: <!-- raw HTML omitted -->skuska<!-- raw HTML omitted --> a potvrdíme.
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+Pokiaľ vytvorenie prebehlo úspešne, tak je príprava ODBC zdroja hotoá.</p>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dodoslav - eblog</title>
+    <link rel="stylesheet" href="/default.css">
+</head>
+<body>
+  <div class="sidebar">
+    <img src="/logo.png">
+<h3>Obsah</h3>
+<ul>
+  <li><a class="" href="/">Novinky</a></li>
+  <li><a href="/clanky/">Články</a></li>
+  <li><a href="/projekty/">Projekty</a></li>
+  <li><a href="/o_stranke/">O stránke</a></li>
+</ul>
+
+
+<h3>Témy</h3>
+<ul>
+  
+</ul>
+
+
+<h3>Kľúčové slová</h3>
+<ul>
+  
+</ul>
+  
+  </div>
+  <div class="content">
+    <h3>IBM IS Datastage - zmena hesiel</h3>
+    <span>Jan 1, 0001</span>
+    Manuál ako zmeniť všetky heslá na IBM IS Datastage
+
+    <p>Note: this is procedure to update password for OS accounts which are used by Datastage.
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+User &ldquo;xmeta&rdquo;:<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+KB link: <!-- raw HTML omitted --><a href="https://www.ibm.com/support/knowledgecenter/en/SSYQ72_10.0.4/com.ibm.help.suiteinstall1004.reportconfig.doc/T_ResettingPasswordForXMetaAndCognos.html">https://www.ibm.com/support/knowledgecenter/en/SSYQ72_10.0.4/com.ibm.help.suiteinstall1004.reportconfig.doc/T_ResettingPasswordForXMetaAndCognos.html</a><!-- raw HTML omitted --></p>
+<p>1.) switch to main DS user<!-- raw HTML omitted -->
+su - dsadm
+<!-- raw HTML omitted -->
+2.) move to the folder<!-- raw HTML omitted -->
+cd /opt/IBM/InformationServer/IIS115/ASBServer/bin<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+3.) update the password via script<!-- raw HTML omitted -->
+./AppServerAdmin.sh -db -user xmeta -password <!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+4.) verify the password via command<!-- raw HTML omitted -->
+./AppServerAdmin.sh -w<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
+<p>User &ldquo;xmetasr&rdquo;:<!-- raw HTML omitted -->
+KB link: <a href="http://www-01.ibm.com/support/docview.wss?uid=swg21640075">http://www-01.ibm.com/support/docview.wss?uid=swg21640075</a><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+1.) switch to main DS user<!-- raw HTML omitted -->
+su - dsadm<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+2.) move to the folder<!-- raw HTML omitted -->
+cd /opt/IBM/InformationServer/IIS115/ASBServer/bin<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+3.) update the password via script<!-- raw HTML omitted -->
+./AppServerAdmin.sh -dbs -user xmetasr -password <!-- raw HTML omitted --><!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+3.) update the password via script (script doesnt existed)<!-- raw HTML omitted -->
+./model_registry_synchronize.sh -l<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
+<p>User &ldquo;dsodb&rdquo;:<!-- raw HTML omitted -->
+KB link: <!-- raw HTML omitted --><a href="https://www.ibm.com/support/knowledgecenter/en/SSZJPZ_8.7.0/com.ibm.swg.im.iis.ds.monitor.doc/topics/changingpassword.html">https://www.ibm.com/support/knowledgecenter/en/SSZJPZ_8.7.0/com.ibm.swg.im.iis.ds.monitor.doc/topics/changingpassword.html</a> <!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+1.) switch to main DS user<!-- raw HTML omitted -->
+su - dsadm<!-- raw HTML omitted --></p>
+<p>2.) stop Datastage engine<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+3.) move to the folder<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+cd /opt/IBM/InformationServer/IIS115/ASBNode/bin<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+4.) encrypt your new password<!-- raw HTML omitted -->
+./encrypt.sh<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+5.) move to the folder<!-- raw HTML omitted -->
+cd /opt/IBM/InformationServer/IIS115/Server/DSODB<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+6.) update the pass phrase (which you have from step 4. ), in this script in variable Password<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+vi DSODBConnect.cfg<!-- raw HTML omitted --></p>
+<p>User &ldquo;dsadm&rdquo;:<!-- raw HTML omitted -->
+<!-- raw HTML omitted -->
+KB link: <a href="http://www-01.ibm.com/support/docview.wss?uid=swg21426789">http://www-01.ibm.com/support/docview.wss?uid=swg21426789</a><!-- raw HTML omitted --></p>
+
+  </div>
+</body>
+</html>

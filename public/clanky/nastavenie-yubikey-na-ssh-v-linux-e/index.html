@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dodoslav - eblog</title>
+    <link rel="stylesheet" href="/default.css">
+</head>
+<body>
+  <div class="sidebar">
+    <img src="/logo.png">
+<h3>Obsah</h3>
+<ul>
+  <li><a class="" href="/">Novinky</a></li>
+  <li><a href="/clanky/">Články</a></li>
+  <li><a href="/projekty/">Projekty</a></li>
+  <li><a href="/o_stranke/">O stránke</a></li>
+</ul>
+
+
+<h3>Témy</h3>
+<ul>
+  
+</ul>
+
+
+<h3>Kľúčové slová</h3>
+<ul>
+  
+</ul>
+  
+  </div>
+  <div class="content">
+    <h3>Nastavenie Yubikey na SSH v Linux-e</h3>
+    <span>Jan 1, 0001</span>
+    Jak nastavit Yubikey pod Linux, a rozbehat s SSH.
+
+    <h1 id="yubicobr">YUBICO<!-- raw HTML omitted --></h1>
+<h1 id="httpssupportyubicocomhcen-usarticles360016649039-enabling-the-yubico-ppa-on-ubuntubr"><a href="https://support.yubico.com/hc/en-us/articles/360016649039-Enabling-the-Yubico-PPA-on-Ubuntu">https://support.yubico.com/hc/en-us/articles/360016649039-Enabling-the-Yubico-PPA-on-Ubuntu</a><!-- raw HTML omitted --></h1>
+<p>sudo add-apt-repository ppa:yubico/stable &amp;&amp; sudo apt-get update<!-- raw HTML omitted -->
+sudo apt install yubikey-manager<!-- raw HTML omitted -->
+sudo apt install yubikey-personalization-gui<!-- raw HTML omitted -->
+sudo apt install yubico-piv-tool<!-- raw HTML omitted -->
+sudo apt install libpam-yubico<!-- raw HTML omitted -->
+sudo apt install libpam-u2f<!-- raw HTML omitted --></p>
+<h1 id="check-servicebr">check service<!-- raw HTML omitted --></h1>
+<p>sudo systemctl start pcscd<!-- raw HTML omitted -->
+sudo systemctl enable pcscd<!-- raw HTML omitted -->
+systemctl status pcscd<!-- raw HTML omitted -->
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<!-- raw HTML omitted -->
+To get yubikey-manager-qt for Ubuntu 20.04/20.10 follow steps (you will have to<!-- raw HTML omitted -->
+build it yourself):<!-- raw HTML omitted -->
+git clone <a href="https://github.com/Yubico/yubikey-manager-qt">https://github.com/Yubico/yubikey-manager-qt</a><!-- raw HTML omitted -->
+cd yubikey-manager-qt<!-- raw HTML omitted -->
+sudo apt install devscripts equivs<!-- raw HTML omitted -->
+sudo mk-build-deps &ndash;install &ndash;tool=apt-get -o Debug::pkgProblemResolver=yes &ndash;no-install-recommends &ndash;yes debian/control<!-- raw HTML omitted -->
+fakeroot debian/rules binary<!-- raw HTML omitted -->
+sudo apt install ../yubikey-manager-qt_1.1.5_amd64.deb<!-- raw HTML omitted --></p>
+<h1 id="resultbr">result<!-- raw HTML omitted --></h1>
+<p>/usr/bin/ykman-gui<!-- raw HTML omitted --></p>
+<h1 id="currently-not-workingbr">currently not working!<!-- raw HTML omitted --></h1>
+<p>#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<!-- raw HTML omitted -->
+ykman info<!-- raw HTML omitted -->
+Device type: YubiKey 5 Nano<!-- raw HTML omitted -->
+Serial number: 12505402<!-- raw HTML omitted -->
+Firmware version: 5.2.7<!-- raw HTML omitted -->
+Form factor: Nano (USB-A)<!-- raw HTML omitted -->
+Enabled USB interfaces: OTP, FIDO, CCID<!-- raw HTML omitted -->
+Applications<!-- raw HTML omitted -->
+FIDO2           Enabled      <!-- raw HTML omitted -->
+OTP             Enabled      <!-- raw HTML omitted -->
+FIDO U2F        Enabled      <!-- raw HTML omitted -->
+OATH            Enabled      <!-- raw HTML omitted -->
+YubiHSM Auth    Not available<!-- raw HTML omitted -->
+OpenPGP         Enabled      <!-- raw HTML omitted -->
+PIV             Enabled      <!-- raw HTML omitted -->
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<!-- raw HTML omitted --></p>
+<h1 id="httpsdevelopersyubicocomyubico-piv-toolyubikey_piv_introductionhtmlbr"><a href="https://developers.yubico.com/yubico-piv-tool/YubiKey_PIV_introduction.html">https://developers.yubico.com/yubico-piv-tool/YubiKey_PIV_introduction.html</a><!-- raw HTML omitted --></h1>
+<p>The default PIN code is 123456. The default PUK code is 12345678.<!-- raw HTML omitted -->
+The default 3DES management key (9B) is 010203040506070801020304050607080102030405060708.<!-- raw HTML omitted --></p>
+<h1 id="management-keybr">Management key<!-- raw HTML omitted --></h1>
+<p>key=$(export LC_CTYPE=C; dd if=/dev/urandom 2&gt;/dev/null | tr -d [:lower:] | tr -cd [:xdigit:] | fold -w48 | head -1)<!-- raw HTML omitted -->
+echo ${key}<!-- raw HTML omitted -->
+yubico-piv-tool -aset-mgm-key -n${key}<!-- raw HTML omitted -->
+1234567890ASDFASDFASDFASDFASDFASDFASDFASDFASDFAS<!-- raw HTML omitted --></p>
+<h1 id="pin-and-pukbr">PIN and PUK<!-- raw HTML omitted --></h1>
+<p>pin=$(export LC_CTYPE=C; dd if=/dev/urandom 2&gt;/dev/null | tr -cd [:digit:] | fold -w6 | head -1)<!-- raw HTML omitted -->
+echo ${pin}<!-- raw HTML omitted -->
+puk=$(export LC_CTYPE=C; dd if=/dev/urandom 2&gt;/dev/null | tr -cd [:digit:] | fold -w8 | head -1)<!-- raw HTML omitted -->
+echo ${puk}<!-- raw HTML omitted -->
+yubico-piv-tool -achange-pin -P123456 -N${pin}<!-- raw HTML omitted -->
+yubico-piv-tool -achange-puk -P12345678 -N${puk}<!-- raw HTML omitted -->
+111111<!-- raw HTML omitted -->
+22222222<!-- raw HTML omitted -->
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<!-- raw HTML omitted --></p>
+<h1 id="checkbr">check<!-- raw HTML omitted --></h1>
+<p>ls /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so<!-- raw HTML omitted --></p>
+<h1 id="or-locate-opensc-pkcs11sobr">or locate opensc-pkcs11.so<!-- raw HTML omitted --></h1>
+<h1 id="if-not-installedbr">if not installed<!-- raw HTML omitted --></h1>
+<p>sudo apt install opensc-pkcs11<!-- raw HTML omitted -->
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<!-- raw HTML omitted --></p>
+<h1 id="httpsdevelopersyubicocompivguidesssh_with_piv_and_pkcs11htmlbr"><a href="https://developers.yubico.com/PIV/Guides/SSH_with_PIV_and_PKCS11.html">https://developers.yubico.com/PIV/Guides/SSH_with_PIV_and_PKCS11.html</a><!-- raw HTML omitted --></h1>
+<h1 id="generate-private-keybr">Generate private key<!-- raw HTML omitted --></h1>
+<h1 id="wiki---touch-policynever----touch-policycachedbr">wiki: &ndash;touch-policy=never; ? &ndash;touch-policy=cached<!-- raw HTML omitted --></h1>
+<p>yubico-piv-tool -s 9a -a generate -o yubi_public.pem -A RSA2048 -S /CN=p@aaa.com/ &ndash;pin-policy=once &ndash;touch-policy=never -k<!-- raw HTML omitted --></p>
+<h1 id="generate-certificatebr">Generate certificate<!-- raw HTML omitted --></h1>
+<p>yubico-piv-tool -a verify-pin -a selfsign-certificate -s 9a -S &ldquo;/CN=SSH key <a href="mailto:p@aaa.co">p@aaa.co</a>/&rdquo; -i yubi_public.pem -o yubi_cert.pem<!-- raw HTML omitted --></p>
+<h1 id="import-the-certificate-to-ssh-slotbr">Import the certificate to &ldquo;SSH slot&rdquo;<!-- raw HTML omitted --></h1>
+<p>yubico-piv-tool -a import-certificate -s 9a -i yubi_cert.pem -k<!-- raw HTML omitted --></p>
+<h1 id="export-public-ssh-keybr">export public SSH key<!-- raw HTML omitted --></h1>
+<p>ssh-keygen -D /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so<!-- raw HTML omitted -->
+ssh-add -s /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so<!-- raw HTML omitted -->
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<!-- raw HTML omitted --></p>
+<h1 id="ssh-agent-tipsbr">ssh-agent tips:<!-- raw HTML omitted --></h1>
+<p>#ssh-agent script<!-- raw HTML omitted -->
+#!/bin/sh<!-- raw HTML omitted -->
+#export SSH_ASKPASS=/usr/bin/ksshaskpass<!-- raw HTML omitted -->
+export SSH_ASKPASS=/usr/bin/ssh-askpass<!-- raw HTML omitted -->
+/usr/bin/ssh-add ${HOME}/.ssh/id_rsa &lt;/dev/null<!-- raw HTML omitted -->
+/usr/bin/ssh-add -e /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so &lt;/dev/null<!-- raw HTML omitted -->
+/usr/bin/ssh-add -s /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so &lt;/dev/null<!-- raw HTML omitted -->
+#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<!-- raw HTML omitted -->
+<!-- raw HTML omitted --></p>
+
+  </div>
+</body>
+</html>
