@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Clankies on Dodoslav - eblog</title>
-    <link>https://www.dodoslav.eu/clanky/</link>
+    <link>https://dodoslavn.github.io/clanky/</link>
     <description>Recent content in Clankies on Dodoslav - eblog</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 08 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://www.dodoslav.eu/clanky/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://dodoslavn.github.io/clanky/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>NtopNG - inštalácia na Debian</title>
-      <link>https://www.dodoslav.eu/clanky/ntp/</link>
+      <link>https://dodoslavn.github.io/clanky/ntp/</link>
       <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>https://www.dodoslav.eu/clanky/ntp/</guid>
+      <guid>https://dodoslavn.github.io/clanky/ntp/</guid>
       <description>&lt;p&gt;Stiahnutie balíka&#xA;$ wget &lt;a href=&#34;https://packages.ntop.org/apt/$(lsb_release&#34;&gt;https://packages.ntop.org/apt/$(lsb_release&lt;/a&gt; -cs)/all/apt-ntop.deb -O /tmp/apt-ntop.deb&#xA;Inštalácia repozitára&lt;/p&gt;&#xA;&lt;h1 id=&#34;apt-install-tmpapt-ntopdeb&#34;&gt;apt install /tmp/apt-ntop.deb&lt;/h1&gt;&#xA;&lt;h1 id=&#34;apt-update&#34;&gt;apt update&lt;/h1&gt;&#xA;&lt;p&gt;Inštalácia&lt;/p&gt;&#xA;&lt;h1 id=&#34;apt-install-ntopng&#34;&gt;apt install ntopng&lt;/h1&gt;&#xA;&lt;p&gt;Nastavenie&#xA;Vytvoríme nový konfiguračný súbor v zložke kde sa načítavajú konfigurácie automaticky.&lt;/p&gt;&#xA;&lt;h1 id=&#34;vi-etcntopngntopngconfdmy_ownconf&#34;&gt;vi /etc/ntopng/ntopng.conf.d/my_own.conf&lt;/h1&gt;&#xA;&lt;p&gt;Obsah môže vyzerať napríklad takto, pozor - port má rovnaký ako používa Grafana.&lt;/p&gt;&#xA;&lt;h1 id=&#34;port&#34;&gt;port&lt;/h1&gt;&#xA;&lt;p&gt;-w=3001&lt;/p&gt;&#xA;&lt;h1 id=&#34;interface&#34;&gt;interface&lt;/h1&gt;&#xA;&lt;p&gt;-i=enp8s0&lt;/p&gt;&#xA;&lt;h1&gt;&lt;/h1&gt;&#xA;&lt;p&gt;#&amp;ndash;local-networks &amp;ldquo;192.168.0.0/24&amp;rdquo;&#xA;Zapnúť službu:&lt;/p&gt;&#xA;&lt;h1 id=&#34;systemctl-restart-ntopngservice&#34;&gt;systemctl restart ntopng.service&lt;/h1&gt;&#xA;&lt;p&gt;Proxy&#xA;Pristupovať na webové rozhranie cez Apache Reverse-Proxy je jednoduché, a nevyžaduje žiadne špeciálne pravidlá.&#xA;/etc/fstab ramfs /tmp/ntopng ramfs defaults,mode=1777 0 0 cat /etc/tmpfiles.d/ramdrive_ntopng.conf d /tmp/ntopng 1777 ntopng ntop - ln -s /tmp/ntopng/ /var/lib/ntopng&lt;/p&gt;</description>
     </item>
   </channel>
