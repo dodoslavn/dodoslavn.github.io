@@ -23,5 +23,14 @@ interface -i=enp8s0
 systemctl restart ntopng.service Proxy Pristupovať na webové rozhranie cez Apache Reverse-Proxy je jednoduché, a nevyžaduje žiadne špeciálne pravidlá.</description>
     </item>
     
+    <item>
+      <title>Ako zrýchliť Windows XP</title>
+      <link>https://dodoslavn.github.io/clanky/ako-zr%C3%BDchli%C5%A5-windows-xp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://dodoslavn.github.io/clanky/ako-zr%C3%BDchli%C5%A5-windows-xp/</guid>
+      <description>Začneme s vypínaním nepotrebých služieb. Budeme otvárať nasledujúce zložky: START -&amp;gt; OVLADACI PANEL -&amp;gt; ADMINISTRATIVNE NASTROJE -&amp;gt; SLUZBY alebo kto to má po anglicky: START -&amp;gt; CONTROL PANEL -&amp;gt; ADMINISTRATIVE TOOLS -&amp;gt; SERVICES a teraz už budeme len vypínat nepotrebné služby, a tu je ich zoznam:- Adapér výkonu služby WMI- Automatická konfigurácia bezdrótových zariadení - ak máte WiFi sieť tak to nechajte- Automatické aktualizáce - ak ich nepoužívate, zakážte- Centrum Zabezpečenia - táto služba sa moc používat nedá, odporúčam zakazáť- Témy - ak nechcete moc využívať vzhľad tak zakážte- Nápoveda a odborná pomoc - dobrá kravina ZAKAZTE- Podpora rozhrani NetBIOS nad protokolem TCP/IP - v skutočnosti predstavuje nebezpečie dúfam, že zakážete- Server - ak nepoužívate zdielanie súborov, zakážte- Služba rozpoznávania pomocou protokolu SSDP- Vzdialený register - bezpečnostná diera, zakážte- Webový klient - s webom nemá nič spolocčného, zakážte- Zasilani sprav o chybáchKto nevie ako sa vypínaju tak, kliknite na službu pravým tlačidlom na myši a dajte&amp;quot;PROPARTIES / VLASTNOSTIa tam kliknite na STOP, a potom vyrolujte Typ spustenia a tam na Vypnuté / DISABLEDA na záver jedna úprava v registre.</description>
+    </item>
+    
   </channel>
 </rss>
