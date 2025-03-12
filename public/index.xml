@@ -5,24 +5,7 @@
     <link>https://dodoslavn.github.io/</link>
     <description>Recent content on Dodoslav - eblog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 08 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://dodoslavn.github.io/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>NtopNG - inštalácia na Debian</title>
-      <link>https://dodoslavn.github.io/clanky/ntp/</link>
-      <pubDate>Sat, 08 Mar 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://dodoslavn.github.io/clanky/ntp/</guid>
-      <description>Stiahnutie balíka $ wget https://packages.ntop.org/apt/$(lsb_release -cs)/all/apt-ntop.deb -O /tmp/apt-ntop.deb Inštalácia repozitára
-apt install /tmp/apt-ntop.deb apt update Inštalácia
-apt install ntopng Nastavenie Vytvoríme nový konfiguračný súbor v zložke kde sa načítavajú konfigurácie automaticky.
-vi /etc/ntopng/ntopng.conf.d/my_own.conf Obsah môže vyzerať napríklad takto, pozor - port má rovnaký ako používa Grafana.
-port -w=3001
-interface -i=enp8s0
-#&amp;ndash;local-networks &amp;ldquo;192.168.0.0/24&amp;rdquo; Zapnúť službu:
-systemctl restart ntopng.service Proxy Pristupovať na webové rozhranie cez Apache Reverse-Proxy je jednoduché, a nevyžaduje žiadne špeciálne pravidlá.</description>
-    </item>
-    
+    <language>en-us</language><atom:link href="https://dodoslavn.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ako blokovať webovú stránku na Windowse</title>
       <link>https://dodoslavn.github.io/clanky/ako-blokova%C5%A5-webov%C3%BA-str%C3%A1nku-na-windowse/</link>

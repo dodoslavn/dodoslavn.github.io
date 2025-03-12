@@ -2,15 +2,6 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://dodoslavn.github.io/clanky/</loc>
-    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dodoslavn.github.io/</loc>
-    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://dodoslavn.github.io/clanky/ntp/</loc>
-    <lastmod>2025-03-08T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://dodoslavn.github.io/clanky/ako-blokova%C5%A5-webov%C3%BA-str%C3%A1nku-na-windowse/</loc>
   </url><url>
     <loc>https://dodoslavn.github.io/clanky/ako-na-https-s-lets-enrypt/</loc>
@@ -38,6 +29,8 @@
     <loc>https://dodoslavn.github.io/categories/</loc>
   </url><url>
     <loc>https://dodoslavn.github.io/clanky/certifik%C3%A1ty-ssl_tls-a-podobn%C3%A9/</loc>
+  </url><url>
+    <loc>https://dodoslavn.github.io/clanky/</loc>
   </url><url>
     <loc>https://dodoslavn.github.io/clanky/correlophus-ciliatus-chov/</loc>
   </url><url>
@@ -70,6 +63,8 @@
     <loc>https://dodoslavn.github.io/clanky/diagnostika-v%C3%BDkonu-diskov-na-linux-e/</loc>
   </url><url>
     <loc>https://dodoslavn.github.io/clanky/docker-in%C5%A1tal%C3%A1cia-a-prv%C3%A9-kroky/</loc>
+  </url><url>
+    <loc>https://dodoslavn.github.io/</loc>
   </url><url>
     <loc>https://dodoslavn.github.io/clanky/edge-loadbalancer-manual/</loc>
   </url><url>
