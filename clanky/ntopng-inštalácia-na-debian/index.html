@@ -34,17 +34,50 @@
     <span>Jan 1, 0001</span>
     Ako nainštalovať Ntopng na Debian.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>/etc/fstab</p>
-<p>ramfs  /tmp/ntopng  ramfs  defaults,mode=1777  0  0</p>
-<p>cat /etc/tmpfiles.d/ramdrive_ntopng.conf
-d /tmp/ntopng 1777 ntopng ntop -</p>
-<p>ln -s /tmp/ntopng/ /var/lib/ntopng</p>
+    <h4 id="stiahnutie-balíka">Stiahnutie balíka</h4>
+<blockquote>
+<p>$ wget <a href="https://packages.ntop.org/apt/">https://packages.ntop.org/apt/</a>$(lsb_release
+-cs)/all/apt-ntop.deb -O /tmp/apt-ntop.deb</p>
+</blockquote>
+<h4 id="inštalácia-repozitára">Inštalácia repozitára</h4>
+<blockquote>
+<p># apt install /tmp/apt-ntop.deb<br>
+# apt update</p>
+</blockquote>
+<h4 id="inštalácia">Inštalácia</h4>
+<blockquote>
+<p># apt install ntopng</p>
+</blockquote>
+<h4 id="nastavenie">Nastavenie</h4>
+<p>Vytvoríme nový konfiguračný súbor v zložke kde sa načítavajú
+konfigurácie automaticky.</p>
+<blockquote>
+<p># vi /etc/ntopng/ntopng.conf.d/my_own.conf</p>
+</blockquote>
+<p>Obsah môže vyzerať napríklad takto, pozor - port má rovnaký ako používa
+Grafana.</p>
+<blockquote>
+<p># port<br>
+-w=3001<br>
+<br>
+# interface<br>
+-i=enp8s0<br>
+<br>
+#<br>
+#--local-networks &quot;192.168.0.0/24&quot;</p>
+</blockquote>
+<h4 id="zapnúť-službu">Zapnúť službu:</h4>
+<blockquote>
+<p># systemctl restart ntopng.service</p>
+</blockquote>
+<h4 id="proxy">Proxy</h4>
+<blockquote>
+<p>Pristupovať na webové rozhranie cez Apache Reverse-Proxy je
+jednoduché, a nevyžaduje žiadne špeciálne pravidlá.</p>
+</blockquote>
+<p>/etc/fstab ramfs /tmp/ntopng ramfs defaults,mode=1777 0 0 cat
+/etc/tmpfiles.d/ramdrive_ntopng.conf d /tmp/ntopng 1777 ntopng ntop - ln
+-s /tmp/ntopng/ /var/lib/ntopng</p>
 
   </div>
 </body>

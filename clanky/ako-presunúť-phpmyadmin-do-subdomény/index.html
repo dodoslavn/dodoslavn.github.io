@@ -35,15 +35,25 @@
     Návod ako presunúť tento nástroj napríklad z fordo.sk/phpmyadmin do subodmény phpmyadmin.fordo.sk .
 
     <p>Vypneme aktuálny virtualhost:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>sudo a2disconf phpmyadmin</p>
+</blockquote>
 <p>Vytvoríme nový PHPMyAdmin konfiguračný súbor virtualhostu:</p>
-<!-- raw HTML omitted -->
-<p>Vložíme doň obsah súboru <!-- raw HTML omitted -->phpmyadmin.conf<!-- raw HTML omitted --> a upravíme doménu podľa seba.
-<!-- raw HTML omitted --><!-- raw HTML omitted -->
+<blockquote>
+<p>vi /etc/apache2/sites-enabled/new_phpmyadmin.conf</p>
+</blockquote>
+<p>Vložíme doň obsah súboru
+<a href="http://fordo.sk/files/phpmyadmin.conf">phpmyadmin.conf</a>{target=&quot;_new&quot;}
+a upravíme doménu podľa seba.<br>
+<br>
 Povolíme ho:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>sudo a2enconf</p>
+</blockquote>
 <p>Reštartujeme apache2</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>sudo systemctl reload apache2.service</p>
+</blockquote>
 
   </div>
 </body>

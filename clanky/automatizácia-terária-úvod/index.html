@@ -34,27 +34,252 @@
     <span>Jan 1, 0001</span>
     Z dôvodu záujmu ľudí o takéto riešenie som sa rozhodol napísať tento článok, v ktorom popíšem ako moje riešenie vypadá, koľko to stojí a tiež popíšem ako to funguje. Eventuálne aj celý manuál ako na to.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="moje-prevedenie">Moje prevedenie</h4>
+<p>Moje riešenie vypadá asi takto. Mám takúto webovú stránku prístupnú
+odkiaľkoľvek cez internet. Môžem si tu zobraziť aktuálny stav teploty a
+relatívnej vlhkosti v teráriu. Viem si tu zobraziť priebeh za celý deň,
+poslednú hodinu, týždeň alebo aj mesiac..</p>
+<p><img src="/files/terapi/zabbix.png" alt="">{width=&ldquo;700px&rdquo; heigh=&ldquo;484&rdquo;}</p>
+<p><br>
+Ak sa úroveň vlhkosti alebo teploty dostane cez mnou stanovený limit,
+príde mi notifikácia na mobil. V mojom prípade konkrétne cez emaily. Ak
+sa teplota alebo vlhkosť dostane cez nejakú úroveň tak sa mi automaticky
+spustí mlhovac, čerpadlo na zavlažovanie, vetranie alebo vyhrievanie
+terária. Pravidelne spínanie svetla ráno a vypínanie večer, prípadne
+pravidelne ovládanie ďalších zariadení môžem nastaviť tiež, takže
+potreba kupovania mechanických spínačov odpadá. Je tam aj možnosť
+ovládania na diaľku, alebo je tam aj možnosť si zobraziť fotku terária,
+ktorá sa robí každú minútu. Stačí USB webkamera a stiahnuť už niekým
+napísaný malý skrípt ktorý to vždy odfotí a uloží do webovej stránky.</p>
+<h4 id="ale">Ale..</h4>
+<p>Moje riešenie je dosť DIY - vytvor si to vlastnoručne. Možno si hovoríte
+že takéto niečo je asi drahé, alebo náročné spraviť. Ohľadne finančnej
+náročnosti, o tom popíšem hneď dole. Ohľadom ako moc je to ťažké, tak ak
+bude záujem som ochotný napísať návod, krok za krokom ako spraviť.
+Rozumiem že nie každý je ajťák alebo elektrikár. Budem sa teda snažiť
+spraviť tak aby to zvládol naozaj každý. Samozrejme pokiaľ sa to podarí
+aspoň jednému tak to bude pre mňa úspech. Veľa vecí ktoré tam sú použité
+sú už vytvorené, takže viacmenej len skladáme už hotové veci dokopy.
+Nieje potreba byť programátor ani nič podobné.</p>
+<h4 id="čo-je-k-tomu-potreba-a-koľko-to-stojí">Čo je k tomu potreba a koľko to stojí</h4>
+<p>Je samozrejme veľa spôsobov ako takéto niečo spraviť. Niektoré sú
+lacnejšie niektoré drahšie. Verím že spôsob ktorý som zvolil ja jeden z
+tých lepších a stojím si za ním. Možno pre niekoho to nieje ideálny, dá
+sa tam ale veľa veci obmeniť a upraviť na mieru. Návod ktorý bude
+popisovať bude jednoduchší. Budem ukazovať iba návod na meranie vlhkosti
+a teploty, zapínanie svetiel a iných veci okolo môžem dodatočne popísať.</p>
+<h5 id="raspberry-pi">Raspberry Pi</h5>
+<p>Raspberry Pi (dalej len RPi) je skoro obycajny pocitac. Pokial mate
+klasicky stolovy pocitac, tak vsetko co sa nachadza v tej skrinke pod
+stolom sa vlastne nachadza aj na RPi. V com obycajny nieje su jeho
+rozmery, kde jeho velkost je podobna velkosti klasickej platobnej karte.
+V tom co ma vnutry je skor podobny tomu co mame v telefone, takze na
+takomto pocitaci vieme skor spustit Android ako nejaky Windows 7.</p>
+<p>RPi je niekolko generacii, najnovsia je uz generacia 4, takze Raspberry
+Pi 4. Cim novsia generacia tym je vykonnejsi, ale aj drahsi. Na tento
+projekt vykon ale moc nepotrebujeme takze staci kludne aj najstarsia
+generacia. Pokial si otvorite akykolvek e-shop a najdete tam na predaj
+RPi je dost mozne ze na vas vybehne cenovka 1 000KC a kludne aj vyrazne
+viac. To si myslim ze je naozaj dost penazi a osobne by som RPi za taku
+cenu nikdy nekupil. Kto chce tak mu samozrejme nebranim. Osobne kupujem
+RPi vzdy z druhej ruky, vzdy s cenou do 500KC. Ludia si RPi radi kupuju
+lebo je to zaujimavy produkt, a kupuju si to s viziou ze si budu doma
+robit nejaku automatizaciu. Casto to ale skonci s rozbalenim RPi ktore
+spustili par krat a dali do skrine kde to odpocivalo az kym nevysla nova
+generacia RPi ktoru si tiez kupili a skoncilo to rovnakym scenarom.
+Stava sa to naozaj casto.</p>
+<p>Na obrazku nizsie mozme vidiet RPi prvej generacie a model B, takze
+Raspberry Pi 1 B. Konkretne tento model ma napriklad konektor na
+pripojenie kablu na internet, 2x USB port (napr. na klavesnicu a mys),
+3,5mm jack na sluchatka alebo reproduktory, HDMI vystup na monitor alebo
+televizor, microUSB konektor ktory sluzi na napajanie tohto pocitaca,
+slot na pamatovu kartu typu SD. Pokial mate ulozene vo svojom pocitaci
+fotky filmy alebo hudbu, tak to vsetko je ulozene na pevnom disku,
+napriklad HDD (hard-disk). Tieto zariadenia su ale priliz velke takze na
+RPi sa pouziva namiesto klasickeho pevneho disku HDD iba klasicku
+pamatovu kartu.</p>
+<p>Mozno sa pytate ci mozte pouzit na miesto tohto mini PC nejaky svoj
+starsi PC alebo notebook. A odpoved je v tomto prevedeni nie. Mozno ste
+si vsimli na fotke toho RPi ze z neho trcia nejake male kolicky. Tieto
+kolicky sa nazyvaju piny. A cele sa to nazyva GPIO. GPIO je nieco co
+jednoducho vzdy potrebujeme, aj v pripade ze by ste to chceli postavit
+trochu inak. GPIO je skratka pre General Purpose Input Ouput - vstupy a
+vystupy pre vseobecne pouzitie. To znamena ze ja ten pin viem z toho RPi
+ovladat a viem ho nastavit napriklad na vystup. A pokial by som na ten
+pin pripojil cez nejaku elektroniku napriklad cerpadlo na zavalazovanie
+zahrady, motorcek na stahovanie zaluzii alebo cohokolvek ineho, tak ak
+ten pin zapnem, tak sa zapne aj cerpadlo, pokial ten pin vypnem, tak sa
+vypne aj cerpadlo. To ako a kedy si ten pin z toho RPi zapnema a vypnem
+je cisto len na vas a sposobov je nekonecno. Dalej ten pin viem nastavit
+aj na vstup, takze ked na ten pin pripojim nejaky senzor, napriklad na
+meranie atmosferickeho tlaku, merianie mnozstva metanu v ovzdusi alebo
+relativnu vlhkost. Tak ten senzor mi ten namerany udaj posle na ten pin
+a v RPi ho cez nejaky program spracujem a ziskam realnu hodnotu. RPi je
+velmi popularna platforma a tych programov na rozne senzory je naozaj
+vela a vsetky su uplne zadarmo.</p>
+<p>Ake RPi teda kupit? Nekupoval by som urcite RPi 1A. Taktiez pre
+zaciatkocnikov neodporucam RPi Zero co je este mensia a lacnejsia verzia
+RPi. Kto ma tych terariek viac, tak nech nebere akekolvek RPi 1, pretoze
+ma menej pinov na GPIO ako akakolvek ina generacia. RPi 1 ma
+pouzitelnych GPIO pinov dokopy 11. To znamena ze tam viete napojit 11
+senzorov na meranie vlhkosti a teploty. U inych generacii je to viac.
+Komu sa neda k terarku priviest kabel na internet, tak nech si kupi RPi
+co ma v sebe uz WiFi modul. Kabel je ale samozrejme vzdy spolahlivejsi.
+Pokial by ste si to rozmysleli, RPi ma vela vyuziti, da sa pripojit k TV
+a pozerat cez to filmy, pozerat youtube videa alebo proste len Facebook.
+Ja som si nan pripojil externy disk, kde mam fotky a fimy, a odkialkovek
+v dome sa nan viem pripojit a tie fotky a filmy pozerat.</p>
+<p><img src="/files/terapi/rpi1b1.jpg" alt=""> <img src="/files/terapi/rpi1b2.jpg" alt="">
+<img src="/files/terapi/rpi1b3.jpg" alt=""></p>
+<h5 id="napajanie">Napajanie</h5>
+<p>RPi musime niecim napajat. Trochu vtipne sa na to pouziva obycajna
+nabyjacka na telefon. Musi splnat 2 parametre. Musi mat microSUB
+konektor, co je dnes asi este stale najpouzivanejsi konektor na
+nabijanie telefonu. A musi mat nejaky vykon. Vieme ze su nabijacky ktore
+vedia nabit telefon rychlejsie alebo pomalsie. Kazde RPi ma inu
+spotrebu. Ja tu mam pre priklad RPi 1B ktore ma spotrebu 5W, teda ma
+odber elektrickeho prudu 1A (1000mA) pri klasickom napati na USB coz je
+5V. To aku ma spotrebu ine RPi alebo aky ma odber prudu sa da vzdy
+dohladat. Pokial si vezmem tu nabijacku do ruky tak tam najdem napisane
+nejakym malym pismom INPUT (vstup) a OUTPUT (vystup). Nas zaujima ten
+vystup. Pokial mam nabijacku kde je napisane 5V a 700mA tak je to v
+mojom pripade s RPi 1B malo. Pokial najdem nabijacku kde je 1200mA
+(1,2A) tak jelikoz je to viac ako potrebujem tak ju mozem urcite
+bezpecne pouzit.</p>
+<p>Nabijacka je teda nieco co mozte mat doma po starom telefone, takze
+ziadny vydaj navyse. Pokial by ste nemali tak nabijacka co vie dodat 1A
+moze stat 200KC. 2A nabijacka moze zase stat aj 400KC.</p>
+<p><img src="/files/terapi/nabijecka.jpg" alt="">{width=&ldquo;400px&rdquo; height=&ldquo;360px&rdquo;}</p>
+<h5 id="pamatova-karta">Pamatova karta</h5>
+<p>Ako som uz hovoril v RPi je pamatovka na miesto pevneho disku. V RPi 1
+sa pouziva este ten velky klasicky slot SD, v ostatnych je uz vsade
+microSD slot. Pokial mam RPi tam samozrejme mozem pouzit aj SD adapter
+na pamatovu kartu microSD. Nie vsetky pamatove karty funguju, cim novsie
+RPi je tym menej problemov by malo mat. Osobne som naposledy kupil v
+najblizsom obchode na telefonu obycajnu pamatovu kartu, bola znacky
+Kingstone a fungovala bez problemov.</p>
+<p>Ohladne velkosti tej pamatovej akrty, tak 8GB je asi malo. 16GB sa da
+urcite pouzit a s 32GB je to istota ze budem mat dost. Dobre je myslet
+aj na rychlost pamatovej karty, casto sa oznacuje slovickom CLASS, cim
+vacsie cislo tam je napisane tym rychlejsie je. CLASS 10 by malo
+znamenat rychlost 10MB/s . Po CLASS 10 sa uz pouziva oznacenie UTF, tie
+su este rychlejsie. Rychlost pocitime hlavne pri instalacii a
+konfiguracii. Napriklad ze sa nam nejaky program nainstaluje o 10sekund
+rychlejsie. Po instalacii sa to moc ani pocitit neda. Ja sosobne teda na
+rychlost moc nehladim.</p>
+<p>Pamatovka je teda nieco co urcite mozte najst doma po starom telefone
+alebo fotaku. Inak napriklad 32GB karta sa da kupit za 200KC.</p>
+<p><img src="/files/terapi/vse.jpg" alt="">{width=&ldquo;400px&rdquo; height=&ldquo;360px&rdquo;}</p>
+<h5 id="kabel-na-internet">Kabel na internet</h5>
+<p>Kto bude pripajat RPi na internet cez kabel tak ten kabel bude logicky
+potrebovat. Da sa kupit do 100KC. Kto ma doma problem s internetom, tak
+internet je vyslovene potrebny iba pri instalacii. Pokial to chcete
+pouzivat iba v ramci domacnosti a nechcete pristupovat z intenetu tak po
+instalacii internet nieje potreba. RPi musi byt umiestnene hned u
+teraria kde chceme merat. A to z dovodu ze sa senzor ktory na RPi bude
+pripojeny nemoze mat priliz dlhy kabel. Ako dlhy kabel byt moze neviem,
+pouzil som asi 30cm a este funguje vporiadku.</p>
+<p><img src="/files/terapi/kabel.jpg" alt="">{width=&ldquo;400px&rdquo; height=&ldquo;360px&rdquo;}</p>
+<h5 id="senzor">Senzor</h5>
+<p>Na meranie teploty a relativnej vlhkosti mozme pouzit napriklad senzor
+DHT11. Je to senzor ktory vie merat oboje. Mozno niekto kto sa vyzna si
+bude mysliet preco odporucam tak strasny senzor ako je DHT11. A ked sa
+nad tym zamyslim tak ten senzor je naozaj najhorsi zo vsetkych co
+poznam. Odporucam ho ale preto lebo bude pravdepodobne lepsi nez to co
+drtiva vacsina ludi co doma nieco v terarku chova. DHT11 ma problem s
+meranim vlhkosti nad 80% kde ta presnost klesa. Aj cez to vsetko si ale
+myslim ze je to dobra volba hlvne na zaciatok. Pokial by sa clovek chcel
+posunut a nieco lepsie by chcel, tak DHT22 je podstatne lepsi senzor. Na
+DHT22 sa pouziva rovnaky program na citanie nameranej hodnoty ako na
+DHT11, a aj zapojenie je skoro rovnake. Oba tieto senzory su nachylne na
+priamy kontakt s vodou, takze urcite ho mat nejakym sposobom zakryty.</p>
+<p>DHT11 stoji na eBay 22KC, a priamo v CZ sa da kupit za 60KC. DHT22 sa da
+kupti za 150KC na eBay a za 250KC v CZ. Ak kupujete napriklad DHT11 cez
+eBay tak ucite si dokupne aj tie napajacie kabliky, casto to ponukaju
+priamo s nimi. a Urcite aj viac kusov. Jelikoz po kontakte s vodou vedia
+rychlost prestat fungovat tak aby ste mali nahradny po ruke. Z eBay to
+moze trvat 2 mesiace kym pride.</p>
+<p><img src="/files/terapi/dht11.jpg" alt="">{width=&ldquo;400px&rdquo; height=&ldquo;360px&rdquo;}
+<img src="/files/terapi/dht22.jpg" alt="">{style=&ldquo;float: right;&rdquo; width=&ldquo;400px&rdquo;
+height=&ldquo;360px&rdquo;}</p>
+<p>Zhnutie ceny:</p>
+<ul>
+<li>RPi - do 500-KC</li>
+<li>DHT11 - 22-KC</li>
+<li>Nabijacka - 250-KC (uz mozno mate)</li>
+<li>Pamatovka - 200-KC (uz mozno mate)</li>
+<li>Kabel - 100-KC (uz mozno mate/nepotrebujete)</li>
+</ul>
+<h4 id="ako-to-funguje">Ako to funguje</h4>
+<p>Funguje to sposobom ze mam senzor DHT11 umiestneni v dierkovanom bambuse
+v terariu. Ten je pripojeny kablom k GPIO pinu v RPi. V RPi bezi
+oficialny operacny system, Raspberry OS. Mam tam stiahnuty program ktory
+vie citat namerane hodnoty z DHT11 senzoru. Dalej tam mam jednoduchy
+skript ktory sa spusta kazdu minutu. Ten spusti spomenuty program na
+citanie hodnoty zo senzoru a zapise hodnotu do obycajneho textoveho
+suboru.</p>
+<p><img src="/files/terapi/rpi_schema.png" alt=""></p>
+<p>Dalej to uz riesi monitorivacie riesenie Zabbix. Na RPi mam
+nainstalovany Zabbix agent komponentu. Dalej tam mam nainstalovanu
+Zabbix server komponentu ktora hovori tej agent komponente ze ma
+precitat obsah uz spomenutych suborov kde sa ukladaju namerane hodnoty
+zo senzora. Po tom ako ju tieto hodnoty Zabbix agent posle Zabbix
+serveru, tak ich tato serverova komponenta ulozi do databaze. Konkretne
+sa pouziva databaza MySQL ( pripadne kompatibilna verzia MariaDB ).
+Dalej mam na RPi nainstalovany program Apache (apache2) ktory sluzi ako
+obycajny webovy server pre bezne webove stranky. Ako webovu stranku som
+ale pouzil Zabbix frontend. To je dalsia Zabbix komponenta, teda kod
+webovej stranky ktory vie citat databazu kde Zabbix server ukladata
+namerane hodnoty, a tato frontend komponenta ich vie zobrazovat a
+ukazovat v grafe. Dalej cez tento frontend viem Zabbix server aj
+nastavovat, takze viem nastavit limity, takze ked namerana hodnota
+presiahne nejaku uroven/hodnotu/limit tak sa vytvory Alert (nejaky
+poplach / oznamenie) a s nou sa odosle notifikacia napriklad na email,
+ze napriklad vlhkost je pod 60 %.</p>
+<p>Aby som to mal pristupne cez internet potrebujem aby Zabbix frontend,
+teda ta webova stranka bola pristupna cez internet. Nic dalej byt
+pristupne nemusi. Zabbix frontend ale potrebuje pristup k databazi. k
+databazi musi mat zase pristup ale aj Zabbix server a tak dalej.. Vsetky
+tieto komponenty sa nachadzaju priamo v RPi. Samozrejme sa to da vsetko
+rozdelit uplne lubovolne. Napriklad ze GPIO budeme riesit cez nejaky
+mikrokontroler, zabbix agent v nejakom inom PC doma, a server mopze byt
+niekde plateny u nejakej firmy tak aby bol aj frontend pristupny
+odkialkovlek cez internet. Vyhoda RPi je ale ta ze to vie zvladnut
+Zabbix a GPIO zaroven.</p>
+<p><img src="/files/terapi/schema.jpg" alt=""></p>
+<h4 id="motivacia">Motivacia</h4>
+<p>Pokial sa bavime o pripojeni DHT senozra, tak sa bavime o pripojeni 3
+kablikov zo senzora do RPi, takze fakt nic zlozite. Pokial sa bavime o
+instalacii programu na citanie DHT senzorov, vsetkych Zabbix komponentov
+a weboveho servera Apache, tak ked to trochu prezeniem je to len jeden
+prikaz ktory okopirujete, ziadna raketova veda. :-)</p>
+<h4 id="zaver">Zaver</h4>
+<p>Na RPi sa pouziva najcastejsie officialny system ktory sa nazvyva
+Raspbian alebo RaspberryOS. Je to zalozene na Linux-e, a vela veci sa
+robi hlavne cez prikazovy riadok. Nemyslim ze je to ale nieco narocne.
+Kto ma monitor, klavesnicu a mys tak ma vyhodu. Na tento navod to ale
+nutne nieje. Je nutne mat nejaky PC kde je citacka pamatovych kariet,
+pripojenie na internet pocas instalacie.</p>
+<h4 id="dodatok-a-ine-sposoby">Dodatok a ine sposoby</h4>
+<p>Uz z obrazku webu je vidiet ze pouzivam nastroj Zabbix. Je to program
+ktory sa sklada z niekolkych casti a pouziva sa na monitorovanie
+serverov napriklad aj v bankach. Pokial by ste mali napriklad 2
+miestnosti a v kazdej 2 terarka ktore chcete takto riesit, tak mozte
+prikupit dalsie RPi a da sa jednoducho pridat uz k existujucemu Zabbix
+rieseniu.</p>
+<p>Tych sposobov je vela a pokial by niekto mal 10 alebo 20 terariek ktore
+cche takto riesit, je asi lepsie to riesit cez nieco co sa nazyva
+mikrokontroler. To je nieco ako mini pocitact ktory sa bezne nachadza v
+dialkovom od auta, v pracke, v chladnicke.. su vsade. Su lacne,
+jednoduch a maju GPIO. Musia sa ale programovat co nieje idealna vec. U
+kazdeho terarka by teda bol jeden mikrokontroler napriklad konkretne
+ESP32 alebo ESP8266. Tie by boli pripojene na domacu WiFi. Tym ze tieto
+mikrokontrolery maju GPIO, daju sa tam napojit senzory a aj samotne
+zariadenia ktore chceme zapinat. Dalej by bol nejaky 1 PC pusteny 24/7,
+moze to byt spominane RPi alebo aj vas starsi notebook na ktory uz
+nemate pouzitie. Ten bude v pravidelnych intervaloch kontrolovat
+namerane hodnoty v mikrokontroleroch a poskytovat ich pre Zabbix ktory
+bude bezat na tom 1 PC.</p>
 
   </div>
 </body>

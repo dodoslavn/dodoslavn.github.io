@@ -34,32 +34,84 @@
     <span>Jan 1, 0001</span>
     V tomto článku si ukážeme ako nainštalovať a nastaviť pod Linuxom GLUT pre OpenGL, a ako s ním pracovať v QT Creator pomocou C&#43;&#43;.
 
-    <p>Najskôr musíme <!-- raw HTML omitted -->glut<!-- raw HTML omitted --> nainštalovať:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted -->void onKeyboard(unsigned char key, int p_x, int p_y)<!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->{<!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->glClear(GL_COLOR_BUFFER_BIT);<!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->glFlush();<!-- raw HTML omitted --><!-- raw HTML omitted --> //zmaze vsetko co je vykresnele<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->if (key == &lsquo;a&rsquo;) x = x - 10;<!-- raw HTML omitted --><!-- raw HTML omitted --> //pomocou &lsquo;a&rsquo; a &rsquo;d&rsquo; klavesy mozeme menit velkost trojuholnika<!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->else if (key == &rsquo;d&rsquo;) x = x + 10;<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->glColor3b(100,100,100);<!-- raw HTML omitted --><!-- raw HTML omitted --> //nastavenie farby vsetkeho co sa vykresli<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->glBegin(GL_TRIANGLE_STRIP);<!-- raw HTML omitted --><!-- raw HTML omitted --> //zaciatok vykreslovania jedneho aspon trojuholnika<!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->glVertex2f(10,400+x);<!-- raw HTML omitted --><!-- raw HTML omitted --> //zadavanie bodov trojuholnika<!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->glVertex2f(10,50);<!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->glVertex2f(400+x,50);<!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->glVertex2f(10,50);<!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->glEnd();<!-- raw HTML omitted --><!-- raw HTML omitted --> //koniec zadavania bodov<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->glutSwapBuffers();<!-- raw HTML omitted --><!-- raw HTML omitted --> //daj na obrazovku<!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->}<!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<p><!-- raw HTML omitted -->void onDisplay()<!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->{<!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->onKeyboard(&rsquo;d&rsquo;, 0,0);<!-- raw HTML omitted --><!-- raw HTML omitted --> //kod ktory sa spusti pri spusteni aplikacie<!-- raw HTML omitted --><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->}<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+    <p>Najskôr musíme <em>glut</em> nainštalovať:</p>
+<blockquote>
+<p>apt install freeglut*</p>
+</blockquote>
+<p>V QT Creator vytvoríme nový projekt ako konzolovú C++ aplikáciu a do
+súboru <em>nazov_projektu.pro</em> pridáme:</p>
+<blockquote>
+<p>QT += core \\
+opengl<br>
+LIBS += -lglut</p>
+</blockquote>
+<p>Do <em>main.cpp</em> pridáme:</p>
+<blockquote>
+<p>#include &quot;GL/glut.h&quot;</p>
+</blockquote>
+<p>Hlavná funkcia <em>main</em> v <em>main.cpp</em> je stručná. Vložíme veci na
+inicializáciu okna v ktorom budeme vykreslovať pomocou OpenGL.</p>
+<blockquote>
+<p><strong>int main(int argc, char *argv[])</strong><br>
+{<br>
+glutInit(&amp;argc,argv);<br>
+glutInitDisplayMode(GLUT_RGBA|GLUT_SINGLE); //nastavenie okna<br>
+glutInitWindowSize(700, 500); //velkost okna<br>
+glutInitWindowPosition(100, 100); //pozicia kde sa okno otvori<br>
+glutCreateWindow(&quot;OpenGL test&quot;); //nazov okna<br>
+glutDisplayFunc(onDisplay); //nadefinovanie cez parameter funkciu,
+ktora sa spusti pri spusteni<br>
+glutReshapeFunc(onResize); //nadefinovanie funkcie, ktora sa spusti
+pri zmene velkosti okna<br>
+glutKeyboardFunc(onKeyboard); //nadefinovanie funkcie, ktora sa spusti
+ked stlacime nejaku klavesu<br>
+glutMainLoop(); //aby nam aplikacia hned neskoncila<br>
+return 0;<br>
+}\</p>
+</blockquote>
+<p>Nadefinovanie funkcií ktoré sme použili v parametroch vo funkcii <em>main</em>.
+Deklarácia týchto funkcií musí byť v súbore nad deklaráciou <em>main</em>.</p>
+<blockquote>
+<p>int x(100),y(100);<br>
+<br>
+<strong>void onResize(int w, int h)</strong><br>
+{<br>
+glViewport(0, 0, w, h);<br>
+glMatrixMode(GL_PROJECTION);<br>
+glLoadIdentity();<br>
+glOrtho(0, w, 0, h, -1, 1);<br>
+}<br>
+<br>
+<br>
+<strong>void onKeyboard(unsigned char key, int p_x, int p_y)</strong><br>
+{<br>
+glClear(GL_COLOR_BUFFER_BIT);<br>
+glFlush(); //zmaze vsetko co je vykresnele<br>
+<br>
+if (key == 'a') x = x - 10; //pomocou 'a' a 'd' klavesy mozeme
+menit velkost trojuholnika<br>
+else if (key == 'd') x = x + 10;<br>
+<br>
+glColor3b(100,100,100); //nastavenie farby vsetkeho co sa vykresli<br>
+<br>
+glBegin(GL_TRIANGLE_STRIP); //zaciatok vykreslovania jedneho aspon
+trojuholnika<br>
+glVertex2f(10,400+x); //zadavanie bodov trojuholnika<br>
+glVertex2f(10,50);<br>
+glVertex2f(400+x,50);<br>
+glVertex2f(10,50);<br>
+glEnd(); //koniec zadavania bodov<br>
+<br>
+glutSwapBuffers(); //daj na obrazovku<br>
+}<br>
+<br>
+<br>
+<strong>void onDisplay()</strong><br>
+{<br>
+onKeyboard('d', 0,0); //kod ktory sa spusti pri spusteni aplikacie<br>
+}\</p>
+</blockquote>
+<p>Spustíme kompiláciu a malo by to všetko ísť.</p>
 
   </div>
 </body>

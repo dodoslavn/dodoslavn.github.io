@@ -34,12 +34,62 @@
     <span>Jan 1, 0001</span>
     Moje poznámky okolo výkonu disku, a ako ho pod Linuxom merať.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="úvod">Úvod</h4>
+<p>Najskôr sa pozrieme na nástroje ktoré slúžia na zobrazenie aktuálneho
+vytaženia diskov. Potom na nástroje ktoré tie disky vedia zaťažiť.</p>
+<h4 id="sar">sar</h4>
+<p>Nástroj ktorý zobrazí základné metriky, všetky dokopy. Popis výstupu:</p>
+<blockquote>
+<p>sar -b -p 1</p>
+</blockquote>
+<ul>
+<li>tps - Celkový počet dokončených transakcí za sekundu (čítanie aj
+zápis)</li>
+<li>rtps - počet dokončených transakcí na čítanie</li>
+<li>wtps - to isté akorát zápis</li>
+<li>bread/s - počet prečítaných blokov zo všetkých blokových zariadení
+za sekundu</li>
+<li>bwrtn/s - to isté akorat zápis</li>
+</ul>
+<h4 id="iostat">iostat</h4>
+<p>Zobrazí vytťaženie diskov, pre každý disk zvlášť.</p>
+<blockquote>
+<p>iostat -x 1</p>
+</blockquote>
+<p>rrqm/s a wrqm/s - počet spojených žiadostí do jednej pre lepšiu
+efektivitu</p>
+<p>rkB/s and wkB/s - množstvo dát ktoré sa zapísujú a čítajú</p>
+<p>avgrq-sz - priemerná veľkosť I/O žiadosti</p>
+<p>avgqu-sz - priemerné množstvo I/O žiadostí vo fronte čakajáce na
+spracovanie</p>
+<p>await - priemerný čas koľko trvá vybaviť I/O žiadosť</p>
+<p>r_await a w_await - to isté akorá rozdelené pre zápis a čítanie</p>
+<p>svctm - to iste ako &quot;await&quot; akorát bez času strávený vo fronte</p>
+<p>util - vytaženie disku</p>
+<h4 id="iozone">iozone</h4>
+<p>Nástroj na otestovanie rýchlosti disku, asi jeden z tých lepších a
+komplexnejších. So správnymi parametrami vie dostať maximum.</p>
+<blockquote>
+<p>iozone -e -I -a -s 10G -r 4k -i 0 -i 1 -i 2 -f ./subor1</p>
+</blockquote>
+<ul>
+<li>-s 10G - nastavuje veľkosť súbora</li>
+<li>-r 4k - nastavuje veľkosť dát ktoré sa budú zapisovať</li>
+<li>-i 0 -i 1 -i 2 - nastavujeme že chceme testovať pomocou zápisu,
+prepisu a čítania</li>
+</ul>
+<h4 id="dd">dd</h4>
+<blockquote>
+<p>dd if=/dev/zero of=subor1 bs=512 count=1000 oflag=dsync</p>
+</blockquote>
+<blockquote>
+<p>dd if=/dev/zero of=subor1 bs=4k count=10000 oflag=direct</p>
+</blockquote>
+<p>Populárny nástroj, dá sa použiť na veľké množstvo úkonov, a áno aj na
+testovanie rýchlosti disku. Prvý príklad ukáže latenciu disku v ms . Ten
+druhý sa pokúsi dostať z disku maximálne IOPS.</p>
+<h4 id="fio">fio</h4>
+<p>Nástroj na benchmark diskov.</p>
 
   </div>
 </body>

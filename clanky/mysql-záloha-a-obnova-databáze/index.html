@@ -34,9 +34,20 @@
     <span>Jan 1, 0001</span>
     Príkazy ako spraviť MySQL zálohu databáze, a obnovenie databáze zo zálohy.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Vyzálohovanie vsštkých databáz:</p>
+<blockquote>
+<p>/usr/bin/mysqldump --all-databases | gzip -c -9 &gt;
+/opt/backup/sql/dump_$(date '+%Y-%m-%d').sql.gz</p>
+</blockquote>
+<p>Nahranie zálohy na server:</p>
+<blockquote>
+<p>mysql -h $SERVER -u $USER -p &lt; &quot;dump_&quot;$DATUM&quot;.sql.gz&quot;</p>
+</blockquote>
+<p>Aby to fungovalo, musíme ešte do MySQL konzole zadať príkaz na
+spracovanie privilegií:</p>
+<blockquote>
+<p>FLUSH PRIVILEGES</p>
+</blockquote>
 
   </div>
 </body>

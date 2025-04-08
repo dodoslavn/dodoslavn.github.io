@@ -33,7 +33,71 @@
     <h3>Informatica PowerCenter</h3>
     <span>Jan 1, 0001</span>
     
-    <!-- raw HTML omitted -->
+    <p><br>
+<br>
+PowerCenter offers many logs to monitor the operation of its processes.
+The following description of logs follows a typical order of log
+verification that you would follow when debugging an issue:<br>
+<br>
+Workflow Monitor<br>
+<br>
+Session Log<br>
+<br>
+Most granular of logs, contains information related to an individual
+session run<br>
+<br>
+Source/Target Rows<br>
+Performance Statistics<br>
+Mapping and Session Level failures<br>
+Can be expanded to include verbose data if necessary for mapping
+debugging<br>
+Workflow Log<br>
+<br>
+Shows the overall processing of a workflow<br>
+<br>
+Success/Failures of Sessions<br>
+Non-Session Task failures<br>
+<br>
+Informatica Administrator<br>
+<br>
+Service Log<br>
+<br>
+Shows service status<br>
+<br>
+Initializations<br>
+TCP/IP activity<br>
+<br>
+Shows user access<br>
+Shows fatal session errors<br>
+<br>
+Domain Log (Domain and Node)<br>
+Security Authentication<br>
+License Information<br>
+Inter-service messages<br>
+Fatal application service errors<br>
+<br>
+Traditional File<br>
+The following logs are found in /tomcat/logs/:<br>
+<br>
+exceptions.log<br>
+Exception subset of node.log<br>
+Shows errors hit while Informatica Services (Node) is starting or
+stopping<br>
+Typically only necessary if the Node would not start or shutdown<br>
+node.log<br>
+Full output of node<br>
+Useful for determining what happened just before or after an exception<br>
+catalina.out<br>
+Log for backend tomcat service<br>
+Useful for determining the source of error in the node.log, or in the
+absence of node.log, the actual error<br>
+MRS<br>
+Log for Model Repository Service<br>
+At<br>
+Log for Analyst Service<br>
+<br>
+Reference Table Manager import logs are stored in
+/isp/bin/rtm_cli_logs.\</p>
 
   </div>
 </body>

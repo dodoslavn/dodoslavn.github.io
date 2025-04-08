@@ -34,18 +34,72 @@
     <span>Jan 1, 0001</span>
     V prvom dieli sme si povedali niečo o základoch programovania v tomto jazyku. Teraz si ukážeme nejaké tie tipy a triky.
 
-    <!-- raw HTML omitted -->
-<p>Pri vstupe z klávesnice, alebo presnejšie z štrandardného vstupu (STDIN = Strandard Input) je nutné potvrdiť zadávané hodnoty klávesou ENTER, inak by ich program samozrejme neprijal. Viacmenej stlačenie klávesy ENTER, sa tiež spracuje v programe tak, že je tiež uvedená v premennej, a to ako znak na konci riadku. Aby sme ju odstránili použijeme funkciu chomp() :</p>
-<!-- raw HTML omitted -->
-<p>Nasledujúci príkaz sa často míli s príkazom predošlím ktorí zmaže &ldquo;novy riadok&rdquo; na konci retazca, zatiaľ čo tento zmaže posledný akykovľek znak. Syntax je takmer rovnaká:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Sme si ukázali ake previesť veľke na malé písmena a naopak. Ale co ak chceme iba prve písmeno? Na to slúži funkcia podobna a zároven aj logická: &ldquo;lsfirst()&rdquo; a &ldquo;ucfirst()&rdquo;. Uvedieme si malý príklad:</p>
-<!-- raw HTML omitted -->
-<p>Aby sme zistili dĺžku retazca, použijeme funkciu: &ldquo;length()&rdquo;. Ta nám vráti číslo zodpovedajúce celej dĺžke retazca:</p>
-<!-- raw HTML omitted -->
-<p>Retazce a čísla naraz? Do premennej môžeme napríklad veľmi jednoducho priradiť hodnotu &ldquo;5 aut&rdquo; nasledujúcim spôsobom:</p>
-<!-- raw HTML omitted -->
+    <h4 id="čítanie-zo-vstupu">Čítanie zo vstupu</h4>
+<p>K získaniu vstupných dát sa v programoch Perl používa konštrukcia
+nazvanú diamantový operátor. Ten vypadá takto:</p>
+<blockquote>
+<p>&lt; &gt;</p>
+</blockquote>
+<p>Diamantový operátor môžeme jednoducho priradiť k premennej ako ich
+hodnotu. Pri behu programu potom bude úžívateľ zadávat hodnoty, ktoré
+zadá z klávesnice.<br>
+Diamantový operátor vo vyžšie uvedenej podobe síce plní svoju funkciu,
+ale umožnuje užívateľovi tiež jednu vec, ktorá sa nám nemusí vždy páčiť.
+Ide o predávanie hodnôt nie z klávesnice, ale z daľších súborov, ktoré
+pri spúštaní programu zadáme ako parameter. Pokiaľ sa tomuto chcete
+vyhnúť a zaújima vás iba vstup z klávesnice, zadajte diamantový operátor
+v podobe . Teda napríklad:</p>
+<blockquote>
+<p>$a = &lt;STDIN&gt; ;</p>
+</blockquote>
+<p>Pri vstupe z klávesnice, alebo presnejšie z štrandardného vstupu (STDIN
+= Strandard Input) je nutné potvrdiť zadávané hodnoty klávesou ENTER,
+inak by ich program samozrejme neprijal. Viacmenej stlačenie klávesy
+ENTER, sa tiež spracuje v programe tak, že je tiež uvedená v premennej,
+a to ako znak na konci riadku. Aby sme ju odstránili použijeme funkciu
+chomp() :</p>
+<blockquote>
+<p>$a = &lt;STDIN&gt; ;<br>
+chomp($a);</p>
+</blockquote>
+<p>Nasledujúci príkaz sa často míli s príkazom predošlím ktorí zmaže &quot;novy
+riadok&quot; na konci retazca, zatiaľ čo tento zmaže posledný akykovľek
+znak. Syntax je takmer rovnaká:</p>
+<blockquote>
+<p>$a = &quot;hocijaky text&quot;; chop($a);</p>
+</blockquote>
+<p>Ak to spustíme, tak v premennej $a bude už len text: &quot;hocijaky tex&quot;.</p>
+<h4 id="úprava-textu--retazcov">Úprava textu / retazcov</h4>
+<p>Ak chcete previesť nejaký retazec v ktorom su veľké písmena, môžme
+použiť funkciu lc() :</p>
+<blockquote>
+<p>$a = lc(&quot;NEJAKY TEXT&quot;);</p>
+</blockquote>
+<p>Ak si premennú potom vypíšeme, bude v nej: &quot;nejaky text&quot;.<br>
+<br>
+To isté, ale naopak. Ak chceme previesť retazec s malímy písmenamy na
+veľke, použijeme funkciu: uc() :</p>
+<blockquote>
+<p>$a = uc(&quot;nejaky text&quot;);</p>
+</blockquote>
+<p>Sme si ukázali ake previesť veľke na malé písmena a naopak. Ale co ak
+chceme iba prve písmeno? Na to slúži funkcia podobna a zároven aj
+logická: &quot;lsfirst()&quot; a &quot;ucfirst()&quot;. Uvedieme si malý príklad:</p>
+<blockquote>
+<p>$a = ucfirst(&quot;nejaky text&quot;);<br>
+$b = lcfirst(&quot;NEJAKY text&quot;);</p>
+</blockquote>
+<p>Aby sme zistili dĺžku retazca, použijeme funkciu: &quot;length()&quot;. Ta nám
+vráti číslo zodpovedajúce celej dĺžke retazca:</p>
+<blockquote>
+<p>$a = length(&quot;nejaky text&quot;);</p>
+</blockquote>
+<p>Retazce a čísla naraz? Do premennej môžeme napríklad veľmi jednoducho
+priradiť hodnotu &quot;5 aut&quot; nasledujúcim spôsobom:</p>
+<blockquote>
+<p>$patka = 5;<br>
+$text = $patka.&quot; aut&quot;;</p>
+</blockquote>
 
   </div>
 </body>

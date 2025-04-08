@@ -33,30 +33,26 @@
     <h3>Oracle databáza - základna syntax</h3>
     <span>Jan 1, 0001</span>
     
-    <p>SELECT<!-- raw HTML omitted -->
-table_name, owner
-FROM
-user_tables; <!-- raw HTML omitted --></p>
-<p>SELECT
-table_name, owner
-FROM
-all_tables
-ORDER BY
-owner, table_name; <!-- raw HTML omitted --></p>
-<p>select username from dba_users;<!-- raw HTML omitted --></p>
-<p>CREATE USER books_admin IDENTIFIED BY MyPassword;<!-- raw HTML omitted -->
-GRANT CONNECT TO books_admin;<!-- raw HTML omitted -->
-GRANT CONNECT, RESOURCE, DBA TO books_admin;<!-- raw HTML omitted -->
-GRANT CREATE SESSION GRANT ANY PRIVILEGE TO books_admin;<!-- raw HTML omitted -->
-GRANT UNLIMITED TABLESPACE TO books_admin;<!-- raw HTML omitted --></p>
-<p>SQL&gt; select USERNAME,ACCOUNT_STATUS from dba_users where ORACLE_MAINTAINED &lt;&gt; &lsquo;Y&rsquo;;<!-- raw HTML omitted --></p>
-<p>SQL&gt; select USERNAME,ACCOUNT_STATUS from dba_users where USERNAME like &lsquo;%XM%&rsquo;;<!-- raw HTML omitted --></p>
-<p>SQL&gt; r<!-- raw HTML omitted -->
-1* SELECT username, status, osuser, process, machine, terminal, logon_time FROM v$session where MACHINE &lt;&gt; &lsquo;hostname&rsquo;<!-- raw HTML omitted --></p>
-<p>SQL&gt; create user dsodb identified by Ostrava123;<!-- raw HTML omitted -->
-SQL&gt; grant connect to dsodb;<!-- raw HTML omitted -->
-SQL&gt; GRANT UNLIMITED TABLESPACE TO dsodb;<!-- raw HTML omitted -->
-SQL&gt; alter user XXX identified by &ldquo;YYY&rdquo; account unlock;<!-- raw HTML omitted --></p>
+    <p>SELECT<br>
+table_name, owner FROM user_tables;<br>
+SELECT table_name, owner FROM all_tables ORDER BY owner, table_name;<br>
+select username from dba_users;<br>
+CREATE USER books_admin IDENTIFIED BY MyPassword;<br>
+GRANT CONNECT TO books_admin;<br>
+GRANT CONNECT, RESOURCE, DBA TO books_admin;<br>
+GRANT CREATE SESSION GRANT ANY PRIVILEGE TO books_admin;<br>
+GRANT UNLIMITED TABLESPACE TO books_admin;<br>
+SQL&gt; select USERNAME,ACCOUNT_STATUS from dba_users where
+ORACLE_MAINTAINED &lt;&gt; 'Y';<br>
+SQL&gt; select USERNAME,ACCOUNT_STATUS from dba_users where USERNAME like
+'%XM%';<br>
+SQL&gt; r<br>
+1* SELECT username, status, osuser, process, machine, terminal,
+logon_time FROM v$session where MACHINE &lt;&gt; 'hostname'<br>
+SQL&gt; create user dsodb identified by Ostrava123;<br>
+SQL&gt; grant connect to dsodb;<br>
+SQL&gt; GRANT UNLIMITED TABLESPACE TO dsodb;<br>
+SQL&gt; alter user XXX identified by &quot;YYY&quot; account unlock;\</p>
 
   </div>
 </body>

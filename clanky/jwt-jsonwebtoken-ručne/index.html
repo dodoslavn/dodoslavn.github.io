@@ -34,9 +34,69 @@
     <span>Jan 1, 0001</span>
     Návod ako pracovať ručne s JavaWebToken-om ktorý sa používá u Bearer typu autorizácie pri HTTP protokole.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="popis">Popis</h4>
+<p>Kód kde sa podpisovanie/kontrola robí ručne kde sa dá pochopiť jak to
+funguje.</p>
+<h4 id="skript">Skript</h4>
+<blockquote>
+<p>#!/bin/bash<br>
+<br>
+#subor ktory obsahuje tvoj JWT<br>
+file=&quot;payload.txt&quot;<br>
+<br>
+echo &quot;########### &quot;Vloz JWT podpisany Googlom:<br>
+read content<br>
+echo<br>
+<br>
+echo $content &gt; $file<br>
+<br>
+echo<br>
+<br>
+#funkcia na upravu base64, standartne sa zaokruhluje, u JWT nie<br>
+decode_base64_url() {<br>
+local len=$((${#1} % 4))<br>
+local result=&quot;$1&quot;<br>
+if [ $len -eq 2 ]; then result=&quot;$1&quot;'=='<br>
+elif [ $len -eq 3 ]; then result=&quot;$1&quot;'='<br>
+fi<br>
+echo &quot;$result&quot; | tr '_-' '/+' | openssl enc -d -base64<br>
+}<br>
+<br>
+#vytiahni casti z JWT<br>
+cat $file | cut -d'.' -f1 &gt;payload1.raw<br>
+cat $file | cut -d'.' -f2 &gt;payload2.raw<br>
+cat $file | cut -d'.' -f3 &gt;payload3.raw<br>
+<br>
+#priprav a zobraz casti ktore su podpisane<br>
+echo &quot;########### Podpisane data:&quot;<br>
+decode_base64_url $( cat payload1.raw )<br>
+echo -n &quot;.&quot;<br>
+decode_base64_url $( cat payload2.raw )<br>
+echo -n $(cat payload1.raw)&quot;.&quot;$(cat payload2.raw) &gt;
+payload12.raw<br>
+<br>
+#priprav podpis<br>
+decode_base64_url $( cat $file | cut -d'.' -f3 ) &gt;payload3.txt<br>
+<br>
+echo<br>
+echo<br>
+<br>
+#prejdi cez vsetky verejne kluce a najdi ktory funguje<br>
+for F in $( ls &quot;/tmp/google_ca_history/&quot; | grep -v google )<br>
+do<br>
+echo &quot;#########&quot;<br>
+echo Kontrola podpisu pomocou: /tmp/refresh_cert/&quot;$F&quot;<br>
+openssl dgst -sha256 -verify &quot;/tmp/google_ca_history/&quot;$F -signature
+payload3.txt payload12.raw<br>
+echo<br>
+done\</p>
+</blockquote>
+<h4 id="zdroje">Zdroje</h4>
+<p><a href="https://medium.com/@bn121rajesh/rsa-sign-and-verify-using-openssl-behind-the-scene-bf3cac0aade2">https://medium.com/@bn121rajesh/rsa-sign-and-verify-using-openssl-behind-the-scene-bf3cac0aade2</a><br>
+<br>
+<a href="https://stackoverflow.com/questions/59002949/how-to-create-a-json-web-token-jwt-using-openssl-shell-commands">https://stackoverflow.com/questions/59002949/how-to-create-a-json-web-token-jwt-using-openssl-shell-commands</a><br>
+<br>
+<a href="https://techdocs.akamai.com/iot-token-access-control/docs/generate-jwt-rsa-keys">https://techdocs.akamai.com/iot-token-access-control/docs/generate-jwt-rsa-keys</a>\</p>
 
   </div>
 </body>

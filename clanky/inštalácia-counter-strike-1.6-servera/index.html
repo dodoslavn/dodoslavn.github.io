@@ -34,9 +34,61 @@
     <span>Jan 1, 0001</span>
     Tu si ukážeme ako nainštalovať oficiálny Counter-Strike server na operačné systémy Windows.
 
-    <p>Budeme k tomu potrebovať niekoľko zásadných vecí, ako je pripojenie k internetu, a oprávnenie na inštaláciu softwéru. Najskôr is stiahneme
-<!-- raw HTML omitted -->HLDS Update Tool<!-- raw HTML omitted -->, ktorý následne na to nainštalujeme. Tento nástroj slúži na stiahnutie oficiálnych dedikovaných serverov. Teraz ho stačí už len spustiť, a to pod určitými parametrami. Predpokladá sa že ste nemenili adresár inštalácie. Teda by mal byť:</p>
-<!-- raw HTML omitted -->
+    <p>Budeme k tomu potrebovať niekoľko zásadných vecí, ako je pripojenie k
+internetu, a oprávnenie na inštaláciu softwéru. Najskôr is stiahneme
+<a href="http://storefront.steampowered.com/download/hldsupdatetool.exe" title="HLDS">HLDS Update
+Tool</a>,
+ktorý následne na to nainštalujeme. Tento nástroj slúži na stiahnutie
+oficiálnych dedikovaných serverov. Teraz ho stačí už len spustiť, a to
+pod určitými parametrami. Predpokladá sa že ste nemenili adresár
+inštalácie. Teda by mal byť:</p>
+<blockquote>
+<p>C:Program Files\Valve\HLServer</p>
+</blockquote>
+<p>Môžme teda začať inštalovať. Najskôr sa presunieme do, už spomínaného
+adresára, príkazom:</p>
+<blockquote>
+<p>cd C:Program Files\Valve\HLServer</p>
+</blockquote>
+<p>Ak sme sa tam úspešne presunuli, zadáme už samotný príkaz na stiahnutie:</p>
+<blockquote>
+<p>HldsUpdateTool.exe -command update -game cstrike -dir .</p>
+</blockquote>
+<p>Po zadaní príkazu by sa nám malo otvoriť okno(DOS, terminál, konzola), v
+ktorom sa po chvíli začne samotný proces sťahovania. Po úspešnom
+dosiahnutí 100%, je server kompletne stiahnutý, a môžme ho spustiť.
+Najskôr si vytvorime odkaz, pre jednoduchšie spúšťanie, a to tak, že sa
+presunieme do adresára ako predtým. Máme na výber dve možnosti. Bud
+budeme spúšťať server v spomínanom &quot;DOS-vskom&quot; rozhraní, aký bol pri
+procese sťahovania, alebo v rozhraní bežnej aplikácie. Teraz keď sme
+odkaz vytvorili a presunuli napríklad na plochu, ho môže editovať.
+Upravíme jeho parametre spúšťania(Vlastnosti\Proparties -&gt;
+Cieľ/Target), a za uvodzovky pridáme atribúty. Celé to môže vyzerať asi
+takto:</p>
+<blockquote>
+<p>&quot;C:\Program Files\Valve\HLServer\hlds.exe&quot; -console -game
+cstrike -autoupdate -port 27015 +maxplayers 20 +map de_dust2</p>
+</blockquote>
+<p>Tieto parametre si môžme samozrejme prisposobiť. -port znamená číslo
+portu na ktorom bude server bežať, kedže na jednom PC môže byť
+spustených viacero serverov. +maxpalyers znamená počet slotov, teda
+koľko môže byť na server pripojených hráčov, +map znamená mapa, a
+dôležitý parameter -console, vďaka ktorému sa nám server spustí v
+spomínanom DOS-ovom rozhraní.<br>
+Server si ešte môžte nakonfigurovať, podľa vlastných predstáv, ako je
+AMX mód, k lepšej administárcií servera a inštalácií iných pluginov a
+módov, dproto doplnok slúži na dual protokol, kedže už dnešný server
+obsahuje protokol verzie 48, kvôli ktorému sa nemôžu pripojiť hráči so
+starším patchom. Týmto pluginom vám bude server pracovať naraz na
+protokole 47 a 48.<br>
+Teraz si ukážeme základnú konfiguráciu servera, Prejdite do adresára kde
+máte nainštalovaný server, a potom do zložky &quot;cstrike&quot;. V tomto
+adresare sa nachádzajú dôležité priečinky ako &quot;maps&quot;, models a rôzne
+konfiguračné súbory. Otvorte súbor s názvom &quot;server.cfg&quot; nejakým
+textovým editorom, napr. Notepadom. Ak ste tam súbor s týtmo názvom
+nenašli, tak ho vytvorte. Do tohoto súboru budeme zapisovať základné
+nastavenia servera. Všetky príkazy aj s vysvetleniamy nájdete
+<a href="/files/cs.txt">tu</a>.</p>
 
   </div>
 </body>

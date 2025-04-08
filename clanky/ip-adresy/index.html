@@ -34,16 +34,170 @@
     <span>Jan 1, 0001</span>
     Malý popis o IP adresách a ako fungujú.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="ipv4">IPv4</h4>
+<p>IP adresy verzie 4 sa skladajú zo 4 čísiel oddelených bodkou. Každé
+číslo je od 0 do 255 (v bežnej desiatkovej sústave). Presnejšie 4, jedno
+bajtové čísla oddelené bodkou. Jeden B (bajt) sa skladá z 8 b (bitov).
+Osem bitov sa dá tiež nazvať ako jeden oktet. Jeden bit je buď 0
+alebo 1. Takže sa dá IP adresa vyjadriť aj v bitoch, to zanmená že budú
+4 osem-ciferné čisla(alebo 4 oktety) oddelené bodkou, kde každá cifra
+bude 0 alebo 1.<br>
+Napríklad, bežná IPv4 adresa môže vypadať takto: 1.2.4.8 , pokial ju
+chceme vyjadrit v binárnej sústave, bude vypadať takto:<br>
+000000001.00000010.000000100.000001000<br>
+Po celú dobu pišem o IPv4 adresách pretože existuje IPv6 ktorá je viac a
+viac populárna. Väčšinou sa ale pod pojmom IP adresa považuje ešte stále
+verzia IPv4.</p>
+<h4 id="maska-podsiete-ipv4">Maska podsiete (IPv4)</h4>
+<p>Pokiaľ niekde nastavujeme IPv4 adresu, tak je tam často ako povinné pole
+maska podsiete. V skutočnosti je to velmi potrebný údaj bez ktorého
+samotná IPv4 adresa nemôže vlastne ani fungovať. V predošlom odstavci je
+popísaná možnosť vyjadriť IPv4 adresu binárne. To je potreba pokiaľ
+práve riešime masku podsiete. Každá IPv4 adresa sa totiž skladá z 2
+častí. Prvá hovorí o adrese siete a druhá hovorí o adrese zariadenia. A
+o tom ktorá časť je ta prvá a ktorá je ta druhá, o tom práve hovorí
+maska podsiete. Maska podsiete sa veľmi podobá klasickej IPv4 adrese. Sú
+to taktiež 4 oktety oddelené podkou. Masku je tiež dôložité prepísať do
+binárneho tvaru. Príklad IPv4 adresy a jej masky: 192.168.0.1,
+255.255.255.0<br>
+Masku prepíšeme do binárneho tvaru: 11111111.11111111.11111111.00000000
+.<br>
+Maska podsiete v binárnom tvare začína z ľavej strany vždy binárnymi
+jednotkami a na pravej strane sú skoro vždy nejake nuly. Dôležitý je tu
+práve ten prechod z binárnych jednotiek na nuly. Ten totiž hovorí o tom
+kde sa práve končí adresa siete a kde začína adresa zariadenia. Z toho
+vyplíva napríklad aj to, koľko zariadení môžem v tej danej IP sieti mať.
+V našom príklade nám maska oddelila IP adresu celkom pekne, presne po 3.
+oktete. To znamená že 192.168.0 je adresa siete (konkrétne 192.168.0.0).
+To znamená že celý posledný oktet slúži na indentifikáciu zariadenia čo
+je 256 IP rôznych IP adries. To znamena od 0 do 255. Reálne použitelných
+je od 1 do 254, z dôvodu že úplne prvá slúži ako adresa siete pri
+smerovaní (v tomto prípade 0), a úplne posledná ( v tomto pripade 255)
+služi ako takzvaná Broadcast adresa, ktora slúži na odosielanie správ
+všetkým zariadeniam v danej IP sieti.<br>
+Pokiaľ budem mať IP adresu 192.168.0.1, a masku 255.255.255.128 v
+binárnom tvare:<br>
+11111111.11111111.11111111.10000000<br>
+Bude znamenať že na zariadenie nemám volný cely oktet, ale iba
+posledných 7 bitov. Čo tvori len 128 rôznych IP adries. Pokiaľ sa bavime
+o adrese 192.168.0.1, tak táto IP adresa je adresa zariadenia, adresa
+tejto siete je 192.168.0.0, brodcast adresa je 192.168.0.127. Rozsah IP
+adries ktoré sa môžu použiť je 192.168.0.1 až 192.168.0.126. Pokiaľ by
+som do siete pripojil zariadenie s IP adresou 192.168.0.200 a rovnakou
+maskou ako v predošlom príklade, tak jelikož táto IP adresa je už z
+iného rozsahu, a patrí teda to inej IP siete, z dovodu že IP adresa
+siete je iná, tak komunikácia nebude fungovať hned len tak. Bude sa
+musiet použit zariadenie s funkciou smerovač, a každé zariadenie ktore
+chce komunikovat so zariadením v tejto inej IP sieti muisí vedieť ze
+musí posielať vsetky komunikáciu prave cez tento smerovač.<br>
+Maska podsiete sa dá vyjadrit aj inak, jednoduchšie na zápis, a to
+jednoducho kde sa za lomítko vyjadrí iba počet binárnych jednotiek z
+ľavej strany. Pre príklad, maska 255.255.255.0 sa da vyjadriť ako /24 a
+maska 255.255.255.128 zase ako /25 . Zapisuje sa to typicky hend za IP
+adresu.</p>
+<h4 id="default-gateway--predvolená-brána">Default gateway / predvolená brána</h4>
+<p>Predvolená brána služi na to ked chceme komunikovať so zariadením v inej
+IP sieti ako je tá naša. Každé zariadenie ma niečo čo sa nazýva
+smerovacia(routovacia) tabulka. Ked chceme niečo niekam poslať, tak sa
+operačný systém pozrie do tejto tabulky a tam sa práve rozhoduje cez
+ktoré sietove rozhranie to pošle. Na PC môžem mať samozrejme viac
+sietových zariadení, a na každej sietovej karte môžem mať pridelených aj
+viac IP adries. Pokiaľ sa ale nenájde zariadenie ktore by malo IP adresu
+z rovnakej IP siete ako IP adresa kam to chcem poslať, pošle sa to práve
+na predvolenú bránu, čo je IP adresa smerovača ktorý to prepošle daľej.
+Buď sa priamo nachádza v tej danej IP sieti a preposle to priamo tomu
+zariadeniu, alebo to prepošle inému smerovači.</p>
+<h4 id="známe-rozsahy">Známe rozsahy</h4>
+<p>Sú niektoré IP siete ktoré maju konkrétny účel a nikde verejne sa na
+internete nesmú používať. Napriklad každý OS ktorý podporuje sietovú
+komunikáciu pomocou IP, má virtuálna sietové zariadenie ktoré sa nazýva
+localhost. Ten má priradenú IP siet 128.0.0.1/8 . To znamená že všetka
+komunikácia na IP ktorá začína na 128. je iba v rámci samotného PC a
+slúži na interné učeli. Napríklad ked si chcete vyskušať nejakú
+klient-server aplikáciu, tak všetka IP komunikácia je len v rámci
+localhost-u a nepotrebujete žiadnu sietovú kartu.</p>
+<p>Dalšie IP siete ktore môžem pouťit doma, sú 3 IP rozsahy:<br>
+10.0.0.0/8<br>
+172.16.0.0/12<br>
+192.168.0.0/16<br>
+Samozrejme si ich IP rozsah môžem upraviť ako chcem. Napríklad IP rozsah
+192.168.0.0/16 sa zpravidla vždy používa ako 192.168.0.0/24. Takže môžem
+mať doma 256 IP sietí kde každá siet ma 256 adries.</p>
+<h4 id="verejná-vs-sukromná">Verejná vs Sukromná</h4>
+<p>Pokiaľ mám doma pripojenie na internet, tak môj router má nejakú IP
+adresu, aby mohol s &quot;internetom&quot; komunikovať. Pokiaľ je táto adresa
+verejná, tak ju na celom svete má len a iba môj router, a je teda úplne
+unikátna. Z dôvodu že IP adries je na interente iba určite množstvo
+ktoré sa rýchlo míňa, nie každý tú verejnú IP adresu má. Napríklad na
+slovensku ju majú typicky ľudia s pripojením cez pevnú linku a
+technológiou ADSL alebo VDSL.</p>
+<p>Súkromná IP adresa znamená že moja IP adresa ktorú má môj router v smere
+do internetu nieje unikátna a nieje teda verejná. Je súkromná. Často sa
+to používa napríklad v bytových domoch. Tam je jeden hlavný router pre
+celý dom. Ten možno aj verejnú IP adresu v smere do internetu má. Do
+neho sa ale napájajú všetci obyvatelia bytového domu, a router ktorý
+každý ten obyvateľ má u seba v byte, má teda len IP adresu unikátnu pre
+ten daný bytový dom a nie celý internet. Pokiaľ napríklad sused robí
+nejakú neplechu a napríklad dostal zákaz vstupu na nejaký herný server,
+tak to čo oni spravili na tom hernom servere je, že zákazu prístup z tej
+danej IP adresy, teda všetkým obyvateľom toho domu. Súkromná IP adresa
+sa používa typicky u pripojení cez telefón, WiFI / WiMax a z pravidla u
+lokálnych poskytovateľov.</p>
+<h4 id="dynamicka-vs-staticka">Dynamicka vs Staticka</h4>
+<p>Dynamická IP adresa znamená že vždy keď sa router zapne, a chce sa
+pripojiť na internet, tak mu poskytovateľ internetu pridelí ďalšiu voľnú
+IP adresu zo zoznamu ktorý používa pre všetkých zákazníkov. Teda je
+veľmi nepravdepodobné že by pridelil rovnakú.<br>
+Často sa toto chovanie zneužíva na obchádzanie rôznych obmedzení, keď
+napríklad nejaká internetová služba ponúka že môžete stiahnuť iba jeden
+súbor za deň. Vy keď si totiž ten router reštartujete tak si ťa stránka
+bude myslieť že ste úplne nový návštevník pretože vaša IP adresa je iná.</p>
+<p>Statická IP adresa znamená že zakaždým keď si router spustím, môj router
+bude mať IP adresu vždy rovnakú.</p>
+<h4 id="vlastný-hosting-port-forwarding-a-nat">Vlastný hosting (Port Forwarding a NAT)</h4>
+<p>Ak má router verejnú IP adresu, tak to má jednu funkčnosť navyše. Tým že
+je unikátna na celom svete, tak ktokoľvek sa bude chcieť pripojiť na
+moju IP adresu, bude sa pripájať na môj router. Ten štandartne všetkú
+komunikáciu odmieta, a niekedy sa aj chová pre človeka ktorý sa chce
+pripojiť že neexistuje.</p>
+<p>To čo ale ja môžem spraviť je že si môžem na svojom PC spustiť napríklad
+nejakú aplikáciu. Napríklad program Apache, ktorý slúži ako web server
+pre bežne webové stránky. Webová komunikácia prebieha na niečom čo sa
+nazýva port, a konkrétne na porte s číslom 80 (prípadne 443). Ja keď si
+otvorím nastavenia toho svojho routera ktorý mám doma, tak mu môžem
+povedať že všetko čo k nemu z internetu chodina port 80 (prípadne 443),
+aby nasmeroval na môj PC kde mi beží spomínaný program Apache ktorý
+slúži ako webový server.</p>
+<p>To znamená že keď si ktokoľvek na internete vloží do prehliadača IP
+adresu vašeho routera tak sa mu zobrazí v prehlaidaci webová stránka
+ktorá sa nachádza na vašom PC kde máte spustený Apache.</p>
+<p>Pokiaľ svoj PC vypnete, tak sa stránka už nikomu nenacita pretože máte
+svoj Apacha vypnutý.</p>
+<p>Pokiaľ máte dynamickú IP adresu a vypadla vám doma elektrika tak vaša IP
+adresa je už iná a vy sa pravdepodobne snažíte pripojiť na router
+niekoho úplne iného.</p>
+<p>Pokiaľ máte doma starší notebook ktorý má malú spotrebu elektrickej
+energie (čo je typické pre notebooky), tak ho môžte pripojiť k vašemu
+routeru ideálne káblom, schovať ho niekde kde nebude zavadzať a nechať
+ho pustený 24/7. Na ňom bude spustený spomínaný webový server Apache.
+Pokiaľ bude notebook spustený, bude fungovať aj webová stránka. Takýmto
+spôsobom si viete spraviť miesto kde vám bude fungovať webová stránka, a
+bude to zdarma (teda len elektrika ktorú notebook spotrebuje). Nebudete
+obmedznovany na priestor, množstvo stránok ktoré môžte mať a ani nič
+iné. Čo prináša mnoztsvo výhod. Problém je ale v tom že keď si niekto
+bude chcieť zobraziť moju webovú stránku ktorú mám doma, tak na môj
+Apacha príde mala správa o tom že si nejakú stránku chce zobraziť. Môj
+webový server mu odpovie samotným obsahom webovej stránky ktorý nemusí
+byť zas tak malý, takže pokiaľ tam máte napríklad 3 obrázky a každý má
+3MB tak sa mu ťa stránka bude načítať naozaj dlhšie, čo vôbec neiej
+príjemné. Závisí to od rýchlosti pripojenia, nie ale od rýchlosti
+sťahovania ale od rýchlosti odosielania čo je parameter ktorý sa už moc
+v reklamách nezverejňuje, a musíte sa dotazovat navyše. Typicky je
+rýchlosť odosielania jedna desatina rýchlosti stahovania. U niekoho môže
+byť ale aj rýchlosť odosielania relatívne vysoká, takže prevádzkovať
+takéto niečo môže byť zmysluplné.</p>
+<p>Takýmto spôsobom sa dá prevádzkovať veľa služieb, nie len webové
+stránky.</p>
 
   </div>
 </body>

@@ -35,13 +35,76 @@
     V tomto článku si ukážeme ako nainštalovať FTP server na Debian. Bude to konkrétne aplikácia ProFTPd, ktorá je známa aj pod operačnými systémamí Windows.
 
     <p>Ako prvé si samotnú aplikáciu nainštalujeme:</p>
-<!-- raw HTML omitted -->
-<p>Teraz si ukážeme ako server ovládať. Server môžme púštať a zastavovať, taktiež klasickým spôsobom</p>
-<!-- raw HTML omitted -->
-<p>Co sa týka nastavenia oprávnenia užívateľov k adresárom, môžme si vytvoriť užívateľov, kde im môžme zadať ich domovský adresár, kde sa bude môct pohybovať. Pre príklad si zvolíme adresár s cestou <!-- raw HTML omitted -->/home/ftp<!-- raw HTML omitted -->, takže zadáme</p>
-<!-- raw HTML omitted -->
-<p>Ak používame Fail2Ban, tak ho povolíme zmenou v jeho konfiguračnom súbore z <!-- raw HTML omitted -->false<!-- raw HTML omitted --> na  <!-- raw HTML omitted -->true<!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>apt-get install proftpd</p>
+</blockquote>
+<p>Po úspešnej inštalacií, môžme začať s konfiguráciou. Na začiatok vložíme
+do <em>/etc/shells</em> riadok, <em>/bin/false</em></p>
+<blockquote>
+<p>echo &quot;/bin/false&quot; &gt;&gt; /bin/false</p>
+</blockquote>
+<p>Teraz sa môžme pustiť do samotnej konfigurácie. Konfiguračný súbor ,
+<em>proftpd.conf</em> , nájdeme v typickom adresáre <em>/etc/proftpd/</em>. Takže
+zadáme</p>
+<blockquote>
+<p>nano /etc/proftpd/proftpd.conf</p>
+</blockquote>
+<p>Tu si môžem nastaviť základne parametre servera ako jeho názov, port,
+<em>TimoOut-y</em>. Napr. jedno veľmi dôležité bezpečnostné nastavenie je
+<em>DefaultRoot</em>. Pokiaľ nieje nastavené alebo je nastavené na <em>off</em> tak
+užívatelia budú mať voľný prístup k celému systému. Pokiaľ bude
+nastavené na <em>on</em>, tak budú ich adresáre zamknuté, a budú sa môcť
+pochybovať iba v ich domovskom adresáre.<br>
+<br>
+Teraz si ukážeme ako server ovládať. Server môžme púštať a zastavovať,
+taktiež klasickým spôsobom</p>
+<blockquote>
+<p>/etc/init.d/proftpd start<br>
+/etc/init.d/proftpd restart<br>
+/etc/init.d/proftpd stop\</p>
+</blockquote>
+<p>Pomocou príkazu</p>
+<blockquote>
+<p>ftptop</p>
+</blockquote>
+<p>si môžme zobraziť aktivity užívateľov a pomocou príkazu</p>
+<blockquote>
+<p>ftpwho</p>
+</blockquote>
+<p>si zobrazíme pripojených uživateľov. Co sa týka nastavenia oprávnenia
+užívateľov k adresárom, môžme si vytvoriť užívateľov, kde im môžme zadať
+ich domovský adresár, kde sa bude môct pohybovať. Pre príklad si zvolíme
+adresár s cestou <em>/home/ftp</em>, takže zadáme</p>
+<blockquote>
+<p>mkdir /home/ftp</p>
+</blockquote>
+<p>Teraz vytovíme spominaného užívatela</p>
+<blockquote>
+<p>useradd ftpdef -p123456 -d /home/ftp -s /bin/false</p>
+</blockquote>
+<p>Ako názov užívatela som dal <em>ftpdef</em> (ako ftp default), heslo som dal
+<em>123456</em> a domovský adresár je ten ktorý sme vytvorili ciže <em>/home/ftp</em>
+. Teraz nastavíme oprávnenie k adresárom. Vytvoríme daľšie dva adresáre</p>
+<blockquote>
+<p>mkdir /home/ftp/download<br>
+mkdir /home/ftp/upload\</p>
+</blockquote>
+<p>Teraz im nastavíme oprávnenie</p>
+<blockquote>
+<p>chmod 755 /home/ftp/download<br>
+chmod 777 /home/ftp/upload\</p>
+</blockquote>
+<p>Ak používame Fail2Ban, tak ho povolíme zmenou v jeho konfiguračnom
+súbore z <em>false</em> na <em>true</em></p>
+<blockquote>
+<p>[proftpd]<br>
+<br>
+enabled = true<br>
+port = ftp,ftp-data,ftps,ftps-data<br>
+filter = proftpd<br>
+logpath = /var/log/proftpd/proftpd.log<br>
+maxretry = 6\</p>
+</blockquote>
 
   </div>
 </body>

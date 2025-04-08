@@ -34,26 +34,100 @@
     <span>Jan 1, 0001</span>
     Návod na pridanie ďalšej inštalácie http servera &lt;i&gt;apache2&lt;/i&gt; za použitia skriptu ktorý je dodávaný so základnou inštaláciou. V konečnom riešení použijeme aj modul &lt;i&gt;Proxy&lt;/i&gt;.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Nainštalujeme samotný Apache</p>
+<blockquote>
+<p>apt install apache2</p>
+</blockquote>
+<p>Spustíme ho a pozreme sa či funguje, a to tak že otvoríme nejaký
+prehliadač ako je Mozilla a skúsime adresu <em>localhost</em></p>
+<blockquote>
+<p>systemctl start apache2</p>
+</blockquote>
+<h4 id="tvorba-novej-inštalácie-a-jej-príprava">Tvorba novej inštalácie a jej príprava</h4>
+<p>Pridáme ďalšiu inštaláciu, ktorá sa bude volať apache2-rizek</p>
+<blockquote>
+<p>cd /usr/share/doc/apache2/examples<br>
+bash setup-instance rizek<br>
+systemctl enable <a href="mailto:apache2@rizek.service">apache2@rizek.service</a></p>
+</blockquote>
+<p>Kúzlo ďalšej inštalácie je že môže bežať pod iným užívateľom, takže
+jedného pridáme</p>
+<blockquote>
+<p>adduser --home /var/www-rizek www-rizek</p>
+</blockquote>
+<p>Upravíme pod ktorým užívateľom to ma bežať</p>
+<blockquote>
+<p>vi /etc/apache2-rizek/envvars</p>
+</blockquote>
+<p>a to spôsobom že prepíšeme premenné <em>APACHE_RUN_USER</em> a
+<em>APACHE_RUN_GROUP</em> na nového užívateľa: <em>www-rizek</em></p>
+<p>Otvoríme súbor z rovnakého adresára a prepíšeme v ňom čísla portu
+<em>Listen 80</em> na niečo iné, napríklad <em>Listen 8080</em> a veci ako IfModule s
+portom 443 celé zmažeme</p>
+<blockquote>
+<p>vi /etc/apache2-rizek/ports.conf</p>
+</blockquote>
+<p>Prepíšeme adresár aby sme mohli používať iné adresáre na <em>DocumentRoot</em>
+a to spôsobom že prepíšeme <em>/var/www</em> na novú <em>/var/www-rizek</em> pomocou</p>
+<blockquote>
+<p>vi /etc/apache2-rizek/apache.conf</p>
+</blockquote>
+<p>Ďalej otvoríme súbor základného <em>virtualhost</em>-u a aj tam prepíšeme číslo
+portu</p>
+<blockquote>
+<p>vi /etc/apache2-rizek/sites-available/000-default.conf</p>
+</blockquote>
+<p>Ďalej v tom súbore upravíme <em>DocumentRoot</em> na</p>
+<blockquote>
+<p>/var/www-rizek/html</p>
+</blockquote>
+<p>Zložku <em>html</em> ešte vytvoríme</p>
+<blockquote>
+<p>su - www-rizek -c &quot;mkdir /var/www-rizek/html&quot;</p>
+</blockquote>
+<p>Vytovríme nejaký základný súbor na zobrazenie</p>
+<blockquote>
+<p>su - www-rizek -c &quot;echo rizeeek &gt; /var/www-rizek/html/index.html&quot;</p>
+</blockquote>
+<p>Spustíme túto novú inštaláciu</p>
+<blockquote>
+<p>systemctl restart <a href="mailto:apache2@rizek.service">apache2@rizek.service</a></p>
+</blockquote>
+<p>Keď dáme do prehliadača <em>localhost:8080</em> malo by nám zobraziť stránku s
+niečim ako <em>rizeeek</em></p>
+<h4 id="príprava-základnej-inštalácie">Príprava základnej inštalácie</h4>
+<p>Povolíme modul:</p>
+<blockquote>
+<p>a2enmod proxy<br>
+a2enmod proxy_http</p>
+</blockquote>
+<p>Vytvoríme nový virtualhost:</p>
+<blockquote>
+<p>/etc/apache2/sites-available/rizek.conf</p>
+</blockquote>
+<p>s obsahom:</p>
+<blockquote>
+<p><br>
+ServerAlias rizek<br>
+ProxyPass / http://localhost:8080/<br>
+ProxyPassReverse / http://localhost:8080/<br>
+\</p>
+</blockquote>
+<p>Virtulhost povolíme:</p>
+<blockquote>
+<p>a2ensite rizek.conf</p>
+</blockquote>
+<p>Ak to celé robíme na jednom PC tak si môžme pre test dať slovo <em>rizek</em>
+ako ekvivalent <em>localhost</em></p>
+<blockquote>
+<p>echo &quot;127.0.0.1 rizek&quot; &gt;&gt; /etc/passwd</p>
+</blockquote>
+<p>Ak zadáme do prehliadača slovo <em>rizek</em> ako adresu, systém nám ju preloží
+na localhost IP, a port 80 co je základna inštancia nášho web servera. Z
+dôvodu že doméma pre ten virtualhost ktorý sme pridali je <em>rizek</em>,
+vybere sa práve ten. V ňom je zase napisané nastavenie Proxy takže sa
+HTTP požiadavok presmeruje na localhost:8080 co je už náša nová
+inštancia apache2-rizek .</p>
 
   </div>
 </body>

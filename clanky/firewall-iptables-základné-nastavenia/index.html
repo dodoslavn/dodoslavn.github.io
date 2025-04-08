@@ -34,15 +34,47 @@
     <span>Jan 1, 0001</span>
     Pár príkazov ako nastaviť firewall &lt;i&gt;iptables&lt;/i&gt; na Debian server.
 
-    <p>Zmažeme všetky nastavenia, na toto pozor, lebo to všetku komunikáciu zablokuje:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Zmažeme všetky nastavenia, na toto pozor, lebo to všetku komunikáciu
+zablokuje:</p>
+<blockquote>
+<p>iptables -F;</p>
+</blockquote>
+<p>Nastavíme všeobecné pravidlá, že sa všetka prichádzajúca komunikácia
+bude blokovať:</p>
+<blockquote>
+<p>iptables -P FORWARD DROP;<br>
+iptables -P INPUT DROP;<br>
+iptables -P OUTPUT ACCEPT;</p>
+</blockquote>
+<p>Pre povolenie prichádzajúcich paketov prijatých vytvorených spojení:</p>
+<blockquote>
+<p>iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT</p>
+</blockquote>
+<p>Povolenie všetkého na localhost-e:</p>
+<blockquote>
+<p>iptables -A INPUT -s 127.0.0.0/8 -d 127.0.0.0/8 -i lo -j ACCEPT</p>
+</blockquote>
+<p>Otvorenie samotného portu, napr. 22 pre SSH server, alebo 80 pre HTTP
+server:</p>
+<blockquote>
+<p>iptables -A INPUT -s 10.20.0.2 -p tcp --dport 22 -m state --state
+NEW -j ACCEPT</p>
+</blockquote>
+<p>Pre prípadné zmazanie pravidla z predošlého príkladu, len vymeníme
+<em>iptables -A</em> za <em>iptables -D</em>, teda napríklad</p>
+<blockquote>
+<p>iptables -D INPUT -s 10.20.0.2 -p tcp --dport 22 -m state --state
+NEW -j ACCEPT</p>
+</blockquote>
+<p>Vylistovanie aktuálneho nastavenia:</p>
+<blockquote>
+<p>iptables -L -n</p>
+</blockquote>
+<p>Ako vyzálohovať nastavenie:</p>
+<blockquote>
+<p>iptables-save &gt; /etc/iptables/backup/iptables-&quot;$(date
+'+%Y.%m.%d_%H:%M').txt&quot;</p>
+</blockquote>
 
   </div>
 </body>

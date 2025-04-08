@@ -34,9 +34,20 @@
     <span>Jan 1, 0001</span>
     Návod ako stiahnuť a nainštalovať Virtualbox Guest additions do Debian virtuálky.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="inštalácia-potrebných-os-balíkov">Inštalácia potrebných OS balíkov</h4>
+<blockquote>
+<p>apt install build-essential module-assistant dkms make</p>
+</blockquote>
+<blockquote>
+<p>m-a prepare</p>
+</blockquote>
+<h4 id="stiahnutie">Stiahnutie</h4>
+<blockquote>
+<p>VBOXS=$(vboxmanage -v | cut -d'r' -f1)<br>
+VBOXL=$(vboxmanage -v | sed 's/r/-/' )<br>
+wget
+<a href="http://download.virtualbox.org/virtualbox/">http://download.virtualbox.org/virtualbox/</a>&quot;$VBOXS&quot;/VirtualBox-&quot;$VBOXL&quot;-Linux_amd64.run</p>
+</blockquote>
 
   </div>
 </body>

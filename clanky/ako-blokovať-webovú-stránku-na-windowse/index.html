@@ -34,10 +34,65 @@
     <span>Jan 1, 0001</span>
     Tu si ukážeme ako veľmi jednoducho a účinne, zablokovať webovú stránku na operačnom systéme Windows. Tiež si ukážeme aj spôsoby ako sa to dá, no to už len okrajovo, pretože sa môžu veľmi líšit vzávislosti aké zariadenia máte.
 
-    <p>Takže bez zpytočných obkecov začneme.<!-- raw HTML omitted -->
+    <p>Takže bez zpytočných obkecov začneme.<br>
 Presunieme sa na adresár:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<blockquote>
+<p>C:\WINDOWS\system32\drivers\etc</p>
+</blockquote>
+<p>V tomto adresáre sa nachádza súbor</p>
+<blockquote>
+<p>hosts</p>
+</blockquote>
+<p>Otvoríme ho v nejakom textovom editore ako napríklad Notepad alebo aj v
+Poznámkovom bloku. Do tohto súboru budeme na úplny spodok vkladať domény
+stránok ktoré chceme zabokovať. Vždy na nový riadok napíšeme svoju IP
+adresu localhostu. Tá je vždy:</p>
+<blockquote>
+<p>127.0.0.1</p>
+</blockquote>
+<p>a o medzeru(na velkosti medzere nezáleží) za nu napíšeme jednu doménu
+stránky ktorú chceme zablokovať. No ak by sme chceli zablokokovať napr.
+prístup na Pokec, nestačí zadať iba stránku pokec.sk, ale všetky možné
+spôsoby, kedže na Pokec sa da pristupovať rôznymy doménamy(aj ked
+konečná doména je vždy rovnaká). Takže musíme zadať aj: azet.sk,
+pokec.azet.sk ale aj kombinácie s www . Ked sme pri tom Pokeci, ukážeme
+si ako môže vyzerať konečný súbor.<br>
+<br>
+# Copyright (c) 1993-1999 Microsoft Corp.<br>
+#<br>
+# This is a sample HOSTS file used by Microsoft TCP/IP for Windows.<br>
+#<br>
+# This file contains the mappings of IP addresses to host names. Each<br>
+# entry should be kept on an individual line. The IP address should<br>
+# be placed in the first column followed by the corresponding host<br>
+# name. The IP address and the host name should be separated by<br>
+# at least one<br>
+# space.<br>
+#<br>
+# Additionally, comments (such as these) may be inserted on individual<br>
+# lines or following the machine name denoted by a '#' symbol.<br>
+#<br>
+# For example:<br>
+#<br>
+# 102.54.94.97 rhino.acme.com # source server<br>
+# 38.25.63.10 x.acme.com # x client host<br>
+<br>
+<br>
+127.0.0.1 <a href="https://www.pokec.sk">www.pokec.sk</a><br>
+127.0.0.1 pokec.sk<br>
+127.0.0.1 azet.sk<br>
+127.0.0.1 pokec.azet.sk<br>
+<br>
+\</p>
+<p>Všetko čo je v tomto súbore napísané za # je iba komentár a celí riadok
+za # bude ignorovaný. No chcel by som ešte niečo dodať ohladom toho, čo
+vlastne tento súbor robí. Pretože on neslúži na blokovanie stránok ale
+na presmerovanie domeny na IP adresu, kedze domena je vlastne len
+náhrada za nu. Takže v skutočnosti sme stránku nezablokovali ale iba
+presmerovali na váš počítač. Ale kedže na Vašom počítači nemáte
+nainštalovaný Apache alebo iny webový server, stránka sa nezobrazí.
+Pokial máte nainštalovaný, tak stačí v nom nastaviť aby na tieto domény
+nereagoval, pripadne nasmeroval niekam kde by sa nič nezobarzilo.</p>
 
   </div>
 </body>

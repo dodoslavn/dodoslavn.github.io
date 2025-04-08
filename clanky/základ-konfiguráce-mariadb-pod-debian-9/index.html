@@ -34,16 +34,51 @@
     <span>Jan 1, 0001</span>
     Ako nainštalovať a spraviť základnú konfiguráciu MariaDB. Základné nastavenie je trochu iné ako MySQL.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Najskôr nainštalujeme klienta:</p>
+<blockquote>
+<p>apt install mysql-client</p>
+</blockquote>
+<p>Potom samotný server,</p>
+<blockquote>
+<p>apt install mysql-server</p>
+</blockquote>
+<p>Dalej môžme doplniť o samotný PHPMyAdmin</p>
+<blockquote>
+<p>apt install phpmyadmin</p>
+</blockquote>
+<p>Problém nastáva ked sa chceme prihlásiť cez web do PHPMyAdmin. Tam totiž
+<em>root</em> účet nefunguje. Je tam síce <em>phpmyadmin</em> účet, ten ale nemá
+oprávnenie menežovať všetko.</p>
+<p>Z príkazového riadku pod root-om týmto príkazom dáme všetky oprávnenia
+účtu <em>phpmyadmin</em></p>
+<blockquote>
+<p>mysql -e &quot;GRANT ALL PRIVILEGES ON * . * TO
+'phpmyadmin'@'localhost' WITH GRANT OPTION&quot;;</p>
+</blockquote>
+<p>Ak chceme vytvoriť nový účet ktorý bude mať vlastnú databázu v ktorej si
+bude môcť robit čo chce, použijem:</p>
+<blockquote>
+<p>CREATE USER 'ucet'@'%' IDENTIFIED VIA mysql_native_password USING
+'heslo';<br>
+GRANT USAGE ON *.* TO 'ucet'@'%' REQUIRE NONE WITH
+MAX_QUERIES_PER_HOUR 0 MAX_CONNECTIONS_PER_HOUR 0 MAX_UPDATES_PER_HOUR
+0 MAX_USER_CONNECTIONS 0;<br>
+CREATE DATABASE IF NOT EXISTS `ucet`;<br>
+GRANT ALL PRIVILEGES ON `ucet`.* TO 'ucet'@'%';</p>
+</blockquote>
+<p>Ak chceme aby bol server prístupný musíme nastaviť <em>bind</em> IP v
+konfiguračnom súbore</p>
+<blockquote>
+<p>/etc/mysql/mariadb.conf.d/50-server.cnf</p>
+</blockquote>
+<blockquote>
+<p>bind-address = 0.0.0.0</p>
+</blockquote>
+<p>Príklad ako vyzálohovať všetky databáze:</p>
+<blockquote>
+<p>/usr/bin/mysqldump --all-databases -pHESLO | /bin/gzip -c -9 &gt;
+/data/backup/sql/dump_$(date '+%Y-%m-%d').sql.gz;</p>
+</blockquote>
 
   </div>
 </body>

@@ -34,30 +34,15 @@
     <span>Jan 1, 0001</span>
     navod na pouzivanie KVM cez konzolu
 
-    <p>#!/bin/bash -x</p>
-<p>#fill values to your need
-VMNAME=aaaa
-MAC=&lsquo;52:54:00:09:11:03&rsquo;
-VNC_PORT=5952
-VNC_PASSWORD=&rsquo;!PASSWORD!&rsquo;
-DISK=&rsquo;/path/to/filename.qcow2&rsquo;</p>
-<p>sudo virt-install <br>
-&ndash;connect qemu:///system <br>
-&ndash;import <br>
-&ndash;name=$VMNAME <br>
-&ndash;ram=2048 <br>
-&ndash;vcpus=2 <br>
-&ndash;disk $DISK,device=disk,bus=virtio,format=qcow2 <br>
-&ndash;os-variant rhel6 <br>
-&ndash;debug <br>
-&ndash;network=bridge:br0,mac=$MAC <br>
-&ndash;graphics=vnc,port=$VNC_PORT,password=$VNC_PASSWORD <br>
-&ndash;autostart <br>
-&ndash;noautoconsole <br>
-&ndash;os-type=linux</p>
-<p>virsh list  &ndash;all
-virsh undefine $VM
-virsh destroy $VM</p>
+    <p>#!/bin/bash -x #fill values to your need VMNAME=aaaa
+MAC='52:54:00:09:11:03' VNC_PORT=5952 VNC_PASSWORD='!PASSWORD!'
+DISK='/path/to/filename.qcow2' sudo virt-install \ --connect
+qemu:///system \ --import \ --name=$VMNAME \ --ram=2048 \
+--vcpus=2 \ --disk $DISK,device=disk,bus=virtio,format=qcow2 \
+--os-variant rhel6 \ --debug \ --network=bridge:br0,mac=$MAC \
+--graphics=vnc,port=$VNC_PORT,password=$VNC_PASSWORD \ --autostart
+\ --noautoconsole \ --os-type=linux virsh list --all virsh undefine
+$VM virsh destroy $VM</p>
 
   </div>
 </body>

@@ -34,11 +34,24 @@
     <span>Jan 1, 0001</span>
     Ako zdielať FileSystém z VirtualMachine cez export
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Ako prerekvizitu použijeme klasický postup na exportovanie adresára
+medzi systémami.</p>
+<p>\</p>
+<p>Povedzme že máme host systém, na ktorom beží VM. Z neho bude zdielaný
+nejaký adresár. Do súbora <em>/etc/exports</em> vložíme:</p>
+<blockquote>
+<p>/data/Virtual_machine_1
+127.0.0.1(rw,sync,no_subtree_check,no_root_squash,insecure)</p>
+</blockquote>
+<p>Vo VM, sa pozrieme aká je <em>DefaultGateway</em></p>
+<blockquote>
+<p>route | grep default | awk '{ print $2}'</p>
+</blockquote>
+<p>zase pridáme do <em>/etc/fstab</em> pričom ako IP použijeme zistenú
+<em>DefaultGateway</em></p>
+<blockquote>
+<p>10.0.2.2:/data/Virtual_machine_1 /mnt nfs defaults 0 0</p>
+</blockquote>
 
   </div>
 </body>

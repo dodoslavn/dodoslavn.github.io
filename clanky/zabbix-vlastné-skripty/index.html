@@ -34,11 +34,36 @@
     <span>Jan 1, 0001</span>
     Ako zprovozdniť CustomScript-y na Zabbix-e
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="zabbix-agent-konfigurácia">Zabbix agent konfigurácia</h4>
+<p>Na strane Zabbix agenta je potreba povoliť aby Custom Skript-y vôbec
+fungovali, a potom je potreba každý jeden príkaz osobitne pridať, a
+priradiť k nemu ako sa tem &quot;item&quot; bude volať.</p>
+<h4 id="povolenie-podpory-custom-script-ov">Povolenie podpory Custom Script-ov</h4>
+<p>Upravíme konfiguračný súbor pre Zabbix agent, a pridáme povolenie pre
+vlastné skripty. Kedysi sa toto nastavenie volalo
+&quot;EnableRemoteCommands&quot;.</p>
+<blockquote>
+<p># vi /etc/zabbix/zabbix_agentd.conf</p>
+</blockquote>
+<p>Upravíme nastavenie:</p>
+<blockquote>
+<p>AllowKey=system.run[*]</p>
+</blockquote>
+<h4 id="založenie-vlasntého-item-u">Založenie vlasntého Item-u</h4>
+<p>Pridáme samotný príkaz ktorý chceme spúštať, a pridelíme mu názov:</p>
+<blockquote>
+<p>echo 'UserParameter=custom.sensors,/usr/bin/sensors -j'
+&gt;/etc/zabbix/zabbix_agentd.conf.d/moje_checky.conf</p>
+</blockquote>
+<h4 id="zabbix-web---gui">Zabbix web - GUI</h4>
+<p>Teraz už len vytvoriť nový Item v GUI Zabbixu a ako názov Item-u použiť:</p>
+<blockquote>
+<p>custom.sensors</p>
+</blockquote>
+<h4 id="užitočné">Užitočné</h4>
+<blockquote>
+<p>zabbix_agentd -R userparameter_reload</p>
+</blockquote>
 
   </div>
 </body>

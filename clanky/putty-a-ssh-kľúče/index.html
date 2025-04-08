@@ -34,11 +34,103 @@
     <span>Jan 1, 0001</span>
     Návod ako rozbehať SSH kľúče v Putty pod Windows. Ako ich vytvoriť, nasadit na server, a použiť.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="putty">Putty</h4>
+<p>Najskôr potrebujeme nainštalovať samotné Putty, nie &quot;portable&quot; verziu.
+A to z dôvodu že klasický inštalátor nam dodá aj daľsie nástroje ktoré
+nám ulahčia život (napr. PuTTYgen).</p>
+<h4 id="vygenerovanie-ssh-kľúčov">Vygenerovanie SSH kľúčov</h4>
+<p>Na vygenerovanie SSH kľučov je potrebný nástroj &quot;PuTTYgen&quot;. Ten
+spustíme, dole vyberieme aký typ šifry sa použije, štandartne sa používa
+RSA, aspoň 2048. Potom už len klikneme na &quot;Generate&quot;. Z dôvodu
+nedôvery voči funkciám ktoré generujú pseudo-nahodne čísla, sa takéto
+funkcie nepoužívajú z bezpečnostných dôvodov. Ako náhrada sa používá
+pohyb myši. Každý kľúč sa dá aj zaheslovať, aby skopírovanie a následné
+zneužitie nebolo tak jednoduché(súkromná časť). Po vygenerovaní získame
+2 súbory. Súkromný, ktorý ako názov hovorí, musí ostať súkromný a za
+žiadnych okolností sa k nemu nesmie nikto nikdy dostať. A druhý subor s
+koncovkou &quot;.pub&quot;, ktory je ako názov hovorí verejná časť kľuča, ktorý
+zase naopak je bezpečné zverejnovať a bude potrebné ho umiestnovať na
+všetky servery kam sa budeme chcieť pomocou neho pripojiť. Obidva
+vygenerované kľúče si určite uložíme niekam na disk.<br>
+Takže vždy musíme ziskať verejný a sukromný kľúč. Zo súkromného kľúča
+viem vždy verejný kedykoľvek vygenerovať, bude ale vždy iný. Rovnako ide
+aj z verejného vygenerovať súkromný kľúč, bude ale zase vždy iný.</p>
+<h4 id="nahranie-verejnej-časti-na-ssh-server">Nahranie verejnej časti na SSH server</h4>
+<p>Aby sme sa mohli pomocou SSH kľúčov pripojiť na SSH server, musíme
+verejnú časť nahrať na SSH server. Funguje to vždy len pre uživateľa
+ktorému ten kľúč priradíme. Putty nemá nástroj na nahranie SSH kľúča na
+server, takže to musíme spraviť ručne. Pripojíme sa na SSH server
+klasickým spôsobom ešte pomocou hesla. Na serveri v domovskom adresári
+užívateľa, sa nachádza skrytá zložka &quot;.ssh&quot;. Je potreba aby táto
+zložka nebola dostupná žiadnemu inému užívateľovi. To iste platí aj pre
+samotný domovský adresár. Po pripojení menom+heslom na SSH server, toto
+môžme skontrolovať následne:</p>
+<blockquote>
+<p>stat --format=%A ~<br>
+stat --format=%A ~/.ssh</p>
+</blockquote>
+<p>Pokiaľ neviete čo ten výstup znamená alebo to nesedí, zpustite
+nasledujúce príkazy, je bezpečné ich spustiť aj viac krát:</p>
+<blockquote>
+<p>chmod g-w ~<br>
+chmod o-w ~<br>
+mkdir -p ~/.ssh<br>
+chmod 700 ~/.ssh\</p>
+</blockquote>
+<p>Ked už teda máme prostredie nachystané, môžme nahrať samotný kľúč.
+Najskôr si pre predstavu zobrazíme ako vypadá súbor momentálne pre
+porovnanie do budúcna alebo po pridaní:</p>
+<blockquote>
+<p>cat ~/.ssh/authorized_keys</p>
+</blockquote>
+<p>Na svojom PC kde máte Putty, otvorte v Poznámkovom Bloku verejný kľuč,
+to je ten čo má príponu &quot;.pub&quot;. Skopírujte ho. Na serveri si ho
+uložíme do premennej &quot;POM&quot;, príklad:</p>
+<blockquote>
+<p>POM='ssh-rsa AAAAB3Nz...'</p>
+</blockquote>
+<p>Skontrolujeme či obsah premennej je rovnaký ako obsah súboru v
+Poznámkovom Bloku.</p>
+<blockquote>
+<p>echo $POM</p>
+</blockquote>
+<p>Pokiaľ je obsah rovnaký tak ho vložíme do súboru:</p>
+<blockquote>
+<p>echo $POM &gt;&gt; ~/.ssh/authorized_keys</p>
+</blockquote>
+<p>Skontrolujeme súbor a porovnáme obsah s pred vložením:</p>
+<blockquote>
+<p>cat ~/.ssh/authorized_keys</p>
+</blockquote>
+<p>Pokiaľ tam svoj kľúč vidíte, tak sme ho tam úspešne pridali a malo by to
+už teraz fungovať.</p>
+<h4 id="použitie-súkromnej-časti">Použitie súkromnej časti</h4>
+<p>Teraz už len musíme povedať svojmu SSH klientovi (Putty) aby ho začal
+používať. Sú 2 spôsoby.<br>
+Prvý spôsob je pre každý profil alebo pripojenie. To znamená že v ľavom
+paneli &quot;Category&quot; v Putty, sa preklikáme do &quot;Connection&quot; -&gt; &quot;SSH&quot;
+-&gt; &quot;Auth&quot;. Tam nájdeme nastavenie ktoré sa nazýva &quot;Private key file
+for authentication&quot;. V niektorých verziách Putty sa toto nastavenie
+nachádza až pod položkou &quot;Credentials&quot;. Tam vyberieme súkromný kľúč a
+prejdeme v ľavo naspäť do &quot;Session&quot; kde si toto nastavenie vieme
+uložiť do nejakého profilu v Putty alebo sa rovno skúsiť pripojiť.
+Pokiaľ to bude pýtat heslo, tak to bude práve heslo k tomu súkromnému
+kľúči, heslo budeme musieť zadávať vždy, čo je bezpečnejšie ale
+nepraktické.<br>
+Druhý spôsob je použiť nástroj ktorý sa nazýva Pageant. Ten spustíme a
+on začne bežať na pozadí. V Tray ikonách (na obrazovke vpravo dole u
+hodin) sa zobrazí jeho ikonka. Klikneme na nu a otvorí sa okno kde
+pridáme svoj súkromny kľuč. Ten tam ostane pridaný uz nastálo až kým
+Pageant nevypneme(nereštartujeme počítač/..) . Teraz už len stačí sa
+pripojiť cez Putty na server, a kľúč by sa ma automaticky použiť. Ak
+máme svoj súkromný kľuč pridaný na všetkých svojich serveroch, tak sa
+budeme môcť pripojiť na všetky SSH servery bez hesla vďaka tomuto
+jednému pridaniu do Pageant.</p>
+<h4 id="nefunguje-to">Nefunguje to..</h4>
+<p>Nepripájajte sa na užívateľa &quot;root&quot; cez Putty, nikdy. Na serveri
+existuje log kde sú záznamy o všetkých prihláseniach cez SSH na server,
+tam možno nájdeš odpoveď prečo ti to nejde. Zavisí od Linuxovej
+distribúcie kde ten log je. Napríklad &quot;/var/log/auth&quot; .</p>
 
   </div>
 </body>

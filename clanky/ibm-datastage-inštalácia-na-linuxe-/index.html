@@ -34,15 +34,62 @@
     <span>Jan 1, 0001</span>
     Návod na inštaláciu IBM IS Datastage na CentOS.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Pridáme skupinu</p>
+<blockquote>
+<p>groupadd dsodb\</p>
+</blockquote>
+<p>Vytvoríme užívateľov</p>
+<blockquote>
+<p>useradd -g dsodb -m dsodb;<br>
+useradd -g db2fenc1 -m db2fenc1;<br>
+useradd -g db2inst1 -m db2inst1;<br>
+useradd -g srduser -m srduser;<br>
+useradd -g iauser -m iauser;<br>
+useradd -g xmetasr -m xmetasr;<br>
+useradd -g dsadm -m dsadm;<br>
+useradd -g xmeta -m xmeta;<br>
+useradd -g dsodb -m dsodb;\</p>
+</blockquote>
+<p>Nainštalujeme balík nástrojov</p>
+<blockquote>
+<p>yum groupinstall &quot;Development Tools&quot;\</p>
+</blockquote>
+<p>Nainštalujeme knižnice</p>
+<blockquote>
+<p>yum install -y libXp libXtst glibc libXp libXau libXext libX11 libxcb
+libXmu nss compat-libstdc* glibc libXp libXtst</p>
+</blockquote>
+<p>Nainštalujeme daľšie knižnice</p>
+<blockquote>
+<p>yum install -y glibc libXp libXau libXext libX11 libxcb libXmu
+nss-softokn-freebl- bc netstat lsof compat libaio ed sed grep fgrep
+libgcc libpam.so.0 net ksh libaio.so.1 libpam.so PAM</p>
+</blockquote>
+<p>Pridáme do súboru /etc/sysctl.conf</p>
+<blockquote>
+<p>kernel.msgmax=65536<br>
+kernel.msgmnb=65536<br>
+kernel.sem=250 256000321024\</p>
+</blockquote>
+<p>Pridáme do súboru <em>/etc/security/limits.conf</em></p>
+<blockquote>
+<p>xmeta soft nofile 25000<br>
+xmeta hard nofile 25000<br>
+db2fenc1 soft nofile 25000<br>
+db2fenc1 hard nofile 25000<br>
+db2inst1 soft nofile 25000<br>
+db2inst1 hard nofile 25000<br>
+iauser soft nofile 25000<br>
+iauser hard nofile 25000\</p>
+</blockquote>
+<p>Nastavíme počet otvorených súborov</p>
+<blockquote>
+<p>ulimit -n 100000</p>
+</blockquote>
+<p>Spustíme inštaláciu</p>
+<blockquote>
+<p>./setup -https 8446 -force -verbose</p>
+</blockquote>
 
   </div>
 </body>

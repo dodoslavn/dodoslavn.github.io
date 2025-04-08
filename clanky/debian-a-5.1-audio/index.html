@@ -34,10 +34,15 @@
     <span>Jan 1, 0001</span>
     Ako spraviť priestorový zvuk na Debian-e.
 
-    <p>V súbore: /etc/pulse/daemon.conf nastaviť na &ldquo;yes&rdquo; pre prehrávanie stereo zvuku aj do ostatných kanálov:</p>
-<!-- raw HTML omitted -->
+    <p>V súbore: /etc/pulse/daemon.conf nastaviť na &quot;yes&quot; pre prehrávanie
+stereo zvuku aj do ostatných kanálov:</p>
+<blockquote>
+<p>enable-lfe-remixing = yes</p>
+</blockquote>
 <p>V rovnakom súbore nastavit počet kanálov:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>default-sample-channels=6</p>
+</blockquote>
 
   </div>
 </body>

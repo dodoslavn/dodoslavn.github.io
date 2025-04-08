@@ -34,26 +34,103 @@
     <span>Jan 1, 0001</span>
     Malý manuál a pár príkazov na databázový systém DB2.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Spustí samotný DB server:</p>
+<blockquote>
+<p>db2start</p>
+</blockquote>
+<p>Vypne DB server:</p>
+<blockquote>
+<p>db2stop</p>
+</blockquote>
+<p>Zobrazí zoznam databáz:</p>
+<blockquote>
+<p>db2 list db directory</p>
+</blockquote>
+<p>Zobrazí zoznam práve aktívnych databáz:</p>
+<blockquote>
+<p>db2 list active databases</p>
+</blockquote>
+<p>Deaktivuje databázu:</p>
+<blockquote>
+<p>db2 deactivate db databaza1</p>
+</blockquote>
+<p>Aktivuje databázu:</p>
+<blockquote>
+<p>db2 activate db databaza1</p>
+</blockquote>
+<p>Zobrazí aktívne pripojenia do všetkých databáz:</p>
+<blockquote>
+<p>db2 list applications</p>
+</blockquote>
+<p>Zobrazí aktívne pripojenia do databáze:</p>
+<blockquote>
+<p>db2 list applications for DB databaza1</p>
+</blockquote>
+<p>Zobrazí práve bežiace utility, napríklad prebiehajúca záloha alebo
+obnovenie:</p>
+<blockquote>
+<p>db2 list utilities</p>
+</blockquote>
+<p>Rovnako ako v predošlom prípade, akorát detailne:</p>
+<blockquote>
+<p>db2 list utilities show detail</p>
+</blockquote>
+<p>Ukončí všetky pripojenia:</p>
+<blockquote>
+<p>db2 force applications all</p>
+</blockquote>
+<p>Vytvorí zálohu databáze, a skomprimuje ju:</p>
+<blockquote>
+<p>db2 backup db databaza1 to /data/backup/ compress</p>
+</blockquote>
+<p>Vytvorí online zálohu databáze, a skomprimuje ju:</p>
+<blockquote>
+<p>db2 backup db databaza1 online to /data/backup/ compress</p>
+</blockquote>
+<p>DB2 príkazy ale fungujú iba pod DB2 užívateľom, ak chceme aby fungovali
+aj po iným, je potreba načítať profil:</p>
+<blockquote>
+<p>/home/db2_user/sqllib/db2profile</p>
+</blockquote>
+<p>Príkaz na pripojenie:</p>
+<blockquote>
+<p>db2 connect to databaza1 user db2_user using db2_heslo</p>
+</blockquote>
+<p>Zobrazí konfiguráciu databáze:</p>
+<blockquote>
+<p>db2 list databaza1 cfg</p>
+</blockquote>
+<p>Zobrazí skupiny:</p>
+<blockquote>
+<p>db2 &quot;select ROLENAME from syscat.roles&quot;</p>
+</blockquote>
+<p>Pridá skupinu užívateľovi:</p>
+<blockquote>
+<p>db2 &quot;GRANT ROLE WRITE TO uzivatel1&quot;</p>
+</blockquote>
+<p>Odobere skupinu užívateľovi:</p>
+<blockquote>
+<p>db2 &quot;REVOKE ROLE FROM uzivatel1&quot;</p>
+</blockquote>
+<h4 id="rozdiely-medzi-typami-zálohy">Rozdiely medzi typami zálohy:</h4>
+<p>A <strong>full backup image</strong>. This is the building block of any recovery
+strategy, without a full backup image, you can't start to restore. If
+the backup is taken online, you require the logs of all transactions
+that transpired while the backup was taking place. Restore a full
+backup, replay the logs of all transactions since the backup, and your
+recovery is complete.</p>
+<p>An <strong>incremental backup</strong>. This includes all changes since the last full
+backup. Restore a full backup, restore the incremental backup, replay
+the logs since the incremental backup, and your recovery is complete.</p>
+<p>A <strong>delta backup</strong>. This includes all changes since the last backup of
+any kind. If the last backup was a full backup image, it and the delta
+provide the most complete backup. If a delta is preceded by an
+incremental backup image, you need the delta, the incremental backup,
+and the full backup image on which the incremental is based. If a delta
+is preceded by one or more deltas, you need all deltas until you reach
+an incremental backup or a full backup image.</p>
+<p>The logs. The logs contain all transactions since the last backup you
+were able to restore.</p>
 
   </div>
 </body>

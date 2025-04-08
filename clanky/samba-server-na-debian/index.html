@@ -35,9 +35,22 @@
     Ako nainštalovať službu pre zdielanie súborov z Linuxu na Windows pomocou Samba . 
 
     <p>Porty to používa 139 a 445.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<h4 id="inštalácia">Inštalácia</h4>
+<blockquote>
+<p>apt install samba</p>
+</blockquote>
+<h4 id="konfigurácia">Konfigurácia</h4>
+<blockquote>
+<p>vi /etc/samba/smb.conf</p>
+</blockquote>
+<h4 id="príklad">Príklad</h4>
+<blockquote>
+<p>[share]<br>
+read only = no<br>
+path = /data<br>
+guest ok = yes<br>
+browsable = yes\</p>
+</blockquote>
 
   </div>
 </body>

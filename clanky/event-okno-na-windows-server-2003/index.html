@@ -34,11 +34,36 @@
     <span>Jan 1, 0001</span>
     Ak ste si pred chvíľou nainštalovali Windows Server 2003 a hľadáte riešenie na vypnutie tzv. Event okna ktorá sa vás neustále pýta otravné a takmer nevyužiteľné otázky ako: prečo vypínate počítač, tak tento návod je práve pre vás!
 
-    <p>Celé je to veľmi jednoduchá a rýchla vec, takže bez zbytočných obkecov ideme na to!<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<p>Takže najskôr si otvoríme takzvaný:</p>
-<!-- raw HTML omitted -->
+    <p>Celé je to veľmi jednoduchá a rýchla vec, takže bez zbytočných obkecov
+ideme na to!<br>
+<br>
+Takže najskôr si otvoríme takzvaný:</p>
+<blockquote>
+<p>Group Policy Object Editor</p>
+</blockquote>
 <p>Ten spustíme tak že pôjdeme na:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>START -&gt; RUN / SPUSTIT</p>
+</blockquote>
+<p>a tam napíšeme:</p>
+<blockquote>
+<p>gpedit.msc</p>
+</blockquote>
+<p>..a potvrdíme. Objavilo sa nám okno, a teraz na paneli (na ľavej strane)
+sa budeme postupne preklikávať:</p>
+<blockquote>
+<p>Computer Configuration -&gt; Administrative Templates -&gt; System</p>
+</blockquote>
+<p>Na pravej strane máme zoznam položiek, v kt. musíme nájsť:</p>
+<blockquote>
+<p>Display Shutdown Event Tracker</p>
+</blockquote>
+<p>Po dvoj-kliku na túto položku sa nám otvorí okno v ktorom označíme:</p>
+<blockquote>
+<p>Disabled</p>
+</blockquote>
+<p>Celé to potvrdíme tlačítkom OK a už pri vypínaní počítača žiadne dalšie
+okno nebude.</p>
 
   </div>
 </body>

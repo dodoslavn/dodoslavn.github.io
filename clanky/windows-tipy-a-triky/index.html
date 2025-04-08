@@ -34,9 +34,22 @@
     <span>Jan 1, 0001</span>
     Nejaké zaujímavosti zo sveta Windows
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Nastavenie premennej v rgistroch cez Command Line:</p>
+<blockquote>
+<p>&quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\LanmanServer\Parameters&quot;
+/f /v &quot;SMB1&quot; /t REG_DWORD /d &quot;1&quot;</p>
+</blockquote>
+<p>Nastavenie premennej v rgistroch cez PowerShell:</p>
+<blockquote>
+<p>Set-ItemProperty -Path
+&quot;HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters&quot;
+SMB1 -Type DWORD -Value 1 -Force</p>
+</blockquote>
+<p>Ako spustiť PowerShell skript z Command Line:</p>
+<blockquote>
+<p>C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File
+C:\Windows\moj_skript.ps1</p>
+</blockquote>
 
   </div>
 </body>

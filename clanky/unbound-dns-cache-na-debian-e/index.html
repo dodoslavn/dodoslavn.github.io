@@ -34,8 +34,57 @@
     <span>Jan 1, 0001</span>
     Inštalácia DNS cache - Unbound, na Debian
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Ako nainštalovať DNS-cache server na Debian, konkrétne Unbound.</p>
+<h4 id="inštalácia">Inštalácia</h4>
+<blockquote>
+<p>apt-get install bind9-utils dnsutils net-tools apt-get install unbound</p>
+</blockquote>
+<h4 id="konfigurácia">Konfigurácia</h4>
+<blockquote>
+<p>server:<br>
+# the working directory.<br>
+directory: &quot;/etc/unbound&quot;<br>
+<br>
+# run as the unbound user<br>
+username: unbound<br>
+<br>
+verbosity: 2 # uncomment and increase to get more logging.<br>
+<br>
+# listen on all interfaces, answer queries from the local subnet.<br>
+interface: 0.0.0.0<br>
+# comment out the following line if your system doesn't have IPv6.<br>
+interface: ::0<br>
+<br>
+# perform prefetching of almost expired DNS cache entries.<br>
+prefetch: yes<br>
+<br>
+access-control: 192.168.0.0/24 allow<br>
+access-control: 127.0.0.1/24 allow<br>
+access-control: 2001:DB8::/64 allow<br>
+<br>
+# hide server info from clients<br>
+hide-identity: yes<br>
+hide-version: yes<br>
+<br>
+# log-queries: no<br>
+logfile: /dev/null<br>
+<br>
+interface-automatic: yes<br>
+remote-control:<br>
+# Enable remote control with unbound-control(8) here.<br>
+control-enable: no<br>
+<br>
+# what interfaces are listened to for remote control.<br>
+# give 0.0.0.0 and ::0 to listen to all interfaces.<br>
+# set to an absolute path to use a unix local name pipe,
+certificates<br>
+# are not used for that, so key and cert files need not be present.<br>
+control-interface: 127.0.0.1<br>
+# control-interface: ::1<br>
+<br>
+# port number for remote control operations.<br>
+control-port: 8953\</p>
+</blockquote>
 
   </div>
 </body>

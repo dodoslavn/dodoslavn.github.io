@@ -34,48 +34,48 @@
     <span>Jan 1, 0001</span>
     Virtualbox podporuje niekoľko druhov sietových zapojení adaptéru. Každý typ siete sa chová inak. Tu je popis jak s nimi žiť.
 
-    <p>Typ sietového adaptéru: Host-only Adapter<!-- raw HTML omitted -->
-VM môžu medzi sebou, a môžu Host strojom<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-Príklad názvu siete: vboxnet0<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-Typ sietového adaptéru: NAT Network<!-- raw HTML omitted -->
-VM môžu medzi sebou, ale  nemôžu Host strojom hned. Musí sa spraviť NAT.<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-Príklad názvu siete: <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-Nastavenie internej siete<!-- raw HTML omitted -->
-VM=NazovVirtualky<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-VBoxManage modifyvm $VM &ndash;nic1 intnet <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-VBoxManage modifyvm $VM &ndash;intnet1 &ldquo;nazov_internej_siete&rdquo;<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-VBoxManage modifyvm $VM &ndash;natpf1 delete &ldquo;guestssh&rdquo;<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-VBoxManage modifyvm $VM &ndash;natpf1 &ldquo;guestssh,tcp,,2222,10.0.2.19,22&rdquo;<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<a href="http://www.itzgeek.com/how-tos/mini-howtos/how-to-install-virtualbox-extension.html">http://www.itzgeek.com/how-tos/mini-howtos/how-to-install-virtualbox-extension.html</a><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<a href="http://www.howopensource.com/2011/06/how-to-use-virtualbox-in-terminal-commandline/">http://www.howopensource.com/2011/06/how-to-use-virtualbox-in-terminal-commandline/</a><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<a href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=58560">https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=58560</a><!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<a href="https://www.virtualbox.org/manual/ch06.html">https://www.virtualbox.org/manual/ch06.html</a><!-- raw HTML omitted --></p>
+    <p>Typ sietového adaptéru: Host-only Adapter<br>
+VM môžu medzi sebou, a môžu Host strojom<br>
+<br>
+Príklad názvu siete: vboxnet0<br>
+<br>
+Typ sietového adaptéru: NAT Network<br>
+VM môžu medzi sebou, ale nemôžu Host strojom hned. Musí sa spraviť NAT.<br>
+<br>
+Príklad názvu siete:<br>
+<br>
+Nastavenie internej siete<br>
+VM=NazovVirtualky<br>
+<br>
+VBoxManage modifyvm $VM --nic1 intnet<br>
+<br>
+VBoxManage modifyvm $VM --intnet1 &quot;nazov_internej_siete&quot;<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+VBoxManage modifyvm $VM --natpf1 delete &quot;guestssh&quot;<br>
+<br>
+VBoxManage modifyvm $VM --natpf1 &quot;guestssh,tcp,,2222,10.0.2.19,22&quot;<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a href="http://www.itzgeek.com/how-tos/mini-howtos/how-to-install-virtualbox-extension.html">http://www.itzgeek.com/how-tos/mini-howtos/how-to-install-virtualbox-extension.html</a><br>
+<br>
+<br>
+<br>
+<a href="http://www.howopensource.com/2011/06/how-to-use-virtualbox-in-terminal-commandline/">http://www.howopensource.com/2011/06/how-to-use-virtualbox-in-terminal-commandline/</a><br>
+<br>
+<br>
+<br>
+<a href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=58560">https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=58560</a><br>
+<br>
+<br>
+<br>
+<a href="https://www.virtualbox.org/manual/ch06.html">https://www.virtualbox.org/manual/ch06.html</a>\</p>
 
   </div>
 </body>

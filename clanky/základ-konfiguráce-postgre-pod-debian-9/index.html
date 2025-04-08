@@ -34,19 +34,67 @@
     <span>Jan 1, 0001</span>
     Inštalácia a základné nastavenia PostgreSQL.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Samotná inštalácia Postgre:</p>
+<blockquote>
+<p>apt install postgresql</p>
+</blockquote>
+<p>Týmto príkazom vstúpime do príkazovej riadky Postgre ako užívateľ
+postgres ktorý má najväčšie oprávnenie, no dá sa použiť v základnom
+nastavení len z príkazovej riadky a z OS účtu postgres:</p>
+<blockquote>
+<p>su - postgres -c psql</p>
+</blockquote>
+<p>Predošlí príkaz využijeme a vytvoríme si nového užívateľa pre nejakú
+aplikáciu:</p>
+<blockquote>
+<p>su - postgres -c &quot;psql -c \&quot;create user uzivatel with encrypted
+password 'heslo';\&quot;&quot;</p>
+</blockquote>
+<p>Pre pokračovanie, musíme vytvoriť ešte databázu k tomuto užívateľovi:</p>
+<blockquote>
+<p>su - postgres -c &quot;psql -c \&quot;create database databaza;\&quot;&quot;</p>
+</blockquote>
+<p>Pridáme ešte oprávnenie:</p>
+<blockquote>
+<p>su - postgres -c &quot;psql -c \&quot;grant all privileges on database
+databaza to uzivatel;\&quot;&quot;</p>
+</blockquote>
+<p>Teraz sa môžme pripojiť cez príkazovú riadku, pokiaľ máme ale základnú
+konfiguráciu, musíme upresniť ako, a to sposobom adresi:</p>
+<blockquote>
+<p>psql -U pentaho1 -h localhost -W</p>
+</blockquote>
+<p>Môžme doinštalovať aj PHPPgAdmin:</p>
+<blockquote>
+<p>apt install phppgadmin</p>
+</blockquote>
+<p>Z dôvodu že postgres účet použiť nemôžeme, vytvoríme nového užívateľa
+phpgpadmin ktorý bude mať oprávnenie na všetko:</p>
+<blockquote>
+<p>su - postgres -c &quot;psql -c \&quot;create user phppgadmin with superuser
+encrypted password 'phppgadmin';\&quot;&quot;</p>
+</blockquote>
+<p>A ešte databáza k nemu:</p>
+<blockquote>
+<p>su - postgres -c &quot;psql -c \&quot;create database phppgadmin;\&quot;&quot;</p>
+</blockquote>
+<p>Spôsob ako spraviť zálohu databáze:</p>
+<blockquote>
+<p>pg_dump --port=15432 -U username database &gt; filename</p>
+</blockquote>
+<p>Ak máme problém s načítaním stránky s hláškou ako:</p>
+<blockquote>
+<p>Forbidden<br>
+You don't have permission to access /phppgadmin/ on this server.</p>
+</blockquote>
+<p>Môžme skúsiť nastaviť v:</p>
+<blockquote>
+<p>/etc/apache2/conf-available/phppgadmin.conf</p>
+</blockquote>
+<blockquote>
+<p>#Require local directive<br>
+Allow from all</p>
+</blockquote>
 
   </div>
 </body>

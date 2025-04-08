@@ -34,12 +34,87 @@
     <span>Jan 1, 0001</span>
     Inštalácia ISC DHCP servera na Debian, aj s konfigom na PXE.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Krátky návod ako nainštalovať DHCP server na Debian. Je potom už
+jednoduché dorobiť boot-ovanie po sieti cez PXE.</p>
+<h4 id="inštalácia">Inštalácia</h4>
+<blockquote>
+<p>apt install isc-dhcp-server</p>
+</blockquote>
+<h4 id="konfigurácia">Konfigurácia</h4>
+<blockquote>
+<p># option definitions common to all supported networks...<br>
+option domain-name &quot;fordo.sk&quot;;<br>
+option domain-name-servers ns1.example.org, ns2.example.org;<br>
+<br>
+default-lease-time 600;<br>
+max-lease-time 7200;<br>
+<br>
+# The ddns-updates-style parameter controls whether or not the server
+will<br>
+# attempt to do a DNS update when a lease is confirmed. We default to
+the<br>
+# behavior of the version 2 packages ('none', since DHCP v2
+didn't<br>
+# have support for DDNS.)<br>
+ddns-update-style none;<br>
+<br>
+# If this DHCP server is the official DHCP server for the local<br>
+# network, the authoritative directive should be uncommented.<br>
+authoritative;<br>
+<br>
+# Use this to send dhcp log messages to a different log file (you
+also<br>
+# have to hack syslog.conf to complete the redirection).<br>
+#log-facility local7;<br>
+<br>
+option domain-name-servers 192.168.0.2, 8.8.8.8;<br>
+<br>
+subnet 192.168.0.0 netmask 255.255.255.0 {<br>
+range 192.168.0.100 192.168.0.200;<br>
+option subnet-mask 255.255.255.0;<br>
+option broadcast-address 192.168.0.255;<br>
+option routers 192.168.0.1;<br>
+option domain-name-servers 192.168.0.2, 8.8.8.8;<br>
+next-server 192.168.0.2;<br>
+option bootfile-name &quot;pxelinux.0&quot;;<br>
+}<br>
+<br>
+allow booting;<br>
+<br>
+group {<br>
+next-server 192.168.0.2;<br>
+host tftpclient {<br>
+filename &quot;pxelinux.0&quot;;<br>
+}<br>
+}<br>
+<br>
+host AW1_am4_asus {<br>
+hardware ethernet f0:2f:74:19:ff:ff;<br>
+fixed-address 192.168.0.10;<br>
+}<br>
+<br>
+<br>
+nastavenie na ktorom interface ma fungovat</p>
+<blockquote>
+<p>vi /etc/default/isc-dhcp-server</p>
+</blockquote>
+<p><br>
+# Show that we want to be the only DHCP server in this network:<br>
+authoritative;\</p>
+</blockquote>
+<h4 id="inštalácia-trivial-ftp-servera-pre-pxe">Inštalácia Trivial FTP servera pre PXE</h4>
+<blockquote>
+<p>apt install tftpd-hpa</p>
+</blockquote>
+<h4 id="konfigurácia-1">Konfigurácia</h4>
+<blockquote>
+<p># /etc/default/tftpd-hpa<br>
+<br>
+TFTP_USERNAME=&quot;tftp&quot;<br>
+TFTP_DIRECTORY=&quot;/mnt/tftp&quot;<br>
+TFTP_ADDRESS=&quot;:69&quot;<br>
+TFTP_OPTIONS=&quot;--secure&quot;\</p>
+</blockquote>
 
   </div>
 </body>

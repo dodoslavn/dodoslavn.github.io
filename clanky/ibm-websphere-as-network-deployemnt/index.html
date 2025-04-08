@@ -34,27 +34,107 @@
     <span>Jan 1, 0001</span>
     Čo to je WebSphere a ako funguje. Pár príkazov s nejakým tým trikom.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>mkdir /tmp/SUPPLEMENTS</p>
-<p>mv WAS-SUPPL.zip /tmp/SUPPLEMENTS</p>
-<p>unzip /tmp/SUPPLEMENTS/WAS-SUPPL.zip</p>
-<p>cd /opt/IBM/InstallationManager/eclipse/tools/</p>
-<p>./imcl install com.ibm.websphere.IHS.v90 -repositories /tmp/SUPPLEMENTS/repository.config –acceptLicense -installationDirectory /opt/IBM/HTTPServer -log IHS.log -showVerboseProgress -properties user.ihs.httpPort=8108</p>
-<p>./imcl install com.ibm.websphere.PLG.v90 -repositories /tmp/SUPPLEMENTS/repository.config –acceptLicense -installationDirectory /opt/IBM/HTTPPlugins -log PLG.log -showVerboseProgress</p>
-<!-- raw HTML omitted -->
-<p>./manageprofiles.sh -create -templatePath /opt/IBM/WebSphere/AppServer/profileTemplates/dmgr -hostName prdmdmapp02 -cellName MDMCell01 -profileName MDM_DmgrProfile -profilePath /opt/IBM/WebSphere/AppServer/profiles/MDM_DmgrProfile -enableAdminSecurity true -adminUserName wasadmin –adminPassword wasadmin_pass</p>
+    <h4 id="ibm-installation-manager">IBM Installation Manager:</h4>
+<p>Vylistovanie balikov v repozitari:</p>
+<blockquote>
+<p>./imcl listAvailablePackages -repositories
+/cesta/k/zlozke/s/repository.conf/</p>
+</blockquote>
+<h4 id="ako-získať-login-do-websphere-dmgr">Ako získať login do WebSphere DMGR:</h4>
+<p>Príklad cesty k súboru:</p>
+<blockquote>
+<p>find /opt/IBM/WebSphere* -name soap.client.props | grep -v eTempl |
+grep -v \/temp\/ | grep \/profiles\/ | grep -i dmgr</p>
+</blockquote>
+<p>Meno a heslo by tam malo byť, heslo dešifrujeme pomocou:</p>
+<blockquote>
+<p><a href="http://strelitzia.net/wasXORdecoder/wasXORdecoder.html">http://strelitzia.net/wasXORdecoder/wasXORdecoder.html</a></p>
+</blockquote>
+<h4 id="ako-získať-port-na-ktorom-beži-dmgr">Ako získať port na ktorom beži DMGR:</h4>
+<p>Príklad cesty k súboru. Je to ten v DMGR profile:</p>
+<blockquote>
+<p>find /opt/IBM/WebSphere* -name serverindex.xml | grep -v eTemp |
+grep -v templates | grep -v workspace | grep -i dmgr</p>
+</blockquote>
+<h4 id="gui-na-menezovanie-profilov">GUI na menezovanie profilov:</h4>
+<blockquote>
+<p>/opt/IBM/WebSphere85/AppServer/bin/ProfileManagement/pmt.sh</p>
+</blockquote>
+<h4 id="instalacia">Instalacia:</h4>
+<p>WAS (download):</p>
+<p>Link:</p>
+<blockquote>
+<p><a href="https://www-112.ibm.com/software/howtobuy/passportadvantage/paocustomer/sdma/SDMA?P0=DOWNLOAD_DISPLAY_ITEM_HTTP&amp;downloadMethod=HTTP&amp;DOWNLOAD_SERVER_ID=3&amp;FIELD_SEARCH_TYPE=2&amp;searchVal=CJ16RML&amp;dataSelectedInfor=CND1LML">https://www-112.ibm.com/software/howtobuy/passportadvantage/paocustomer/sdma/SDMA?P0=DOWNLOAD_DISPLAY_ITEM_HTTP&amp;downloadMethod=HTTP&amp;DOWNLOAD_SERVER_ID=3&amp;FIELD_SEARCH_TYPE=2&amp;searchVal=CJ16RML&amp;dataSelectedInfor=CND1LML</a></p>
+</blockquote>
+<p>WAS (install):</p>
+<p>Documentation:</p>
+<p>Procedure:</p>
+<blockquote>
+<p>sudo su - root<br>
+<br>
+mkdir /tmp/WAS<br>
+<br>
+mv WAS-XXX.zip /tmp/WAS<br>
+<br>
+unzip /tmp/WAS/WAS-XXX.zip<br>
+<br>
+cd /opt/IBM/InstallationManager/eclipse/tools<br>
+<br>
+./imcl install com.ibm.websphere.ND.v90xxx -repositories
+/tmp/WAS/repository.config -acceptLicense -installationDirectory
+/opt/IBM/WebSphere/AppServer -showProgress</p>
+</blockquote>
+<h4 id="dmgr">dmgr:</h4>
+<p>sudo su - root<br>
+cd /opt/IBM/WebSphere/AppServer/bin/<br>
+<br>
+./manageprofiles.sh -create<br>
+-templatePath /opt/IBM/WebSphere/AppServer/profileTemplates/dmgr<br>
+-hostName prdmdmapp02<br>
+-cellName MDMCell01<br>
+-profileName MDM_DmgrProfile<br>
+-profilePath /opt/IBM/WebSphere/AppServer/profiles/MDM_DmgrProfile<br>
+-enableAdminSecurity true<br>
+-adminUserName wasadmin<br>
+&ndash;adminPassword wasadmin_pass</p>
+<h4 id="node">node:</h4>
+<p>sudo su - root<br>
+cd /opt/IBM/WebSphere/AppServer/bin/<br>
+./manageprofiles.sh -create<br>
+-templatePath /opt/IBM/WebSphere/AppServer/profileTemplates/managed<br>
+-hostName prdmdmapp02<br>
+-nodeName MDM_Node1<br>
+-profileName MDM_Node1profile<br>
+-profilePath /elixas/IBM/WebSphere/AppServer/profiles/MDM_Node1profile<br>
+-dmgrHost prdmdmapp02<br>
+-dmgrPort 887x<br>
+-dmgrAdminUserName wasadmin<br>
+&ndash;dmgrAdminPassword wasadmin_pass<br>
+-isDefault</p>
+<h4 id="suppme">suppme:</h4>
+<p>sudo su - root mkdir /tmp/SUPPLEMENTS mv WAS-SUPPL.zip /tmp/SUPPLEMENTS
+unzip /tmp/SUPPLEMENTS/WAS-SUPPL.zip cd
+/opt/IBM/InstallationManager/eclipse/tools/ ./imcl install
+com.ibm.websphere.IHS.v90 -repositories
+/tmp/SUPPLEMENTS/repository.config &ndash;acceptLicense
+-installationDirectory /opt/IBM/HTTPServer -log IHS.log
+-showVerboseProgress -properties user.ihs.httpPort=8108 ./imcl install
+com.ibm.websphere.PLG.v90 -repositories
+/tmp/SUPPLEMENTS/repository.config &ndash;acceptLicense
+-installationDirectory /opt/IBM/HTTPPlugins -log PLG.log
+-showVerboseProgress\</p>
+<h4 id="zmazanie-profilu">Zmazanie profilu:</h4>
+<blockquote>
+<p>./bin/manageprofiles.sh -delete -profileName profile_name<br>
+./bin/manageprofiles.sh -validateAndUpdateRegistry<br>
+./bin/manageprofiles.sh -listProfiles\</p>
+</blockquote>
+<p>./manageprofiles.sh -create -templatePath
+/opt/IBM/WebSphere/AppServer/profileTemplates/dmgr -hostName prdmdmapp02
+-cellName MDMCell01 -profileName MDM_DmgrProfile -profilePath
+/opt/IBM/WebSphere/AppServer/profiles/MDM_DmgrProfile
+-enableAdminSecurity true -adminUserName wasadmin &ndash;adminPassword
+wasadmin_pass</p>
 
   </div>
 </body>

@@ -35,20 +35,48 @@
     Ako správne nainštalovať stahovač YouTube videí, youtube-dl. Na Debian 8 (jessie) sa to musí robiť trochu inak z dôvodu že v repozitároch ma starú verziu.
 
     <p>Inštalácia:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>sudo apt install youtube-dl</p>
+</blockquote>
 <p>Kontrola nainštalovanej verzie:</p>
-<!-- raw HTML omitted -->
-<p>V repozitároch môže byť ale často verzia stará, preto existuej alternatívny spôsob:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>youtube-dl --version</p>
+</blockquote>
+<p>V repozitároch môže byť ale často verzia stará, preto existuej
+alternatívny spôsob:</p>
+<blockquote>
+<p>wget -O - <a href="https://yt-dl.org/downloads/latest/youtube-dl">https://yt-dl.org/downloads/latest/youtube-dl</a> | sudo tee
+/usr/sbin/youtube-dl &gt;/dev/null sudo chmod a+x /usr/sbin/youtube-dl</p>
+</blockquote>
 <p>Skontrolujeme že máme novšiu verziu:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<blockquote>
+<p>/usr/sbin/youtube-dl --version</p>
+</blockquote>
+<h4 id="pár-príkladov-použitia">Pár príkladov použitia:</h4>
 <p>Príkaz na stiahnute a automatické prekonverovanie YouTUbe videa do mp3</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>youtube-dl --extract-audio --audio-quality 0 --audio-format mp3 -ti
+<a href="https://www.youtube.com/watch?v=XXX">https://www.youtube.com/watch?v=XXX</a></p>
+</blockquote>
 <p>Ziskanie nazvov videi z playlistu:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<blockquote>
+<p>youtube-dl --ignore-errors -o &quot;%(title)s.%(ext)s&quot; --get-filename
+<a href="https://www.youtube.com/playlist?list=XXX">https://www.youtube.com/playlist?list=XXX</a></p>
+</blockquote>
+<p>Ine:</p>
+<blockquote>
+<p>youtube-dl -o
+&quot;$PATH_DL%(uploader)s/mp4/%(playlist)s/%(title)s.%(ext)s&quot;
+--download-archive archive.txt --format best --ignore-errors
+--continue --no-overwrites --verbose -a
+$PATH_BASE&quot;&quot;links/playlists.csv</p>
+</blockquote>
+<blockquote>
+<p>youtube-dl -o
+&quot;$PATH_DL%(uploader)s/mp4/%(playlist)s/%(title)s.%(ext)s&quot;
+--download-archive archive.txt --format best --ignore-errors
+--continue --no-overwrites --verbose ytuser:MrSuicideSheep</p>
+</blockquote>
 
   </div>
 </body>

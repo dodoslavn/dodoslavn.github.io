@@ -34,10 +34,25 @@
     <span>Jan 1, 0001</span>
     Základné príkazy na ovládanie Edge LoadBalanceru.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Vypnutie:</p>
+<blockquote>
+<p>dscontrol manager stop<br>
+dscontrol executor stop<br>
+dsserver stop</p>
+</blockquote>
+<p>Zapnutie:</p>
+<blockquote>
+<p>dsserver start</p>
+</blockquote>
+<p>Kontrola:</p>
+<blockquote>
+<p>dscontrol manager report<br>
+dscontrol highavailability status</p>
+</blockquote>
+<p>Prepnutie zo StandBy do Primary:</p>
+<blockquote>
+<p>dscontrol highavailability takeover</p>
+</blockquote>
 
   </div>
 </body>

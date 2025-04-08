@@ -34,7 +34,13 @@
     <span>Jan 1, 0001</span>
     Návod ako obnoviť certifikáty pre repozitáre na Ubuntu.
 
-    <!-- raw HTML omitted -->
+    <blockquote>
+<p>sudo apt-key list | \\
+grep &quot;expired: &quot; | \\
+sed -ne 's|pub .*/\([^ ]*\) .*|\1|gp' | \\
+xargs -n1 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80
+--recv-keys</p>
+</blockquote>
 
   </div>
 </body>

@@ -35,23 +35,47 @@
     Tu si ukážeme ako nainštalovať torrent klient Transmission na Debian, ktorý má GUI vo forme webovej stránky, na ktorú sa dá pristupovať zdialene.
 
     <p>Nainštalujeme samotný Transmission:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>apt install transmission-cli transmission-common transmission-daemon</p>
+</blockquote>
 <p>Môžme sa pozrieť že beží:</p>
-<!-- raw HTML omitted -->
-<p>GUI je vo forme webovej stránky, štandartne prístupná iba z localhost a to beží na:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>systemctl status transmission-daemon.service</p>
+</blockquote>
+<p>GUI je vo forme webovej stránky, štandartne prístupná iba z localhost a
+to beží na:</p>
+<blockquote>
+<p>http://localhost:9091</p>
+</blockquote>
 <p>Prihlasovacie meno je rovnaké ako heslo:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>transmission</p>
+</blockquote>
 <p>Pokiaľ chceme niečo konfigurovať, musíme celý klient najskôr vypnúť:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>systemctl stop transmission-daemon.service</p>
+</blockquote>
 <p>Konfiguráciu nastavíme spôsobom:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>sudo vi /etc/transmission-daemon/settings.json</p>
+</blockquote>
 <p>Zmena hesla do GUI prebiehe spôsobom že namiesto hashu ako je tento:</p>
-<!-- raw HTML omitted -->
-<p>Povolenie prístupu z iných adries povolíme v rámci jednej z premenných ako sú:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>&quot;rpc-password&quot;:
+&quot;{93ddee5728888a0568c7d151cbf541fe738b7674mJ8y6YJi&quot;,</p>
+</blockquote>
+<p>do uvodzoviek zadáme naše nové heslo v normálnej forme, a po štarte
+klienta sa heslo prepíše automaticky na zahashovanú verziu. Povolenie
+prístupu z iných adries povolíme v rámci jednej z premenných ako sú:</p>
+<blockquote>
+<p>&quot;rpc-whitelist&quot;: &quot;127.0.0.1, 192.168.1.*&quot;,<br>
+&quot;rpc-whitelist-enabled&quot;: true</p>
+</blockquote>
 <p>Pre kompletne odinštalovanie aj so zlou konfiguráciou zadáme:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>sudo apt-get --purge remove transmission-cli transmission-common
+transmission-daemon</p>
+</blockquote>
 
   </div>
 </body>

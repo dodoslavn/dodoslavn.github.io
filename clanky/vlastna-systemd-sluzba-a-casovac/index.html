@@ -34,33 +34,26 @@
     <span>Jan 1, 0001</span>
     
     <p>Type=oneshot → Runs the command and does not restart after exit.
-RemainAfterExit=yes → Marks the service as active even after the script finishes.</p>
-<!-- raw HTML omitted -->
-<p>[Service]
-ExecStart=/usr/local/bin/setup.sh
-Type=oneshot
-RemainAfterExit=yes</p>
-<p>[Install]
-WantedBy=multi-user.target</p>
-<!-- raw HTML omitted -->
+RemainAfterExit=yes → Marks the service as active even after the script
+finishes.</p>
+<blockquote>
+<p>[Unit] Description=One-Time Setup Script After=network.target
+[Service] ExecStart=/usr/local/bin/setup.sh Type=oneshot
+RemainAfterExit=yes [Install] WantedBy=multi-user.target</p>
+</blockquote>
 <p>Type=simple → Assumes the process runs indefinitely in the foreground.
 Restart=always → If the process crashes, systemd will restart it.</p>
-<!-- raw HTML omitted -->
-<p>[Service]
-ExecStart=/usr/bin/python3 -m http.server 8080
-Restart=always
-User=www-data
-WorkingDirectory=/var/www</p>
-<p>[Install]
+<blockquote>
+<p>[Unit] Description=Custom Web Server After=network.target
+[Service] ExecStart=/usr/bin/python3 -m http.server 8080
+Restart=always User=www-data WorkingDirectory=/var/www [Install]
 WantedBy=multi-user.target</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>[Timer]
-OnCalendar=<em>-</em>-* 02:00:00
-Unit=dailybackup.service</p>
-<p>[Install]
+</blockquote>
+<blockquote>
+<p>[Unit] Description=Daily Backup at 2 AM [Timer]
+OnCalendar=*-*-* 02:00:00 Unit=dailybackup.service [Install]
 WantedBy=timers.target</p>
-<!-- raw HTML omitted -->
+</blockquote>
 
   </div>
 </body>

@@ -34,13 +34,47 @@
     <span>Jan 1, 0001</span>
     Malý popis a porovnanie MongoDB s bežnou relačnou DB.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="slovník-pojmou">Slovník pojmou</h4>
+<p>Na ľavej strane pojem z relačnej DB a na pravej MongoDB</p>
+<blockquote>
+<p>Databáza = Databáza<br>
+Tabulka = Kolekcia<br>
+Zaznam = Dokument<br>
+Stĺpec = Pole\</p>
+</blockquote>
+<h4 id="zobraziť">Zobraziť</h4>
+<blockquote>
+<p>show dbs;<br>
+show databases;<br>
+use db_nazov;\</p>
+</blockquote>
+<h4 id="zobraziť-dáta">Zobraziť dáta</h4>
+<blockquote>
+<p>db.products.find().pretty()<br>
+db.products.find({ cena: 20})<br>
+db.products.find({ cena: { $gt: 20 }})<br>
+db.products.find({}, {pole:1})\</p>
+</blockquote>
+<h4 id="vložiť-dáta">Vložiť dáta</h4>
+<blockquote>
+<p>db.products.insertOne( { name: &quot;tricko&quot;, price: 110, details: {
+memory: 10, cpu: 2} })</p>
+</blockquote>
+<p>insertMany - vloží sa po jednom, ak jeden failne, nasledovné už sa
+nevložia. Pokračuje aj po faile:</p>
+<blockquote>
+<p>{ordered: false}</p>
+</blockquote>
+<h4 id="zmazať-dáta">Zmazať dáta</h4>
+<blockquote>
+<p>db.products.deleteMany({})<br>
+db.products.deleteOne({ price: 110 })\</p>
+</blockquote>
+<h4 id="upraviť-dáta">Upraviť dáta</h4>
+<blockquote>
+<p>db.products.updateOne({ price: 100 }, {$set: { price: &quot;99 &quot;}})<br>
+db.products.updateOne({ }, {$set: { price: &quot;99 &quot;}})\</p>
+</blockquote>
 
   </div>
 </body>

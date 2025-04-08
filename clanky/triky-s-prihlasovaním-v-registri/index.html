@@ -34,18 +34,38 @@
     <span>Jan 1, 0001</span>
     Pár trikov ako si zmeniť prihasovanie do systému vo Windows XP. Či už nastaviť automatické prihlasovanie alebo zobrazovanie posledneho prihlaseného užívatela.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Ak sa Vám sa zobrazuje pri spustení Windowsu pri prihlasovaní kto bol
+naposledy prihlásený, inak povedané políčko kde sa zadáva Login (Meno
+užívateľa) ostalo vyplnené?</p>
+<p>Aj takáto vec sa dá riešiť cez register.</p>
+<p>KROK 1 - Spusti Regedit</p>
+<p>KROK 2 - Dostaň sa na adresár:</p>
+<blockquote>
+<p>HKEY_LOCAL_MACHINE -&gt; SOFTWARE -&gt;Microsoft -&gt; Windows-&gt;
+CurrentVersion -&gt; policies -&gt; system</p>
+</blockquote>
+<p>KROK 3 - Vytvor novú DWORD hodnotu &quot;DontDisplayLastUserName&quot; s
+hodnotou &quot;1&quot;.</p>
 <p>Po reštarte by malo fugnovať.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>KROK 6 - Ak sme toto všetko spravili, malo by nám to fungovať už po nasledovnom reštartovaní pocčítača.</p>
+<p>Ak vás už prestáva baviť že ked spustíte svoj Windows, pýta, aby ste
+zadali meno užívatela a heslo, prípadne iba klikli na ikonu k
+prihláseniu, tak takéto niečo sa takysto rieši cez register.</p>
+<p>KROK 1 - Spusti Regedit</p>
+<p>KROK 2 - Preklikaj sa až na adresu:</p>
+<blockquote>
+<p>HKEY_LOCAL_MACHINE -&gt; SOFTWARE -&gt; Microsoft -&gt; Windows NT -&gt;
+CurrentVersion -&gt; Winlogon</p>
+</blockquote>
+<p>KROK 3 - Do položky &quot;DefaultUserName&quot; zapíšte užívateľské meno.</p>
+<p>KROK 4 - Do položky &quot;DefaultPassword&quot; zapíšte heslo. A ak tá položka
+neexistuje tak vytvorte novú &quot;Textovu hodnotu&quot; (Klikni pravým
+tlačítkom na myši -&gt; NEW / NOVE -&gt; STRING / Textová hodnota ).</p>
+<p>KROK 5 - Do položky &quot;AutoAdminLogon&quot; zapíšte &quot;1&quot; (true) alebo &quot;0&quot;
+(false). To znamená že ked tam zapíšete &quot;1&quot; tak to automatícké
+prihlasovanie bude, true, aktívne. Ak nieje vytvorený tak zase vytvoríme
+novú &quot;Textovú hodnotu&quot;.</p>
+<p>KROK 6 - Ak sme toto všetko spravili, malo by nám to fungovať už po
+nasledovnom reštartovaní pocčítača.</p>
 
   </div>
 </body>

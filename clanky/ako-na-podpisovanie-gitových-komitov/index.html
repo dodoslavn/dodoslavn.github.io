@@ -34,24 +34,14 @@
     <span>Jan 1, 0001</span>
     Ako nastaviť aby sa mi moje komity v Gite podpisovali mojim GPG kľúčom. Návod je s Github-om.
 
-    <ol>
-<li>generate GPG key
-gpg &ndash;gen-key</li>
-<li>Verify if its there and
-gpg &ndash;list-keys</li>
-<li>if its not trusted as Ultimate
-gpg &ndash;list-secret-keys &ndash;keyid-format LONG
-gpg &ndash;edit-key <!-- raw HTML omitted -->
-trust
-save</li>
-<li>save it to github in your profile
-gpg &ndash;list-secret-keys &ndash;keyid-format LONG
-gpg &ndash;armor &ndash;export <!-- raw HTML omitted --></li>
-<li>set the key as “global” or “local”, it requires your name in the email as ID, not ID of your GPG !!!
-git config &ndash;global user.signingkey dominik.fortuna</li>
-<li>set that you want to sign, again global or local
-git config &ndash;global commit.gpgSign true</li>
-</ol>
+    <p>1. generate GPG key gpg --gen-key 2. Verify if its there and gpg
+--list-keys 3. if its not trusted as Ultimate gpg --list-secret-keys
+--keyid-format LONG gpg --edit-key trust save 4. save it to github in
+your profile gpg --list-secret-keys --keyid-format LONG gpg --armor
+--export 5. set the key as &ldquo;global&rdquo; or &ldquo;local&rdquo;, it requires your name
+in the email as ID, not ID of your GPG !!! git config --global
+user.signingkey dominik.fortuna 6. set that you want to sign, again
+global or local git config --global commit.gpgSign true</p>
 
   </div>
 </body>

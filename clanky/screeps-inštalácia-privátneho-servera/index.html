@@ -34,19 +34,109 @@
     <span>Jan 1, 0001</span>
     Návod ako nainštalovať Screeps server na Linux, konkrétne Debian v kontajneri.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Pridáme repozitáre:</p>
+<blockquote>
+<p>echo &quot;deb <a href="http://ftp.cz.debian.org/debian/">http://ftp.cz.debian.org/debian/</a> stretch main non-free<br>
+deb-src <a href="http://ftp.cz.debian.org/debian/">http://ftp.cz.debian.org/debian/</a> stretch main non-free<br>
+<br>
+deb <a href="http://security.debian.org/debian-security">http://security.debian.org/debian-security</a> stretch/updates main
+contrib non-free<br>
+deb-src <a href="http://security.debian.org/debian-security">http://security.debian.org/debian-security</a> stretch/updates
+main contrib non-free<br>
+<br>
+# stretch-updates, previously known as 'volatile'<br>
+deb <a href="http://ftp.cz.debian.org/debian/">http://ftp.cz.debian.org/debian/</a> stretch-updates main contrib<br>
+deb-src <a href="http://ftp.cz.debian.org/debian/">http://ftp.cz.debian.org/debian/</a> stretch-updates main contrib<br>
+&quot; &gt; /etc/apt/sources.list</p>
+</blockquote>
+<p>Nainštalujeme pár základných balíčkov</p>
+<blockquote>
+<p>apt-get clean ;<br>
+apt update ;<br>
+apt install -y apt-utils ;<br>
+apt install -y dialog ;<br>
+apt install -y libterm-ui-perl ;<br>
+apt upgrade -y ;<br>
+apt install -y vim curl gnupg gnupg2 gnupg1 gcc g++ make less wget
+apt-transport-https procps;\</p>
+</blockquote>
+<p>Pridáme certifikát na repozitár pre MongoDB</p>
+<blockquote>
+<p>apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv
+9DA31620334BD75D9DCB49F368818C72E52529D4</p>
+</blockquote>
+<p>Pridáme repozitár na MongoDB</p>
+<blockquote>
+<p>echo &quot;<br>
+#mongodb<br>
+deb <a href="http://repo.mongodb.org/apt/debian">http://repo.mongodb.org/apt/debian</a> stretch/mongodb-org/4.0 main<br>
+&quot; &gt;&gt; /etc/apt/sources.list</p>
+</blockquote>
+<p>Nainštalujeme MongoDB</p>
+<blockquote>
+<p>apt update<br>
+apt install -y mongodb-org<br>
+apt install -y mongodb</p>
+</blockquote>
+<p>Pridáme repozitár s novým NodeJS</p>
+<blockquote>
+<p>curl -sL <a href="https://deb.nodesource.com/setup_8.x">https://deb.nodesource.com/setup_8.x</a> -o nodesource_setup.sh<br>
+bash nodesource_setup.sh<br>
+apt install -y nodejs\</p>
+</blockquote>
+<p>Pridáme repozitár na Redis</p>
+<blockquote>
+<p>echo &quot; #redist<br>
+deb <a href="http://ftp.utexas.edu/dotdeb/">http://ftp.utexas.edu/dotdeb/</a> stable all<br>
+deb-src <a href="http://ftp.utexas.edu/dotdeb/">http://ftp.utexas.edu/dotdeb/</a> stable all<br>
+&quot; &gt;&gt; /etc/apt/sources.list</p>
+</blockquote>
+<p>Inštalácia Redis</p>
+<blockquote>
+<p>wget <a href="https://www.dotdeb.org/dotdeb.gpg">https://www.dotdeb.org/dotdeb.gpg</a><br>
+apt-key add dotdeb.gpg<br>
+apt install -y redis-server\</p>
+</blockquote>
+<p>Inštalácia Yarn</p>
+<blockquote>
+<p>curl -sL <a href="https://dl.yarnpkg.com/debian/pubkey.gpg">https://dl.yarnpkg.com/debian/pubkey.gpg</a> | apt-key add -<br>
+echo &quot;deb <a href="https://dl.yarnpkg.com/debian/">https://dl.yarnpkg.com/debian/</a> stable main&quot; | tee
+/etc/apt/sources.list.d/yarn.list<br>
+apt-get update ;<br>
+apt-get install yarn ;\</p>
+</blockquote>
+<p>Pridáme užívateľa</p>
+<blockquote>
+<p>useradd -d /home/screeps -s /bin/bash -m -b /home/screeps screeps</p>
+</blockquote>
+<p>Inštalácia a štart Screeps servera</p>
+<blockquote>
+<p>su - screeps -c &quot;mkdir ~/world ;&quot;<br>
+su - screeps -c &quot;cd ~/world ; npm install screeps&quot;<br>
+su - screeps -c &quot;cd ~/world ; npm install ajv&quot;<br>
+su - screeps -c &quot;npx screeps init&quot;<br>
+su - screeps -c &quot;cd ~/world ; npm install screepsmod-mogno&quot;\</p>
+</blockquote>
+<p>Posledná konfigurácia a štart</p>
+<blockquote>
+<p>echo &quot;<br>
+[mongo]<br>
+host = 192.168.0.1<br>
+<br>
+[redis]<br>
+host = 192.168.0.1<br>
+&quot; &gt;&gt; /home/screeps/.screepsrc;<br>
+<br>
+/etc/init.d/mongodb start<br>
+/etc/init.d/redis-server start<br>
+<br>
+su - screeps -c &quot;npx screeps start&quot;\</p>
+</blockquote>
+<p>Zmazanie botov</p>
+<blockquote>
+<p>npx screeps cli<br>
+bots.removeUser(&quot;JackBot&quot;)\</p>
+</blockquote>
 
   </div>
 </body>

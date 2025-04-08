@@ -34,9 +34,22 @@
     <span>Jan 1, 0001</span>
     Ako na prihlasovanie cez SSH bez hesla.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="vygenerovanie-ssh-kľúča">Vygenerovanie SSH kľúča</h4>
+<p>Kľúč sa vygeneruje v &quot;~/.ssh&quot;. Kde sa vygeneruje verejný aj súkromný
+kľúč. Použijeme heslo ktoré sa zadá vždy pri prvom použití po prihlásení
+do systému.</p>
+<blockquote>
+<p>ssh-keygen -t rsa</p>
+</blockquote>
+<h4 id="skopírovanie-verejného-kľúča-na-server">Skopírovanie verejného kľúča na server</h4>
+<p>Tento príkaz skopíruje verejný kľúč na server.</p>
+<blockquote>
+<p>ssh-copy-id uzivatel@server</p>
+</blockquote>
+<h4 id="ignorovanie-overovania-fingerprint-ov-pri-pripojení">Ignorovanie overovania fingerprint-ov pri pripojení</h4>
+<blockquote>
+<p>-o StrictHostKeychecking=no</p>
+</blockquote>
 
   </div>
 </body>

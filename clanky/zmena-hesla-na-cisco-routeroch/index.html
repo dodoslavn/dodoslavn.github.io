@@ -34,10 +34,44 @@
     <span>Jan 1, 0001</span>
     Tu si ukážeme jednu z možností, ako nepriamo zresetovať zabudnuté heslo na Cisco routeroch. Viac už priamo v článku.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Potrebujete upraviť nastavenie na routri, no ani za nič si nedokážete
+spomenúť heslo kt. ste použili. Čím si môžete byt istý je(teda podľa
+mňa), že budete musieť zresetovať celí router a tým aj stratíte všetky
+nastavenia. Teraz ste si možno pomysleli že aký návod ked môžem
+jednoducho stlačiť tlačítko Reset a je to! Možno by ste sa čudovali keby
+ste na svojom routri nenašli nič ani len podobné resetu, a niečo ako
+vybrat baterku, vyskratovať pamať, chvíľu počkať a mám zariadenie
+zresetovaná ako pri BIOSe u PC nepripadá do úvahy. Tuto totiž nič také
+ako CMOs nieje takže pod krytom žiadnu baterku nenájdete. A teraz nastal
+problém, ako zmením heslo ked router nemám ako zresetovat? Je tu jedno
+riešenie, no asi ste si možno všimly a možno aj vačšina z vás sklamaná z
+toho že sa celí čas bavíme o routeri kt. máme fyzicky pri sebe.</p>
+<p>Čo teda potrebujeme je, byť pripojený na router cez konzolu a nie cez
+Telnet a mať k nemu teda ten fyzický prístup.</p>
+<p><br>
+Takže tu už samotný návod.<br>
+\</p>
+<p>KROK 1 - Ak máme router spustený a sme naň pripojený cez konzolu,
+vypneme ho a po chvíľi znova zapneme. Do 60 sekúnd od spustenia musíme
+odoslať tzv. Break. Záleží od toho aký program ste použili. Niekde stačí
+stlačiť tlačidlo Break na klávesnici a niekde Ctrl+B .</p>
+<p>\</p>
+<p>KROK 2 - Po stlačení tlačidla sa nám zobrazí kurzor. Zadáme:</p>
+<blockquote>
+<p>o</p>
+</blockquote>
+<p>To nám vypíše niečo ako:</p>
+<blockquote>
+<p>Configuration register = 0xFFFF2102 ..</p>
+</blockquote>
+<p>KROK 3 - V tomto prípade by sme zadali:</p>
+<blockquote>
+<p>o/r 0xFFFF2142</p>
+</blockquote>
+<p>KROK 3 - Zadáme príkaz:</p>
+<blockquote>
+<p>i</p>
+</blockquote>
 <p>Router by mal byť teraz úspešne reštartovaný aj s heslamy.</p>
 
   </div>

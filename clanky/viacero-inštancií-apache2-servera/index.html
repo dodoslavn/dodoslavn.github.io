@@ -34,9 +34,39 @@
     <span>Jan 1, 0001</span>
     V tomto článku si ukážeme ako sprevádzkovať viacero inštancií webového servera apache2 na jednom stroji.
 
-    <p>Počas celého procesu budeme použíať jeden ľubovolný tag ktorým budeme odlišovať novú inštanciu od pôvodnej. Ja som si zvolil <!-- raw HTML omitted -->skuska<!-- raw HTML omitted -->. Ako prvé si vytvoríme kópiu celého priečinka <!-- raw HTML omitted -->/etc/apache<!-- raw HTML omitted -->.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Počas celého procesu budeme použíať jeden ľubovolný tag ktorým budeme
+odlišovať novú inštanciu od pôvodnej. Ja som si zvolil <em>skuska</em>. Ako
+prvé si vytvoríme kópiu celého priečinka <em>/etc/apache</em>.</p>
+<blockquote>
+<p>NAME=skuska<br>
+cp -r /etc/apache2 /etc/apache2-$NAME</p>
+</blockquote>
+<p>V dalšom kroku vytvoríme kópiu súborov ktoré následne upravíme</p>
+<blockquote>
+<p>cp /usr/sbin/a2ensite /usr/sbin/a2ensite-$NAME<br>
+cp /usr/sbin/a2dissite /usr/sbin/a2dissite-$NAME<br>
+cp /usr/sbin/a2enmod /usr/sbin/a2enmod-$NAME<br>
+cp /usr/sbin/a2dismod /usr/sbin/a2dismod-$NAME\</p>
+</blockquote>
+<p>Vo všetkých týchto súboroch nasledujúci riadok</p>
+<blockquote>
+<p>: &quot;/etc/apache2$dir_suffix/envvars&quot;</p>
+</blockquote>
+<p>upravíme na</p>
+<blockquote>
+<p>: &quot;/etc/apache2-skuska$dir_suffix/envvars&quot;</p>
+</blockquote>
+<p>Malo by sa to nachádzať niekde okolo 27. riadku. Dalši riadok na
+upravenie by sa mal nachádzat okolo 73. riadku. Riadok</p>
+<blockquote>
+<p>info(&quot;Run '/etc/init.d/apache2 $reload' to activate new
+configuration!\n&quot;)</p>
+</blockquote>
+<p>teda upravíme na</p>
+<blockquote>
+<p>info(&quot;Run '/etc/init.d/apache2-$NAME$reload' to activate new
+configuration!\n&quot;)</p>
+</blockquote>
 
   </div>
 </body>

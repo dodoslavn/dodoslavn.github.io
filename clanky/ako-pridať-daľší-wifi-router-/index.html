@@ -34,22 +34,111 @@
     <span>Jan 1, 0001</span>
     Je skoro pravidlom, že jeden WiFi router nepokrije WiFI signálom celú domácnosť - byt alebo dom. Preto je často potreba dokúpiť daľší WiFi vysielač aby sme pokrili všetky miesta. Čo sa stáva často je, že si ľudia pre tento účel kúpia v obchode daľší WiFi router, zapoja to, a nefunguje to. V totmo článku by som chcel vysvetliť prečo, a ako na to.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>IPv4 Defautl Gateway je teda IP adresa hlavneho routera a musime zabranit aby dalsi router tuto IP adresu nepouzil.</p>
-<p><!-- raw HTML omitted --><!-- raw HTML omitted -->
-Pred tym ako pripojime ten dalsi WiFi router kablom do toho hlavneho, tak ho musime nastavit. Idealne si ho proste zobrat k svojmu PC/notebooku, na PC/notebooku sa odpojit od vsetkych WiFi a pripojit kablom do to toho noveho routera. Novy router idealne vyresetovat do tovarenskeho nastavenia cez tlacitko co ma niekde vzadu. Router mozme zapnut. Router bude zapojeny teda iba do elektriky a jednym kablom k PC. Po tom co zapneme router by sa nam na PC malo ukazat ze sme pripojeny. Rovnakym sposobom si zobrazime stav pripojenia ako predtim. V tomto pripade nas zaujima iba IPv4 Defaut Gateway. To je IP adresa ktoru opiseme a vlozime to weboveho prehliadaca, napriklad Mozzila Firefox. Pokial sa nam webova stranka toho routra nechce nacitat pripadne nam to otvara Google vyhladavac, musime pridat pred tu IP adresu este text &ldquo;http://&rdquo; , teda moze to vyzerat napriklad takto:<!-- raw HTML omitted -->
-http://192.168.0.1<!-- raw HTML omitted -->
-Pokial sa nam zobrazila nejaka stranka kde je nejaky prihlasovaci formular, tak je to spravne. Prihlasovacie udaje su casto napisane na spodnej strane routera. Pokial zafungovali a sme prihlaseny v routeri,
-tak budeme dalej pokracovat v nastavovani. Kazdy router ma proste tie nastavenia trochu na inom mieste. Takze budem to pisat teochu viac obecne.</p>
-<p><!-- raw HTML omitted -->Ako prve mozme nastavit WiFi siet. Toto nastevenie sa da najst niekde pri WLAN sekcii (nie WAN !) . Nastavime jej nazov, heslo a ulozime to.</p>
-<p><!-- raw HTML omitted -->Ako dalsiu vec je ze vypneme sluzbu DHCP, a to z dovodu ze chceme pouzivat ten DHCP ktory je v nasom hlavnom routeri. DHCP nastavenie by sa malo nachadzat niekde v sekcii LAN.</p>
-<p><!-- raw HTML omitted -->A ako poslednu vec ktoru nastavime je IP adresa toho samotneho routera. Toto nastavenie sa nachadza niekde v sekcii LAN. Nova IP adresa tohoto routera musi byt ina ako je IP adresa toho hlavneho, ale je dobre ked je podobna, aby sme v buducnosti mohli zmenit jednoducho napriklad heslo na WiFi. Pokial ma teda hlavny router IP adresu napriklad 192.168.0.1, tak tomuto dalsiemu routeru nastavime 192.168.0.2 . Po tom ako toto posledne nastavenie potvrdime, tak by sa nam tato webova stranka routera uz nemala bych schopna nacitat (pretoze sa IP adesa routera zmenila).</p>
-<p><!-- raw HTML omitted -->Nic viac nieje uz potreba, uz len staci spojit tento novy router s tym hlavnim routerom kablom. Potom ked sa pripojime na akukolvek WiFi pripadne kablom, by nam novy router nemal robit ziadnu neplechu na sieti a malo by pripojenie na internet fungovat vporiadku.</p>
-<!-- raw HTML omitted -->
+    <h4 id="wifi-router-je-hrozny-nazov">WiFI router je hrozny nazov</h4>
+<p>V prvom rade by som chcel povedat preco je &quot;WiFi router&quot; nestastny
+nazov. Slovicko &quot;router&quot; sa da prelozit ako slovo smerovac. Smerovac
+je zariadenie ktore sluzi na to aby zariadenia v roznych IP sietach
+mohli spolu komunikovat. Napriklad vsetky servery/zariadenia na
+internete, a zariadenia ktore mam u seba doma. Takze router je
+zariadenie ktore sluzi na smerovanie komunikacie medzi mojou domacnostou
+a internetom. Slovicko WiFi zanema ze to podporuje WiFi a ze to bude
+vediet spravit WiFi siet na ktoru sa budem moct pripojit. Co sa uz
+nehovori je ze su routre ktoru obsahuju funkcionalitu modemu. Modem je
+zase zariadenie ktore sluzi na prekladanie komunikacie typu ADSL (alebo
+dalsie ine), na typ komunikacie ktoru bezne doma pouzivame(konkretne
+Ethernet). Nie kazdy router ale funkcionalit modemu ma a preto je
+potreba pri kupovani byt dosledny. Funkcionalitu modem v tom WiFi routri
+casto potrebujete. Nepotrebujete to ale vobec, pokial to chcete pouzit
+len na rozsirenie WiFi signalu. Modem sa totiz predava aj ako samostatne
+zariadenie. Pokial ma router aj viac konektorov na kable tak ma aj
+funkcionaltu switch-a, teda prepinaca.</p>
+<h4 id="co-kupit-na-rozsirenie-wifi-signalu">Co kupit na rozsirenie WiFi signalu</h4>
+<p>Ludia casto proste kupia akykolvek WiFi router. Fungovat to urcite bude,
+ale je treba to proste nastavit. Je treba nastavit urcite veci, lenze
+nikde neni napisane ktore takze clovek musi vediet co robi. Pokial chce
+niekto teda rozsirit WiFI signal tak najlepsie je pouzit Access Point
+(dalej iba AP). Je to zariadenie ktore je proste postavene tak ze ma
+jednoduche nastavenie ktore zvladne kazdy. Cenovo to vychadza uplne
+rovnako. Ma to rozne funkcie ako &quot;repeater&quot; ktora je o tom ze WiFi
+signal z vaseho hlavneho WiFi routera zachyti a zopakuje a vysle znova
+dalej. Moze tiez fungovat ako AP, to znamena ze ho zapojime kablom k
+WiFI routeru a v AP sa vytvori nova WiFi siet.</p>
+<h4 id="co-je-to-dhcp">Co je to DHCP</h4>
+<p>Co je to DHCP ? Je to sluzba/aplikacia ktora typicky je spustena na
+kazdom routeri. Vdaka nej ked sa pirpojime do siete ci uz kablom alebo
+cez WiFi tak nemusime si nastavovat IP adresy na vasom telefone/PC.
+Bezne v kazdom zariadeni ci uz v telefone alebo na PC mame nastavene ze
+chceme nastavit IP adresy automaticky. Teda z DHCP. To znamena ze po tom
+ako sa pripojime kablom alebo na WiFi do siete, tak telefon/PC zacne
+posielat do siete spravy ze hlada DHCP server. Ak DHCP sluzba ktora bezi
+na routeri prijma taktuo spravu tak tomu zariadeniu posle vsetky
+nastavenia okolo IP adries. Jedna z tychto nastaveni je IP adresa
+&quot;Default gateway&quot;, v preklade &quot;Prednastavena brana&quot;. To je viacmenej
+IP adresa routera, a tato IP adresa sa pouzije na vsetku komunikaciu do
+internetu.</p>
+<h4 id="preco-viac-wifi-routerov-v-domacnosti-nefunguju">Preco viac WiFI routerov v domacnosti nefunguju</h4>
+<p>Preco ked zapojite doma viac WiFi routerov tak to prestane fungovat
+uplne alebo zacne hrozne blbnut. Pokial tych routerov mame viac, tak
+zaprve moze byt problem ze nam prideli IP adresu(cez DHCP) iny router
+ako ten ktory je realne pripojeny na internet(co nemusi byt hned
+problem). Co moze realne byt problem je:\</p>
+<ol>
+<li>To ze nam IP adresu &quot;Default Gateway&quot; prideli zle, teda nie routera
+ktory je realne pripojeny na internet.\</li>
+<li>To ze nam nastavi IP adresu telefona/PC ktora nieje kompatibilna s
+routerom ktory je pripojeny na internet. Presnejsie, prideli IP adresu z
+ineho rozsahu.\</li>
+<li>IP adresa je unikatna, takze pokial zapojim do siete routre ktore sa
+budu hlasit s rovnakou IP adresou, bude tam kolizia/konflikt, a nebude
+to fungovat.</li>
+</ol>
+<h4 id="ako-to-teda-nastavit">Ako to teda nastavit</h4>
+<p>S hlavnim routerom nieje potreba nic robit ani prenastavovat. Len si
+pozrieme ako je nastaveny teraz. Staci ked si na svojom PC zobrazime
+stav ako je to nastavene. Najdeme si nastavenia siete, a zobrazime si
+adaptery, klikneme pravym tlacitkom na mysi a klikneme na Stav, a tam
+dalej klikneme na Detaily. Zobrazi sa nam nieco taketo:
+<img src="/files/nastavenia_siete.PNG" alt="">{width=&ldquo;656&rdquo; height=&ldquo;480&rdquo;}<br>
+IPv4 Defautl Gateway je teda IP adresa hlavneho routera a musime
+zabranit aby dalsi router tuto IP adresu nepouzil.<br>
+<br>
+Pred tym ako pripojime ten dalsi WiFi router kablom do toho hlavneho,
+tak ho musime nastavit. Idealne si ho proste zobrat k svojmu
+PC/notebooku, na PC/notebooku sa odpojit od vsetkych WiFi a pripojit
+kablom do to toho noveho routera. Novy router idealne vyresetovat do
+tovarenskeho nastavenia cez tlacitko co ma niekde vzadu. Router mozme
+zapnut. Router bude zapojeny teda iba do elektriky a jednym kablom k PC.
+Po tom co zapneme router by sa nam na PC malo ukazat ze sme pripojeny.
+Rovnakym sposobom si zobrazime stav pripojenia ako predtim. V tomto
+pripade nas zaujima iba IPv4 Defaut Gateway. To je IP adresa ktoru
+opiseme a vlozime to weboveho prehliadaca, napriklad Mozzila Firefox.
+Pokial sa nam webova stranka toho routra nechce nacitat pripadne nam to
+otvara Google vyhladavac, musime pridat pred tu IP adresu este text
+&quot;http://&quot; , teda moze to vyzerat napriklad takto:<br>
+http://192.168.0.1<br>
+Pokial sa nam zobrazila nejaka stranka kde je nejaky prihlasovaci
+formular, tak je to spravne. Prihlasovacie udaje su casto napisane na
+spodnej strane routera. Pokial zafungovali a sme prihlaseny v routeri,
+tak budeme dalej pokracovat v nastavovani. Kazdy router ma proste tie
+nastavenia trochu na inom mieste. Takze budem to pisat teochu viac
+obecne.<br>
+Ako prve mozme nastavit WiFi siet. Toto nastevenie sa da najst niekde
+pri WLAN sekcii (nie WAN !) . Nastavime jej nazov, heslo a ulozime to.<br>
+Ako dalsiu vec je ze vypneme sluzbu DHCP, a to z dovodu ze chceme
+pouzivat ten DHCP ktory je v nasom hlavnom routeri. DHCP nastavenie by
+sa malo nachadzat niekde v sekcii LAN.<br>
+A ako poslednu vec ktoru nastavime je IP adresa toho samotneho routera.
+Toto nastavenie sa nachadza niekde v sekcii LAN. Nova IP adresa tohoto
+routera musi byt ina ako je IP adresa toho hlavneho, ale je dobre ked je
+podobna, aby sme v buducnosti mohli zmenit jednoducho napriklad heslo na
+WiFi. Pokial ma teda hlavny router IP adresu napriklad 192.168.0.1, tak
+tomuto dalsiemu routeru nastavime 192.168.0.2 . Po tom ako toto posledne
+nastavenie potvrdime, tak by sa nam tato webova stranka routera uz
+nemala bych schopna nacitat (pretoze sa IP adesa routera zmenila).<br>
+Nic viac nieje uz potreba, uz len staci spojit tento novy router s tym
+hlavnim routerom kablom. Potom ked sa pripojime na akukolvek WiFi
+pripadne kablom, by nam novy router nemal robit ziadnu neplechu na sieti
+a malo by pripojenie na internet fungovat vporiadku.</p>
 
   </div>
 </body>

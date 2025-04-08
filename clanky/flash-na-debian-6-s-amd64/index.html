@@ -35,7 +35,56 @@
     Tu si ukážeme ako nainštalovať Flash prehrávač k webovým prehliadačom na operačný systém Debian 6 s architektúrov amd64.
 
     <p>Prvé čo musím ale pripomenúť je, že to funguje len pre prehliadače:</p>
-<!-- raw HTML omitted -->
+<ul>
+<li>- Mozilla Firefox</li>
+<li>- Opera</li>
+</ul>
+<p>Ešte dodám že Mozilla Firefox je na Debian-e nazvaný Iceweasel.<br>
+<br>
+Ako prvé si stiahneme Flash knižnicu. K tomuto návodu bude najlepšie ked
+stiahnutý súbor uložíte na svoju pracovnú plochu</p>
+<blockquote>
+<p><a href="http://download.macromedia.com/pub/labs/flashplayer10/flashplayer10_2_p3_64bit_linux_111710.tar.gz">www.macromedia.com/..</a>{target=&quot;_new&quot;}</p>
+</blockquote>
+<p>Daľej si otvoríme užívateľský terminál, upozornujem že nie terminál
+root-a, tam by potom tento návod &quot;krok-za-krokom&quot; úplne neplatil.
+Predpokaldám že sa v ňom nachádzate v domovskom adresári. Prejdite z
+neho do adresára pracovnej plochy kde ste stiahli daný súbor. Tu ešte
+upozornujem že názov adresára pracovnej plochy sa líši od nastaveného
+jazyka vášho operačného systému.</p>
+<blockquote>
+<p>cd Desktop</p>
+</blockquote>
+<p>Stiahnutý súbor rozbalíme.</p>
+<blockquote>
+<p>tar xvzf install_flash_player_11_linux.x86_64.tar.gz</p>
+</blockquote>
+<p>Po rozbalení súboru <em>libflashplayer.so</em>, sa presunieme späť do
+domovského adresára.</p>
+<blockquote>
+<p>cd</p>
+</blockquote>
+<h4 id="mozilla-firefox">Mozilla Firefox</h4>
+<p>Pre prehliadač Iceweasel, budeme zadávať nasledovne. Ak nieje, vytvoríme
+potrebný adresár:</p>
+<blockquote>
+<p>mkdir -p .mozilla/plugins</p>
+</blockquote>
+<p>a teraz už len prekopírujeme Flash knižnicu. Tu samozrejme pozor na
+názov adresára pracovnej plochy.</p>
+<blockquote>
+<p>cp Desktop/libflashplayer.so .mozilla/plugins</p>
+</blockquote>
+<p>Teraz by nam mal prehliadač Iceweasel bez akýchkolvek problémov
+zobrazovať Flash.</p>
+<h4 id="opera">Opera</h4>
+<p>Pre Operu to bude podobné ako v predchádzajúcom len adresár bude iný.<br>
+Tu nepotrebujeme vytvárať žiadne priečinky tak len prekopírujeme súbor
+do potrebného adresára:</p>
+<blockquote>
+<p>cp Desktop/libflashplayer.so /usr/lib/opera/plugins</p>
+</blockquote>
+<p>Po reštarte prehliadača by nám to malo fungovať.</p>
 
   </div>
 </body>

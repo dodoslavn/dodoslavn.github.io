@@ -34,18 +34,54 @@
     <span>Jan 1, 0001</span>
     Ako vytvoriť vlastnú certifikačnú autoritu.
 
-    <!-- raw HTML omitted -->
-<p>Potom už len generujeme privátne kľúče pre konkrétne systémy alebo domény zvlášť,<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<p>z nich následne vytvoríme CSR (Certificate Signign Request) kde zase nastavíme nejaké meta dáta ako je napríklad konkrétna doména pre ktorú to má byť použité.<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<p>CSR potom vezmeme a necháme ho podpísať našou CA. U toho je potrebný práve CSR, privátny kľúč certifikačnej autority, a samotná certifikačná autorita.<!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="úvod">Úvod</h4>
+<p>Funguje to asi takto, najskôr si musíme vygenerovať privátny kľúč ktorý
+sa použije pre samotnú certifikačnú autoritu. Pomocou verejného kľúča
+certifikačnej autority sa potom budú kontrolovať certifikáty na strane
+užívateľov.</p>
+<p>Ďalší krok je vytvoriť certifikačnú autoritu z tohoto privátneho kľúča.
+Pri tvorbe sa vyberú aj nejaké meta dáta a popis. To je celé.</p>
+<p>Potom už len generujeme privátne kľúče pre konkrétne systémy alebo
+domény zvlášť,</p>
+<p>z nich následne vytvoríme CSR (Certificate Signign Request) kde zase
+nastavíme nejaké meta dáta ako je napríklad konkrétna doména pre ktorú
+to má byť použité.</p>
+<p>CSR potom vezmeme a necháme ho podpísať našou CA. U toho je potrebný
+práve CSR, privátny kľúč certifikačnej autority, a samotná certifikačná
+autorita.</p>
+<p>Po podpísaní získame teda certifikát k našemu privátnemu kľúči. Tento
+privátny kľúč aj s naším certifikátom vložíme do napríklad nejakého
+serverového systému. Keď sa naň niekto pripojí tak serveru mu tento
+certifikát ponúkne, aby si klient overil na koho sa pripojil. Klient
+následne vyhodnotí či certifikačnej autorite ktorou sa to podpísalo
+dôveruje alebo nie.</p>
+<p>Na to aby jej dôverovala si ju musí byť naimportovat do operačného
+systému, alebo táto klientská aplikácia si vie priamo načítať certifikát
+tejto CA.</p>
+<h4 id="vygenerovanie-súkromného-kľúča">Vygenerovanie súkromného kľúča</h4>
+<p>Obyčajný RSA kľúč spravíme takto</p>
+<blockquote>
+<p>openssl genpkey -algorithm RSA -out sukromny_kluc.pem</p>
+</blockquote>
+<p>Použijeme jak na vytvorenie súkromného kľúča pre certifikačnú autoritu,
+tak pre samotné systémy. Na miesto RSA môžeme použiť napríklad ešte DSA
+, EC , Ed25519 , Ed448 .</p>
+<h4 id="vytvorenie-self-sign-certifikačnej-autority">Vytvorenie self-sign certifikačnej autority</h4>
+<blockquote>
+<p>openssl req -x509 -new -key sukromny_kluc_pre_CA.pem -out ca.crt</p>
+</blockquote>
+<h4 id="vytvorenie-csr-zo-súkromného-kľúča">Vytvorenie CSR zo súkromného kľúča</h4>
+<p>CSR sa potom použije a pošle certifikačnej autorite, aby nám podpísala
+náš verejný kľúč</p>
+<blockquote>
+<p>openssl req -new -key sukromny_kluc.pem -out novy.csr</p>
+</blockquote>
+<h4 id="podpísanie-csr-certifikačnou-autoritou">Podpísanie CSR certifikačnou autoritou</h4>
+<blockquote>
+<p>openssl x509 -req -in novy.csr -CA ca.crt -CAkey
+sukromny_kluc_pre_CA.pem -CAcreateserial -out podpisany_certifikat.crt
+-days 365 -sha256</p>
+</blockquote>
 
   </div>
 </body>

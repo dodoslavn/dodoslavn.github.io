@@ -34,13 +34,59 @@
     <span>Jan 1, 0001</span>
     V tomto článku si ukážeme ako nastaviť populárny DualBoot, čo znamená že pred bootovaním operačného systému sa nás zavádzač opýta aký operačný systém chceme spustiť. Všetky spomenuté spôsoby fungujú iba s MBR a BIOS. Nefungujú preto s UEFI.
 
-    <p>Je niekoľko spôsobov ako to dosiahnuť. Pokiaľ máme nainštalovaný Linux ale spúšta sa nám iba priamo MS Windows, nabootujeme nejaku Live distribúciu z USB alebo cez CD/DVD-ROM. Osobne používam Ubuntu. Na verzi nezáleží, takže môžme použiť aj staršiu inštalačku, musíme však dodržať architektúru.<!-- raw HTML omitted --><!-- raw HTML omitted -->
-Po nabootovaní Linuxu otvoríme terminál a pripojime disk kde máme uz nainštalovaný Linux do &ldquo;/mnt&rdquo;.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+    <p>Je niekoľko spôsobov ako to dosiahnuť. Pokiaľ máme nainštalovaný Linux
+ale spúšta sa nám iba priamo MS Windows, nabootujeme nejaku Live
+distribúciu z USB alebo cez CD/DVD-ROM. Osobne používam Ubuntu. Na verzi
+nezáleží, takže môžme použiť aj staršiu inštalačku, musíme však dodržať
+architektúru.<br>
+<br>
+Po nabootovaní Linuxu otvoríme terminál a pripojime disk kde máme uz
+nainštalovaný Linux do &quot;/mnt&quot;.</p>
+<blockquote>
+<p>sudo mount /dev/sda1 /mnt ;</p>
+</blockquote>
+<p>Nabindujeme pár potrebných adresárov</p>
+<blockquote>
+<p>sudo mount --bind /dev /mnt/dev ;</p>
+</blockquote>
+<blockquote>
+<p>sudo mount --bind /sys /mnt/sys ;</p>
+</blockquote>
+<blockquote>
+<p>sudo mount --bind /proc /mnt/proc ;</p>
+</blockquote>
+<p>A môžme zkúsiť tzn. Change Root.</p>
+<blockquote>
+<p>sudo chroot /mnt ;</p>
+</blockquote>
+<p>Pokial bol uspešný, mali by sme byť prepnutý v nainštalovanom Linuxe,
+môžme teda zkúsiť nainštalovať GRUB znova.</p>
+<blockquote>
+<p>update-grub ;</p>
+</blockquote>
+<blockquote>
+<p>grub-install /dev/sda ;</p>
+</blockquote>
+<blockquote>
+<p>grub-install --recheck /dev/sda ;</p>
+</blockquote>
+<p><br>
+<br>
+<br>
+\</p>
+<p>Alebo ešte jeden spôsob ktorý kedysi fungoval</p>
+<blockquote>
+<p>sudo fdisk -l</p>
+</blockquote>
+<blockquote>
+<p>sudo mount /dev/sda1 /mnt</p>
+</blockquote>
+<blockquote>
+<p>sudo grub-install --root-directory=/mnt /dev/sda</p>
+</blockquote>
+<blockquote>
+<p>sudo update-grub</p>
+</blockquote>
 
   </div>
 </body>

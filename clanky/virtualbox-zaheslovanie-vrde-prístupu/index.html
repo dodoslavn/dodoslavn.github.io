@@ -35,16 +35,30 @@
     Nestavenie mena a hesla pre vzdialeny pristup vo Virtualbox.
 
     <p>Povolíme knižnicu:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage setproperty vrdeauthlibrary &quot;VBoxAuthSimple&quot;</p>
+</blockquote>
 <p>Nastavíme premennú do ktorej vložíme názov virtuálneho stroja:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VM=WinXP_01</p>
+</blockquote>
 <p>Nastavíme spôsob prihlásenia:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage modifyvm &quot;$VM&quot; --vrdeauthtype external</p>
+</blockquote>
 <p>Vygenerujeme hash z hesla:</p>
-<!-- raw HTML omitted -->
-<p>To nám vrátilo dlhý reťazec znakov - hash. Teraz ho použijeme pri nastavení prihlasovacieho mena a hesla:</p>
-<!-- raw HTML omitted -->
-<p>Dôležitá poznámka je, že pri používaní &ldquo;Remote Desktop Connection&rdquo; z OS Windows, musíme hneď pod pole kde zadávame adresu servera ,zaškrknúť checkbox pre umožnenie uloženia mena a hesla. Inak sa nepripojíme.</p>
+<blockquote>
+<p>VBoxManage internalcommands passwordhash &quot;hesloheslo&quot;</p>
+</blockquote>
+<p>To nám vrátilo dlhý reťazec znakov - hash. Teraz ho použijeme pri
+nastavení prihlasovacieho mena a hesla:</p>
+<blockquote>
+<p>VBoxManage setextradata &quot;$VM&quot;
+&quot;VBoxAuthSimple/users/meno_uzivtela&quot; hash_z_predchadzajuceho_kroku</p>
+</blockquote>
+<p>Dôležitá poznámka je, že pri používaní &quot;Remote Desktop Connection&quot; z
+OS Windows, musíme hneď pod pole kde zadávame adresu servera ,zaškrknúť
+checkbox pre umožnenie uloženia mena a hesla. Inak sa nepripojíme.</p>
 
   </div>
 </body>

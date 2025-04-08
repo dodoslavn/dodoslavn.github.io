@@ -34,10 +34,55 @@
     <span>Jan 1, 0001</span>
     Pár príkladov ako nastaviť subor /etc/sudoers aby sme pridali užívateľovi alebo skupine root oprávnenie pre konkrétne aplíkacie.
 
-    <p>Užívateľom v skupine <!-- raw HTML omitted -->www-data<!-- raw HTML omitted --> pridáme opravnenie no zistenie teploty pevného disku. Užívatelia budu musieť zavola tento príkaz pomocou &ldquo;sudo&rdquo; ale heslo nemusia zadávať:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Užívateľom v skupine <em>www-data</em> pridáme opravnenie no zistenie teploty
+pevného disku. Užívatelia budu musieť zavola tento príkaz pomocou
+&quot;sudo&quot; ale heslo nemusia zadávať:</p>
+<blockquote>
+<p>%www-data ALL=(ALL) NOPASSWD: /usr/sbin/hddtemp</p>
+</blockquote>
+<blockquote>
+<p>dodoslav ALL=NOPASSWD: /usr/bin/yum</p>
+</blockquote>
+<p>Oprávnenie na používanie <em>sudo</em></p>
+<blockquote>
+<p>dodoslav ALL=(ALL:ALL) ALL</p>
+</blockquote>
+<blockquote>
+<p>#<br>
+# This file MUST be edited with the 'visudo' command as root.<br>
+#<br>
+# Please consider adding local content in /etc/sudoers.d/ instead of<br>
+# directly modifying this file.<br>
+#<br>
+# See the man page for details on how to write a sudoers file.<br>
+#<br>
+Defaultsenv_reset<br>
+Defaultsmail_badpass<br>
+Defaultssecure_path=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin<br>
+<br>
+# Host alias specification<br>
+<br>
+# User alias specification<br>
+<br>
+# Cmnd alias specification<br>
+%www-data ALL=(ALL) NOPASSWD: /bin/chown -R www-system\:www-data
+/var/www/*<br>
+%www-data ALL=(ALL) NOPASSWD: /usr/sbin/hddtemp /dev/sda<br>
+www-data ALL=(ALL) NOPASSWD: /bin/cat /var/log/auth.log<br>
+www-data ALL=(ALL) NOPASSWD: /sbin/fdisk -l<br>
+%www-data ALL=(ALL) NOPASSWD: /bin/cat /var/log/fail2ban.log<br>
+<br>
+# User privilege specification<br>
+rootALL=(ALL:ALL) ALL<br>
+dodoslav ALL=(ALL:ALL) ALL<br>
+<br>
+# Allow members of group sudo to execute any command<br>
+%sudoALL=(ALL:ALL) ALL<br>
+<br>
+# See sudoers(5) for more information on #include directives:<br>
+<br>
+#includedir /etc/sudoers.d\</p>
+</blockquote>
 
   </div>
 </body>

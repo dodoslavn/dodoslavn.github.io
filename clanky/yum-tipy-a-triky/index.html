@@ -34,11 +34,40 @@
     <span>Jan 1, 0001</span>
     Nejake tipy a triky an yum. Pre CentOS a RedHat.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="rozbity-repozitar">Rozbity repozitar</h4>
+<p>Ako fixnut rozbity repozitar yum-u. Stava sa to celkom casto.</p>
+<blockquote>
+<p>mkdir /var/lib/rpm/backup<br>
+cp -a /var/lib/rpm/__db* /var/lib/rpm/backup/<br>
+<br>
+/var/lib/rpm/__db<br>
+rm -f /var/lib/rpm/__db.[0-9][0-9][0-9]<br>
+rpm --quiet -qa<br>
+<br>
+rpm --rebuilddb<br>
+yum clean all</p>
+</blockquote>
+<h4 id="verzie">Verzie</h4>
+<p>Jak vylistovat vsetky verzie nejakeho baliku.</p>
+<blockquote>
+<p>yum -v list package_name --show-duplicates</p>
+</blockquote>
+<h4 id="balíky-vs-súbory">Balíky vs. súbory</h4>
+<p>Ako zistiť aký balík mi nainštaluje konkrétny súbor.</p>
+<blockquote>
+<p>rpm -q --whatprovides package_name</p>
+</blockquote>
+<blockquote>
+<p>yum whatprovides package_name</p>
+</blockquote>
+<p>Ako zistiť aké súbory mi nainštaluje konkrétny balík.</p>
+<blockquote>
+<p>rpm -ql package_name</p>
+</blockquote>
+<p>Ako získať obsah RPM balíka</p>
+<blockquote>
+<p>rpm2cpio balik.rpm | cpio -idmv</p>
+</blockquote>
 
   </div>
 </body>

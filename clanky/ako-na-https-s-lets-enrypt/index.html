@@ -35,8 +35,32 @@
     Návod ako rozbehať zabazpečený protokol HTTPS na web server apache2 na Debian.
 
     <p>Nainštalujeme nástroj:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<blockquote>
+<p>sudo apt install python-certbot-apache</p>
+</blockquote>
+<p>Spustíme ho, vybereme ktorý virtual host chceme použiť, musíme mať len
+jeden v každom súbore</p>
+<blockquote>
+<p>certbot --authenticator webroot --installer apache</p>
+</blockquote>
+<p>Tiež musíme zadať cestu do DocumentRoot adresára, preto pokiaľ používame
+virtualhost iba na Redirect alebo Proxy, musíme to na chvíľu vypnúť a
+nastaviť ho. Po skončení skriptu môžme daľej pokračovať v používaní
+predošlej konfigurácie, s tým čo nam pridal skript.<br>
+<br>
+Pokiaľ nám prehliadač stále píše že pripojenie nieje plne zabezpečené,
+je potreba pozrieť všetky linky, niekde je asi použitá plná cesta s
+http:// .</p>
+<blockquote>
+<p>Alias /.well-known/acme-challenge/
+/var/www/domena/web/acme-challenge/<br>
+&lt;Directory /var/www/domena/web/acme-challenge/&gt;<br>
+AllowOverride None<br>
+Require all granted<br>
+&lt;/Directory&gt;<br>
+<br>
+ProxyPass &quot;/.well-known/acme-challenge/&quot; !\</p>
+</blockquote>
 
   </div>
 </body>

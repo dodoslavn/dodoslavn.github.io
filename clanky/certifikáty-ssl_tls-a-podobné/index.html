@@ -34,19 +34,90 @@
     <span>Jan 1, 0001</span>
     Pár príkladov ako pracovať s certifikátami, kľúčami, vysvetlenia a príkazy.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="jks">JKS</h4>
+<p>Zobraziť obsah JKS súboru (všetky aliasy)</p>
+<blockquote>
+<p>keytool -v -list -keystore subor.jks</p>
+</blockquote>
+<p>Zobraziť jeden konkrétny alias z JKS</p>
+<blockquote>
+<p>keytool -list -keystore subor.jks -alias alias_nazov</p>
+</blockquote>
+<h4 id="konvertovanie-jks-do-p12">Konvertovanie JKS do P12</h4>
+<p>Všetky aliasy z JKS do P12</p>
+<blockquote>
+<p>keytool -importkeystore -srckeystore vstupny.jks -destkeystore
+vystupny.p12 -srcstoretype jks deststoretype pkcs12</p>
+</blockquote>
+<p>Jeden konkrétny alias z JKS do PEM</p>
+<blockquote>
+<p>keytool -exportcert -alias nazov_aliasy -keystore vstupny.jks -rfc
+-file vystup.pem</p>
+</blockquote>
+<h4 id="konvertovanie-p12-do-pem">Konvertovanie P12 do PEM</h4>
+<blockquote>
+<p>openssl pkcs12 -in tvoj_subor.p12 -out tvoj_subor.pem</p>
+</blockquote>
+<h4 id="trust-store">Trust store</h4>
+<p>Slúži iba na overenie u klienta.</p>
+<ul>
+<li>-obsahuje CA</li>
+<li>-overuje certifikát</li>
+<li>-obsahuje verejný kľúč</li>
+</ul>
+<h4 id="key-store">Key store</h4>
+<p>Obsahuje privátny kľúč a podpis, používa sa na serveri.</p>
+<ul>
+<li>-obsahuje práve jeden súkromný kľúč pre hostname</li>
+<li>-provide those credentials</li>
+</ul>
+<h4 id="vytvorenie-key-store-a-trust-store">Vytvorenie Key store a Trust store</h4>
+<blockquote>
+<p>keytool -import -file certifikat.pem -alias moj_alias_01 -keystore
+truststore.p12 -storetype pkcs12<br>
+keytool -importkeystore -srckeystore truststore.p12 -srcstoretype
+PKCS12 -destkeystore truststore.jks<br>
+<br>
+openssl pkcs12 -export -out keystore.p12 -in certifikat.pem -inkey
+privatni_klic.pem<br>
+keytool -importkeystore -srckeystore keystore.p12 -srcstoretype pkcs12
+-srcalias 1 -destkeystore keystore.jks -deststoretype jks -destalias
+moj_alias_01</p>
+</blockquote>
+<p>Kontrola obsahu trust a key storu</p>
+<blockquote>
+<p>keytool -v -list -keystore keystore.jks<br>
+keytool -v -list -keystore truststore.jks</p>
+</blockquote>
+<h4 id="export-verejneho-kľúča">Export verejneho kľúča</h4>
+<blockquote>
+<p>openssl x509 -in cert.pem -pubkey -noout pub_cert.pem</p>
+</blockquote>
+<h4 id="zobrazenie-verejného-kľúča">Zobrazenie verejného kľúča</h4>
+<blockquote>
+<p>openssl rsa -pubin -in tvoj_subor.pem -text</p>
+</blockquote>
+<h4 id="zobrazenie-prvého-pem-certifikátu">Zobrazenie prvého PEM certifikátu</h4>
+<blockquote>
+<p>openssl x509 -in tvoj_subor.pem -text</p>
+</blockquote>
+<h4 id="zobrazenie-všetkých-pem-certifikátov">Zobrazenie všetkých PEM certifikátov</h4>
+<blockquote>
+<p>keytool -printcert -v -file tvoj_subor.pem</p>
+</blockquote>
+<h4 id="zobrazenie-p12-certifikátu">Zobrazenie P12 certifikátu</h4>
+<blockquote>
+<p>openssl pkcs12 -info -in keystore.p12</p>
+</blockquote>
+<blockquote>
+<p>keytool -list -v -keystore tvoj_subor.p12 -storepass heslo</p>
+</blockquote>
+<h4 id="overenie-páru">Overenie páru</h4>
+<p>Porovnanie či certifikát patrí k súkromnému kľúči</p>
+<blockquote>
+<p>openssl x509 -noout -modulus -in subor.crt.pem | openssl md5<br>
+openssl rsa -noout -modulus -in subor.prv.pem | openssl md5</p>
+</blockquote>
 
   </div>
 </body>

@@ -34,26 +34,85 @@
     <span>Jan 1, 0001</span>
     Krátky návod ako nainštalovať Docker na Debian 9 a pár príkazov na ovládanie.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="inštalácia">Inštalácia</h4>
+<p>Nainštalujeme pár základných vecí:</p>
+<blockquote>
+<p>apt install apt-transport-https dirmngr</p>
+</blockquote>
+<p>Pridáme repozitár:</p>
+<blockquote>
+<p>echo 'deb <a href="https://apt.dockerproject.org/repo">https://apt.dockerproject.org/repo</a> debian-stretch main'
+&gt;&gt; /etc/apt/sources.list</p>
+</blockquote>
+<p>Pridáme kľúč:</p>
+<blockquote>
+<p>apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80
+--recv-keys F76221572C52609D</p>
+</blockquote>
+<p>Spravíme update balíkov:</p>
+<blockquote>
+<p>apt update</p>
+</blockquote>
+<p>Nainštalujeme samotný Docker:</p>
+<blockquote>
+<p>apt install docker-engine</p>
+</blockquote>
+<h4 id="používanie">Používanie</h4>
+<p>Stiahneme nejaký <em>Image</em></p>
+<blockquote>
+<p>docker pull debian</p>
+</blockquote>
+<p>Spustíme ho, a to tak že bežiaci kontajner sa bude volať <em>smazak</em>, bude
+vytvorený z obrazu <em>debian</em> ktorý sme prave stiahli, a spustíme na ňom
+<em>/bin/bash</em></p>
+<blockquote>
+<p>docker run --interactive --tty --name smazak debian /bin/bash</p>
+</blockquote>
+<p>Exitom z neho zase vyjdeme.</p>
+<p>Kontajner aj ked už nemá žiadny bežiaci proces, stále ho máme.</p>
+<blockquote>
+<p>docker ps -a</p>
+</blockquote>
+<p>Pod jedným názvom môže existovať len raz, paramter <em>--name smazak</em>
+môžme zmazať.</p>
+<p>Pokiaľ sme ho nespustili s parametrami <em>--interactive --tty</em>, musíme
+ho najskốr vypnúť</p>
+<blockquote>
+<p>docker container kill smazak</p>
+</blockquote>
+<p>Pokiaľ ho už nechceme nikdy nijak znova použiť, môžme ho vymazať</p>
+<blockquote>
+<p>docker rm docker</p>
+</blockquote>
+<p>Ak v ňom ale chceme pokračovať, prípadne sme si ho pripravili,
+nainštalovali nejake veci, a chceme ho používať, môžme ho uložiť ako
+obraz</p>
+<blockquote>
+<p>docker commit smazak novy_obraz\</p>
+</blockquote>
+<p>Ako spustiť kontajner a použiť disk z hostu</p>
+<blockquote>
+<p>docker run -it -v /opt/smazak/:/mnt/ --name smazak debian /bin/bash</p>
+</blockquote>
+<p>PortForward z hostu do kontajneru</p>
+<blockquote>
+<p>docker run -d=true --rm -it -h smazak01 -p 1000:1000/udp -p
+1001:1001/tcp --name smazak01 smazak /start.sh</p>
+</blockquote>
+<p>Niekedy pri inštalácií potrebujeme tieto balíčky, je dobré ich mať
+dopredu:</p>
+<blockquote>
+<p>apt install dialog apt-utils</p>
+</blockquote>
+<p>Ako premenovať image:</p>
+<blockquote>
+<p>docker tag image_old image_new</p>
+</blockquote>
+<p>Ako exportovat image:</p>
+<blockquote>
+<p>docker save -o image.tar image_name<br>
+docker load -i image.tar</p>
+</blockquote>
 
   </div>
 </body>

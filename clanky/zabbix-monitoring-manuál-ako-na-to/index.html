@@ -34,18 +34,77 @@
     <span>Jan 1, 0001</span>
     Návod ako nainštalovať Zabbix monitoring na Linux, aj do kontajnera.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Návod pre Debian 9, prípadne Debian 9 v Dockeri.</p>
+<h4 id="priprava">Priprava</h4>
+<p>Otvoríme v prehliadači tento odkaz kde si nájdeme akyuálnu verziu
+balíku, a skopríjeme jeho odkaz. Balík následne na servere stiahneme cez
+wget.
+<em><a href="https://repo.zabbix.com/zabbix/4.2/debian/pool/main/z/zabbix-release/">https://repo.zabbix.com/zabbix/4.2/debian/pool/main/z/zabbix-release/</a></em></p>
+<p>Inštalácia základných vecí.</p>
+<blockquote>
+<p>apt install dialog apt-utils wget vim</p>
+</blockquote>
+<p>Stiahneme Zabbix balík:</p>
+<blockquote>
+<p>wget
+<a href="https://repo.zabbix.com/zabbix/4.2/debian/pool/main/z/zabbix-release/zabbix-release_4.2-1%2Bstretch_all.deb">https://repo.zabbix.com/zabbix/4.2/debian/pool/main/z/zabbix-release/zabbix-release_4.2-1%2Bstretch_all.deb</a></p>
+</blockquote>
+<p>Nainštalujeme ho:</p>
+<blockquote>
+<p>dpkg -i zabbix-release_4.2-1+stretch_all.deb</p>
+</blockquote>
+<p>Obnovíme zoznam balíkov:</p>
+<blockquote>
+<p>apt update</p>
+</blockquote>
+<h4 id="server">Server</h4>
+<p>Inštalácia nástrojov na monitoring server.</p>
+<p>Inštalácia MariaDB servera:</p>
+<blockquote>
+<p>apt install mysql-server mysql-client</p>
+</blockquote>
+<p>Spustenie databázového servera:</p>
+<blockquote>
+<p>/etc/init.d/mysql restart</p>
+</blockquote>
+<p>Inštalácia Apache2 web servera:</p>
+<blockquote>
+<p>apt install apache2</p>
+</blockquote>
+<p>Inštalácia PHP a webového nástroja do Apache web servera, na spravovanie
+MariaDB databáze:</p>
+<blockquote>
+<p>apt install phpmyadmin</p>
+</blockquote>
+<p>Spustenie Apache2 web servera:</p>
+<blockquote>
+<p>/etc/init.d/apache2 restart</p>
+</blockquote>
+<p>Inštalácia samotného monitoring servera:</p>
+<blockquote>
+<p>apt install zabbix-server-mysql</p>
+</blockquote>
+<p>Otvoríme v prehliadači PHP My Admin ktorý sme naištalovali.
+Prihlasovacie údaje použijeme tie čo sme zadali pri inštalácií. Mal by
+byť na adrese: http://localhost/phpmyadmin/</p>
+<p>Následne v PHP My Admin vytvoríme nového užívateľa. Pri vytvárani</p>
+<p>Inštalácia Zabbix web-u:</p>
+<blockquote>
+<p>apt install zabbix-frontend-php</p>
+</blockquote>
+<blockquote>
+<p>rm /var/www/html/index.html<br>
+cp -r /usr/share/zabbix/* /var/www/html/</p>
+</blockquote>
+<h4 id="nastavenie-agenta">Nastavenie agenta</h4>
+<blockquote>
+<p>Hostname=DEVMDMAPP01</p>
+</blockquote>
+<blockquote>
+<p>Server=zabbix_server ServerActive=zabbix_server</p>
+</blockquote>
+<h4 id="passive-vs-active">Passive vs. Active</h4>
+<p>Aktivni agent -&gt; Server:10051 &gt; Passivni agent:10050</p>
 
   </div>
 </body>

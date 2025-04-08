@@ -34,7 +34,18 @@
     <span>Jan 1, 0001</span>
     Ako upgradovať verziu Debian na novšiu. Niekedy je to proste trochu iné.
 
-    <!-- raw HTML omitted -->
+    <h4 id="upgrade-z-debian-11-na-12">Upgrade z Debian 11 na 12</h4>
+<p>Postup ktorý mi fungoval z verzie Debian 11 Bullseye na Debian 12
+Bookworm.</p>
+<blockquote>
+<p>apt update<br>
+apt upgrade<br>
+sed -i 's/bullseye/bookworm/g' /etc/apt/sources.list<br>
+apt update<br>
+apt upgrade --without-new-pkgs<br>
+apt full-upgrade<br>
+reboot\</p>
+</blockquote>
 
   </div>
 </body>

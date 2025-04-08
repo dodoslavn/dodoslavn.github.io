@@ -34,25 +34,35 @@
     <span>Jan 1, 0001</span>
     Ukážka farieb ako sa dá nastaviť $PS1 pre Bash na Linuxe.
 
-    <p><!-- raw HTML omitted -->\w<!-- raw HTML omitted --> - aktuálny adresár s plnou cestou<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->\W<!-- raw HTML omitted --> - názov aktuálneho adresára<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->\h<!-- raw HTML omitted --> - hostname<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->\u<!-- raw HTML omitted --> - meno užívateľa<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->\e[1m<!-- raw HTML omitted --> - tučné písmo<!-- raw HTML omitted --><!-- raw HTML omitted -->
+    <p><strong>\w</strong> - aktuálny adresár s plnou cestou<br>
+<strong>\W</strong> - názov aktuálneho adresára<br>
+<strong>\h</strong> - hostname<br>
+<strong>\u</strong> - meno užívateľa<br>
+<strong>\e[1m</strong> - tučné písmo<br>
+<br>
 Píklad:</p>
-<!-- raw HTML omitted -->
-<p>Farby:<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-PS1=&quot;[\033[38;5;0m][\u@\h:\w]\$[\033[0m] &quot;
-<!-- raw HTML omitted --><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<blockquote>
+<p>PS1=&quot;[\u@\h:\w]\\$ &quot;</p>
+</blockquote>
+<p>Farby:<br>
+[ PS1=&quot;\[\033[38;5;0m\][\u@\h:\w]\\$\[\033[0m\] &quot;
+]{style=&ldquo;color: #555753&rdquo;}<br>
+[ PS1=&quot;\[\033[38;5;1m\][\u@\h:\w]\\$\[\033[0m\] &quot;
+]{style=&ldquo;color: #ef2929&rdquo;}<br>
+[ PS1=&quot;\[\033[38;5;2m\][\u@\h:\w]\\$\[\033[0m\] &quot;
+]{style=&ldquo;color: #8ae234&rdquo;}<br>
+[ PS1=&quot;\[\033[38;5;3m\][\u@\h:\w]\\$\[\033[0m\] &quot;
+]{style=&ldquo;color: #fce94f&rdquo;}<br>
+[ PS1=&quot;\[\033[38;5;4m\][\u@\h:\w]\\$\[\033[0m\] &quot;
+]{style=&ldquo;color: #729fcf&rdquo;}<br>
+[ PS1=&quot;\[\033[38;5;5m\][\u@\h:\w]\\$\[\033[0m\] &quot;
+]{style=&ldquo;color: #ad7fa8&rdquo;}<br>
+[ PS1=&quot;\[\033[38;5;6m\][\u@\h:\w]\\$\[\033[0m\] &quot;
+]{style=&ldquo;color: #34e2e2&rdquo;}<br>
+[ PS1=&quot;\[\033[38;5;7m\][\u@\h:\w]\\$\[\033[0m\] &quot;
+]{style=&ldquo;color: #eeeeec&rdquo;}<br>
+[ PS1=&quot;\[\033[38;5;8m\][\u@\h:\w]\\$\[\033[0m\] &quot;
+]{style=&ldquo;color: #ff0000&rdquo;}\</p>
 
   </div>
 </body>

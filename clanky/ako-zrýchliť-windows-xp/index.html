@@ -34,13 +34,63 @@
     <span>Jan 1, 0001</span>
     Windows ma vela skrytých funkcií a služieb ktoré nepoužívame a tak nám kladie napríklad nepotrebné otázky, zdržuje nás a berie výkon ktorý potrebujeme napríklad pri hrách. Tieto služby su voliteľné a môžme ich samozrejme aj vypnúť. Tu si ukážeme niekoľko základných vecí.
 
-    <p>Začneme s vypínaním nepotrebých služieb. Budeme otvárať nasledujúce zložky:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Kto nevie ako sa vypínaju tak, kliknite na službu pravým tlačidlom na myši a dajte&quot;</p>
-<!-- raw HTML omitted -->
+    <p>Začneme s vypínaním nepotrebých služieb. Budeme otvárať nasledujúce
+zložky:</p>
+<blockquote>
+<p>START -&gt; OVLADACI PANEL -&gt; ADMINISTRATIVNE NASTROJE -&gt; SLUZBY</p>
+</blockquote>
+<p>alebo kto to má po anglicky:</p>
+<blockquote>
+<p>START -&gt; CONTROL PANEL -&gt; ADMINISTRATIVE TOOLS -&gt; SERVICES</p>
+</blockquote>
+<p>a teraz už budeme len vypínat nepotrebné služby, a tu je ich zoznam:</p>
+<blockquote>
+<p>- Adapér výkonu služby WMI\</p>
+<ul>
+<li>Automatická konfigurácia bezdrótových zariadení - ak máte WiFi sieť
+tak to nechajte\</li>
+<li>Automatické aktualizáce - ak ich nepoužívate, zakážte\</li>
+<li>Centrum Zabezpečenia - táto služba sa moc používat nedá, odporúčam
+zakazáť\</li>
+<li>Témy - ak nechcete moc využívať vzhľad tak zakážte\</li>
+<li>Nápoveda a odborná pomoc - dobrá kravina ZAKAZTE\</li>
+<li>Podpora rozhrani NetBIOS nad protokolem TCP/IP - v skutočnosti
+predstavuje nebezpečie dúfam, že zakážete\</li>
+<li>Server - ak nepoužívate zdielanie súborov, zakážte\</li>
+<li>Služba rozpoznávania pomocou protokolu SSDP\</li>
+<li>Vzdialený register - bezpečnostná diera, zakážte\</li>
+<li>Webový klient - s webom nemá nič spolocčného, zakážte\</li>
+<li>Zasilani sprav o chybách\</li>
+</ul>
+</blockquote>
+<p>Kto nevie ako sa vypínaju tak, kliknite na službu pravým tlačidlom na
+myši a dajte&quot;</p>
+<blockquote>
+<p>PROPARTIES / VLASTNOSTI</p>
+</blockquote>
+<p>a tam kliknite na STOP, a potom vyrolujte Typ spustenia a tam na</p>
+<blockquote>
+<p>Vypnuté / DISABLED</p>
+</blockquote>
 <p>A na záver jedna úprava v registre. Spustíme aplikáciu Regedit</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>START &gt; SPUSTIT &gt; REGEDIT</p>
+</blockquote>
+<p>alebo po ENG</p>
+<blockquote>
+<p>START &gt; RUN &gt; REGEDIT</p>
+</blockquote>
+<p>Zobrazý sa nám aplikácia v ktorej dalej postupujeme v ľavom panely:</p>
+<blockquote>
+<p>HKEY_CURRENT_USER -&gt; CONTROL PANEL -&gt; DESKTOP</p>
+</blockquote>
+<p>A teraz sa nám napravo zobrazil nejaky zoznam. Nájdeme v ňom:</p>
+<blockquote>
+<p>MenuShowDelay</p>
+</blockquote>
+<p>Upravíme jeho hodnotu (zo 400) na 0 (nula). Teraz by sme mali pocítiť
+zvíšenu rýchlostľ hlavne v StartMenu (Starte). Nezabudnite že efekt
+všetkých týchto úprav pocítite až po reštarte sýstému.</p>
 
   </div>
 </body>

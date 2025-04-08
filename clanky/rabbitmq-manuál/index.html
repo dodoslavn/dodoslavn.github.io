@@ -34,9 +34,19 @@
     <span>Jan 1, 0001</span>
     Pár poznámok ohladne RabbitMQ. Čo, kde a ako funguje.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="lazy-queues">Lazy queues</h4>
+<p>Uchováva správy vo frontách, ukladá ich tam čo najrýchlejšie, primárne
+na disk. V pamäti sú iba pri spracovávaní. Veľmi šetrné k pamäti RAM.</p>
+<h4 id="durable">durable</h4>
+<p>Fronty a exchange ostávajú aj po reštarte. Inak budú zmazanaé aj s
+obsahom.</p>
+<h4 id="quorum-queue">Quorum queue</h4>
+<p>Nastavenie quorum queue cluster size v runtime</p>
+<blockquote>
+<p>rabbitmqctl eval 'application:get_env(rabbit,quorum_cluster_size).'<br>
+rabbitmqctl eval 'application:set_env(rabbit,quorum_cluster_size,
+5).'</p>
+</blockquote>
 
   </div>
 </body>

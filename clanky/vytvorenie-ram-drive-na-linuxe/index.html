@@ -34,9 +34,21 @@
     <span>Jan 1, 0001</span>
     Návod na vytvorenie RAM drive na Linuxe
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Toto je spôsob ako vytvoriť RAM drive. Dá sa to dobre automatizovať ked
+dáme tieto príkazy do skriptu, a skript dáme na spustenie po štarte
+systému.</p>
+<p>Vytvorenie adresára:</p>
+<blockquote>
+<p>mkdir /tmp/ramdisk ;</p>
+</blockquote>
+<p>Nastavenie oprávnenia:</p>
+<blockquote>
+<p>chmod 777 /tmp/ramdisk ;</p>
+</blockquote>
+<p>Vytvorenie samotného RAM drive:</p>
+<blockquote>
+<p>mount -t tmpfs -o size=10000M tmpfs /tmp/ramdisk/ ;</p>
+</blockquote>
 
   </div>
 </body>

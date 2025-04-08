@@ -34,12 +34,48 @@
     <span>Jan 1, 0001</span>
     Navod ako zdielat adresar na Linuxe (Debian). Navod obsahuje cast pre server ale aj pre klienta.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Návod sa skladá z dvoch častí, a to časť pre server a pre klient. Hneď
+na začiatku si zistíme adresu oboch PC, najlepšie ked ich IP adresa v
+sieti bude statická.</p>
+<p>Pre príklad, v tomto návode bude mať server adresu 192.168.1.2 a klient
+bude mať 192.168.1.111 . Pokiaľ sa chceme vyhnúť problému s opravnením,
+musíme buď používať LDAP autetifikáciu, alebo vytvárať lokálnych
+užívateľoch na všetkých zariadeniach ktoré budú používať rovnaký
+zdielaný adresár tak, aby mali rovnaké ID.</p>
+<p>Pre viac info ohľadom oprávnení a nastavení zdielania je možné nájsť v:</p>
+<blockquote>
+<p>man 5 exports</p>
+</blockquote>
+<h4 id="server">Server</h4>
+<p>Nainštalujeme NFS balíčky:</p>
+<blockquote>
+<p>sudo apt install nfs-kernel-server nfs-common</p>
+</blockquote>
+<p>Otvoríme subor:</p>
+<blockquote>
+<p>vi /etc/exports</p>
+</blockquote>
+<p>a v ňom nastavíme adresár a nastavenie zdielania:</p>
+<blockquote>
+<p>/mnt/server
+192.168.1.111(rw,sync,fsid=0,crossmnt,no_subtree_check,no_root_squash)</p>
+</blockquote>
+<h4 id="klient">Klient</h4>
+<p>Nainštalujeme NFS balíček:</p>
+<blockquote>
+<p>sudo apt install nfs-common</p>
+</blockquote>
+<p>Pripojíme adresár:</p>
+<blockquote>
+<p>mount 192.168.1.2:/mnt/server /mnt/klient</p>
+</blockquote>
+<p>Pre debugovanie sa môžu použiť príkazy:</p>
+<blockquote>
+<p>exportfs -a</p>
+</blockquote>
+<blockquote>
+<p>showmount -e localhost</p>
+</blockquote>
 <p>Port 111 (TCP and UDP) and 2049 (TCP and UDP)</p>
 
   </div>

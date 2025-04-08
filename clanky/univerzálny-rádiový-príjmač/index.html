@@ -34,16 +34,55 @@
     <span>Jan 1, 0001</span>
     Ako príjmať akykoľvek rádiový signál a v počítači ho následne spracovať.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="software-defined-radio">Software defined radio</h4>
+<p>Je to zariadenie ktoré má nejaký, zpravidla veľký frekvenčný rozsah
+signálu ktorý vie prijať, a pomocou ADC (Analog to Digital Converter)
+prevodníku poslať daľej do počítača v digitalnej forme, kde si ho cez
+nejaký software viem rôzne spracovať.</p>
+<h4 id="výpočet-veľkosti-vlny">Výpočet veľkosti vlny</h4>
+<p>Rýchlosť svetla je 300 000 000 m/s.<br>
+Veľkosť vlny sa počíta vydelením: rýchlost svetla v m/s deleno
+frekvencia v Hz .</p>
+<h4 id="antény-a-rádiove-vlny">Antény a rádiove vlny</h4>
+<p>U anténty vo výške 2-násobku veľkosti vlny, alebo akejkoľvek väčšej
+výšky, môžme ignorovať odrazy signálu od zeme.<br>
+Anténa nesmie byť vo výške ktorá je násobok štvrtiny veľkosti vlny.<br>
+SDR zariadenie by malo byť čo najbližšie k anténe z dôvodu straty sily
+signálu na koax káblu.</p>
+<h4 id="rtl-sdr-v4-rtl2832u">RTL-SDR v4 (RTL2832U)</h4>
+<p>TBD. Obsahuje tuner R828D.</p>
+<ul>
+<li>frekvenčný rozsah: 500kHz - 1.7GHz</li>
+<li>ADC prevodník: 8bit</li>
+</ul>
+<h4 id="software">Software</h4>
+<p>Zoznam programov užitočnych pre prácu s SDR.</p>
+<ul>
+<li>AirSpy / SDR Sharp / SDR#</li>
+<li>SDR++</li>
+<li>SatDump</li>
+<li>SonicVisualiser</li>
+<li>WXtoimg</li>
+<li>noaa-apt</li>
+<li>apt-decoder <a href="https://github.com/zacstewart/apt-decoder">https://github.com/zacstewart/apt-decoder</a></li>
+<li>zadig.exe</li>
+</ul>
+<h4 id="rtl-sdr-instalacia--ovladace">RTL-SDR instalacia / ovladace</h4>
+<p>SDR jednoducho pripojime cez USB do PC. Na Windows v &ldquo;Spravci zariadeni&rdquo;
+( Device Manager ), by mali byt vidiet 2 nezname USB zarisdenia so zltym
+vykrocnikom. Je teraz potreb nainstalovat ovladace, najjednodussi sposob
+je nainstalovat SDR-Sharp nastroj v ktorom sa pri prvom spusteni stiahne
+aj Zadig nastroj. Nastroj Zadig spustime (v zlozke SDR-Sharp nástroja sa
+bude nachadzat subor &ldquo;zadig.exe&rdquo;). V Zadig nastroji vyberieme SDR, a
+dame nainstalovat. Obcas sa to rozbije takze je potreba pouzit znova</p>
+<h4 id="sdr-sharp">SDR Sharp</h4>
+<p>Nastroj na samotne prijmanie a spracovanie signalu z SDR. Ma v sebe
+spustu funkcii. Pri instalacii si natiahne aj nastroj &ldquo;Zadig&rdquo; ktory
+sluzi na nainstalovanie ovladacov prave toho RTL-SDR.</p>
+<h4 id="užitočné-odkazy">Užitočné odkazy</h4>
+<p><a href="https://www.noaasis.noaa.gov/POLAR/HRPT/hrpt.html">https://www.noaasis.noaa.gov/POLAR/HRPT/hrpt.html</a><br>
+<a href="https://sgcderek.github.io">https://sgcderek.github.io</a></p>
+<h4 id="dipólová-anténa">Dipólová anténa</h4>
 
   </div>
 </body>

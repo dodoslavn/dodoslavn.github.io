@@ -35,17 +35,93 @@
     Tu si povieme niečo o viditeľných faktoroch na stránke a najčastejšie chyby ktorých sa vyvojári dopúštajú.
 
     <p>Tu sa budeme zaoberať týmito viditeľnýmy faktormy:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>v HTML elemente &lt; head &gt;. Titulka je viditeľná v okne prehliadača a tiež vo výsledkoch vyhľadávania. Je to jeden z najdôležitejších faktorov stránky, pretože rozhoduje nielen pri zaradenia výsledkov, ale ma velký vplyv na počet preklikov ( CTR ).</p>
-<!-- raw HTML omitted -->
-<p>Pri písani titulky je dobre dávať niektoré kľúčové slová. Ale. Titulka síce môže slávit úspechy v presvedčovaní vyhľadávača, aby stránku posunul vyžšie, ale úspech dobrého umiestnenia je na úkor preklikov ( CTR ). Titulky preplnené kľúčovýmy slovamy veľkú mieru preklikov nemajú, aj ked teda sú umiestnené veľmi dobre.</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<ul>
+<li>- titulka stránky</li>
+<li>- nadpis v stránke</li>
+<li>- text stránky</li>
+<li>- odchádzajúce odkazy</li>
+<li>- kľúčové slová v URL a v doméne</li>
+<li>- vnutorná štruktúra odkazov</li>
+<li>- tematické zameranie webu ako takého</li>
+</ul>
+<h4 id="tititulka-stránky">Tititulka stránky</h4>
+<p>Titulka stránky je textový retazec definovaný obsahom elementu:</p>
+<blockquote>
+<p>&lt; title &gt; &lt; /title &gt;</p>
+</blockquote>
+<p>v HTML elemente &lt; head &gt;. Titulka je viditeľná v okne prehliadača a
+tiež vo výsledkoch vyhľadávania. Je to jeden z najdôležitejších faktorov
+stránky, pretože rozhoduje nielen pri zaradenia výsledkov, ale ma velký
+vplyv na počet preklikov ( CTR ).</p>
+<blockquote>
+<p>Jedna z najväčších chýb ktorých sa vývojáry webov dopúštajú je, že
+dajú všetkym stránkam webu rovnakú titulku. Často ide o názov firmy a
+jeho slogan. V takýchto prípadoch, prinajlepšom bude umiestnenie
+stránky mizerné, a prinajhoršom dostane celí web penalizáciu ak
+vyhľadávač usúdi že sa jedná o duplicitný obsah. Preto sa uistíte aby
+každá stránka webu mala svoju jedinečnú titulku.</p>
+</blockquote>
+<p>Pri písani titulky je dobre dávať niektoré kľúčové slová. Ale. Titulka
+síce môže slávit úspechy v presvedčovaní vyhľadávača, aby stránku
+posunul vyžšie, ale úspech dobrého umiestnenia je na úkor preklikov (
+CTR ). Titulky preplnené kľúčovýmy slovamy veľkú mieru preklikov nemajú,
+aj ked teda sú umiestnené veľmi dobre.</p>
+<h4 id="nadpisy-stránky">Nadpisy stránky</h4>
+<p>Nadpisy v stránke sú časti textu ktoré sú vyznačené či už iným sfarbením
+alebo veľkým písmom kde vyznačujú celkový význam stránky. Typicky sú
+vytvárané HTML tagmy &lt; hX &gt; kde X je číslo od 1 do 7. V minulosti boli
+zneužívané k manipulácií výsldeskov vyhľadávania, no dnes ešte stále sú
+dôležitým on-page faktorom, a ich hlavný význam je že ulahčujú navigáciu
+na stránke.</p>
+<h4 id="text-stránky">Text stránky</h4>
+<p>Stránka obsahujúca kľúčové slová, ktorú užívateľ hľadá, by pre neho už
+sama, mala byt dôležitá. Algoritmy vyhľadávačou s tým tiež počítajú. No
+nemali by ste s tým prehánať. Prílišné vyskytovanie sa kľúčových slov v
+texte môže viesť k označeniu webu ako spam ( keyword stuffing ). Aj ked
+vypisovanie rôznych možnostiach zápisu ( v minulom / prítomnom / budúcom
+čase ), a tiež aj zmena poradia slov slovného spojenia nieje určite na
+škodu. Písanie textu tak, aby sa návštevníkom dobre čítal, ale zároveň
+aj zameraný na určité vyhľadávacie frázy. Je to proces kedy sa snažíme
+bez akychkovľek spamových praktík dostať na popredné miesta výsledkov
+vyhľadávania. A je to naozaj tažké napísat dobrý text tak, aby bol dobre
+čitatelný ale aj pútavy pre vyhľadávače, aby teda obsahoval pár krát
+relevantné slová. Neexistuje teda asi presný postup, ako napísat text,
+tak aby bol pútavy pre obe strany. Viacmenej, je pár overených postupov
+a trikov ako to dosiahnuť:</p>
+<blockquote>
+<p>Jedným z overených trikov, ktory si určite obľúbite, je dávať kľúčové
+slová na koniec ale aj na začiatok vety, kedy jeho výskyt znásobite.</p>
+</blockquote>
+<h4 id="odchádzajúce-odkazy">Odchádzajúce odkazy</h4>
+<p>Vyhľadávače ohodnocujú nielen text ako taký, ale aj odkazy na stránke.
+Avšak odkaz na stránku s bezvyznamným alebo spamovým obsahom. To znamená
+že odkaz na &quot;nesprávnu&quot; stránku môže stránke veľmi uškodit, ale
+nesmieme zabudnút že &quot;správne&quot; odkazy, môže veľmi polepšiť hodnotenie
+webu vyhľadávačom.</p>
+<h4 id="kľúčové-slová-v-url-a-doméne">Kľúčové slová v URL a doméne</h4>
+<p>Kľúčové slová vyskytujúce sa v URL a v doméne, majú asi len malý vpliv
+na umiestenie, ale zrejme kladný, no určite majú vpliv na mieru
+preklikov, kedže kľúčové slová pravdepodobne presvedčia viac užívateľa
+aby na odkaz klikol v dôsledku zvýšeného pocitu suvislosti s hladanýmy
+pojmamy. To platí pre doménu aj URL.</p>
+<h4 id="vnútorná-štruktúra-odkazov">Vnútorná štruktúra odkazov</h4>
+<p>Vyhľadávače asi predpokaldajú, že stránky na ktoré nevedú žiadne
+vnútorné odkazy, alebo su zamorené hlboko vo vnútornej šktruktúre webu,
+podobne ako ked stránky na ktoré nevedú externé odkazy sú menej
+podstatné ako tie na ktore vedú. Priamy odkaz na úvodnej stránke na
+obsah ktorý chcete dobre umiestniť, pomôže vylepšiť veľmi dobre jej
+hodnotenie z pohľadu vyhľadávača. Je to podobné ako v obchode, kde
+obľúbene vyrobky umiestnia do prednej časti obchodu.<br>
+Najhoršie čo môže byt je ked stránku &quot;pochováte&quot; v hierarchií odkazov
+pomocou navigácie &quot;&lt;&lt; dozadu&quot; a &quot;dopredu &gt;&gt;&quot;. Tá stránka, čo
+bude niekde na konci bude horšie dosiahnuteľný nielen pre človeka, ktorý
+bude musieť niekoľko krát prekliknúť, ale určite bude považovaný aj za
+menej dôležitý pre vyhľadávače. Z toho dôvodu nepoužívajte stránkovanie
+podobné vyžšie uvedenému spôsobu, a pridajte k nim napríklad číslovanie
+stránok. Teda napr. 1 2 3 4 a pod.</p>
+<h4 id="tematické-zameranie-celého-webu">Tematické zameranie celého webu</h4>
+<p>To, že webová stránka suvisý s ostatnýmy stránkamy na danom webe, môže
+denému webu zlepšiť hodnotenie celému webu ako takého.</p>
 
   </div>
 </body>

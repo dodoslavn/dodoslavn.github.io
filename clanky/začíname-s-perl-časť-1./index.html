@@ -34,30 +34,116 @@
     <span>Jan 1, 0001</span>
     Tento sciptovací jazyk, ktorý má dobre vypracované regulárne výrazy, môžete použiť k veľmi rôznorodému spektru činností, zahrnajúci efektivného zpracovaniu väčšieho množstva textu. Nasledujúce typy by vám mali pomôcť so začiatkamy tak, aby ste boli schopný vytvoriť sami jednoduché aplikácie.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="interpretovaný-vs-kompilovaný-kód">Interpretovaný vs. kompilovaný kód</h4>
+<p>Programy v Perl môžeme ukladať dvoma spôsobmy. Bud interpretované v
+scripte alebo ako binárne verzie (kompilovaný). Obidva spôsoby majú
+svoje výhody a nevýhody. Kompilovaný je o trochu pomalši a jeho súčastou
+je celí zdrojový kód, všetky knižnice a veľa iných vecí. Veľkost je tak
+neporovnateľne väčšia, no veľkosť je tam väčšia hlavne kvôli knižniciam.
+Neskôr ked program dorábame už sa jeho velkosť zvačšuje tak isto ako pri
+nekompilovanom. Tým ze je skompilovaný je znížena aj jeho možnost zmien
+chovania. Má ale aj výhody. Program potom prenesený na iné PC je ihned
+plne funkčny ako na PC na kt. sa program vytváral, kedže v obsahuje aj
+všetky knižnice netreba nič inštalovať. Interpretovaný program je
+rychlejší, prehladnejší a k dispozícií je zdrojový kod kt. je hlavne
+malý. Je tiež možnosť ho ľahko upravovať bez zásadnejších zmien.<br>
+Pokiaľ chcete script kompilovať, napíšte:</p>
+<blockquote>
+<p>perlcc subor.pl</p>
+</blockquote>
+<p>Pokiaľ uprednostnujete interpretované programy, musíte napísať na
+začiatok každého scriptu:</p>
+<blockquote>
+<p>#!/usr/bin/perl</p>
+</blockquote>
+<p>Odporúčam ale používať variantu s parametrom -w, vdaka ktorému nám bude
+vypisovať všetky chyby:</p>
+<blockquote>
+<p>#!/usr/bin/perl -w</p>
+</blockquote>
+<h4 id="výpis-textu">Výpis textu</h4>
+<p>Zakladný príkaz asi v každom jazyku je print. Teraz si vyskúšajte tento
+script:</p>
+<blockquote>
+<p>#!/usr/bin/perl -w<br>
+print &quot;Hallo World&quot;;</p>
+</blockquote>
 <p>Tento súbor uložte ako:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>subor.pl</p>
+</blockquote>
+<p>Potom musíme ale nastaviť tomu súboru aj práva na spustenie, takže
+zadajte:</p>
+<blockquote>
+<p>chmod a+x subor.pl</p>
+</blockquote>
 <p>A teraz uz len spustime program:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Deklarovanie premenných a ich typ nieje potrebne kedže sa deklarujú sami automaticky, ihned pri prvom použití. Skalárnu premennú s hodnotou 5 vytvoríme nasledovne:</p>
-<!-- raw HTML omitted -->
-<p>Ak chceme niektorú z premenných zrušiť, nemôžeme im iba prideliť nulovú hodnotu ale musíme im prideliť hodnotu undef:</p>
-<!-- raw HTML omitted -->
-<p>Ak chceme vytvorit viacero premenných s rovnakou hodnotou môžeme ich jednoducho napisať vedľa seba:</p>
-<!-- raw HTML omitted -->
-<p>Pokial chceme hodnotu premennej zvačšiť(napr. o 5), väčšinou použijete zápis:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>./subor.pl</p>
+</blockquote>
+<h4 id="premenné-a-práca-s-nimi">Premenné a práca s nimi</h4>
+<p>V tomto jazyku je niekoľko typov premenných a tie sa od seba líšia
+znakom pred nazvom premennej.</p>
+<blockquote>
+<p>$premenna //skalárna<br>
+@premenna //pole, zoznam alebo text<br>
+%premenna //asiciatívna (hash)<br>
+$$premenna //odkaz na premennú ($$ / @$ / %$)\</p>
+</blockquote>
+<p>Deklarovanie premenných a ich typ nieje potrebne kedže sa deklarujú sami
+automaticky, ihned pri prvom použití. Skalárnu premennú s hodnotou 5
+vytvoríme nasledovne:</p>
+<blockquote>
+<p>$premenna = 5;</p>
+</blockquote>
+<p>Ak chceme niektorú z premenných zrušiť, nemôžeme im iba prideliť nulovú
+hodnotu ale musíme im prideliť hodnotu undef:</p>
+<blockquote>
+<p>$premenna = undef;</p>
+</blockquote>
+<p>Ak chceme vytvorit viacero premenných s rovnakou hodnotou môžeme ich
+jednoducho napisať vedľa seba:</p>
+<blockquote>
+<p>$a = $b = $c = $d = 5;</p>
+</blockquote>
+<p>Pokial chceme hodnotu premennej zvačšiť(napr. o 5), väčšinou použijete
+zápis:</p>
+<blockquote>
+<p>$a = $a + 5;</p>
+</blockquote>
 <p>No v Perl poznáme ale jnoduchší zápis:</p>
-<!-- raw HTML omitted -->
-<p>Už sme si ukázali ako zmeniť hodnotu premennej, ale čo ak chceme iba incrementovat? Na to môžme použiť další spôsob:</p>
-<!-- raw HTML omitted -->
-<p>Rozdiel medzi nimi ja taký ze pri prvom spôsobe zápisu sa najskôr vyvolá hodnota premennej a bude vydaná jej pôvodna hodnota a až potom sa incrementuje. Zatiaľ co pri druhom spôsobe sa najskôr incrementuje a je vydaná už jej incrementovaná hodnota.</p>
-<p>Spájanie premenných v Perl je tiež jednoduché ako u ostatných jazykoch, a to pomocou &ldquo;.&rdquo; (bodky). Tu si uvedieme príklad:</p>
-<!-- raw HTML omitted -->
-<p>Opakovanie príkazu môžme vykonať príkazom &ldquo;x&rdquo;. Tu je jednoduchý príklad ktorí nám vypíše 5 krát za sebou hodnotu premennej $a:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>$a += 5;</p>
+</blockquote>
+<p>Tento spôsob funguje aj pri ostatných operáciach, nielen pri sčitovaní.
+Už sme si ukázali ako zmeniť hodnotu premennej, ale čo ak chceme iba
+incrementovat? Na to môžme použiť další spôsob:</p>
+<blockquote>
+<p>$a++ ;</p>
+</blockquote>
+<p>No máme tu aj další podobný zápis:</p>
+<blockquote>
+<p>++$a ;</p>
+</blockquote>
+<p>Rozdiel medzi nimi ja taký ze pri prvom spôsobe zápisu sa najskôr vyvolá
+hodnota premennej a bude vydaná jej pôvodna hodnota a až potom sa
+incrementuje. Zatiaľ co pri druhom spôsobe sa najskôr incrementuje a je
+vydaná už jej incrementovaná hodnota. Spájanie premenných v Perl je tiež
+jednoduché ako u ostatných jazykoch, a to pomocou &quot;.&quot; (bodky). Tu si
+uvedieme príklad:</p>
+<blockquote>
+<p>$premenna = &quot;jablko &quot;.&quot;hruska &quot;.&quot;a ostatne&quot;;</p>
+</blockquote>
+<p>Alebo tiež ak iba pripisujeme k premennej tak môžme použiť:</p>
+<blockquote>
+<p>$premenna = &quot;jablko hruska&quot;;<br>
+$premenna .= &quot;a ostatne&quot;;</p>
+</blockquote>
+<p>Opakovanie príkazu môžme vykonať príkazom &quot;x&quot;. Tu je jednoduchý
+príklad ktorí nám vypíše 5 krát za sebou hodnotu premennej $a:</p>
+<blockquote>
+<p>print $a x 5;</p>
+</blockquote>
 
   </div>
 </body>

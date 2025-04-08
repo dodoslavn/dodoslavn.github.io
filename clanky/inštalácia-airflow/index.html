@@ -34,16 +34,13 @@
     <span>Jan 1, 0001</span>
     Postup ako zprovozniť Airflow - ETL nástroj od Apache.
 
-    <p>apt install -y  default-libmysqlclient-dev build-essential
-cd /niekam/
-python3 -m venv .
-./bin/pip3 install apache-airflow[mysql]</p>
-<p>./airflow db init</p>
-<p>vi ../home/airflow/airflow.cfg</p>
-<p>sql_alchemy_conn = mysql+mysqldb://airflow_user:your_secure_password@localhost:3306/airflow_db</p>
-<p>executor = LocalExecutor</p>
-<p>./airflow db init</p>
-<p>./airflow users create dodo4svk4 &ndash;firstname first_name &ndash;lastname last_name &ndash;role Admin  &ndash;email <a href="mailto:spiderman@superhero.org">spiderman@superhero.org</a></p>
+    <p>apt install -y default-libmysqlclient-dev build-essential cd /niekam/
+python3 -m venv . ./bin/pip3 install apache-airflow[mysql] ./airflow
+db init vi ../home/airflow/airflow.cfg sql_alchemy_conn =
+mysql+mysqldb://airflow_user:your_secure_password@localhost:3306/airflow_db
+executor = LocalExecutor ./airflow db init ./airflow users create
+dodo4svk4 --firstname first_name --lastname last_name --role Admin
+--email <a href="mailto:spiderman@superhero.org">spiderman@superhero.org</a></p>
 
   </div>
 </body>

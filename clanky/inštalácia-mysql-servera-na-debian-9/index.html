@@ -34,12 +34,31 @@
     <span>Jan 1, 0001</span>
     V repozitároch Debian 9 sa už MySQL nenachádza z dovôdu že bol nahradený MariaDB. To ale neznamená že ho nemôžme používať a nainštalovať mimo repozitár.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Najskôr musíme stiahnuť officiálny balík zo stránok MySQL ktorý nám
+nakonfiguruje repozitár. Buď navštívime stáránku a stiahneme najnovší z
+<a href="https://dev.mysql.com/downloads/repo/apt/">https://dev.mysql.com/downloads/repo/apt/</a>{target=&quot;_new&quot;}
+.</p>
+<p>Alebo tu je link na balík z doby písania článku:</p>
+<blockquote>
+<p>wget <a href="https://dev.mysql.com/get/mysql-apt-config_0.8.7-1_all.deb">https://dev.mysql.com/get/mysql-apt-config_0.8.7-1_all.deb</a></p>
+</blockquote>
+<p>Po stiahnutí balíka ho môžme nainštalovať:</p>
+<blockquote>
+<p>sudo dpkg -i mysql-apt-config_0.8.7-1_all.deb</p>
+</blockquote>
+<p>Po inštalácií spravíme update, v ktorom by sme mali vidieť <em>mysql</em>
+repozitár:</p>
+<blockquote>
+<p>sudo apt update</p>
+</blockquote>
+<p>A teraz uz môžme nainštalovať samotný MySQL server priamo z repozitára:</p>
+<blockquote>
+<p>sudo apt install mysql-server</p>
+</blockquote>
+<p>Po ňom môžme nainštalovať napríklad PHPMyAdmin:</p>
+<blockquote>
+<p>sudo apt install phpmyadmin</p>
+</blockquote>
 <p><a href="https://downloads.mysql.com/archives/community/">https://downloads.mysql.com/archives/community/</a></p>
 
   </div>

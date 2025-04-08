@@ -34,12 +34,129 @@
     <span>Jan 1, 0001</span>
     Návod - príklad ako nainštalovat fixpack na IBM IS Information Server Datastage. Je v angličtine.
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <h4 id="príprava">Príprava:</h4>
+<p><a href="http://www-01.ibm.com/support/docview.wss?uid=swg24044633">http://www-01.ibm.com/support/docview.wss?uid=swg24044633</a></p>
+<h4 id="procedúra">Procedúra:</h4>
+<blockquote>
+<p><a href="http://www.ibm.com/support/docview.wss?uid=swg22014102">http://www.ibm.com/support/docview.wss?uid=swg22014102</a><br>
+<a href="http://www-01.ibm.com/support/docview.wss?uid=swg27046499&amp;aid=1">http://www-01.ibm.com/support/docview.wss?uid=swg27046499&amp;aid=1</a></p>
+</blockquote>
+<p>\</p>
+<h4 id="create-folders">Create folders:</h4>
+<blockquote>
+<p>mkdir /data/IS<br>
+mkdir /data/IS/BACKUP</p>
+</blockquote>
+<h4 id="move-installation-file-to-the-server">Move installation file to the server:</h4>
+<blockquote>
+<p>is-update-linux64-11.7.0.106.tar<br>
+fixpack_FP2_IS115_linux64_11500-11501.ispkg\</p>
+</blockquote>
+<p><br>
+Increase size of /tmp FS to have at least 2.5GB of free space<br>
+<strong>--- Procedure ---</strong><br>
+<br>
+1.) connect to the server<br>
+#verify health and status<br>
+#create maintenance flag for monitoring<br>
+<br>
+2.) stop Datastage<br>
+<br>
+3.) perform DB2 XMETA database offline backup to folder:
+/data/IS/BACKUP<br>
+//DB2 part<br>
+Note: permission issue, 1.2GB, lasted few seconds<br>
+<br>
+4.) perform backup of Datastage installation<br>
+#folder to backup: /opt/app/InformationServer<br>
+#backup destination: /data/IS/BACKUP<br>
+tar cvf - /opt/app/InformationServer | gzip &gt;
+/data/123/BACKUP/InformationServer.tar.gz<br>
+#the backup file had 8GB<br>
+<br>
+5.) start Datastahe<br>
+#make sure DB2 is running<br>
+<br>
+6.) install latest Update installer<br>
+cd /dataIS<br>
+mkdir /data/123/UpdateInstaller<br>
+tar -xvf is-update-linux64-11.7.0.106.tar -C ./UpdateInstaller/<br>
+cd ./UpdateInstaller/<br>
+bash updateImage.sh<br>
+#enter this path:<br>
+/opt/app/InformationServer/IIS115/_uninstall<br>
+Note: lasted 1 second<br>
+<br>
+7.) perform in Client side<br>
+//IS developers<br>
+7 a.)<br>
+(Services and engine tiers) Disable any InfoSphere Information Services
+Director applications that are currently running.<br>
+Log on to the IBM InfoSphere Information Server console with an account
+that has the suite administrator role.<br>
+Select OPERATE &gt; Deployed Information Services Applications.<br>
+From the View pane, select a deployed application.<br>
+Click Edit.<br>
+In the bottom of the View pane, click Disable and select Disable from
+the menu.<br>
+Repeat these steps for each deployed application.<br>
+7 b.)<br>
+(Services and engine tiers) Stop all scheduled tasks, such as reports
+and log purge activities. To shut down these tasks, create an unfiltered
+schedule view within the IBM InfoSphere Information Server Web console,
+and then stop all scheduled tasks that are displayed in the view.<br>
+Log in to the IBM InfoSphere Information Server Web console with an
+account that has the suite administrator role.<br>
+In the Web console, click the Administration tab.<br>
+In the Navigation pane, select Scheduling Management &gt; Scheduling
+Views.<br>
+In the Scheduling Views pane, click New.<br>
+Enter a name and description in the Name and Description fields.<br>
+Click Save and Close.<br>
+Select the schedule view that you created in the previous steps.<br>
+Click View Schedules.<br>
+Select a schedule in the list, and click View Task.<br>
+Look at the Status value in the Schedule section:<br>
+If the Status value is STARTED, click Close, and then click Stop to stop
+the task. Write down the name of the schedule so that you can restart it
+after the installation is completed.<br>
+If the Status value is not STARTED, click Close.<br>
+Repeat steps (i) through (j) for each schedule in the list.<br>
+<br>
+8.) Verify on Server side and Client side<br>
+//IS developers + BI<br>
+Ensure that no jobs are running.<br>
+Unschedule any scheduled tasks or jobs for external tools that run on
+these computers. Ensure that scheduled tasks or jobs do not run on these
+computers during the installation process.<br>
+Ensure that all InfoSphere Information Server clients are shut down.<br>
+Ensure that all InfoSphere Information Server clients, including
+browser-based clients, are shut down for the duration of the
+installation of both tiers. Halt any other applications, such as import
+tools, that might be running on the server.<br>
+<br>
+9.) perform installation of FixPack<br>
+sudo su - root<br>
+umask 022<br>
+ulimit -n 10240<br>
+cd /opt/app/InformationServer/IIS115/Updates<br>
+./installUpdates -installLocation /opt/IBM/InformationServer/IIS115
+-patchPackage /data/123/fixpack_FP2_IS115_linux64_11500-11501.ispkg
+-user -password -console -verbose -wasadmin -waspassword<br>
+<br>
+Note: if not enough space in /tmp, use in the previous ./installUpdates
+command also &quot;-force&quot; option and do this command, whcih will redirect
+some tmp files<br>
+echo &quot;-Djava.io.tmpdir=/data/CH30092909/tmp&quot; &gt;&gt;
+/opt/app/InformationServer/IIS115/_uninstall/.jvm_args<br>
+<br>
+<br>
+10.) check version:<br>
+<br>
+head /opt/IBM/InformationServer/IIS115/Version.xml<br>
+<br>
+<br>
+11.) undo step 7. and restart Datastage\</p>
 
   </div>
 </body>

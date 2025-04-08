@@ -34,36 +34,87 @@
     <span>Jan 1, 0001</span>
     V tomto článku si v rychlosti ukážeme ako nainštalovať TeamSpeak server na Linux Debian-like OS. Bude to konkrétne verzia TeamSpeak3. &lt;br&gt; Aktualizovaná verzia návodu pre Debian 8.
 
-    <p>Vytvoríme užívateľa pod ktorým bude TeamSpeak bežať. <!-- raw HTML omitted -->Nazveme ho &ldquo;<!-- raw HTML omitted -->teamspeak3<!-- raw HTML omitted -->&rdquo;.</p>
-<!-- raw HTML omitted -->
+    <p>Vytvoríme užívateľa pod ktorým bude TeamSpeak bežať.<br>
+Nazveme ho &quot;<em>teamspeak3</em>&quot;.</p>
+<blockquote>
+<p>sudo adduser --home /opt/ts3 --disabled-login teamspeak3</p>
+</blockquote>
 <p>Nstavíme mu heslo.</p>
-<!-- raw HTML omitted -->
-<p>Prepneme sa do našeho teamspeak užívateľa a všetky nasledujúce kroky budu prebiehať pod ním</p>
-<!-- raw HTML omitted -->
-<p>Pokiaľ prepnutie nefunguje, tak to nieje nutné. Netreba zabudnúť na krok pri konci.</p>
-<p>Presunieme sa do domovského adresára</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>sudo passwd nejake_heslo</p>
+</blockquote>
+<p>Prepneme sa do našeho teamspeak užívateľa a všetky nasledujúce kroky
+budu prebiehať pod ním</p>
+<blockquote>
+<p>su - teamspeak3</p>
+</blockquote>
+<p>Pokiaľ prepnutie nefunguje, tak to nieje nutné. Netreba zabudnúť na krok
+pri konci. Presunieme sa do domovského adresára</p>
+<blockquote>
+<p>cd /opt/ts3</p>
+</blockquote>
 <p>Stiahneme samotný TeamSpeak server, v tomto odkaze je 32-bitova verzia</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>wget
+<a href="http://dl.4players.de/ts/releases/3.0.10/teamspeak3-server_linux-x86-3.0.10.tar.gz">http://dl.4players.de/ts/releases/3.0.10/teamspeak3-server_linux-x86-3.0.10.tar.gz</a></p>
+</blockquote>
+<p>Pre 64-bit:</p>
+<blockquote>
+<p>wget
+<a href="http://dl.4players.de/ts/releases/3.0.10/teamspeak3-server_linux-amd64-3.0.10.tar.gz">http://dl.4players.de/ts/releases/3.0.10/teamspeak3-server_linux-amd64-3.0.10.tar.gz</a></p>
+</blockquote>
 <p>Úspešne stiahnutý balík rozbalíme.</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>tar xf teamspeak3-server_linux-x86-3.0.10.tar.gz -C /opt/ts3</p>
+</blockquote>
 <p>TeamSpeak3 server už môžme spustiť príkazom</p>
-<!-- raw HTML omitted -->
-<p>Po tejto inicializácií môžme server vypnúť stlačením CTRL+C. Aby sa nám server spúštal vždy po spustení servera pridáme ho do <!-- raw HTML omitted -->crontab<!-- raw HTML omitted -->-u.</p>
-<!-- raw HTML omitted -->
-<p>Do neho vložíme záznam (pri vstupe do crontab-u sa nás bude pýtať aký editor použiť, <!-- raw HTML omitted -->nano<!-- raw HTML omitted --> je jednoduchý editor, pre uloženie zmien stlačíme CTRL-X a potvrdíme ENTER-om)</p>
-<!-- raw HTML omitted -->
-<p>Pokiaľ sme archív nerozbalili pod <!-- raw HTML omitted -->teamspeak3<!-- raw HTML omitted --> užívateľom, tak musíme nastavit opravnenie</p>
-<!-- raw HTML omitted -->
-<p>Celí server môžme reštartovať aby sme videli či naozaj beží pod našim <!-- raw HTML omitted -->teamspeak3<!-- raw HTML omitted --> užívateľom</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>./ts3server_minimal_runscript.sh | tee -a ./logs/instalation.log</p>
+</blockquote>
+<p>po ktorom sa nám v konzole zobrazí prvý užívateľ(serveradmin) s jeho
+heslom, ktoré je dobré si zapísať, a tzn. <em>Privilege key</em>. Ten si
+skopírujeme, a pomocou TeamSpeak3 klienta sa prihlásime na náš server,
+ktorý si tento <em>Privilege key</em> vyžiada. Je veľmi dôležitá nastavená
+<em>identita</em> na TeamSpeak3 klientovi pod ktorým sme sa prihlásili. Pretože
+oprávnenia budeme mať iba s touto identitou. Po tejto inicializácií
+môžme server vypnúť stlačením CTRL+C. Aby sa nám server spúštal vždy po
+spustení servera pridáme ho do <em>crontab</em>-u.</p>
+<blockquote>
+<p>crontab -u teamspeak3 -e</p>
+</blockquote>
+<p>Do neho vložíme záznam (pri vstupe do crontab-u sa nás bude pýtať aký
+editor použiť, <em>nano</em> je jednoduchý editor, pre uloženie zmien stlačíme
+CTRL-X a potvrdíme ENTER-om)</p>
+<blockquote>
+<p>@reboot /opt/ts3/ts3server_startscript.sh start</p>
+</blockquote>
+<p>Pokiaľ sme archív nerozbalili pod <em>teamspeak3</em> užívateľom, tak musíme
+nastavit opravnenie</p>
+<blockquote>
+<p>sudo chown -R teamspeak3:teamspeak3 /opt/ts3</p>
+</blockquote>
+<p>Celí server môžme reštartovať aby sme videli či naozaj beží pod našim
+<em>teamspeak3</em> užívateľom</p>
+<blockquote>
+<p>sudo init 1</p>
+</blockquote>
 <p>Beh servera v procesoch môžme skontrolovať príkazom</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>ps -ef | grep teamspeak</p>
+</blockquote>
 <p>Prípadne v rámci spojení</p>
-<!-- raw HTML omitted -->
-<p>Na koniec môžme nastaviť prístupové oprávnenia do inštalácie TeamSpeak servera</p>
-<!-- raw HTML omitted -->
-<p>Pokiaľ sa na server nevieme pripojiť môže to byť napríklad neotvoreným portom na smerovači kde treba väčšinou nastaviť NAT, prípadne firewall na strane operačného systému servera. TeamSpeak3 server používa v prednastavenom stave port 9987 a funguje na protokole UDP.</p>
+<blockquote>
+<p>netstat -lnp | grep ts3</p>
+</blockquote>
+<p>Na koniec môžme nastaviť prístupové oprávnenia do inštalácie TeamSpeak
+servera</p>
+<blockquote>
+<p>chmod -R 750 /opt/ts3</p>
+</blockquote>
+<p>Pokiaľ sa na server nevieme pripojiť môže to byť napríklad neotvoreným
+portom na smerovači kde treba väčšinou nastaviť NAT, prípadne firewall
+na strane operačného systému servera. TeamSpeak3 server používa v
+prednastavenom stave port 9987 a funguje na protokole UDP.</p>
 
   </div>
 </body>

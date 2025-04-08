@@ -34,18 +34,37 @@
     <span>Jan 1, 0001</span>
     Zbierka tipov a trikov na Linuxový Bash
 
-    <!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>hladanie pipe:
-zistanie ci je subor otvoreny
-ls -l /proc/<em>/fd/</em> 2&gt;/dev/null | grep FILENAME</p>
-<p>zistenie PID:
-ps -ef | grep process_name
-ls -l /proc/$PID/fd/0
-ls -l /proc/*/fd/1 | grep 47673884
-ps -ef | grep $NEW_PID</p>
+    <p>Vysvetlenie príkazu <em>stat</em></p>
+<blockquote>
+<p>There are 3 kind of &quot;timestamps&quot;:<br>
+Access - the last time the file was read<br>
+Modify - the last time the file was modified (content has been
+modified)<br>
+Change - the last time meta data of the file was changed (e.g.
+permissions)\</p>
+</blockquote>
+<p>Presunitie sa v skripte do adresára skriptu:</p>
+<blockquote>
+<p>cd &quot;$(dirname &quot;$0&quot;)&quot;</p>
+</blockquote>
+<p>Získanie názvu skriptu v skripte samotnom:</p>
+<blockquote>
+<p>echo $(basename &quot;$0&quot;)</p>
+</blockquote>
+<p>Prehľadávanie súbora po riadkoch. Premenná IFS (Internal Field
+Separator) sa použije na nastavenie znaku na základe ktorého sa obsah
+súboru rozseká do premennej v cykle typu <em>for</em> .</p>
+<blockquote>
+<p>IFS=$'\n'<br>
+for RIADOK in $(cat subor.txt)<br>
+do<br>
+echo $RIADOK<br>
+done\</p>
+</blockquote>
+<p>hladanie pipe: zistanie ci je subor otvoreny ls -l /proc/*/fd/*
+2&gt;/dev/null | grep FILENAME zistenie PID: ps -ef | grep process_name
+ls -l /proc/$PID/fd/0 ls -l /proc/*/fd/1 | grep 47673884 ps -ef |
+grep $NEW_PID</p>
 
   </div>
 </body>

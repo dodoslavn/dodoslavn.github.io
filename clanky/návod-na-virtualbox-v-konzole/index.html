@@ -34,77 +34,213 @@
     <span>Jan 1, 0001</span>
     Jednoduchý návod na inštaláciu a konfiguráciu VritualBoxu pod Debian 8 Jessie, aj s konfiguráciou Virtuálneho stroja.
 
-    <!-- raw HTML omitted -->
+    <h4 id="príprava">Príprava</h4>
+<p>Z dôvodu že sa konfigurácia ukladá do domovského adresára užívateľa,
+nedá sa virtuálny stroj spustiť pod iným užívateľom. Preto je vhodné na
+to vytvoriť nového.</p>
+<blockquote>
+<p>sudo adduser virtualbox</p>
+</blockquote>
+<p>Pridáme repozitár na nainštalovanie VirtualBoxu (pod root-om)</p>
+<blockquote>
+<p>echo &quot;deb <a href="http://download.virtualbox.org/virtualbox/debian">http://download.virtualbox.org/virtualbox/debian</a> jessie
+contrib&quot; &gt;&gt; /etc/apt/sources.list</p>
+</blockquote>
 <p>Pridanie kľúča:</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>wget
+<a href="http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc">http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc</a><br>
+apt-key add oracle_vbox_2016.asc</p>
+</blockquote>
 <p>Inštalácia VirtualBoxu</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>sudo apt-get update; sudo apt-get -y --force-yes install
+virtualbox-5.1</p>
+</blockquote>
 <p>Ak niesu nainštalované doplnky</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>sudo VBoxManage list extpacks</p>
+</blockquote>
+<p>Sú vhodne ked sa chceme napríklad pripojiť pomocou VNC alebo Remote
+Desktop.</p>
+<blockquote>
+<p>vboxmanage --version</p>
+</blockquote>
 <p>Podľa aktuálnej verzie VirtualBoxu stiahnuť spomínané doplnky.</p>
-<!-- raw HTML omitted -->
-<p>Zoznam doplnkov pre všetky verzie VirtualBoxu <!-- raw HTML omitted --><a href="http://download.virtualbox.org/virtualbox/">http://download.virtualbox.org/virtualbox/</a><!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>wget
+<a href="http://download.virtualbox.org/virtualbox/5.1.8/Oracle_VM_VirtualBox_Extension_Pack-5.1.8-111374.vbox-extpack">http://download.virtualbox.org/virtualbox/5.1.8/Oracle_VM_VirtualBox_Extension_Pack-5.1.8-111374.vbox-extpack</a></p>
+</blockquote>
+<p>Zoznam doplnkov pre všetky verzie VirtualBoxu
+<a href="http://download.virtualbox.org/virtualbox/">http://download.virtualbox.org/virtualbox/</a></p>
+<blockquote>
+<p>sudo VBoxManage extpack install
+Oracle_VM_VirtualBox_Extension_Pack-5.1.8-111374.vbox-extpack</p>
+</blockquote>
 <p>Zavedenie doplnkov</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage setproperty vrdeextpack &quot;Oracle VM VirtualBox Extension
+Pack&quot;</p>
+</blockquote>
 <p>Ak by bolo potrebné, dajú sa odinštalovať</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<blockquote>
+<p>sudo VBoxManage extpack uninstall &quot;Oracle VM VirtualBox Extension
+Pack&quot;</p>
+</blockquote>
+<h4 id="virtuálny-stroj">Virtuálny stroj</h4>
+<p>Teraz už pod užívateľom pre VirtualBox</p>
+<blockquote>
+<p>su - virtualbox</p>
+</blockquote>
 <p>Zoznam podporovaných operačných systémov</p>
-<!-- raw HTML omitted -->
-<p>Pre šetrenie času nastavíme premennú do ktorej vložíme meno našej novej virtuálky.</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage list ostypes | grep -v Family</p>
+</blockquote>
+<p>Pre šetrenie času nastavíme premennú do ktorej vložíme meno našej novej
+virtuálky.</p>
+<blockquote>
+<p>VM=WinXP_001</p>
+</blockquote>
 <p>Vytvorenie virtuálky s typom OS podľa seba</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage createvm --name $VM --ostype WindowsXP --register</p>
+</blockquote>
 <p>Pre kontrolu by sme ho mali videiť</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage list vms</p>
+</blockquote>
 <p>Ak sa nevydarilo, dá sa odregistrovať</p>
-<!-- raw HTML omitted -->
-<p>Podľa seba nastavíme pamäť RAM v MB</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage unregistervm --delete $VM</p>
+</blockquote>
+<p>Disky ostanú, konfigurácia tiež zostane v &quot;<em>~/VirtualBox\
+VMs/$VM/</em>&quot; takže tú tiež zmazať. Podľa seba nastavíme pamäť RAM v MB</p>
+<blockquote>
+<p>VBoxManage modifyvm $VM --memory 2048</p>
+</blockquote>
 <p>Pridanie základných vecí</p>
-<!-- raw HTML omitted -->
-<p>Nastavenie sietovej karty. NAT karta podporuje PortForwarding takže sa bude dať hostovať serverové aplikácie</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage modifyvm $VM --vram 128 --accelerate3d off --audio alsa
+--audiocontroller ac97</p>
+</blockquote>
+<p>Nastavenie sietovej karty. NAT karta podporuje PortForwarding takže sa
+bude dať hostovať serverové aplikácie</p>
+<blockquote>
+<p>VBoxManage modifyvm $VM --nic1 nat --nictype1 virtio
+--cableconnected1 on</p>
+</blockquote>
 <p>Nastavenie poradia bootovania. Môžme kľudne zmeniť na iné.</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage modifyvm $VM --boot1 dvd --boot2 disk --boot3 none
+--boot4 none</p>
+</blockquote>
 <p>Pre podporu viac jadier a 64-bit systémov</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage modifyvm $VM --ioapic on</p>
+</blockquote>
 <p>Nastavenie počet jadier procesora</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<blockquote>
+<p>vboxmanage modifyvm $VM --cpus 4</p>
+</blockquote>
+<h4 id="cddvd-mechanika">CD/DVD mechanika</h4>
+<p>Mechaniky sa pripájajú cez IDE radič. Takže najskôr vytvoríme ten.</p>
+<blockquote>
+<p>VBoxManage storagectl $VM --name &quot;IDE Radic&quot; --add ide</p>
+</blockquote>
 <p>Vytvorenie mechaniky a pripojenie obrazu disku</p>
-<!-- raw HTML omitted -->
-<p>Pre odpojenie nahradiť názov .iso súboru na <!-- raw HTML omitted -->none<!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage storageattach $VM --storagectl &quot;IDE Radic&quot; --port 0
+--device 0 --type dvddrive --medium bootovatelna_instalacka.iso</p>
+</blockquote>
+<p>Pre odpojenie nahradiť názov .iso súboru na <em>none</em></p>
+<h4 id="pevný-disk">Pevný disk</h4>
+<p>Ak ešte nemáme žiadny vytvorený tak ho vytvoríme.<br>
+Ak k názvu disku nedáme aj cestu tak sa vytvorí v aktuálnej zložke,
+veľkosť je zase v MB. <em>.vdi</em> nieje nutné dávať na koniec názvu disku.</p>
+<blockquote>
+<p>VBoxManage createhd --filename $VM --size 10000</p>
+</blockquote>
 <p>Pripadne mozme naklonovat uz vytvoreny disk pomocou vstavanej funkcie:</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage clonehd stary_disk.vdi $VM --format VDI</p>
+</blockquote>
+<h4 id="pripojenie-pevného-disku">Pripojenie pevného disku</h4>
+<p>Pre staršie OS ako ej Windows XP je dobré ked sa disk pripojí cez IDE
+jelikož to SATA nemusí rozoznať.</p>
+<blockquote>
+<p>VBoxManage storageattach $VM --storagectl &quot;IDE Radic&quot; --port 0
+--device 1 --type hdd --medium tvoj_hdd.vdi</p>
+</blockquote>
 <p>Pre použitie SATA, pridáme radič</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage storagectl $VM --name &quot;SATA Radic&quot; --add sata
+--controller IntelAHCI</p>
+</blockquote>
 <p>Pripojíme disk</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<p>Spustenie stroja, po ktorom by sa mal spustiť bez akejkoľvek chybovej hlášky, mal by aj napísať že počúva na porte (v tomto prípade) 5012.</p>
-<!-- raw HTML omitted -->
-<p>Pre pripojenie z Windows stačí použiť Remote Desktop Connection kde nezabudnúť na port pri pripájaní.
-<!-- raw HTML omitted -->Pre Linux</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage storageattach $VM --storagectl &quot;SATA Radic&quot; --port 0
+--device 0 --type hdd --medium $VM.vdi</p>
+</blockquote>
+<h4 id="menežovanie">Menežovanie</h4>
+<p>Pre povolenie pripojenia na diaľku cez RDC, adresu upraviť podľa adresy
+na ktorej bude počúvať fyzický stroj, takže je dobré nastaviť statickú
+IP fyzickému stroju</p>
+<blockquote>
+<p>VBoxManage modifyvm $VM --vrde on --vrdeport 5012 --vrdeaddress
+192.168.1.100</p>
+</blockquote>
+<p>Spustenie stroja, po ktorom by sa mal spustiť bez akejkoľvek chybovej
+hlášky, mal by aj napísať že počúva na porte (v tomto prípade) 5012.</p>
+<blockquote>
+<p>VBoxHeadless --startvm $VM</p>
+</blockquote>
+<p>Pre pripojenie z Windows stačí použiť Remote Desktop Connection kde
+nezabudnúť na port pri pripájaní.<br>
+Pre Linux</p>
+<blockquote>
+<p>rdesktop -a 16 -N 192.168.1.100:5012</p>
+</blockquote>
 <p>Spustená virtuálka sa dá vidieť cez</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage list runningvms</p>
+</blockquote>
 <p>Pre vypnutie</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage controlvm $VM poweroff</p>
+</blockquote>
 <p>Pre nastavenie PortForwardu</p>
-<!-- raw HTML omitted -->
-<p>Nastavenie PortForwardu sa dá vidieť v</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage modifyvm $VM --natpf1 &quot;SSH,tcp,,10002,,22&quot;</p>
+</blockquote>
+<p>SSH - iba názov PortForwardu<br>
+tcp / udp<br>
+10002 - port na ktorom počúva fyzický stroj<br>
+22 - port na virtuálnom stroji<br>
+Nastavenie PortForwardu sa dá vidieť v</p>
+<blockquote>
+<p>VBoxManage list vms --long</p>
+</blockquote>
 <p>Zmazanie nastavenia PortForwardu</p>
-<!-- raw HTML omitted -->
+<blockquote>
+<p>VBoxManage modifyvm $VM --natpf1 delete &quot;SSH&quot;</p>
+</blockquote>
 <p>Či reálne funguje sa dá pozrieť v</p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+<blockquote>
+<p>netstat -a | grep cislo_portu</p>
+</blockquote>
+<h4 id="zdielanie-priečinku-a-iné">Zdielanie priečinku a iné</h4>
+<p>Pre lepšiu integráciu operačného systému vo VM s Remote Desktop môžme
+stiahnuť</p>
+<blockquote>
+<p>wget
+<a href="http://download.virtualbox.org/virtualbox/5.1.8/VBoxGuestAdditions_5.1.8.iso">http://download.virtualbox.org/virtualbox/5.1.8/VBoxGuestAdditions_5.1.8.iso</a></p>
+</blockquote>
+<p>Pripojíme ho k CD/DVD-ROM mechanike vo VM a nainštalujeme.</p>
+<h4 id="použité-zdroje">Použité zdroje</h4>
+<p><a href="http://www.itzgeek.com/how-tos/mini-howtos/how-to-install-virtualbox-extension.html">http://www.itzgeek.com/how-tos/mini-howtos/how-to-install-virtualbox-extension.html</a>
+<a href="http://www.howopensource.com/2011/06/how-to-use-virtualbox-in-terminal-commandline/">http://www.howopensource.com/2011/06/how-to-use-virtualbox-in-terminal-commandline/</a>
+<a href="https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=58560">https://forums.virtualbox.org/viewtopic.php?f=7&amp;t=58560</a>
+<a href="https://www.virtualbox.org/manual/ch06.html">https://www.virtualbox.org/manual/ch06.html</a></p>
 
   </div>
 </body>

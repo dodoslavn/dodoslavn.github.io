@@ -34,17 +34,47 @@
     <span>Jan 1, 0001</span>
     Moje poznámky okolo meterologických satelitov ako sú NOAA a iné, ktoré obiehaju okolo Zeme a vysielajú verejne.
 
-    <!-- raw HTML omitted -->
-<p>NOAA satelity vysielajú z pravidla 2 spôsobmi, APT a HRPT.<!-- raw HTML omitted --></p>
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
-<!-- raw HTML omitted -->
+    <p>Tieto satelity obiehajú na orbite okolo Zeme, s tým že prelietavajú nad
+konkrétnou časťou Zeme v podobnú časť dňa, napríklad nad Európou z
+pravidla len večer. NOAA satelity sú momentalne aktívne len 3, z toho
+NOAA 15 už skôr dosluhuje a v roku 2024 ma skončiť. V minulosti boli aj
+iné, z technických dôvodov ale ukončili prevádzku.<br>
+NOAA satelity vysielajú z pravidla 2 spôsobmi, APT a HRPT.</p>
+<h4 id="automatic-picture-transmission">Automatic Picture Transmission</h4>
+<p>APT funguje na frekvencií okolo 130MHz a signál je analógový. Na tejto
+frekvenci sa dá prijať fotografia povrchu Zeme, bez nejakých
+podrobnejších informácií. Vysiela ich stále dokola, takže niekedy to
+vyjde tak že v rámci preletu nezískate ani jednu celú fotografiu, ale 2
+polovičné. Na prijatie takéhoto signálu je ideálna priama viditelnosť na
+satelit, a ako anténa stačí dipólová, ramená by mali byť od seba okolo
+120° , dĺžka každého ramena by mala byť 53cm a konce ramien by mali byť
+od seba okolo 90cm. Anténa by mala byť otočená v smere preletu satelitu
+ale kolmo.</p>
+<p>Na prijatie signálu sa dá použiť SDR# alebo SDR++. Nastavíme WFM,
+Sampling na 2.4MSPS, Gain nieje potreba extra zvyšovať, signál pre NOAA
+18 a 19 pri dobrom prelete je dost silný. Nahraváme ako &quot;baseband&quot;, na
+&quot;audio&quot; vieme vždy prekonvertovať.</p>
+<h4 id="low-rate-picture-transmission">Low Rate Picture Transmission</h4>
+<p>LRPT</p>
+<h4 id="high-rate-picture-transmission">High Rate Picture Transmission</h4>
+<p>HRPT</p>
+<h4 id="zoznam-satelitov">Zoznam satelitov</h4>
+<p>NOAA 19 - <a href="https://www.n2yo.com/passes/?s=33591">10-dnová
+predpoveď</a>{target=&quot;_new&quot;}<br>
+NOAA 18 - <a href="https://www.n2yo.com/passes/?s=28654">10-dnová
+predpoveď</a>{target=&quot;_new&quot;}<br>
+NOAA 15 - <a href="https://www.n2yo.com/passes/?s=25338">10-dnová
+predpoveď</a>{target=&quot;_new&quot;}<br>
+MetOp-B - <a href="https://www.n2yo.com/passes/?s=38771">10-dnová
+predpoveď</a>{target=&quot;_new&quot;}\</p>
+<h4 id="noaa-15">NOAA 15</h4>
+<p>Funguje dobre, vysiela APT na 137,1MHz, LRPT nepodporuje.</p>
+<h4 id="noaa-18">NOAA 18</h4>
+<p>Funguje dobre, vysiela APT na 137,9125MHz, LRPT nepodporuje.</p>
+<h4 id="noaa-19">NOAA 19</h4>
+<p>Officiálne už asi zrušený, špatný signál, poškodený.</p>
+<h4 id="metop-b">MetOp-B</h4>
+<p>Vysiela aj LRPT na 137.1MHz.</p>
 
   </div>
 </body>

@@ -35,7 +35,78 @@
     Ak máte česrstvo nainštalovaný Debian, prípadne inú podobnú distribúciu, a nieste spokojný s jeho designom, tu si ukážeme ako si upraviť veci manuálne.
 
     <p>Tu si ukážeme ako zmeniť:</p>
-<!-- raw HTML omitted -->
+<ul>
+<li>- pozadie GRUB zavádzača</li>
+<li>- téma pri prihlasovaní</li>
+<li>- pozadie pri prihlasovaní</li>
+</ul>
+<h4 id="pozadie-grub-zavádzača">Pozadie GRUB zavádzača</h4>
+<p>Možno budete prekvapený ako jednoducho sa dá zmeniť pozadie GRUB
+zavádzača, a že pozadie môže byť aj klasický obrázok, s väčším
+rozlíšením a aj s farbamy viacej ako 256 farieb čo je možno
+prekvapujúce. Jedná sa o veľmi jednoduchú úpravu, kedže iba nahradíme
+obrázok pôvodný, našim novým. Najskôr si náš obrázok premenujeme na:</p>
+<blockquote>
+<p>desktop-grub.png</p>
+</blockquote>
+<p>Ja som použil formát .png, kedže je to aj defaultný formát, takže
+netreba robiť nič iné. Teraz už len cez konzolu nahradíme povodný
+obrázok novým:</p>
+<blockquote>
+<p>sudo cp desktop-grub.png /usr/share/images/desktop-base</p>
+</blockquote>
+<p>Zmenu uvidíte už hned pri prvom načítaní zavádzača.</p>
+<h4 id="téma-pri-prihlasovaní">Téma pri prihlasovaní</h4>
+<p>Daľšia jednoduchá vec, ako si zmeniť prihlasovacie okno, teda jeho
+farby, štýl zobrazenia a jeho ikony, tak ako pri nastavovaní témy pri
+pracovnej ploche. Celé to spočíva v tom že skopírujeme aplikáciu vdaka
+ktorej môžme meniť tému a pozadie pracovnej plochy do adresára v ktorom
+sa automaticky spúštajú všetky aplikacie pri načítavaní prihlasovacieho
+okna. Zadáme teda príkaz:</p>
+<blockquote>
+<p>sudo cp /usr/share/applications/gnome-appearance-properties.desktop
+/usr/share/gdm/autostart/LoginWindow</p>
+</blockquote>
+<p>Teraz sa už len odhlásíme, alebo dáme prepnúť používateľa a okno na
+zmenu témy by sa malo samo zobraziť. Možno ste si všimly že ale pozadie
+zmeniť nejde. Je to zapríčinené iným formátom obrázkov. Ak ste si tému
+zmenili, túto nakopírovanú aplikáciu si už zmažeme, aby sa nám už viac
+pri zobrazení prihlasovacieho okna nezobrazovala:</p>
+<blockquote>
+<p>sudo rm
+/usr/share/gdm/autostart/LoginWindow/gnome-appearance-properties.desktop</p>
+</blockquote>
+<h4 id="pozadie-pri-prihlasovaní">Pozadie pri prihlasovaní</h4>
+<p>Jedna z prvých vecí čo vás zarazilo bolo možno, síce zladené ale nie
+veľmi pôsobivé, pozadie pri prihlasovaní. Pri novšých verziách Debianu a
+Ubuntu(neviem od koľkých ta podpora zmyzla), sa cez klasický softvér
+toto pozadie zmeniť nedá. Teda aspom ja som ho nenašiel, a pri Ubuntu
+bol v starších verziách tento softvér už integrovaný. Celé je to vcelku
+veľmi jednoduché, vlastne len budeme nahradzať tie povodné obrázky, týmy
+našimy, ako v predošlých prípadoch. No musíme dodržať v niektorých
+prípadoch aj formát a rozlíšenie obrázku pri prihlasovacom okne je
+použitý formát .svg a rozlíšenie 1650x1050 (teda aspom u mna).<br>
+Otvoríme se teda náš obrázok pod nejakým programom, ktorý dokáže ukladať
+vo formate .svg. Ja som použil Inkscape. Po exportovaní do tohoto
+formátu zmeníme názov súboru na</p>
+<blockquote>
+<p>login-background.svg</p>
+</blockquote>
+<p>Teraz nám ostáva už len nahradiť ten starý. A to tak že do konzoly
+zadáme</p>
+<blockquote>
+<p>sudo cp login-background.svg /usr/share/images/desktop-base</p>
+</blockquote>
+<p>Pri odhláseni alebo len prepnutí užívateľa by sa nám malo zobraziť už
+nové pozadie.</p>
+<h4 id="na-záver">Na záver</h4>
+<p>V tomto článku som presne popísal návod ako zmeniť určite vecí aj s
+dlhým zbytožným obkecom. Ak si chcete zmeniť ešte nejaké pozadia stačí
+si prezrieť adresár:</p>
+<blockquote>
+<p>/usr/share/images/desktop-base</p>
+</blockquote>
+<p>Tam toho nájdete veľa.</p>
 
   </div>
 </body>
