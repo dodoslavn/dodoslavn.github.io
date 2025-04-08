@@ -4,7 +4,8 @@
     <title>Tags on Dodoslav - eblog</title>
     <link>https://dodoslavn.github.io/tags/</link>
     <description>Recent content in Tags on Dodoslav - eblog</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://dodoslavn.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://dodoslavn.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
