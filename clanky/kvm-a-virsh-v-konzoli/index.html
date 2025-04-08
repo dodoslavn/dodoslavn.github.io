@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Dodoslav - eblog</title>
+    <link rel="stylesheet" href="/default.css">
+</head>
+<body>
+  <div class="sidebar">
+    <img src="/logo.png">
+<h3>Obsah</h3>
+<ul>
+  <li><a class="" href="/">Novinky</a></li>
+  <li><a href="/clanky/">Články</a></li>
+  <li><a href="/projekty/">Projekty</a></li>
+  <li><a href="/o_stranke/">O stránke</a></li>
+</ul>
+
+
+<h3>Témy</h3>
+<ul>
+  
+</ul>
+
+
+<h3>Kľúčové slová</h3>
+<ul>
+  
+</ul>
+  
+  </div>
+  <div class="content">
+    <h3>KVM a virsh v konzoli</h3>
+    <span>Jan 1, 0001</span>
+    navod na pouzivanie KVM cez konzolu
+
+    <p>#!/bin/bash -x</p>
+<p>#fill values to your need
+VMNAME=aaaa
+MAC=&lsquo;52:54:00:09:11:03&rsquo;
+VNC_PORT=5952
+VNC_PASSWORD=&rsquo;!PASSWORD!&rsquo;
+DISK=&rsquo;/path/to/filename.qcow2&rsquo;</p>
+<p>sudo virt-install <br>
+&ndash;connect qemu:///system <br>
+&ndash;import <br>
+&ndash;name=$VMNAME <br>
+&ndash;ram=2048 <br>
+&ndash;vcpus=2 <br>
+&ndash;disk $DISK,device=disk,bus=virtio,format=qcow2 <br>
+&ndash;os-variant rhel6 <br>
+&ndash;debug <br>
+&ndash;network=bridge:br0,mac=$MAC <br>
+&ndash;graphics=vnc,port=$VNC_PORT,password=$VNC_PASSWORD <br>
+&ndash;autostart <br>
+&ndash;noautoconsole <br>
+&ndash;os-type=linux</p>
+<p>virsh list  &ndash;all
+virsh undefine $VM
+virsh destroy $VM</p>
+
+  </div>
+</body>
+</html>
