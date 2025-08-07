@@ -33,27 +33,72 @@
     <h3>Vlastna Systemd sluzba a casovac</h3>
     <span>Jan 1, 0001</span>
     
-    <p>Type=oneshot → Runs the command and does not restart after exit.
-RemainAfterExit=yes → Marks the service as active even after the script
-finishes.</p>
-<blockquote>
-<p>[Unit] Description=One-Time Setup Script After=network.target
-[Service] ExecStart=/usr/local/bin/setup.sh Type=oneshot
-RemainAfterExit=yes [Install] WantedBy=multi-user.target</p>
-</blockquote>
-<p>Type=simple → Assumes the process runs indefinitely in the foreground.
-Restart=always → If the process crashes, systemd will restart it.</p>
-<blockquote>
-<p>[Unit] Description=Custom Web Server After=network.target
-[Service] ExecStart=/usr/bin/python3 -m http.server 8080
-Restart=always User=www-data WorkingDirectory=/var/www [Install]
-WantedBy=multi-user.target</p>
-</blockquote>
-<blockquote>
-<p>[Unit] Description=Daily Backup at 2 AM [Timer]
-OnCalendar=*-*-* 02:00:00 Unit=dailybackup.service [Install]
-WantedBy=timers.target</p>
-</blockquote>
+    <h2 id="example-systemd-service-file">Example: systemd Service File</h2>
+<pre><code>[Unit]
+Description=My Custom App
+After=network.target
+Requires=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/myapp --flag1 --flag2
+WorkingDirectory=/opt/myapp
+User=www-data
+Group=www-data
+Environment=&quot;ENV_VAR=value&quot;
+EnvironmentFile=/etc/myapp.env
+
+Restart=on-failure
+RestartSec=5s
+TimeoutStartSec=30
+TimeoutStopSec=10
+
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
+</code></pre>
+<h2 id="systemd-type-options">systemd Type Options</h2>
+<ul>
+<li><strong>simple</strong> &ndash; Default. Runs ExecStart directly.</li>
+<li><strong>forking</strong> &ndash; For daemons that fork (e.g., Apache, MySQL).</li>
+<li><strong>oneshot</strong> &ndash; For scripts that run and exit (used with timers).</li>
+<li><strong>notify</strong> &ndash; App notifies systemd when ready.</li>
+<li><strong>idle</strong> &ndash; Runs when the system is idle.</li>
+</ul>
+<h2 id="example-systemd-timer">Example: systemd Timer</h2>
+<p><strong>mytask.service</strong></p>
+<pre><code>[Unit]
+Description=Run my scheduled task
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/bin/my-script.sh
+</code></pre>
+<p><strong>mytask.timer</strong></p>
+<pre><code>[Unit]
+Description=Run mytask.service every 15 minutes
+
+[Timer]
+OnBootSec=5min
+OnUnitActiveSec=15min
+Unit=mytask.service
+
+[Install]
+WantedBy=timers.target
+</code></pre>
+<h2 id="environment-file-example">Environment File Example</h2>
+<p><strong>/etc/myapp.env</strong></p>
+<pre><code>DB_HOST=localhost
+DB_PORT=3306
+</code></pre>
+<h2 id="useful-commands">Useful Commands</h2>
+<pre><code>systemctl enable --now mytask.timer
+systemctl list-timers
+journalctl -u myapp.service
+systemctl daemon-reload
+</code></pre>
 
   </div>
 </body>

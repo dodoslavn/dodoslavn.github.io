@@ -1356,11 +1356,7 @@ Dôležitá poznámka je, že pri používaní &amp;quot;Remote Desktop Connecti
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://dodoslavn.github.io/clanky/vlastna-systemd-sluzba-a-casovac/</guid>
-      <description>Type=oneshot → Runs the command and does not restart after exit. RemainAfterExit=yes → Marks the service as active even after the script finishes.
-[Unit] Description=One-Time Setup Script After=network.target [Service] ExecStart=/usr/local/bin/setup.sh Type=oneshot RemainAfterExit=yes [Install] WantedBy=multi-user.target
-Type=simple → Assumes the process runs indefinitely in the foreground. Restart=always → If the process crashes, systemd will restart it.
-[Unit] Description=Custom Web Server After=network.target [Service] ExecStart=/usr/bin/python3 -m http.server 8080 Restart=always User=www-data WorkingDirectory=/var/www [Install] WantedBy=multi-user.target
-[Unit] Description=Daily Backup at 2 AM [Timer] OnCalendar=*-*-* 02:00:00 Unit=dailybackup.</description>
+      <description>Example: systemd Service File [Unit] Description=My Custom App After=network.target Requires=network.target [Service] Type=simple ExecStart=/usr/bin/myapp --flag1 --flag2 WorkingDirectory=/opt/myapp User=www-data Group=www-data Environment=&amp;quot;ENV_VAR=value&amp;quot; EnvironmentFile=/etc/myapp.env Restart=on-failure RestartSec=5s TimeoutStartSec=30 TimeoutStopSec=10 StandardOutput=journal StandardError=journal [Install] WantedBy=multi-user.target systemd Type Options simple &amp;ndash; Default. Runs ExecStart directly. forking &amp;ndash; For daemons that fork (e.g., Apache, MySQL). oneshot &amp;ndash; For scripts that run and exit (used with timers). notify &amp;ndash; App notifies systemd when ready. idle &amp;ndash; Runs when the system is idle.</description>
     </item>
     
     <item>
