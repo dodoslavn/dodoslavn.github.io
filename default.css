@@ -186,12 +186,15 @@ a:hover {
     font-size: 0.8rem;
     border: 1px solid var(--border-color);
     transition: all 0.2s ease;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .tag:hover {
     background-color: var(--accent-primary);
     color: white;
     border-color: var(--accent-primary);
+    text-decoration: none;
 }
 
 /* Description */
