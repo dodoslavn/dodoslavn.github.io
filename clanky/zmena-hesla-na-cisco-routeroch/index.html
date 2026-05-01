@@ -1,60 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <title>Dodoslav - eblog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zmena hesla na Cisco routeroch | Dodoslav - eBlog</title>
+    <meta name="description" content="Tu si ukážeme jednu z možností, ako nepriamo zresetovať zabudnuté heslo na Cisco routeroch. Viac už priamo v článku.
+">
     <link rel="stylesheet" href="/default.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div class="sidebar">
-    <img src="/logo.png">
-<h3>Obsah</h3>
+    <a href="/">
+  <img src="/logo.png" alt="Dodoslav Logo">
+</a>
+
+<h3>Navigácia</h3>
 <ul>
-  <li><a class="" href="/">Novinky</a></li>
-  <li><a href="/clanky/">Články</a></li>
-  <li><a href="/projekty/">Projekty</a></li>
-  <li><a href="/o_stranke/">O stránke</a></li>
+  <li><a class="" href="/">🏠 Novinky</a></li>
+  <li><a href="/clanky/">📝 Články</a></li>
+  <li><a href="/projekty/">🚀 Projekty</a></li>
+  <li><a href="/o_stranke/">ℹ️ O stránke</a></li>
 </ul>
 
 
-<h3>Témy</h3>
-<ul>
-  
-</ul>
 
 
 <h3>Kľúčové slová</h3>
 <ul>
   
-</ul>
+    <li><a href="https://dodoslavn.github.io/tags/ibm-datastage/">Ibm Datastage (2)</a></li>
   
+    <li><a href="https://dodoslavn.github.io/tags/mysql-sql-databazy-database-delphi-pascal-turbo-how-to-ako/">Mysql Sql Databazy Database Delphi Pascal Turbo How to Ako (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/perl-linux-program/">Perl Linux Program (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/3d-print-printer-tiskarna-tlaciaren-octo-octoprint/">3d Print Printer Tiskarna Tlaciaren Octo Octoprint (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/apache2-apache-linux-web-http/">Apache2 Apache Linux Web Http (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/audio-electro/">Audio Electro (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/bash-linux-debian/">Bash Linux Debian (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cisco-router-switch-heslo-pass-zmena/">Cisco Router Switch Heslo Pass Zmena (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/counter-strike-1.6-windows-server-instalacia-konfi/">Counter-Strike 1.6 Windows Server Instalacia Konfi (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cpp-c&#43;&#43;-qt-creator-opengl-gl-glut/">Cpp C&#43;&#43; Qt Creator Opengl Gl Glut (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/db2-database-sql/">Db2 Database Sql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-9-linux-scretch-mysql/">Debian 9 Linux Scretch Mysql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-dns-cache-linux-resolver/">Debian Dns Cache Linux Resolver (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-iptables-manual-firewall/">Debian Iptables Manual Firewall (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-linux-amd-amd64-flash-flesh-tutorial-install-mozilla-opera-iceweasel-firefox/">Debian Linux Amd Amd64 Flash Flesh Tutorial Install Mozilla Opera Iceweasel Firefox (1)</a></li>
+  
+</ul>
+
+
+<a href="mailto:admin@dodoslav.eu">✉️ admin@dodoslav.eu</a>
+
   </div>
   <div class="content">
-    <h3>Zmena hesla na Cisco routeroch</h3>
-    <span>Jan 1, 0001</span>
-    Tu si ukážeme jednu z možností, ako nepriamo zresetovať zabudnuté heslo na Cisco routeroch. Viac už priamo v článku.
+    <article>
+      <h1>Zmena hesla na Cisco routeroch</h1>
+      <div class="article-meta">
+        <strong>13. September 2011</strong> • Dodoslav
+      </div>
+      
+      <div class="tags">
+        
+          <span class="tag">cisco router switch heslo pass zmena</span>
+        
+      </div>
+      
+      
+      <div class="description">
+        Tu si ukážeme jednu z možností, ako nepriamo zresetovať zabudnuté heslo na Cisco routeroch. Viac už priamo v článku.
 
-    <p>Potrebujete upraviť nastavenie na routri, no ani za nič si nedokážete
-spomenúť heslo kt. ste použili. Čím si môžete byt istý je(teda podľa
-mňa), že budete musieť zresetovať celí router a tým aj stratíte všetky
-nastavenia. Teraz ste si možno pomysleli že aký návod ked môžem
-jednoducho stlačiť tlačítko Reset a je to! Možno by ste sa čudovali keby
-ste na svojom routri nenašli nič ani len podobné resetu, a niečo ako
-vybrat baterku, vyskratovať pamať, chvíľu počkať a mám zariadenie
-zresetovaná ako pri BIOSe u PC nepripadá do úvahy. Tuto totiž nič také
-ako CMOs nieje takže pod krytom žiadnu baterku nenájdete. A teraz nastal
-problém, ako zmením heslo ked router nemám ako zresetovat? Je tu jedno
-riešenie, no asi ste si možno všimly a možno aj vačšina z vás sklamaná z
-toho že sa celí čas bavíme o routeri kt. máme fyzicky pri sebe.</p>
-<p>Čo teda potrebujeme je, byť pripojený na router cez konzolu a nie cez
-Telnet a mať k nemu teda ten fyzický prístup.</p>
+      </div>
+      <hr>
+      
+      <p>Potrebujete upraviť nastavenie na routri, no ani za nič si nedokážete spomenúť heslo kt. ste použili. Čím si môžete byt istý je(teda podľa mňa), že budete musieť zresetovať celí router a tým aj stratíte všetky nastavenia. Teraz ste si možno pomysleli že aký návod ked môžem jednoducho stlačiť tlačítko Reset a je to! Možno by ste sa čudovali keby ste na svojom routri nenašli nič ani len podobné resetu, a niečo ako vybrat baterku, vyskratovať pamať, chvíľu počkať a mám zariadenie zresetovaná ako pri BIOSe u PC nepripadá do úvahy. Tuto totiž nič také ako CMOs nieje takže pod krytom žiadnu baterku nenájdete. A teraz nastal problém, ako zmením heslo ked router nemám ako zresetovat? Je tu jedno riešenie, no asi ste si možno všimly a možno aj vačšina z vás sklamaná z toho že sa celí čas bavíme o routeri kt. máme fyzicky pri sebe.</p>
+<p>Čo teda potrebujeme je, byť pripojený na router cez konzolu a nie cez Telnet a mať k nemu teda ten fyzický prístup.</p>
 <p><br>
 Takže tu už samotný návod.<br>
 \</p>
-<p>KROK 1 - Ak máme router spustený a sme naň pripojený cez konzolu,
-vypneme ho a po chvíľi znova zapneme. Do 60 sekúnd od spustenia musíme
-odoslať tzv. Break. Záleží od toho aký program ste použili. Niekde stačí
-stlačiť tlačidlo Break na klávesnici a niekde Ctrl+B .</p>
+<p>KROK 1 - Ak máme router spustený a sme naň pripojený cez konzolu, vypneme ho a po chvíľi znova zapneme. Do 60 sekúnd od spustenia musíme odoslať tzv. Break. Záleží od toho aký program ste použili. Niekde stačí stlačiť tlačidlo Break na klávesnici a niekde Ctrl+B .</p>
 <p>\</p>
 <p>KROK 2 - Po stlačení tlačidla sa nám zobrazí kurzor. Zadáme:</p>
 <blockquote>
@@ -74,6 +110,7 @@ stlačiť tlačidlo Break na klávesnici a niekde Ctrl+B .</p>
 </blockquote>
 <p>Router by mal byť teraz úspešne reštartovaný aj s heslamy.</p>
 
+    </article>
   </div>
 </body>
 </html>

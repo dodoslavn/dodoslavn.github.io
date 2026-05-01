@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IBM WebSphere AS - Network Deployemnt | Dodoslav - eBlog</title>
+    <meta name="description" content="Čo to je WebSphere a ako funguje. Pár príkazov s nejakým tým trikom.
+">
+    <link rel="stylesheet" href="/default.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="sidebar">
+    <a href="/">
+  <img src="/logo.png" alt="Dodoslav Logo">
+</a>
+
+<h3>Navigácia</h3>
+<ul>
+  <li><a class="" href="/">🏠 Novinky</a></li>
+  <li><a href="/clanky/">📝 Články</a></li>
+  <li><a href="/projekty/">🚀 Projekty</a></li>
+  <li><a href="/o_stranke/">ℹ️ O stránke</a></li>
+</ul>
+
+
+
+
+<h3>Kľúčové slová</h3>
+<ul>
+  
+    <li><a href="https://dodoslavn.github.io/tags/ibm-datastage/">Ibm Datastage (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/mysql-sql-databazy-database-delphi-pascal-turbo-how-to-ako/">Mysql Sql Databazy Database Delphi Pascal Turbo How to Ako (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/perl-linux-program/">Perl Linux Program (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/3d-print-printer-tiskarna-tlaciaren-octo-octoprint/">3d Print Printer Tiskarna Tlaciaren Octo Octoprint (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/apache2-apache-linux-web-http/">Apache2 Apache Linux Web Http (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/audio-electro/">Audio Electro (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/bash-linux-debian/">Bash Linux Debian (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cisco-router-switch-heslo-pass-zmena/">Cisco Router Switch Heslo Pass Zmena (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/counter-strike-1.6-windows-server-instalacia-konfi/">Counter-Strike 1.6 Windows Server Instalacia Konfi (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cpp-c&#43;&#43;-qt-creator-opengl-gl-glut/">Cpp C&#43;&#43; Qt Creator Opengl Gl Glut (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/db2-database-sql/">Db2 Database Sql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-9-linux-scretch-mysql/">Debian 9 Linux Scretch Mysql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-dns-cache-linux-resolver/">Debian Dns Cache Linux Resolver (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-iptables-manual-firewall/">Debian Iptables Manual Firewall (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-linux-amd-amd64-flash-flesh-tutorial-install-mozilla-opera-iceweasel-firefox/">Debian Linux Amd Amd64 Flash Flesh Tutorial Install Mozilla Opera Iceweasel Firefox (1)</a></li>
+  
+</ul>
+
+
+<a href="mailto:admin@dodoslav.eu">✉️ admin@dodoslav.eu</a>
+
+  </div>
+  <div class="content">
+    <article>
+      <h1>IBM WebSphere AS - Network Deployemnt</h1>
+      <div class="article-meta">
+        <strong>7. November 2018</strong> • Dodoslav
+      </div>
+      
+      <div class="tags">
+        
+          <span class="tag">websphere was application server apliakcny server manual</span>
+        
+      </div>
+      
+      
+      <div class="description">
+        Čo to je WebSphere a ako funguje. Pár príkazov s nejakým tým trikom.
+
+      </div>
+      <hr>
+      
+      <h4 id="ibm-installation-manager">IBM Installation Manager:</h4>
+<p>Vylistovanie balikov v repozitari:</p>
+<blockquote>
+<p>./imcl listAvailablePackages -repositories /cesta/k/zlozke/s/repository.conf/</p>
+</blockquote>
+<h4 id="ako-získať-login-do-websphere-dmgr">Ako získať login do WebSphere DMGR:</h4>
+<p>Príklad cesty k súboru:</p>
+<blockquote>
+<p>find /opt/IBM/WebSphere* -name soap.client.props | grep -v eTempl | grep -v \/temp\/ | grep \/profiles\/ | grep -i dmgr</p>
+</blockquote>
+<p>Meno a heslo by tam malo byť, heslo dešifrujeme pomocou:</p>
+<blockquote>
+<p><a href="http://strelitzia.net/wasXORdecoder/wasXORdecoder.html">http://strelitzia.net/wasXORdecoder/wasXORdecoder.html</a></p>
+</blockquote>
+<h4 id="ako-získať-port-na-ktorom-beži-dmgr">Ako získať port na ktorom beži DMGR:</h4>
+<p>Príklad cesty k súboru. Je to ten v DMGR profile:</p>
+<blockquote>
+<p>find /opt/IBM/WebSphere* -name serverindex.xml | grep -v eTemp | grep -v templates | grep -v workspace | grep -i dmgr</p>
+</blockquote>
+<h4 id="gui-na-menezovanie-profilov">GUI na menezovanie profilov:</h4>
+<blockquote>
+<p>/opt/IBM/WebSphere85/AppServer/bin/ProfileManagement/pmt.sh</p>
+</blockquote>
+<h4 id="instalacia">Instalacia:</h4>
+<p>WAS (download):</p>
+<p>Link:</p>
+<blockquote>
+<p><a href="https://www-112.ibm.com/software/howtobuy/passportadvantage/paocustomer/sdma/SDMA?P0=DOWNLOAD_DISPLAY_ITEM_HTTP&amp;downloadMethod=HTTP&amp;DOWNLOAD_SERVER_ID=3&amp;FIELD_SEARCH_TYPE=2&amp;searchVal=CJ16RML&amp;dataSelectedInfor=CND1LML">https://www-112.ibm.com/software/howtobuy/passportadvantage/paocustomer/sdma/SDMA?P0=DOWNLOAD_DISPLAY_ITEM_HTTP&amp;downloadMethod=HTTP&amp;DOWNLOAD_SERVER_ID=3&amp;FIELD_SEARCH_TYPE=2&amp;searchVal=CJ16RML&amp;dataSelectedInfor=CND1LML</a></p>
+</blockquote>
+<p>WAS (install):</p>
+<p>Documentation:</p>
+<p>Procedure:</p>
+<blockquote>
+<p>sudo su - root<br>
+<br>
+mkdir /tmp/WAS<br>
+<br>
+mv WAS-XXX.zip /tmp/WAS<br>
+<br>
+unzip /tmp/WAS/WAS-XXX.zip<br>
+<br>
+cd /opt/IBM/InstallationManager/eclipse/tools<br>
+<br>
+./imcl install com.ibm.websphere.ND.v90xxx -repositories /tmp/WAS/repository.config -acceptLicense -installationDirectory /opt/IBM/WebSphere/AppServer -showProgress</p>
+</blockquote>
+<h4 id="dmgr">dmgr:</h4>
+<p>sudo su - root<br>
+cd /opt/IBM/WebSphere/AppServer/bin/<br>
+<br>
+./manageprofiles.sh -create<br>
+-templatePath /opt/IBM/WebSphere/AppServer/profileTemplates/dmgr<br>
+-hostName prdmdmapp02<br>
+-cellName MDMCell01<br>
+-profileName MDM_DmgrProfile<br>
+-profilePath /opt/IBM/WebSphere/AppServer/profiles/MDM_DmgrProfile<br>
+-enableAdminSecurity true<br>
+-adminUserName wasadmin<br>
+&ndash;adminPassword wasadmin_pass</p>
+<h4 id="node">node:</h4>
+<p>sudo su - root<br>
+cd /opt/IBM/WebSphere/AppServer/bin/<br>
+./manageprofiles.sh -create<br>
+-templatePath /opt/IBM/WebSphere/AppServer/profileTemplates/managed<br>
+-hostName prdmdmapp02<br>
+-nodeName MDM_Node1<br>
+-profileName MDM_Node1profile<br>
+-profilePath /elixas/IBM/WebSphere/AppServer/profiles/MDM_Node1profile<br>
+-dmgrHost prdmdmapp02<br>
+-dmgrPort 887x<br>
+-dmgrAdminUserName wasadmin<br>
+&ndash;dmgrAdminPassword wasadmin_pass<br>
+-isDefault</p>
+<h4 id="suppme">suppme:</h4>
+<p>sudo su - root
+mkdir /tmp/SUPPLEMENTS
+mv WAS-SUPPL.zip /tmp/SUPPLEMENTS
+unzip /tmp/SUPPLEMENTS/WAS-SUPPL.zip
+cd /opt/IBM/InstallationManager/eclipse/tools/
+./imcl install com.ibm.websphere.IHS.v90 -repositories /tmp/SUPPLEMENTS/repository.config &ndash;acceptLicense -installationDirectory /opt/IBM/HTTPServer -log IHS.log -showVerboseProgress -properties user.ihs.httpPort=8108
+./imcl install com.ibm.websphere.PLG.v90 -repositories /tmp/SUPPLEMENTS/repository.config &ndash;acceptLicense -installationDirectory /opt/IBM/HTTPPlugins -log PLG.log -showVerboseProgress\</p>
+<h4 id="zmazanie-profilu">Zmazanie profilu:</h4>
+<blockquote>
+<p>./bin/manageprofiles.sh -delete -profileName profile_name<br>
+./bin/manageprofiles.sh -validateAndUpdateRegistry<br>
+./bin/manageprofiles.sh -listProfiles\</p>
+</blockquote>
+<p>./manageprofiles.sh -create -templatePath /opt/IBM/WebSphere/AppServer/profileTemplates/dmgr -hostName prdmdmapp02 -cellName MDMCell01 -profileName MDM_DmgrProfile -profilePath /opt/IBM/WebSphere/AppServer/profiles/MDM_DmgrProfile -enableAdminSecurity true -adminUserName wasadmin &ndash;adminPassword wasadmin_pass</p>
+
+    </article>
+  </div>
+</body>
+</html>

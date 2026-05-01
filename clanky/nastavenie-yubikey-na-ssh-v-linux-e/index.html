@@ -1,42 +1,92 @@
 <!DOCTYPE html>
-<html>
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <title>Dodoslav - eblog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nastavenie Yubikey na SSH v Linux-e | Dodoslav - eBlog</title>
+    <meta name="description" content="Jak nastavit Yubikey pod Linux, a rozbehat s SSH.
+">
     <link rel="stylesheet" href="/default.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div class="sidebar">
-    <img src="/logo.png">
-<h3>Obsah</h3>
+    <a href="/">
+  <img src="/logo.png" alt="Dodoslav Logo">
+</a>
+
+<h3>Navigácia</h3>
 <ul>
-  <li><a class="" href="/">Novinky</a></li>
-  <li><a href="/clanky/">Články</a></li>
-  <li><a href="/projekty/">Projekty</a></li>
-  <li><a href="/o_stranke/">O stránke</a></li>
+  <li><a class="" href="/">🏠 Novinky</a></li>
+  <li><a href="/clanky/">📝 Články</a></li>
+  <li><a href="/projekty/">🚀 Projekty</a></li>
+  <li><a href="/o_stranke/">ℹ️ O stránke</a></li>
 </ul>
 
 
-<h3>Témy</h3>
-<ul>
-  
-</ul>
 
 
 <h3>Kľúčové slová</h3>
 <ul>
   
-</ul>
+    <li><a href="https://dodoslavn.github.io/tags/ibm-datastage/">Ibm Datastage (2)</a></li>
   
+    <li><a href="https://dodoslavn.github.io/tags/mysql-sql-databazy-database-delphi-pascal-turbo-how-to-ako/">Mysql Sql Databazy Database Delphi Pascal Turbo How to Ako (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/perl-linux-program/">Perl Linux Program (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/3d-print-printer-tiskarna-tlaciaren-octo-octoprint/">3d Print Printer Tiskarna Tlaciaren Octo Octoprint (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/apache2-apache-linux-web-http/">Apache2 Apache Linux Web Http (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/audio-electro/">Audio Electro (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/bash-linux-debian/">Bash Linux Debian (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cisco-router-switch-heslo-pass-zmena/">Cisco Router Switch Heslo Pass Zmena (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/counter-strike-1.6-windows-server-instalacia-konfi/">Counter-Strike 1.6 Windows Server Instalacia Konfi (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cpp-c&#43;&#43;-qt-creator-opengl-gl-glut/">Cpp C&#43;&#43; Qt Creator Opengl Gl Glut (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/db2-database-sql/">Db2 Database Sql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-9-linux-scretch-mysql/">Debian 9 Linux Scretch Mysql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-dns-cache-linux-resolver/">Debian Dns Cache Linux Resolver (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-iptables-manual-firewall/">Debian Iptables Manual Firewall (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-linux-amd-amd64-flash-flesh-tutorial-install-mozilla-opera-iceweasel-firefox/">Debian Linux Amd Amd64 Flash Flesh Tutorial Install Mozilla Opera Iceweasel Firefox (1)</a></li>
+  
+</ul>
+
+
+<a href="mailto:admin@dodoslav.eu">✉️ admin@dodoslav.eu</a>
+
   </div>
   <div class="content">
-    <h3>Nastavenie Yubikey na SSH v Linux-e</h3>
-    <span>Jan 1, 0001</span>
-    Jak nastavit Yubikey pod Linux, a rozbehat s SSH.
+    <article>
+      <h1>Nastavenie Yubikey na SSH v Linux-e</h1>
+      <div class="article-meta">
+        <strong>13. January 2023</strong> • Dodoslav
+      </div>
+      
+      <div class="tags">
+        
+          <span class="tag">yubikey key klic</span>
+        
+      </div>
+      
+      
+      <div class="description">
+        Jak nastavit Yubikey pod Linux, a rozbehat s SSH.
 
-    <p># YUBICO<br>
-#
-<a href="https://support.yubico.com/hc/en-us/articles/360016649039-Enabling-the-Yubico-PPA-on-Ubuntu">https://support.yubico.com/hc/en-us/articles/360016649039-Enabling-the-Yubico-PPA-on-Ubuntu</a><br>
+      </div>
+      <hr>
+      
+      <p># YUBICO<br>
+# <a href="https://support.yubico.com/hc/en-us/articles/360016649039-Enabling-the-Yubico-PPA-on-Ubuntu">https://support.yubico.com/hc/en-us/articles/360016649039-Enabling-the-Yubico-PPA-on-Ubuntu</a><br>
 sudo add-apt-repository ppa:yubico/stable &amp;&amp; sudo apt-get update<br>
 sudo apt install yubikey-manager<br>
 sudo apt install yubikey-personalization-gui<br>
@@ -48,15 +98,12 @@ sudo systemctl start pcscd<br>
 sudo systemctl enable pcscd<br>
 systemctl status pcscd<br>
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br>
-To get yubikey-manager-qt for Ubuntu 20.04/20.10 follow steps (you will
-have to<br>
+To get yubikey-manager-qt for Ubuntu 20.04/20.10 follow steps (you will have to<br>
 build it yourself):<br>
 git clone <a href="https://github.com/Yubico/yubikey-manager-qt">https://github.com/Yubico/yubikey-manager-qt</a><br>
 cd yubikey-manager-qt<br>
 sudo apt install devscripts equivs<br>
-sudo mk-build-deps --install --tool=apt-get -o
-Debug::pkgProblemResolver=yes --no-install-recommends --yes
-debian/control<br>
+sudo mk-build-deps --install --tool=apt-get -o Debug::pkgProblemResolver=yes --no-install-recommends --yes debian/control<br>
 fakeroot debian/rules binary<br>
 sudo apt install ../yubikey-manager-qt_1.1.5_amd64.deb<br>
 # result<br>
@@ -78,23 +125,18 @@ YubiHSM Auth Not available<br>
 OpenPGP Enabled<br>
 PIV Enabled<br>
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br>
-#
-<a href="https://developers.yubico.com/yubico-piv-tool/YubiKey_PIV_introduction.html">https://developers.yubico.com/yubico-piv-tool/YubiKey_PIV_introduction.html</a><br>
+# <a href="https://developers.yubico.com/yubico-piv-tool/YubiKey_PIV_introduction.html">https://developers.yubico.com/yubico-piv-tool/YubiKey_PIV_introduction.html</a><br>
 The default PIN code is 123456. The default PUK code is 12345678.<br>
-The default 3DES management key (9B) is
-010203040506070801020304050607080102030405060708.<br>
+The default 3DES management key (9B) is 010203040506070801020304050607080102030405060708.<br>
 # Management key<br>
-key=$(export LC_CTYPE=C; dd if=/dev/urandom 2&gt;/dev/null | tr -d
-[:lower:] | tr -cd [:xdigit:] | fold -w48 | head -1)<br>
+key=$(export LC_CTYPE=C; dd if=/dev/urandom 2&gt;/dev/null | tr -d [:lower:] | tr -cd [:xdigit:] | fold -w48 | head -1)<br>
 echo ${key}<br>
 yubico-piv-tool -aset-mgm-key -n${key}<br>
 1234567890ASDFASDFASDFASDFASDFASDFASDFASDFASDFAS<br>
 # PIN and PUK<br>
-pin=$(export LC_CTYPE=C; dd if=/dev/urandom 2&gt;/dev/null | tr -cd
-[:digit:] | fold -w6 | head -1)<br>
+pin=$(export LC_CTYPE=C; dd if=/dev/urandom 2&gt;/dev/null | tr -cd [:digit:] | fold -w6 | head -1)<br>
 echo ${pin}<br>
-puk=$(export LC_CTYPE=C; dd if=/dev/urandom 2&gt;/dev/null | tr -cd
-[:digit:] | fold -w8 | head -1)<br>
+puk=$(export LC_CTYPE=C; dd if=/dev/urandom 2&gt;/dev/null | tr -cd [:digit:] | fold -w8 | head -1)<br>
 echo ${puk}<br>
 yubico-piv-tool -achange-pin -P123456 -N${pin}<br>
 yubico-piv-tool -achange-puk -P12345678 -N${puk}<br>
@@ -107,15 +149,12 @@ ls /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so<br>
 # if not installed<br>
 sudo apt install opensc-pkcs11<br>
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br>
-#
-<a href="https://developers.yubico.com/PIV/Guides/SSH_with_PIV_and_PKCS11.html">https://developers.yubico.com/PIV/Guides/SSH_with_PIV_and_PKCS11.html</a><br>
+# <a href="https://developers.yubico.com/PIV/Guides/SSH_with_PIV_and_PKCS11.html">https://developers.yubico.com/PIV/Guides/SSH_with_PIV_and_PKCS11.html</a><br>
 # Generate private key<br>
 # wiki: --touch-policy=never; ? --touch-policy=cached<br>
-yubico-piv-tool -s 9a -a generate -o yubi_public.pem -A RSA2048 -S
-/CN=p@aaa.com/ --pin-policy=once --touch-policy=never -k<br>
+yubico-piv-tool -s 9a -a generate -o yubi_public.pem -A RSA2048 -S /CN=p@aaa.com/ --pin-policy=once --touch-policy=never -k<br>
 # Generate certificate<br>
-yubico-piv-tool -a verify-pin -a selfsign-certificate -s 9a -S &quot;/CN=SSH
-key <a href="mailto:p@aaa.co">p@aaa.co</a>/&quot; -i yubi_public.pem -o yubi_cert.pem<br>
+yubico-piv-tool -a verify-pin -a selfsign-certificate -s 9a -S &quot;/CN=SSH key <a href="mailto:p@aaa.co">p@aaa.co</a>/&quot; -i yubi_public.pem -o yubi_cert.pem<br>
 # Import the certificate to &quot;SSH slot&quot;<br>
 yubico-piv-tool -a import-certificate -s 9a -i yubi_cert.pem -k<br>
 # export public SSH key<br>
@@ -127,12 +166,13 @@ ssh-add -s /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so<br>
 #!/bin/sh<br>
 #export SSH_ASKPASS=/usr/bin/ksshaskpass<br>
 export SSH_ASKPASS=/usr/bin/ssh-askpass<br>
-/usr/bin/ssh-add ${HOME}/.ssh/id_rsa /usr/bin/ssh-add -e
-/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so /usr/bin/ssh-add -s
-/usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so
+/usr/bin/ssh-add ${HOME}/.ssh/id_rsa
+/usr/bin/ssh-add -e /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so
+/usr/bin/ssh-add -s /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br>
 \</p>
 
+    </article>
   </div>
 </body>
 </html>

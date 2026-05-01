@@ -1,72 +1,111 @@
 <!DOCTYPE html>
-<html>
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <title>Dodoslav - eblog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triky s prihlasovaním v registri | Dodoslav - eBlog</title>
+    <meta name="description" content="Pár trikov ako si zmeniť prihasovanie do systému vo Windows XP. Či už nastaviť automatické prihlasovanie alebo zobrazovanie posledneho prihlaseného užívatela.
+">
     <link rel="stylesheet" href="/default.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div class="sidebar">
-    <img src="/logo.png">
-<h3>Obsah</h3>
+    <a href="/">
+  <img src="/logo.png" alt="Dodoslav Logo">
+</a>
+
+<h3>Navigácia</h3>
 <ul>
-  <li><a class="" href="/">Novinky</a></li>
-  <li><a href="/clanky/">Články</a></li>
-  <li><a href="/projekty/">Projekty</a></li>
-  <li><a href="/o_stranke/">O stránke</a></li>
+  <li><a class="" href="/">🏠 Novinky</a></li>
+  <li><a href="/clanky/">📝 Články</a></li>
+  <li><a href="/projekty/">🚀 Projekty</a></li>
+  <li><a href="/o_stranke/">ℹ️ O stránke</a></li>
 </ul>
 
 
-<h3>Témy</h3>
-<ul>
-  
-</ul>
 
 
 <h3>Kľúčové slová</h3>
 <ul>
   
-</ul>
+    <li><a href="https://dodoslavn.github.io/tags/ibm-datastage/">Ibm Datastage (2)</a></li>
   
+    <li><a href="https://dodoslavn.github.io/tags/mysql-sql-databazy-database-delphi-pascal-turbo-how-to-ako/">Mysql Sql Databazy Database Delphi Pascal Turbo How to Ako (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/perl-linux-program/">Perl Linux Program (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/3d-print-printer-tiskarna-tlaciaren-octo-octoprint/">3d Print Printer Tiskarna Tlaciaren Octo Octoprint (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/apache2-apache-linux-web-http/">Apache2 Apache Linux Web Http (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/audio-electro/">Audio Electro (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/bash-linux-debian/">Bash Linux Debian (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cisco-router-switch-heslo-pass-zmena/">Cisco Router Switch Heslo Pass Zmena (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/counter-strike-1.6-windows-server-instalacia-konfi/">Counter-Strike 1.6 Windows Server Instalacia Konfi (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cpp-c&#43;&#43;-qt-creator-opengl-gl-glut/">Cpp C&#43;&#43; Qt Creator Opengl Gl Glut (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/db2-database-sql/">Db2 Database Sql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-9-linux-scretch-mysql/">Debian 9 Linux Scretch Mysql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-dns-cache-linux-resolver/">Debian Dns Cache Linux Resolver (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-iptables-manual-firewall/">Debian Iptables Manual Firewall (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-linux-amd-amd64-flash-flesh-tutorial-install-mozilla-opera-iceweasel-firefox/">Debian Linux Amd Amd64 Flash Flesh Tutorial Install Mozilla Opera Iceweasel Firefox (1)</a></li>
+  
+</ul>
+
+
+<a href="mailto:admin@dodoslav.eu">✉️ admin@dodoslav.eu</a>
+
   </div>
   <div class="content">
-    <h3>Triky s prihlasovaním v registri</h3>
-    <span>Jan 1, 0001</span>
-    Pár trikov ako si zmeniť prihasovanie do systému vo Windows XP. Či už nastaviť automatické prihlasovanie alebo zobrazovanie posledneho prihlaseného užívatela.
+    <article>
+      <h1>Triky s prihlasovaním v registri</h1>
+      <div class="article-meta">
+        <strong>17. August 2011</strong> • Dodoslav
+      </div>
+      
+      <div class="tags">
+        
+          <span class="tag">regedit register windows xp pr</span>
+        
+      </div>
+      
+      
+      <div class="description">
+        Pár trikov ako si zmeniť prihasovanie do systému vo Windows XP. Či už nastaviť automatické prihlasovanie alebo zobrazovanie posledneho prihlaseného užívatela.
 
-    <p>Ak sa Vám sa zobrazuje pri spustení Windowsu pri prihlasovaní kto bol
-naposledy prihlásený, inak povedané políčko kde sa zadáva Login (Meno
-užívateľa) ostalo vyplnené?</p>
+      </div>
+      <hr>
+      
+      <p>Ak sa Vám sa zobrazuje pri spustení Windowsu pri prihlasovaní kto bol naposledy prihlásený, inak povedané políčko kde sa zadáva Login (Meno užívateľa) ostalo vyplnené?</p>
 <p>Aj takáto vec sa dá riešiť cez register.</p>
 <p>KROK 1 - Spusti Regedit</p>
 <p>KROK 2 - Dostaň sa na adresár:</p>
 <blockquote>
-<p>HKEY_LOCAL_MACHINE -&gt; SOFTWARE -&gt;Microsoft -&gt; Windows-&gt;
-CurrentVersion -&gt; policies -&gt; system</p>
+<p>HKEY_LOCAL_MACHINE -&gt; SOFTWARE -&gt;Microsoft -&gt; Windows-&gt; CurrentVersion -&gt; policies -&gt; system</p>
 </blockquote>
-<p>KROK 3 - Vytvor novú DWORD hodnotu &quot;DontDisplayLastUserName&quot; s
-hodnotou &quot;1&quot;.</p>
+<p>KROK 3 - Vytvor novú DWORD hodnotu &quot;DontDisplayLastUserName&quot; s hodnotou &quot;1&quot;.</p>
 <p>Po reštarte by malo fugnovať.</p>
-<p>Ak vás už prestáva baviť že ked spustíte svoj Windows, pýta, aby ste
-zadali meno užívatela a heslo, prípadne iba klikli na ikonu k
-prihláseniu, tak takéto niečo sa takysto rieši cez register.</p>
+<p>Ak vás už prestáva baviť že ked spustíte svoj Windows, pýta, aby ste zadali meno užívatela a heslo, prípadne iba klikli na ikonu k prihláseniu, tak takéto niečo sa takysto rieši cez register.</p>
 <p>KROK 1 - Spusti Regedit</p>
 <p>KROK 2 - Preklikaj sa až na adresu:</p>
 <blockquote>
-<p>HKEY_LOCAL_MACHINE -&gt; SOFTWARE -&gt; Microsoft -&gt; Windows NT -&gt;
-CurrentVersion -&gt; Winlogon</p>
+<p>HKEY_LOCAL_MACHINE -&gt; SOFTWARE -&gt; Microsoft -&gt; Windows NT -&gt; CurrentVersion -&gt; Winlogon</p>
 </blockquote>
 <p>KROK 3 - Do položky &quot;DefaultUserName&quot; zapíšte užívateľské meno.</p>
-<p>KROK 4 - Do položky &quot;DefaultPassword&quot; zapíšte heslo. A ak tá položka
-neexistuje tak vytvorte novú &quot;Textovu hodnotu&quot; (Klikni pravým
-tlačítkom na myši -&gt; NEW / NOVE -&gt; STRING / Textová hodnota ).</p>
-<p>KROK 5 - Do položky &quot;AutoAdminLogon&quot; zapíšte &quot;1&quot; (true) alebo &quot;0&quot;
-(false). To znamená že ked tam zapíšete &quot;1&quot; tak to automatícké
-prihlasovanie bude, true, aktívne. Ak nieje vytvorený tak zase vytvoríme
-novú &quot;Textovú hodnotu&quot;.</p>
-<p>KROK 6 - Ak sme toto všetko spravili, malo by nám to fungovať už po
-nasledovnom reštartovaní pocčítača.</p>
+<p>KROK 4 - Do položky &quot;DefaultPassword&quot; zapíšte heslo. A ak tá položka neexistuje tak vytvorte novú &quot;Textovu hodnotu&quot; (Klikni pravým tlačítkom na myši -&gt; NEW / NOVE -&gt; STRING / Textová hodnota ).</p>
+<p>KROK 5 - Do položky &quot;AutoAdminLogon&quot; zapíšte &quot;1&quot; (true) alebo &quot;0&quot; (false). To znamená že ked tam zapíšete &quot;1&quot; tak to automatícké prihlasovanie bude, true, aktívne. Ak nieje vytvorený tak zase vytvoríme novú &quot;Textovú hodnotu&quot;.</p>
+<p>KROK 6 - Ak sme toto všetko spravili, malo by nám to fungovať už po nasledovnom reštartovaní pocčítača.</p>
 
+    </article>
   </div>
 </body>
 </html>

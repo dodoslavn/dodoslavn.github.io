@@ -1,69 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <title>Dodoslav - eblog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Začíname s Perl časť 1. | Dodoslav - eBlog</title>
+    <meta name="description" content="Tento sciptovací jazyk, ktorý má dobre vypracované regulárne výrazy, môžete použiť k veľmi rôznorodému spektru činností, zahrnajúci efektivného zpracovaniu väčšieho množstva textu. Nasledujúce typy by vám mali pomôcť so začiatkamy tak, aby ste boli schopný vytvoriť sami jednoduché aplikácie.
+">
     <link rel="stylesheet" href="/default.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div class="sidebar">
-    <img src="/logo.png">
-<h3>Obsah</h3>
+    <a href="/">
+  <img src="/logo.png" alt="Dodoslav Logo">
+</a>
+
+<h3>Navigácia</h3>
 <ul>
-  <li><a class="" href="/">Novinky</a></li>
-  <li><a href="/clanky/">Články</a></li>
-  <li><a href="/projekty/">Projekty</a></li>
-  <li><a href="/o_stranke/">O stránke</a></li>
+  <li><a class="" href="/">🏠 Novinky</a></li>
+  <li><a href="/clanky/">📝 Články</a></li>
+  <li><a href="/projekty/">🚀 Projekty</a></li>
+  <li><a href="/o_stranke/">ℹ️ O stránke</a></li>
 </ul>
 
 
-<h3>Témy</h3>
-<ul>
-  
-</ul>
 
 
 <h3>Kľúčové slová</h3>
 <ul>
   
-</ul>
+    <li><a href="https://dodoslavn.github.io/tags/ibm-datastage/">Ibm Datastage (2)</a></li>
   
+    <li><a href="https://dodoslavn.github.io/tags/mysql-sql-databazy-database-delphi-pascal-turbo-how-to-ako/">Mysql Sql Databazy Database Delphi Pascal Turbo How to Ako (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/perl-linux-program/">Perl Linux Program (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/3d-print-printer-tiskarna-tlaciaren-octo-octoprint/">3d Print Printer Tiskarna Tlaciaren Octo Octoprint (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/apache2-apache-linux-web-http/">Apache2 Apache Linux Web Http (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/audio-electro/">Audio Electro (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/bash-linux-debian/">Bash Linux Debian (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cisco-router-switch-heslo-pass-zmena/">Cisco Router Switch Heslo Pass Zmena (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/counter-strike-1.6-windows-server-instalacia-konfi/">Counter-Strike 1.6 Windows Server Instalacia Konfi (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cpp-c&#43;&#43;-qt-creator-opengl-gl-glut/">Cpp C&#43;&#43; Qt Creator Opengl Gl Glut (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/db2-database-sql/">Db2 Database Sql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-9-linux-scretch-mysql/">Debian 9 Linux Scretch Mysql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-dns-cache-linux-resolver/">Debian Dns Cache Linux Resolver (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-iptables-manual-firewall/">Debian Iptables Manual Firewall (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-linux-amd-amd64-flash-flesh-tutorial-install-mozilla-opera-iceweasel-firefox/">Debian Linux Amd Amd64 Flash Flesh Tutorial Install Mozilla Opera Iceweasel Firefox (1)</a></li>
+  
+</ul>
+
+
+<a href="mailto:admin@dodoslav.eu">✉️ admin@dodoslav.eu</a>
+
   </div>
   <div class="content">
-    <h3>Začíname s Perl časť 1.</h3>
-    <span>Jan 1, 0001</span>
-    Tento sciptovací jazyk, ktorý má dobre vypracované regulárne výrazy, môžete použiť k veľmi rôznorodému spektru činností, zahrnajúci efektivného zpracovaniu väčšieho množstva textu. Nasledujúce typy by vám mali pomôcť so začiatkamy tak, aby ste boli schopný vytvoriť sami jednoduché aplikácie.
+    <article>
+      <h1>Začíname s Perl časť 1.</h1>
+      <div class="article-meta">
+        <strong>2. October 2011</strong> • Dodoslav
+      </div>
+      
+      <div class="tags">
+        
+          <span class="tag">perl linux program</span>
+        
+      </div>
+      
+      
+      <div class="description">
+        Tento sciptovací jazyk, ktorý má dobre vypracované regulárne výrazy, môžete použiť k veľmi rôznorodému spektru činností, zahrnajúci efektivného zpracovaniu väčšieho množstva textu. Nasledujúce typy by vám mali pomôcť so začiatkamy tak, aby ste boli schopný vytvoriť sami jednoduché aplikácie.
 
-    <h4 id="interpretovaný-vs-kompilovaný-kód">Interpretovaný vs. kompilovaný kód</h4>
-<p>Programy v Perl môžeme ukladať dvoma spôsobmy. Bud interpretované v
-scripte alebo ako binárne verzie (kompilovaný). Obidva spôsoby majú
-svoje výhody a nevýhody. Kompilovaný je o trochu pomalši a jeho súčastou
-je celí zdrojový kód, všetky knižnice a veľa iných vecí. Veľkost je tak
-neporovnateľne väčšia, no veľkosť je tam väčšia hlavne kvôli knižniciam.
-Neskôr ked program dorábame už sa jeho velkosť zvačšuje tak isto ako pri
-nekompilovanom. Tým ze je skompilovaný je znížena aj jeho možnost zmien
-chovania. Má ale aj výhody. Program potom prenesený na iné PC je ihned
-plne funkčny ako na PC na kt. sa program vytváral, kedže v obsahuje aj
-všetky knižnice netreba nič inštalovať. Interpretovaný program je
-rychlejší, prehladnejší a k dispozícií je zdrojový kod kt. je hlavne
-malý. Je tiež možnosť ho ľahko upravovať bez zásadnejších zmien.<br>
+      </div>
+      <hr>
+      
+      <h4 id="interpretovaný-vs-kompilovaný-kód">Interpretovaný vs. kompilovaný kód</h4>
+<p>Programy v Perl môžeme ukladať dvoma spôsobmy. Bud interpretované v scripte alebo ako binárne verzie (kompilovaný). Obidva spôsoby majú svoje výhody a nevýhody. Kompilovaný je o trochu pomalši a jeho súčastou je celí zdrojový kód, všetky knižnice a veľa iných vecí. Veľkost je tak neporovnateľne väčšia, no veľkosť je tam väčšia hlavne kvôli knižniciam. Neskôr ked program dorábame už sa jeho velkosť zvačšuje tak isto ako pri nekompilovanom. Tým ze je skompilovaný je znížena aj jeho možnost zmien chovania. Má ale aj výhody. Program potom prenesený na iné PC je ihned plne funkčny ako na PC na kt. sa program vytváral, kedže v obsahuje aj všetky knižnice netreba nič inštalovať. Interpretovaný program je rychlejší, prehladnejší a k dispozícií je zdrojový kod kt. je hlavne malý. Je tiež možnosť ho ľahko upravovať bez zásadnejších zmien.<br>
 Pokiaľ chcete script kompilovať, napíšte:</p>
 <blockquote>
 <p>perlcc subor.pl</p>
 </blockquote>
-<p>Pokiaľ uprednostnujete interpretované programy, musíte napísať na
-začiatok každého scriptu:</p>
+<p>Pokiaľ uprednostnujete interpretované programy, musíte napísať na začiatok každého scriptu:</p>
 <blockquote>
 <p>#!/usr/bin/perl</p>
 </blockquote>
-<p>Odporúčam ale používať variantu s parametrom -w, vdaka ktorému nám bude
-vypisovať všetky chyby:</p>
+<p>Odporúčam ale používať variantu s parametrom -w, vdaka ktorému nám bude vypisovať všetky chyby:</p>
 <blockquote>
 <p>#!/usr/bin/perl -w</p>
 </blockquote>
 <h4 id="výpis-textu">Výpis textu</h4>
-<p>Zakladný príkaz asi v každom jazyku je print. Teraz si vyskúšajte tento
-script:</p>
+<p>Zakladný príkaz asi v každom jazyku je print. Teraz si vyskúšajte tento script:</p>
 <blockquote>
 <p>#!/usr/bin/perl -w<br>
 print &quot;Hallo World&quot;;</p>
@@ -72,8 +109,7 @@ print &quot;Hallo World&quot;;</p>
 <blockquote>
 <p>subor.pl</p>
 </blockquote>
-<p>Potom musíme ale nastaviť tomu súboru aj práva na spustenie, takže
-zadajte:</p>
+<p>Potom musíme ale nastaviť tomu súboru aj práva na spustenie, takže zadajte:</p>
 <blockquote>
 <p>chmod a+x subor.pl</p>
 </blockquote>
@@ -82,32 +118,26 @@ zadajte:</p>
 <p>./subor.pl</p>
 </blockquote>
 <h4 id="premenné-a-práca-s-nimi">Premenné a práca s nimi</h4>
-<p>V tomto jazyku je niekoľko typov premenných a tie sa od seba líšia
-znakom pred nazvom premennej.</p>
+<p>V tomto jazyku je niekoľko typov premenných a tie sa od seba líšia znakom pred nazvom premennej.</p>
 <blockquote>
 <p>$premenna //skalárna<br>
 @premenna //pole, zoznam alebo text<br>
 %premenna //asiciatívna (hash)<br>
 $$premenna //odkaz na premennú ($$ / @$ / %$)\</p>
 </blockquote>
-<p>Deklarovanie premenných a ich typ nieje potrebne kedže sa deklarujú sami
-automaticky, ihned pri prvom použití. Skalárnu premennú s hodnotou 5
-vytvoríme nasledovne:</p>
+<p>Deklarovanie premenných a ich typ nieje potrebne kedže sa deklarujú sami automaticky, ihned pri prvom použití. Skalárnu premennú s hodnotou 5 vytvoríme nasledovne:</p>
 <blockquote>
 <p>$premenna = 5;</p>
 </blockquote>
-<p>Ak chceme niektorú z premenných zrušiť, nemôžeme im iba prideliť nulovú
-hodnotu ale musíme im prideliť hodnotu undef:</p>
+<p>Ak chceme niektorú z premenných zrušiť, nemôžeme im iba prideliť nulovú hodnotu ale musíme im prideliť hodnotu undef:</p>
 <blockquote>
 <p>$premenna = undef;</p>
 </blockquote>
-<p>Ak chceme vytvorit viacero premenných s rovnakou hodnotou môžeme ich
-jednoducho napisať vedľa seba:</p>
+<p>Ak chceme vytvorit viacero premenných s rovnakou hodnotou môžeme ich jednoducho napisať vedľa seba:</p>
 <blockquote>
 <p>$a = $b = $c = $d = 5;</p>
 </blockquote>
-<p>Pokial chceme hodnotu premennej zvačšiť(napr. o 5), väčšinou použijete
-zápis:</p>
+<p>Pokial chceme hodnotu premennej zvačšiť(napr. o 5), väčšinou použijete zápis:</p>
 <blockquote>
 <p>$a = $a + 5;</p>
 </blockquote>
@@ -116,8 +146,7 @@ zápis:</p>
 <p>$a += 5;</p>
 </blockquote>
 <p>Tento spôsob funguje aj pri ostatných operáciach, nielen pri sčitovaní.
-Už sme si ukázali ako zmeniť hodnotu premennej, ale čo ak chceme iba
-incrementovat? Na to môžme použiť další spôsob:</p>
+Už sme si ukázali ako zmeniť hodnotu premennej, ale čo ak chceme iba incrementovat? Na to môžme použiť další spôsob:</p>
 <blockquote>
 <p>$a++ ;</p>
 </blockquote>
@@ -125,12 +154,8 @@ incrementovat? Na to môžme použiť další spôsob:</p>
 <blockquote>
 <p>++$a ;</p>
 </blockquote>
-<p>Rozdiel medzi nimi ja taký ze pri prvom spôsobe zápisu sa najskôr vyvolá
-hodnota premennej a bude vydaná jej pôvodna hodnota a až potom sa
-incrementuje. Zatiaľ co pri druhom spôsobe sa najskôr incrementuje a je
-vydaná už jej incrementovaná hodnota. Spájanie premenných v Perl je tiež
-jednoduché ako u ostatných jazykoch, a to pomocou &quot;.&quot; (bodky). Tu si
-uvedieme príklad:</p>
+<p>Rozdiel medzi nimi ja taký ze pri prvom spôsobe zápisu sa najskôr vyvolá hodnota premennej a bude vydaná jej pôvodna hodnota a až potom sa incrementuje. Zatiaľ co pri druhom spôsobe sa najskôr incrementuje a je vydaná už jej incrementovaná hodnota.
+Spájanie premenných v Perl je tiež jednoduché ako u ostatných jazykoch, a to pomocou &quot;.&quot; (bodky). Tu si uvedieme príklad:</p>
 <blockquote>
 <p>$premenna = &quot;jablko &quot;.&quot;hruska &quot;.&quot;a ostatne&quot;;</p>
 </blockquote>
@@ -139,12 +164,12 @@ uvedieme príklad:</p>
 <p>$premenna = &quot;jablko hruska&quot;;<br>
 $premenna .= &quot;a ostatne&quot;;</p>
 </blockquote>
-<p>Opakovanie príkazu môžme vykonať príkazom &quot;x&quot;. Tu je jednoduchý
-príklad ktorí nám vypíše 5 krát za sebou hodnotu premennej $a:</p>
+<p>Opakovanie príkazu môžme vykonať príkazom &quot;x&quot;. Tu je jednoduchý príklad ktorí nám vypíše 5 krát za sebou hodnotu premennej $a:</p>
 <blockquote>
 <p>print $a x 5;</p>
 </blockquote>
 
+    </article>
   </div>
 </body>
 </html>

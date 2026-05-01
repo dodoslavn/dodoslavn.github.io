@@ -1,40 +1,91 @@
 <!DOCTYPE html>
-<html>
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <title>Dodoslav - eblog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux inštalácia youtube-dl | Dodoslav - eBlog</title>
+    <meta name="description" content="Ako správne nainštalovať stahovač YouTube videí, youtube-dl. Na Debian 8 (jessie) sa to musí robiť trochu inak z dôvodu že v repozitároch ma starú verziu.
+">
     <link rel="stylesheet" href="/default.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div class="sidebar">
-    <img src="/logo.png">
-<h3>Obsah</h3>
+    <a href="/">
+  <img src="/logo.png" alt="Dodoslav Logo">
+</a>
+
+<h3>Navigácia</h3>
 <ul>
-  <li><a class="" href="/">Novinky</a></li>
-  <li><a href="/clanky/">Články</a></li>
-  <li><a href="/projekty/">Projekty</a></li>
-  <li><a href="/o_stranke/">O stránke</a></li>
+  <li><a class="" href="/">🏠 Novinky</a></li>
+  <li><a href="/clanky/">📝 Články</a></li>
+  <li><a href="/projekty/">🚀 Projekty</a></li>
+  <li><a href="/o_stranke/">ℹ️ O stránke</a></li>
 </ul>
 
 
-<h3>Témy</h3>
-<ul>
-  
-</ul>
 
 
 <h3>Kľúčové slová</h3>
 <ul>
   
-</ul>
+    <li><a href="https://dodoslavn.github.io/tags/ibm-datastage/">Ibm Datastage (2)</a></li>
   
+    <li><a href="https://dodoslavn.github.io/tags/mysql-sql-databazy-database-delphi-pascal-turbo-how-to-ako/">Mysql Sql Databazy Database Delphi Pascal Turbo How to Ako (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/perl-linux-program/">Perl Linux Program (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/3d-print-printer-tiskarna-tlaciaren-octo-octoprint/">3d Print Printer Tiskarna Tlaciaren Octo Octoprint (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/apache2-apache-linux-web-http/">Apache2 Apache Linux Web Http (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/audio-electro/">Audio Electro (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/bash-linux-debian/">Bash Linux Debian (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cisco-router-switch-heslo-pass-zmena/">Cisco Router Switch Heslo Pass Zmena (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/counter-strike-1.6-windows-server-instalacia-konfi/">Counter-Strike 1.6 Windows Server Instalacia Konfi (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cpp-c&#43;&#43;-qt-creator-opengl-gl-glut/">Cpp C&#43;&#43; Qt Creator Opengl Gl Glut (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/db2-database-sql/">Db2 Database Sql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-9-linux-scretch-mysql/">Debian 9 Linux Scretch Mysql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-dns-cache-linux-resolver/">Debian Dns Cache Linux Resolver (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-iptables-manual-firewall/">Debian Iptables Manual Firewall (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-linux-amd-amd64-flash-flesh-tutorial-install-mozilla-opera-iceweasel-firefox/">Debian Linux Amd Amd64 Flash Flesh Tutorial Install Mozilla Opera Iceweasel Firefox (1)</a></li>
+  
+</ul>
+
+
+<a href="mailto:admin@dodoslav.eu">✉️ admin@dodoslav.eu</a>
+
   </div>
   <div class="content">
-    <h3>Linux inštalácia youtube-dl</h3>
-    <span>Jan 1, 0001</span>
-    Ako správne nainštalovať stahovač YouTube videí, youtube-dl. Na Debian 8 (jessie) sa to musí robiť trochu inak z dôvodu že v repozitároch ma starú verziu.
+    <article>
+      <h1>Linux inštalácia youtube-dl</h1>
+      <div class="article-meta">
+        <strong>20. August 2016</strong> • Dodoslav
+      </div>
+      
+      <div class="tags">
+        
+          <span class="tag">linux debian youtube youtube-dl</span>
+        
+      </div>
+      
+      
+      <div class="description">
+        Ako správne nainštalovať stahovač YouTube videí, youtube-dl. Na Debian 8 (jessie) sa to musí robiť trochu inak z dôvodu že v repozitároch ma starú verziu.
 
-    <p>Inštalácia:</p>
+      </div>
+      <hr>
+      
+      <p>Inštalácia:</p>
 <blockquote>
 <p>sudo apt install youtube-dl</p>
 </blockquote>
@@ -42,11 +93,10 @@
 <blockquote>
 <p>youtube-dl --version</p>
 </blockquote>
-<p>V repozitároch môže byť ale často verzia stará, preto existuej
-alternatívny spôsob:</p>
+<p>V repozitároch môže byť ale často verzia stará, preto existuej alternatívny spôsob:</p>
 <blockquote>
-<p>wget -O - <a href="https://yt-dl.org/downloads/latest/youtube-dl">https://yt-dl.org/downloads/latest/youtube-dl</a> | sudo tee
-/usr/sbin/youtube-dl &gt;/dev/null sudo chmod a+x /usr/sbin/youtube-dl</p>
+<p>wget -O - <a href="https://yt-dl.org/downloads/latest/youtube-dl">https://yt-dl.org/downloads/latest/youtube-dl</a> | sudo tee /usr/sbin/youtube-dl &gt;/dev/null
+sudo chmod a+x /usr/sbin/youtube-dl</p>
 </blockquote>
 <p>Skontrolujeme že máme novšiu verziu:</p>
 <blockquote>
@@ -55,29 +105,21 @@ alternatívny spôsob:</p>
 <h4 id="pár-príkladov-použitia">Pár príkladov použitia:</h4>
 <p>Príkaz na stiahnute a automatické prekonverovanie YouTUbe videa do mp3</p>
 <blockquote>
-<p>youtube-dl --extract-audio --audio-quality 0 --audio-format mp3 -ti
-<a href="https://www.youtube.com/watch?v=XXX">https://www.youtube.com/watch?v=XXX</a></p>
+<p>youtube-dl --extract-audio --audio-quality 0 --audio-format mp3 -ti <a href="https://www.youtube.com/watch?v=XXX">https://www.youtube.com/watch?v=XXX</a></p>
 </blockquote>
 <p>Ziskanie nazvov videi z playlistu:</p>
 <blockquote>
-<p>youtube-dl --ignore-errors -o &quot;%(title)s.%(ext)s&quot; --get-filename
-<a href="https://www.youtube.com/playlist?list=XXX">https://www.youtube.com/playlist?list=XXX</a></p>
+<p>youtube-dl --ignore-errors -o &quot;%(title)s.%(ext)s&quot; --get-filename <a href="https://www.youtube.com/playlist?list=XXX">https://www.youtube.com/playlist?list=XXX</a></p>
 </blockquote>
 <p>Ine:</p>
 <blockquote>
-<p>youtube-dl -o
-&quot;$PATH_DL%(uploader)s/mp4/%(playlist)s/%(title)s.%(ext)s&quot;
---download-archive archive.txt --format best --ignore-errors
---continue --no-overwrites --verbose -a
-$PATH_BASE&quot;&quot;links/playlists.csv</p>
+<p>youtube-dl -o &quot;$PATH_DL%(uploader)s/mp4/%(playlist)s/%(title)s.%(ext)s&quot; --download-archive archive.txt --format best --ignore-errors --continue --no-overwrites --verbose -a $PATH_BASE&quot;&quot;links/playlists.csv</p>
 </blockquote>
 <blockquote>
-<p>youtube-dl -o
-&quot;$PATH_DL%(uploader)s/mp4/%(playlist)s/%(title)s.%(ext)s&quot;
---download-archive archive.txt --format best --ignore-errors
---continue --no-overwrites --verbose ytuser:MrSuicideSheep</p>
+<p>youtube-dl -o &quot;$PATH_DL%(uploader)s/mp4/%(playlist)s/%(title)s.%(ext)s&quot; --download-archive archive.txt --format best --ignore-errors --continue --no-overwrites --verbose ytuser:MrSuicideSheep</p>
 </blockquote>
 
+    </article>
   </div>
 </body>
 </html>

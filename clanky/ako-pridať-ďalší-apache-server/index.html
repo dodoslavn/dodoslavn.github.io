@@ -1,45 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <title>Dodoslav - eblog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ako pridať ďalší Apache server | Dodoslav - eBlog</title>
+    <meta name="description" content="Návod na pridanie ďalšej inštalácie http servera &lt;i&gt;apache2&lt;/i&gt; za použitia skriptu ktorý je dodávaný so základnou inštaláciou. V konečnom riešení použijeme aj modul &lt;i&gt;Proxy&lt;/i&gt;.
+">
     <link rel="stylesheet" href="/default.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div class="sidebar">
-    <img src="/logo.png">
-<h3>Obsah</h3>
+    <a href="/">
+  <img src="/logo.png" alt="Dodoslav Logo">
+</a>
+
+<h3>Navigácia</h3>
 <ul>
-  <li><a class="" href="/">Novinky</a></li>
-  <li><a href="/clanky/">Články</a></li>
-  <li><a href="/projekty/">Projekty</a></li>
-  <li><a href="/o_stranke/">O stránke</a></li>
+  <li><a class="" href="/">🏠 Novinky</a></li>
+  <li><a href="/clanky/">📝 Články</a></li>
+  <li><a href="/projekty/">🚀 Projekty</a></li>
+  <li><a href="/o_stranke/">ℹ️ O stránke</a></li>
 </ul>
 
 
-<h3>Témy</h3>
-<ul>
-  
-</ul>
 
 
 <h3>Kľúčové slová</h3>
 <ul>
   
-</ul>
+    <li><a href="https://dodoslavn.github.io/tags/ibm-datastage/">Ibm Datastage (2)</a></li>
   
+    <li><a href="https://dodoslavn.github.io/tags/mysql-sql-databazy-database-delphi-pascal-turbo-how-to-ako/">Mysql Sql Databazy Database Delphi Pascal Turbo How to Ako (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/perl-linux-program/">Perl Linux Program (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/3d-print-printer-tiskarna-tlaciaren-octo-octoprint/">3d Print Printer Tiskarna Tlaciaren Octo Octoprint (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/apache2-apache-linux-web-http/">Apache2 Apache Linux Web Http (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/audio-electro/">Audio Electro (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/bash-linux-debian/">Bash Linux Debian (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cisco-router-switch-heslo-pass-zmena/">Cisco Router Switch Heslo Pass Zmena (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/counter-strike-1.6-windows-server-instalacia-konfi/">Counter-Strike 1.6 Windows Server Instalacia Konfi (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cpp-c&#43;&#43;-qt-creator-opengl-gl-glut/">Cpp C&#43;&#43; Qt Creator Opengl Gl Glut (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/db2-database-sql/">Db2 Database Sql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-9-linux-scretch-mysql/">Debian 9 Linux Scretch Mysql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-dns-cache-linux-resolver/">Debian Dns Cache Linux Resolver (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-iptables-manual-firewall/">Debian Iptables Manual Firewall (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-linux-amd-amd64-flash-flesh-tutorial-install-mozilla-opera-iceweasel-firefox/">Debian Linux Amd Amd64 Flash Flesh Tutorial Install Mozilla Opera Iceweasel Firefox (1)</a></li>
+  
+</ul>
+
+
+<a href="mailto:admin@dodoslav.eu">✉️ admin@dodoslav.eu</a>
+
   </div>
   <div class="content">
-    <h3>Ako pridať ďalší Apache server</h3>
-    <span>Jan 1, 0001</span>
-    Návod na pridanie ďalšej inštalácie http servera &lt;i&gt;apache2&lt;/i&gt; za použitia skriptu ktorý je dodávaný so základnou inštaláciou. V konečnom riešení použijeme aj modul &lt;i&gt;Proxy&lt;/i&gt;.
+    <article>
+      <h1>Ako pridať ďalší Apache server</h1>
+      <div class="article-meta">
+        <strong>27. February 2018</strong> • Dodoslav
+      </div>
+      
+      <div class="tags">
+        
+          <span class="tag">apache2 apache linux web http</span>
+        
+      </div>
+      
+      
+      <div class="description">
+        Návod na pridanie ďalšej inštalácie http servera &lt;i&gt;apache2&lt;/i&gt; za použitia skriptu ktorý je dodávaný so základnou inštaláciou. V konečnom riešení použijeme aj modul &lt;i&gt;Proxy&lt;/i&gt;.
 
-    <p>Nainštalujeme samotný Apache</p>
+      </div>
+      <hr>
+      
+      <p>Nainštalujeme samotný Apache</p>
 <blockquote>
 <p>apt install apache2</p>
 </blockquote>
-<p>Spustíme ho a pozreme sa či funguje, a to tak že otvoríme nejaký
-prehliadač ako je Mozilla a skúsime adresu <em>localhost</em></p>
+<p>Spustíme ho a pozreme sa či funguje, a to tak že otvoríme nejaký prehliadač ako je Mozilla a skúsime adresu <em>localhost</em></p>
 <blockquote>
 <p>systemctl start apache2</p>
 </blockquote>
@@ -50,8 +100,7 @@ prehliadač ako je Mozilla a skúsime adresu <em>localhost</em></p>
 bash setup-instance rizek<br>
 systemctl enable <a href="mailto:apache2@rizek.service">apache2@rizek.service</a></p>
 </blockquote>
-<p>Kúzlo ďalšej inštalácie je že môže bežať pod iným užívateľom, takže
-jedného pridáme</p>
+<p>Kúzlo ďalšej inštalácie je že môže bežať pod iným užívateľom, takže jedného pridáme</p>
 <blockquote>
 <p>adduser --home /var/www-rizek www-rizek</p>
 </blockquote>
@@ -59,21 +108,16 @@ jedného pridáme</p>
 <blockquote>
 <p>vi /etc/apache2-rizek/envvars</p>
 </blockquote>
-<p>a to spôsobom že prepíšeme premenné <em>APACHE_RUN_USER</em> a
-<em>APACHE_RUN_GROUP</em> na nového užívateľa: <em>www-rizek</em></p>
-<p>Otvoríme súbor z rovnakého adresára a prepíšeme v ňom čísla portu
-<em>Listen 80</em> na niečo iné, napríklad <em>Listen 8080</em> a veci ako IfModule s
-portom 443 celé zmažeme</p>
+<p>a to spôsobom že prepíšeme premenné <em>APACHE_RUN_USER</em> a <em>APACHE_RUN_GROUP</em> na nového užívateľa: <em>www-rizek</em></p>
+<p>Otvoríme súbor z rovnakého adresára a prepíšeme v ňom čísla portu <em>Listen 80</em> na niečo iné, napríklad <em>Listen 8080</em> a veci ako IfModule s portom 443 celé zmažeme</p>
 <blockquote>
 <p>vi /etc/apache2-rizek/ports.conf</p>
 </blockquote>
-<p>Prepíšeme adresár aby sme mohli používať iné adresáre na <em>DocumentRoot</em>
-a to spôsobom že prepíšeme <em>/var/www</em> na novú <em>/var/www-rizek</em> pomocou</p>
+<p>Prepíšeme adresár aby sme mohli používať iné adresáre na <em>DocumentRoot</em> a to spôsobom že prepíšeme <em>/var/www</em> na novú <em>/var/www-rizek</em> pomocou</p>
 <blockquote>
 <p>vi /etc/apache2-rizek/apache.conf</p>
 </blockquote>
-<p>Ďalej otvoríme súbor základného <em>virtualhost</em>-u a aj tam prepíšeme číslo
-portu</p>
+<p>Ďalej otvoríme súbor základného <em>virtualhost</em>-u a aj tam prepíšeme číslo portu</p>
 <blockquote>
 <p>vi /etc/apache2-rizek/sites-available/000-default.conf</p>
 </blockquote>
@@ -93,8 +137,7 @@ portu</p>
 <blockquote>
 <p>systemctl restart <a href="mailto:apache2@rizek.service">apache2@rizek.service</a></p>
 </blockquote>
-<p>Keď dáme do prehliadača <em>localhost:8080</em> malo by nám zobraziť stránku s
-niečim ako <em>rizeeek</em></p>
+<p>Keď dáme do prehliadača <em>localhost:8080</em> malo by nám zobraziť stránku s niečim ako <em>rizeeek</em></p>
 <h4 id="príprava-základnej-inštalácie">Príprava základnej inštalácie</h4>
 <p>Povolíme modul:</p>
 <blockquote>
@@ -117,18 +160,13 @@ ProxyPassReverse / http://localhost:8080/<br>
 <blockquote>
 <p>a2ensite rizek.conf</p>
 </blockquote>
-<p>Ak to celé robíme na jednom PC tak si môžme pre test dať slovo <em>rizek</em>
-ako ekvivalent <em>localhost</em></p>
+<p>Ak to celé robíme na jednom PC tak si môžme pre test dať slovo <em>rizek</em> ako ekvivalent <em>localhost</em></p>
 <blockquote>
 <p>echo &quot;127.0.0.1 rizek&quot; &gt;&gt; /etc/passwd</p>
 </blockquote>
-<p>Ak zadáme do prehliadača slovo <em>rizek</em> ako adresu, systém nám ju preloží
-na localhost IP, a port 80 co je základna inštancia nášho web servera. Z
-dôvodu že doméma pre ten virtualhost ktorý sme pridali je <em>rizek</em>,
-vybere sa práve ten. V ňom je zase napisané nastavenie Proxy takže sa
-HTTP požiadavok presmeruje na localhost:8080 co je už náša nová
-inštancia apache2-rizek .</p>
+<p>Ak zadáme do prehliadača slovo <em>rizek</em> ako adresu, systém nám ju preloží na localhost IP, a port 80 co je základna inštancia nášho web servera. Z dôvodu že doméma pre ten virtualhost ktorý sme pridali je <em>rizek</em>, vybere sa práve ten. V ňom je zase napisané nastavenie Proxy takže sa HTTP požiadavok presmeruje na localhost:8080 co je už náša nová inštancia apache2-rizek .</p>
 
+    </article>
   </div>
 </body>
 </html>

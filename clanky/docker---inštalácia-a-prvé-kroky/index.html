@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker - inštalácia a prvé kroky | Dodoslav - eBlog</title>
+    <meta name="description" content="Krátky návod ako nainštalovať Docker na Debian 9 a pár príkazov na ovládanie.
+">
+    <link rel="stylesheet" href="/default.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="sidebar">
+    <a href="/">
+  <img src="/logo.png" alt="Dodoslav Logo">
+</a>
+
+<h3>Navigácia</h3>
+<ul>
+  <li><a class="" href="/">🏠 Novinky</a></li>
+  <li><a href="/clanky/">📝 Články</a></li>
+  <li><a href="/projekty/">🚀 Projekty</a></li>
+  <li><a href="/o_stranke/">ℹ️ O stránke</a></li>
+</ul>
+
+
+
+
+<h3>Kľúčové slová</h3>
+<ul>
+  
+    <li><a href="https://dodoslavn.github.io/tags/ibm-datastage/">Ibm Datastage (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/mysql-sql-databazy-database-delphi-pascal-turbo-how-to-ako/">Mysql Sql Databazy Database Delphi Pascal Turbo How to Ako (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/perl-linux-program/">Perl Linux Program (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/3d-print-printer-tiskarna-tlaciaren-octo-octoprint/">3d Print Printer Tiskarna Tlaciaren Octo Octoprint (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/apache2-apache-linux-web-http/">Apache2 Apache Linux Web Http (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/audio-electro/">Audio Electro (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/bash-linux-debian/">Bash Linux Debian (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cisco-router-switch-heslo-pass-zmena/">Cisco Router Switch Heslo Pass Zmena (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/counter-strike-1.6-windows-server-instalacia-konfi/">Counter-Strike 1.6 Windows Server Instalacia Konfi (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cpp-c&#43;&#43;-qt-creator-opengl-gl-glut/">Cpp C&#43;&#43; Qt Creator Opengl Gl Glut (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/db2-database-sql/">Db2 Database Sql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-9-linux-scretch-mysql/">Debian 9 Linux Scretch Mysql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-dns-cache-linux-resolver/">Debian Dns Cache Linux Resolver (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-iptables-manual-firewall/">Debian Iptables Manual Firewall (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-linux-amd-amd64-flash-flesh-tutorial-install-mozilla-opera-iceweasel-firefox/">Debian Linux Amd Amd64 Flash Flesh Tutorial Install Mozilla Opera Iceweasel Firefox (1)</a></li>
+  
+</ul>
+
+
+<a href="mailto:admin@dodoslav.eu">✉️ admin@dodoslav.eu</a>
+
+  </div>
+  <div class="content">
+    <article>
+      <h1>Docker - inštalácia a prvé kroky</h1>
+      <div class="article-meta">
+        <strong>20. April 2018</strong> • Dodoslav
+      </div>
+      
+      <div class="tags">
+        
+          <span class="tag">docker linux</span>
+        
+      </div>
+      
+      
+      <div class="description">
+        Krátky návod ako nainštalovať Docker na Debian 9 a pár príkazov na ovládanie.
+
+      </div>
+      <hr>
+      
+      <h4 id="inštalácia">Inštalácia</h4>
+<p>Nainštalujeme pár základných vecí:</p>
+<blockquote>
+<p>apt install apt-transport-https dirmngr</p>
+</blockquote>
+<p>Pridáme repozitár:</p>
+<blockquote>
+<p>echo 'deb <a href="https://apt.dockerproject.org/repo">https://apt.dockerproject.org/repo</a> debian-stretch main' &gt;&gt; /etc/apt/sources.list</p>
+</blockquote>
+<p>Pridáme kľúč:</p>
+<blockquote>
+<p>apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys F76221572C52609D</p>
+</blockquote>
+<p>Spravíme update balíkov:</p>
+<blockquote>
+<p>apt update</p>
+</blockquote>
+<p>Nainštalujeme samotný Docker:</p>
+<blockquote>
+<p>apt install docker-engine</p>
+</blockquote>
+<h4 id="používanie">Používanie</h4>
+<p>Stiahneme nejaký <em>Image</em></p>
+<blockquote>
+<p>docker pull debian</p>
+</blockquote>
+<p>Spustíme ho, a to tak že bežiaci kontajner sa bude volať <em>smazak</em>, bude vytvorený z obrazu <em>debian</em> ktorý sme prave stiahli, a spustíme na ňom <em>/bin/bash</em></p>
+<blockquote>
+<p>docker run --interactive --tty --name smazak debian /bin/bash</p>
+</blockquote>
+<p>Exitom z neho zase vyjdeme.</p>
+<p>Kontajner aj ked už nemá žiadny bežiaci proces, stále ho máme.</p>
+<blockquote>
+<p>docker ps -a</p>
+</blockquote>
+<p>Pod jedným názvom môže existovať len raz, paramter <em>--name smazak</em> môžme zmazať.</p>
+<p>Pokiaľ sme ho nespustili s parametrami <em>--interactive --tty</em>, musíme ho najskốr vypnúť</p>
+<blockquote>
+<p>docker container kill smazak</p>
+</blockquote>
+<p>Pokiaľ ho už nechceme nikdy nijak znova použiť, môžme ho vymazať</p>
+<blockquote>
+<p>docker rm docker</p>
+</blockquote>
+<p>Ak v ňom ale chceme pokračovať, prípadne sme si ho pripravili, nainštalovali nejake veci, a chceme ho používať, môžme ho uložiť ako obraz</p>
+<blockquote>
+<p>docker commit smazak novy_obraz\</p>
+</blockquote>
+<p>Ako spustiť kontajner a použiť disk z hostu</p>
+<blockquote>
+<p>docker run -it -v /opt/smazak/:/mnt/ --name smazak debian /bin/bash</p>
+</blockquote>
+<p>PortForward z hostu do kontajneru</p>
+<blockquote>
+<p>docker run -d=true --rm -it -h smazak01 -p 1000:1000/udp -p 1001:1001/tcp --name smazak01 smazak /start.sh</p>
+</blockquote>
+<p>Niekedy pri inštalácií potrebujeme tieto balíčky, je dobré ich mať dopredu:</p>
+<blockquote>
+<p>apt install dialog apt-utils</p>
+</blockquote>
+<p>Ako premenovať image:</p>
+<blockquote>
+<p>docker tag image_old image_new</p>
+</blockquote>
+<p>Ako exportovat image:</p>
+<blockquote>
+<p>docker save -o image.tar image_name<br>
+docker load -i image.tar</p>
+</blockquote>
+
+    </article>
+  </div>
+</body>
+</html>

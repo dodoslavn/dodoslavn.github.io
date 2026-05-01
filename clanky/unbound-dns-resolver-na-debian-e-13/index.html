@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unbound DNS resolver na Debian-e 13 | Dodoslav - eBlog</title>
+    <meta name="description" content="Ako nainštalovať DNS resolver Unbound na Debian 13.
+">
+    <link rel="stylesheet" href="/default.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="sidebar">
+    <a href="/">
+  <img src="/logo.png" alt="Dodoslav Logo">
+</a>
+
+<h3>Navigácia</h3>
+<ul>
+  <li><a class="" href="/">🏠 Novinky</a></li>
+  <li><a href="/clanky/">📝 Články</a></li>
+  <li><a href="/projekty/">🚀 Projekty</a></li>
+  <li><a href="/o_stranke/">ℹ️ O stránke</a></li>
+</ul>
+
+
+
+
+<h3>Kľúčové slová</h3>
+<ul>
+  
+    <li><a href="https://dodoslavn.github.io/tags/ibm-datastage/">Ibm Datastage (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/mysql-sql-databazy-database-delphi-pascal-turbo-how-to-ako/">Mysql Sql Databazy Database Delphi Pascal Turbo How to Ako (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/perl-linux-program/">Perl Linux Program (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/3d-print-printer-tiskarna-tlaciaren-octo-octoprint/">3d Print Printer Tiskarna Tlaciaren Octo Octoprint (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/apache2-apache-linux-web-http/">Apache2 Apache Linux Web Http (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/audio-electro/">Audio Electro (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/bash-linux-debian/">Bash Linux Debian (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cisco-router-switch-heslo-pass-zmena/">Cisco Router Switch Heslo Pass Zmena (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/counter-strike-1.6-windows-server-instalacia-konfi/">Counter-Strike 1.6 Windows Server Instalacia Konfi (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cpp-c&#43;&#43;-qt-creator-opengl-gl-glut/">Cpp C&#43;&#43; Qt Creator Opengl Gl Glut (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/db2-database-sql/">Db2 Database Sql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-9-linux-scretch-mysql/">Debian 9 Linux Scretch Mysql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-dns-cache-linux-resolver/">Debian Dns Cache Linux Resolver (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-iptables-manual-firewall/">Debian Iptables Manual Firewall (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-linux-amd-amd64-flash-flesh-tutorial-install-mozilla-opera-iceweasel-firefox/">Debian Linux Amd Amd64 Flash Flesh Tutorial Install Mozilla Opera Iceweasel Firefox (1)</a></li>
+  
+</ul>
+
+
+<a href="mailto:admin@dodoslav.eu">✉️ admin@dodoslav.eu</a>
+
+  </div>
+  <div class="content">
+    <article>
+      <h1>Unbound DNS resolver na Debian-e 13</h1>
+      <div class="article-meta">
+        <strong>27. January 2026</strong> • Dodoslav
+      </div>
+      
+      <div class="tags">
+        
+          <span class="tag">dns resolver cache unbound debian</span>
+        
+      </div>
+      
+      
+      <div class="description">
+        Ako nainštalovať DNS resolver Unbound na Debian 13.
+
+      </div>
+      <hr>
+      
+      <p>Ako nainštalovať DNS-cache server na Debian, konkrétne Unbound.</p>
+<h4 id="inštalácia">Inštalácia</h4>
+<blockquote>
+<p>apt install bind9-dnsutils net-tools dns-root-data iproute2<br>
+apt install unbound</p>
+</blockquote>
+<h4 id="nastavenie-ovládania">Nastavenie ovládania</h4>
+<p>Remote-control tu vypínam, zakomentované riadky niesú podporované v tejto verzií Unbound.</p>
+<blockquote>
+<p>echo 'remote-control:<br>
+   control-enable: no<br>
+   control-interface: /run/unbound.socket<br>
+   #control-use-cert: yes<br>
+   #control-perms: 600<br>
+   #control-owner: root<br>
+   #control-group: root' &gt; /etc/unbound/unbound.conf.d/remote-control.conf</p>
+</blockquote>
+<h4 id="základné-nastavenia">Základné nastavenia</h4>
+<p>Tu si dať pozor na ten access-control a pridať tam svoju sieť ak je iná.</p>
+<blockquote>
+<p>echo '
+server:<br>
+   interface: 0.0.0.0<br>
+<br>
+   interface: ::0<br>
+<br>
+   access-control: 127.0.0.0/8 allow<br>
+   access-control: 192.168.1.0/24 allow<br>
+<br>
+   port: 53<br>
+   do-ip4: yes<br>
+   do-udp: yes<br>
+   do-tcp: yes<br>
+<br>
+   verbosity: 1' &gt; /etc/unbound/unbound.conf.d/lan.conf</p>
+</blockquote>
+<h4 id="overenie-funkčnosti">Overenie funkčnosti</h4>
+<p>Reštartujeme Unbound a skontrolujeme či beží ako služba:</p>
+<blockquote>
+<p>systemctl restart unbound.service<br>
+systemctl status unbound.service</p>
+</blockquote>
+<p>Overíme či naozaj prekladá domény:</p>
+<blockquote>
+<p>dig google.sk @127.0.0.1</p>
+</blockquote>
+<h4 id="blacklist">Blacklist</h4>
+<p>Pre blacklist-ovanie domén proti reklamám a špatným webom sa môže použiť:</p>
+<p><a href="https://github.com/dodoslavn/domain_blacklist">https://github.com/dodoslavn/domain_blacklist</a></p>
+
+    </article>
+  </div>
+</body>
+</html>

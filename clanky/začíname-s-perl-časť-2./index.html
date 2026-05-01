@@ -1,106 +1,138 @@
 <!DOCTYPE html>
-<html>
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <title>Dodoslav - eblog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Začíname s Perl časť 2. | Dodoslav - eBlog</title>
+    <meta name="description" content="V prvom dieli sme si povedali niečo o základoch programovania v tomto jazyku. Teraz si ukážeme nejaké tie tipy a triky.
+">
     <link rel="stylesheet" href="/default.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div class="sidebar">
-    <img src="/logo.png">
-<h3>Obsah</h3>
+    <a href="/">
+  <img src="/logo.png" alt="Dodoslav Logo">
+</a>
+
+<h3>Navigácia</h3>
 <ul>
-  <li><a class="" href="/">Novinky</a></li>
-  <li><a href="/clanky/">Články</a></li>
-  <li><a href="/projekty/">Projekty</a></li>
-  <li><a href="/o_stranke/">O stránke</a></li>
+  <li><a class="" href="/">🏠 Novinky</a></li>
+  <li><a href="/clanky/">📝 Články</a></li>
+  <li><a href="/projekty/">🚀 Projekty</a></li>
+  <li><a href="/o_stranke/">ℹ️ O stránke</a></li>
 </ul>
 
 
-<h3>Témy</h3>
-<ul>
-  
-</ul>
 
 
 <h3>Kľúčové slová</h3>
 <ul>
   
-</ul>
+    <li><a href="https://dodoslavn.github.io/tags/ibm-datastage/">Ibm Datastage (2)</a></li>
   
+    <li><a href="https://dodoslavn.github.io/tags/mysql-sql-databazy-database-delphi-pascal-turbo-how-to-ako/">Mysql Sql Databazy Database Delphi Pascal Turbo How to Ako (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/perl-linux-program/">Perl Linux Program (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/3d-print-printer-tiskarna-tlaciaren-octo-octoprint/">3d Print Printer Tiskarna Tlaciaren Octo Octoprint (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/apache2-apache-linux-web-http/">Apache2 Apache Linux Web Http (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/audio-electro/">Audio Electro (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/bash-linux-debian/">Bash Linux Debian (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cisco-router-switch-heslo-pass-zmena/">Cisco Router Switch Heslo Pass Zmena (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/counter-strike-1.6-windows-server-instalacia-konfi/">Counter-Strike 1.6 Windows Server Instalacia Konfi (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cpp-c&#43;&#43;-qt-creator-opengl-gl-glut/">Cpp C&#43;&#43; Qt Creator Opengl Gl Glut (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/db2-database-sql/">Db2 Database Sql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-9-linux-scretch-mysql/">Debian 9 Linux Scretch Mysql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-dns-cache-linux-resolver/">Debian Dns Cache Linux Resolver (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-iptables-manual-firewall/">Debian Iptables Manual Firewall (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-linux-amd-amd64-flash-flesh-tutorial-install-mozilla-opera-iceweasel-firefox/">Debian Linux Amd Amd64 Flash Flesh Tutorial Install Mozilla Opera Iceweasel Firefox (1)</a></li>
+  
+</ul>
+
+
+<a href="mailto:admin@dodoslav.eu">✉️ admin@dodoslav.eu</a>
+
   </div>
   <div class="content">
-    <h3>Začíname s Perl časť 2.</h3>
-    <span>Jan 1, 0001</span>
-    V prvom dieli sme si povedali niečo o základoch programovania v tomto jazyku. Teraz si ukážeme nejaké tie tipy a triky.
+    <article>
+      <h1>Začíname s Perl časť 2.</h1>
+      <div class="article-meta">
+        <strong>2. October 2011</strong> • Dodoslav
+      </div>
+      
+      <div class="tags">
+        
+          <span class="tag">perl linux program</span>
+        
+      </div>
+      
+      
+      <div class="description">
+        V prvom dieli sme si povedali niečo o základoch programovania v tomto jazyku. Teraz si ukážeme nejaké tie tipy a triky.
 
-    <h4 id="čítanie-zo-vstupu">Čítanie zo vstupu</h4>
-<p>K získaniu vstupných dát sa v programoch Perl používa konštrukcia
-nazvanú diamantový operátor. Ten vypadá takto:</p>
+      </div>
+      <hr>
+      
+      <h4 id="čítanie-zo-vstupu">Čítanie zo vstupu</h4>
+<p>K získaniu vstupných dát sa v programoch Perl používa konštrukcia nazvanú diamantový operátor. Ten vypadá takto:</p>
 <blockquote>
 <p>&lt; &gt;</p>
 </blockquote>
-<p>Diamantový operátor môžeme jednoducho priradiť k premennej ako ich
-hodnotu. Pri behu programu potom bude úžívateľ zadávat hodnoty, ktoré
-zadá z klávesnice.<br>
-Diamantový operátor vo vyžšie uvedenej podobe síce plní svoju funkciu,
-ale umožnuje užívateľovi tiež jednu vec, ktorá sa nám nemusí vždy páčiť.
-Ide o predávanie hodnôt nie z klávesnice, ale z daľších súborov, ktoré
-pri spúštaní programu zadáme ako parameter. Pokiaľ sa tomuto chcete
-vyhnúť a zaújima vás iba vstup z klávesnice, zadajte diamantový operátor
-v podobe . Teda napríklad:</p>
+<p>Diamantový operátor môžeme jednoducho priradiť k premennej ako ich hodnotu. Pri behu programu potom bude úžívateľ zadávat hodnoty, ktoré zadá z klávesnice.<br>
+Diamantový operátor vo vyžšie uvedenej podobe síce plní svoju funkciu, ale umožnuje užívateľovi tiež jednu vec, ktorá sa nám nemusí vždy páčiť. Ide o predávanie hodnôt nie z klávesnice, ale z daľších súborov, ktoré pri spúštaní programu zadáme ako parameter. Pokiaľ sa tomuto chcete vyhnúť a zaújima vás iba vstup z klávesnice, zadajte diamantový operátor v podobe . Teda napríklad:</p>
 <blockquote>
 <p>$a = &lt;STDIN&gt; ;</p>
 </blockquote>
-<p>Pri vstupe z klávesnice, alebo presnejšie z štrandardného vstupu (STDIN
-= Strandard Input) je nutné potvrdiť zadávané hodnoty klávesou ENTER,
-inak by ich program samozrejme neprijal. Viacmenej stlačenie klávesy
-ENTER, sa tiež spracuje v programe tak, že je tiež uvedená v premennej,
-a to ako znak na konci riadku. Aby sme ju odstránili použijeme funkciu
-chomp() :</p>
+<p>Pri vstupe z klávesnice, alebo presnejšie z štrandardného vstupu (STDIN = Strandard Input) je nutné potvrdiť zadávané hodnoty klávesou ENTER, inak by ich program samozrejme neprijal. Viacmenej stlačenie klávesy ENTER, sa tiež spracuje v programe tak, že je tiež uvedená v premennej, a to ako znak na konci riadku. Aby sme ju odstránili použijeme funkciu chomp() :</p>
 <blockquote>
 <p>$a = &lt;STDIN&gt; ;<br>
 chomp($a);</p>
 </blockquote>
-<p>Nasledujúci príkaz sa často míli s príkazom predošlím ktorí zmaže &quot;novy
-riadok&quot; na konci retazca, zatiaľ čo tento zmaže posledný akykovľek
-znak. Syntax je takmer rovnaká:</p>
+<p>Nasledujúci príkaz sa často míli s príkazom predošlím ktorí zmaže &quot;novy riadok&quot; na konci retazca, zatiaľ čo tento zmaže posledný akykovľek znak. Syntax je takmer rovnaká:</p>
 <blockquote>
-<p>$a = &quot;hocijaky text&quot;; chop($a);</p>
+<p>$a = &quot;hocijaky text&quot;;
+chop($a);</p>
 </blockquote>
 <p>Ak to spustíme, tak v premennej $a bude už len text: &quot;hocijaky tex&quot;.</p>
 <h4 id="úprava-textu--retazcov">Úprava textu / retazcov</h4>
-<p>Ak chcete previesť nejaký retazec v ktorom su veľké písmena, môžme
-použiť funkciu lc() :</p>
+<p>Ak chcete previesť nejaký retazec v ktorom su veľké písmena, môžme použiť funkciu lc() :</p>
 <blockquote>
 <p>$a = lc(&quot;NEJAKY TEXT&quot;);</p>
 </blockquote>
 <p>Ak si premennú potom vypíšeme, bude v nej: &quot;nejaky text&quot;.<br>
 <br>
-To isté, ale naopak. Ak chceme previesť retazec s malímy písmenamy na
-veľke, použijeme funkciu: uc() :</p>
+To isté, ale naopak. Ak chceme previesť retazec s malímy písmenamy na veľke, použijeme funkciu: uc() :</p>
 <blockquote>
 <p>$a = uc(&quot;nejaky text&quot;);</p>
 </blockquote>
-<p>Sme si ukázali ake previesť veľke na malé písmena a naopak. Ale co ak
-chceme iba prve písmeno? Na to slúži funkcia podobna a zároven aj
-logická: &quot;lsfirst()&quot; a &quot;ucfirst()&quot;. Uvedieme si malý príklad:</p>
+<p>Sme si ukázali ake previesť veľke na malé písmena a naopak. Ale co ak chceme iba prve písmeno? Na to slúži funkcia podobna a zároven aj logická: &quot;lsfirst()&quot; a &quot;ucfirst()&quot;. Uvedieme si malý príklad:</p>
 <blockquote>
 <p>$a = ucfirst(&quot;nejaky text&quot;);<br>
 $b = lcfirst(&quot;NEJAKY text&quot;);</p>
 </blockquote>
-<p>Aby sme zistili dĺžku retazca, použijeme funkciu: &quot;length()&quot;. Ta nám
-vráti číslo zodpovedajúce celej dĺžke retazca:</p>
+<p>Aby sme zistili dĺžku retazca, použijeme funkciu: &quot;length()&quot;. Ta nám vráti číslo zodpovedajúce celej dĺžke retazca:</p>
 <blockquote>
 <p>$a = length(&quot;nejaky text&quot;);</p>
 </blockquote>
-<p>Retazce a čísla naraz? Do premennej môžeme napríklad veľmi jednoducho
-priradiť hodnotu &quot;5 aut&quot; nasledujúcim spôsobom:</p>
+<p>Retazce a čísla naraz? Do premennej môžeme napríklad veľmi jednoducho priradiť hodnotu &quot;5 aut&quot; nasledujúcim spôsobom:</p>
 <blockquote>
 <p>$patka = 5;<br>
 $text = $patka.&quot; aut&quot;;</p>
 </blockquote>
 
+    </article>
   </div>
 </body>
 </html>

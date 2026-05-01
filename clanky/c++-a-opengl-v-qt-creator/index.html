@@ -1,45 +1,95 @@
 <!DOCTYPE html>
-<html>
+<html lang="sk">
 <head>
     <meta charset="UTF-8">
-    <title>Dodoslav - eblog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C&#43;&#43; a OpenGL v QT Creator | Dodoslav - eBlog</title>
+    <meta name="description" content="V tomto článku si ukážeme ako nainštalovať a nastaviť pod Linuxom GLUT pre OpenGL, a ako s ním pracovať v QT Creator pomocou C&#43;&#43;.
+">
     <link rel="stylesheet" href="/default.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <div class="sidebar">
-    <img src="/logo.png">
-<h3>Obsah</h3>
+    <a href="/">
+  <img src="/logo.png" alt="Dodoslav Logo">
+</a>
+
+<h3>Navigácia</h3>
 <ul>
-  <li><a class="" href="/">Novinky</a></li>
-  <li><a href="/clanky/">Články</a></li>
-  <li><a href="/projekty/">Projekty</a></li>
-  <li><a href="/o_stranke/">O stránke</a></li>
+  <li><a class="" href="/">🏠 Novinky</a></li>
+  <li><a href="/clanky/">📝 Články</a></li>
+  <li><a href="/projekty/">🚀 Projekty</a></li>
+  <li><a href="/o_stranke/">ℹ️ O stránke</a></li>
 </ul>
 
 
-<h3>Témy</h3>
-<ul>
-  
-</ul>
 
 
 <h3>Kľúčové slová</h3>
 <ul>
   
-</ul>
+    <li><a href="https://dodoslavn.github.io/tags/ibm-datastage/">Ibm Datastage (2)</a></li>
   
+    <li><a href="https://dodoslavn.github.io/tags/mysql-sql-databazy-database-delphi-pascal-turbo-how-to-ako/">Mysql Sql Databazy Database Delphi Pascal Turbo How to Ako (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/perl-linux-program/">Perl Linux Program (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/3d-print-printer-tiskarna-tlaciaren-octo-octoprint/">3d Print Printer Tiskarna Tlaciaren Octo Octoprint (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/apache2-apache-linux-web-http/">Apache2 Apache Linux Web Http (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/audio-electro/">Audio Electro (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/bash-linux-debian/">Bash Linux Debian (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cisco-router-switch-heslo-pass-zmena/">Cisco Router Switch Heslo Pass Zmena (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/counter-strike-1.6-windows-server-instalacia-konfi/">Counter-Strike 1.6 Windows Server Instalacia Konfi (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cpp-c&#43;&#43;-qt-creator-opengl-gl-glut/">Cpp C&#43;&#43; Qt Creator Opengl Gl Glut (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/db2-database-sql/">Db2 Database Sql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-9-linux-scretch-mysql/">Debian 9 Linux Scretch Mysql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-dns-cache-linux-resolver/">Debian Dns Cache Linux Resolver (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-iptables-manual-firewall/">Debian Iptables Manual Firewall (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-linux-amd-amd64-flash-flesh-tutorial-install-mozilla-opera-iceweasel-firefox/">Debian Linux Amd Amd64 Flash Flesh Tutorial Install Mozilla Opera Iceweasel Firefox (1)</a></li>
+  
+</ul>
+
+
+<a href="mailto:admin@dodoslav.eu">✉️ admin@dodoslav.eu</a>
+
   </div>
   <div class="content">
-    <h3>C&#43;&#43; a OpenGL v QT Creator</h3>
-    <span>Jan 1, 0001</span>
-    V tomto článku si ukážeme ako nainštalovať a nastaviť pod Linuxom GLUT pre OpenGL, a ako s ním pracovať v QT Creator pomocou C&#43;&#43;.
+    <article>
+      <h1>C&#43;&#43; a OpenGL v QT Creator</h1>
+      <div class="article-meta">
+        <strong>24. June 2017</strong> • Dodoslav
+      </div>
+      
+      <div class="tags">
+        
+          <span class="tag">cpp c&#43;&#43; qt creator opengl gl glut</span>
+        
+      </div>
+      
+      
+      <div class="description">
+        V tomto článku si ukážeme ako nainštalovať a nastaviť pod Linuxom GLUT pre OpenGL, a ako s ním pracovať v QT Creator pomocou C&#43;&#43;.
 
-    <p>Najskôr musíme <em>glut</em> nainštalovať:</p>
+      </div>
+      <hr>
+      
+      <p>Najskôr musíme <em>glut</em> nainštalovať:</p>
 <blockquote>
 <p>apt install freeglut*</p>
 </blockquote>
-<p>V QT Creator vytvoríme nový projekt ako konzolovú C++ aplikáciu a do
-súboru <em>nazov_projektu.pro</em> pridáme:</p>
+<p>V QT Creator vytvoríme nový projekt ako konzolovú C++ aplikáciu a do súboru <em>nazov_projektu.pro</em> pridáme:</p>
 <blockquote>
 <p>QT += core \\
 opengl<br>
@@ -49,8 +99,7 @@ LIBS += -lglut</p>
 <blockquote>
 <p>#include &quot;GL/glut.h&quot;</p>
 </blockquote>
-<p>Hlavná funkcia <em>main</em> v <em>main.cpp</em> je stručná. Vložíme veci na
-inicializáciu okna v ktorom budeme vykreslovať pomocou OpenGL.</p>
+<p>Hlavná funkcia <em>main</em> v <em>main.cpp</em> je stručná. Vložíme veci na inicializáciu okna v ktorom budeme vykreslovať pomocou OpenGL.</p>
 <blockquote>
 <p><strong>int main(int argc, char *argv[])</strong><br>
 {<br>
@@ -59,18 +108,14 @@ glutInitDisplayMode(GLUT_RGBA|GLUT_SINGLE); //nastavenie okna<br>
 glutInitWindowSize(700, 500); //velkost okna<br>
 glutInitWindowPosition(100, 100); //pozicia kde sa okno otvori<br>
 glutCreateWindow(&quot;OpenGL test&quot;); //nazov okna<br>
-glutDisplayFunc(onDisplay); //nadefinovanie cez parameter funkciu,
-ktora sa spusti pri spusteni<br>
-glutReshapeFunc(onResize); //nadefinovanie funkcie, ktora sa spusti
-pri zmene velkosti okna<br>
-glutKeyboardFunc(onKeyboard); //nadefinovanie funkcie, ktora sa spusti
-ked stlacime nejaku klavesu<br>
+glutDisplayFunc(onDisplay); //nadefinovanie cez parameter funkciu, ktora sa spusti pri spusteni<br>
+glutReshapeFunc(onResize); //nadefinovanie funkcie, ktora sa spusti pri zmene velkosti okna<br>
+glutKeyboardFunc(onKeyboard); //nadefinovanie funkcie, ktora sa spusti ked stlacime nejaku klavesu<br>
 glutMainLoop(); //aby nam aplikacia hned neskoncila<br>
 return 0;<br>
 }\</p>
 </blockquote>
-<p>Nadefinovanie funkcií ktoré sme použili v parametroch vo funkcii <em>main</em>.
-Deklarácia týchto funkcií musí byť v súbore nad deklaráciou <em>main</em>.</p>
+<p>Nadefinovanie funkcií ktoré sme použili v parametroch vo funkcii <em>main</em>. Deklarácia týchto funkcií musí byť v súbore nad deklaráciou <em>main</em>.</p>
 <blockquote>
 <p>int x(100),y(100);<br>
 <br>
@@ -88,14 +133,12 @@ glOrtho(0, w, 0, h, -1, 1);<br>
 glClear(GL_COLOR_BUFFER_BIT);<br>
 glFlush(); //zmaze vsetko co je vykresnele<br>
 <br>
-if (key == 'a') x = x - 10; //pomocou 'a' a 'd' klavesy mozeme
-menit velkost trojuholnika<br>
+if (key == 'a') x = x - 10; //pomocou 'a' a 'd' klavesy mozeme menit velkost trojuholnika<br>
 else if (key == 'd') x = x + 10;<br>
 <br>
 glColor3b(100,100,100); //nastavenie farby vsetkeho co sa vykresli<br>
 <br>
-glBegin(GL_TRIANGLE_STRIP); //zaciatok vykreslovania jedneho aspon
-trojuholnika<br>
+glBegin(GL_TRIANGLE_STRIP); //zaciatok vykreslovania jedneho aspon trojuholnika<br>
 glVertex2f(10,400+x); //zadavanie bodov trojuholnika<br>
 glVertex2f(10,50);<br>
 glVertex2f(400+x,50);<br>
@@ -113,6 +156,7 @@ onKeyboard('d', 0,0); //kod ktory sa spusti pri spusteni aplikacie<br>
 </blockquote>
 <p>Spustíme kompiláciu a malo by to všetko ísť.</p>
 
+    </article>
   </div>
 </body>
 </html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inštalácia Counter-Strike 1.6  servera | Dodoslav - eBlog</title>
+    <meta name="description" content="Tu si ukážeme ako nainštalovať oficiálny Counter-Strike server na operačné systémy Windows.
+">
+    <link rel="stylesheet" href="/default.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+</head>
+<body>
+  <div class="sidebar">
+    <a href="/">
+  <img src="/logo.png" alt="Dodoslav Logo">
+</a>
+
+<h3>Navigácia</h3>
+<ul>
+  <li><a class="" href="/">🏠 Novinky</a></li>
+  <li><a href="/clanky/">📝 Články</a></li>
+  <li><a href="/projekty/">🚀 Projekty</a></li>
+  <li><a href="/o_stranke/">ℹ️ O stránke</a></li>
+</ul>
+
+
+
+
+<h3>Kľúčové slová</h3>
+<ul>
+  
+    <li><a href="https://dodoslavn.github.io/tags/ibm-datastage/">Ibm Datastage (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/mysql-sql-databazy-database-delphi-pascal-turbo-how-to-ako/">Mysql Sql Databazy Database Delphi Pascal Turbo How to Ako (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/perl-linux-program/">Perl Linux Program (2)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/3d-print-printer-tiskarna-tlaciaren-octo-octoprint/">3d Print Printer Tiskarna Tlaciaren Octo Octoprint (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/apache2-apache-linux-web-http/">Apache2 Apache Linux Web Http (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/audio-electro/">Audio Electro (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/bash-linux-debian/">Bash Linux Debian (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cisco-router-switch-heslo-pass-zmena/">Cisco Router Switch Heslo Pass Zmena (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/counter-strike-1.6-windows-server-instalacia-konfi/">Counter-Strike 1.6 Windows Server Instalacia Konfi (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/cpp-c&#43;&#43;-qt-creator-opengl-gl-glut/">Cpp C&#43;&#43; Qt Creator Opengl Gl Glut (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/db2-database-sql/">Db2 Database Sql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-9-linux-scretch-mysql/">Debian 9 Linux Scretch Mysql (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-dns-cache-linux-resolver/">Debian Dns Cache Linux Resolver (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-iptables-manual-firewall/">Debian Iptables Manual Firewall (1)</a></li>
+  
+    <li><a href="https://dodoslavn.github.io/tags/debian-linux-amd-amd64-flash-flesh-tutorial-install-mozilla-opera-iceweasel-firefox/">Debian Linux Amd Amd64 Flash Flesh Tutorial Install Mozilla Opera Iceweasel Firefox (1)</a></li>
+  
+</ul>
+
+
+<a href="mailto:admin@dodoslav.eu">✉️ admin@dodoslav.eu</a>
+
+  </div>
+  <div class="content">
+    <article>
+      <h1>Inštalácia Counter-Strike 1.6  servera</h1>
+      <div class="article-meta">
+        <strong>15. December 2011</strong> • Dodoslav
+      </div>
+      
+      <div class="tags">
+        
+          <span class="tag">Counter-Strike 1.6 Windows server instalacia konfi</span>
+        
+      </div>
+      
+      
+      <div class="description">
+        Tu si ukážeme ako nainštalovať oficiálny Counter-Strike server na operačné systémy Windows.
+
+      </div>
+      <hr>
+      
+      <p>Budeme k tomu potrebovať niekoľko zásadných vecí, ako je pripojenie k internetu, a oprávnenie na inštaláciu softwéru. Najskôr is stiahneme
+<a href="http://storefront.steampowered.com/download/hldsupdatetool.exe" title="HLDS">HLDS Update Tool</a>, ktorý následne na to nainštalujeme. Tento nástroj slúži na stiahnutie oficiálnych dedikovaných serverov. Teraz ho stačí už len spustiť, a to pod určitými parametrami. Predpokladá sa že ste nemenili adresár inštalácie. Teda by mal byť:</p>
+<blockquote>
+<p>C:Program Files\Valve\HLServer</p>
+</blockquote>
+<p>Môžme teda začať inštalovať. Najskôr sa presunieme do, už spomínaného adresára, príkazom:</p>
+<blockquote>
+<p>cd C:Program Files\Valve\HLServer</p>
+</blockquote>
+<p>Ak sme sa tam úspešne presunuli, zadáme už samotný príkaz na stiahnutie:</p>
+<blockquote>
+<p>HldsUpdateTool.exe -command update -game cstrike -dir .</p>
+</blockquote>
+<p>Po zadaní príkazu by sa nám malo otvoriť okno(DOS, terminál, konzola), v ktorom sa po chvíli začne samotný proces sťahovania. Po úspešnom dosiahnutí 100%, je server kompletne stiahnutý, a môžme ho spustiť. Najskôr si vytvorime odkaz, pre jednoduchšie spúšťanie, a to tak, že sa presunieme do adresára ako predtým. Máme na výber dve možnosti. Bud budeme spúšťať server v spomínanom &quot;DOS-vskom&quot; rozhraní, aký bol pri procese sťahovania, alebo v rozhraní bežnej aplikácie. Teraz keď sme odkaz vytvorili a presunuli napríklad na plochu, ho môže editovať. Upravíme jeho parametre spúšťania(Vlastnosti\Proparties -&gt; Cieľ/Target), a za uvodzovky pridáme atribúty. Celé to môže vyzerať asi takto:</p>
+<blockquote>
+<p>&quot;C:\Program Files\Valve\HLServer\hlds.exe&quot; -console -game cstrike -autoupdate -port 27015 +maxplayers 20 +map de_dust2</p>
+</blockquote>
+<p>Tieto parametre si môžme samozrejme prisposobiť. -port znamená číslo portu na ktorom bude server bežať, kedže na jednom PC môže byť spustených viacero serverov. +maxpalyers znamená počet slotov, teda koľko môže byť na server pripojených hráčov, +map znamená mapa, a dôležitý parameter -console, vďaka ktorému sa nám server spustí v spomínanom DOS-ovom rozhraní.<br>
+Server si ešte môžte nakonfigurovať, podľa vlastných predstáv, ako je AMX mód, k lepšej administárcií servera a inštalácií iných pluginov a módov, dproto doplnok slúži na dual protokol, kedže už dnešný server obsahuje protokol verzie 48, kvôli ktorému sa nemôžu pripojiť hráči so starším patchom. Týmto pluginom vám bude server pracovať naraz na protokole 47 a 48.<br>
+Teraz si ukážeme základnú konfiguráciu servera, Prejdite do adresára kde máte nainštalovaný server, a potom do zložky &quot;cstrike&quot;. V tomto adresare sa nachádzajú dôležité priečinky ako &quot;maps&quot;, models a rôzne konfiguračné súbory. Otvorte súbor s názvom &quot;server.cfg&quot; nejakým textovým editorom, napr. Notepadom. Ak ste tam súbor s týtmo názvom nenašli, tak ho vytvorte. Do tohoto súboru budeme zapisovať základné nastavenia servera. Všetky príkazy aj s vysvetleniamy nájdete <a href="/files/cs.txt">tu</a>.</p>
+
+    </article>
+  </div>
+</body>
+</html>
