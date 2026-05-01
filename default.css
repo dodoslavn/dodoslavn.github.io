@@ -54,6 +54,38 @@ a:hover {
     margin-bottom: 1rem;
 }
 
+/* Site Logo Text */
+.site-logo {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    padding: 1.5rem 0 2rem 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.site-logo:hover {
+    transform: translateY(-2px);
+}
+
+.site-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--accent-primary);
+    letter-spacing: -0.5px;
+    margin-bottom: 0.25rem;
+    line-height: 1.2;
+}
+
+.site-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    letter-spacing: 2px;
+    text-transform: lowercase;
+}
+
 .sidebar h3 {
     color: var(--text-primary);
     font-size: 0.875rem;
