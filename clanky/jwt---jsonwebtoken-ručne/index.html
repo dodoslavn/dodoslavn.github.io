@@ -104,7 +104,7 @@ echo<br>
 <br>
 #funkcia na upravu base64, standartne sa zaokruhluje, u JWT nie<br>
 decode_base64_url() {<br>
-local len=$((${#1} % 4))<br>
+local len=$(($ % 4))<br>
 local result=&quot;$1&quot;<br>
 if [ $len -eq 2 ]; then result=&quot;$1&quot;'=='<br>
 elif [ $len -eq 3 ]; then result=&quot;$1&quot;'='<br>
