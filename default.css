@@ -126,15 +126,37 @@ a:hover {
     font-weight: 500;
 }
 
-.sidebar a[href^="mailto"] {
-    display: block;
+/* Sidebar Footer */
+.sidebar-footer {
     margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-link {
+    display: block;
     padding: 0.5rem;
     text-align: center;
     font-size: 0.85rem;
     color: var(--text-muted);
-    border-top: 1px solid var(--border-color);
-    padding-top: 1rem;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+}
+
+.footer-link:hover {
+    color: var(--accent-primary);
+    background-color: var(--bg-tertiary);
+}
+
+.footer-link svg {
+    transition: transform 0.2s ease;
+}
+
+.footer-link:hover svg {
+    transform: scale(1.1);
 }
 
 /* Main Content */
