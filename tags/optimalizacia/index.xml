@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimalizacia on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/optimalizacia/</link>
+    <description>Recent content in Optimalizacia on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Tue, 18 Oct 2011 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/optimalizacia/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SEO - vnútorné faktory časť 1.</title>
+      <link>https://dodoslavn.github.io/clanky/seo---vn%C3%BAtorn%C3%A9-faktory-%C4%8Das%C5%A5-1./</link>
+      <pubDate>Tue, 18 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/seo---vn%C3%BAtorn%C3%A9-faktory-%C4%8Das%C5%A5-1./</guid>
+      <description>V týchto dieloch si budeme preberať tieto dieli:&#xA;- množstvo, kvalita a relevancia prichádzajúcich odkazov - vírenie odkazov - miera pribúdania odkazov - text odkazov a okolného textu - vzájomné odkazy - počet odkazov na stránke - semantické súvislosti medzi odkazmy na stránke - IP adresa vzájomne sa odkazujúcich webov - TLD doménoveho mena odkazov - poloha odkazu - platnosť podľa webových štandardov - škodlivé faktory Množstvo prichádzajúcich odkazov Web na ktorý odchádza veľmi veľa odkazov, bude asi významny, kedže mu dalo vela ludí svoj hlas a dalo si jeho odkaz na svoj web.</description>
+    </item>
+    <item>
+      <title>SEO - neviditeľné faktory</title>
+      <link>https://dodoslavn.github.io/clanky/seo---nevidite%C4%BEn%C3%A9-faktory/</link>
+      <pubDate>Mon, 10 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/seo---nevidite%C4%BEn%C3%A9-faktory/</guid>
+      <description>Ako sme si už v úvodnom článku hovorili, neviditeľné faktory sú tie ktoré niesú užívateľom alebo inak povedané, čitateľom, vidieť. Zaradujeme medzi nich napríklad:&#xA;- popis v elemente &amp;lt; meta &amp;gt; - kľúčové slová v elemente &amp;lt; meta &amp;gt; - parametre alt a title - štruktúra stránky Popis v elemente &amp;lt; meta &amp;gt; Popis v elemente &amp;lt; meta &amp;gt; je dôležitý preto, že ho vyhľadávače môžu použiť pre prezentáciu stránky vo výsledkoch vyhľadávania, namiesto používania útržkov zo stránky.</description>
+    </item>
+    <item>
+      <title>SEO - viditeľné faktory</title>
+      <link>https://dodoslavn.github.io/clanky/seo---vidite%C4%BEn%C3%A9-faktory/</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/seo---vidite%C4%BEn%C3%A9-faktory/</guid>
+      <description>Tu sa budeme zaoberať týmito viditeľnýmy faktormy:&#xA;- titulka stránky - nadpis v stránke - text stránky - odchádzajúce odkazy - kľúčové slová v URL a v doméne - vnutorná štruktúra odkazov - tematické zameranie webu ako takého Tititulka stránky Titulka stránky je textový retazec definovaný obsahom elementu:&#xA;&amp;lt; title &amp;gt; &amp;lt; /title &amp;gt;&#xA;v HTML elemente &amp;lt; head &amp;gt;. Titulka je viditeľná v okne prehliadača a tiež vo výsledkoch vyhľadávania.</description>
+    </item>
+  </channel>
+</rss>

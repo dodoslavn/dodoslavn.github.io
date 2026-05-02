@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mongo on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/mongo/</link>
+    <description>Recent content in Mongo on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sun, 20 Aug 2023 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/mongo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MongoDB - základy</title>
+      <link>https://dodoslavn.github.io/clanky/mongodb---z%C3%A1klady/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/mongodb---z%C3%A1klady/</guid>
+      <description>Slovník pojmou Na ľavej strane pojem z relačnej DB a na pravej MongoDB&#xA;Databáza = Databáza&#xA;Tabulka = Kolekcia&#xA;Zaznam = Dokument&#xA;Stĺpec = Pole\&#xA;Zobraziť show dbs;&#xA;show databases;&#xA;use db_nazov;\&#xA;Zobraziť dáta db.products.find().pretty()&#xA;db.products.find()&#xA;db.products.find(})&#xA;db.products.find(, )\&#xA;Vložiť dáta db.products.insertOne( })&#xA;insertMany - vloží sa po jednom, ak jeden failne, nasledovné už sa nevložia. Pokračuje aj po faile:&#xA;Zmazať dáta db.products.deleteMany()&#xA;db.products.deleteOne()\&#xA;Upraviť dáta db.products.updateOne(, })&#xA;db.products.updateOne(, })\</description>
+    </item>
+  </channel>
+</rss>

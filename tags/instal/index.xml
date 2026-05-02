@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Instal on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/instal/</link>
+    <description>Recent content in Instal on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Tue, 03 Jul 2012 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/instal/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debian - Inštalácia ProFTPd servera</title>
+      <link>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-proftpd-servera/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-proftpd-servera/</guid>
+      <description>Ako prvé si samotnú aplikáciu nainštalujeme:&#xA;apt-get install proftpd&#xA;Po úspešnej inštalacií, môžme začať s konfiguráciou. Na začiatok vložíme do /etc/shells riadok, /bin/false&#xA;echo &amp;quot;/bin/false&amp;quot; &amp;gt;&amp;gt; /bin/false&#xA;Teraz sa môžme pustiť do samotnej konfigurácie. Konfiguračný súbor , proftpd.conf , nájdeme v typickom adresáre /etc/proftpd/. Takže zadáme&#xA;nano /etc/proftpd/proftpd.conf&#xA;Tu si môžem nastaviť základne parametre servera ako jeho názov, port, TimoOut-y. Napr. jedno veľmi dôležité bezpečnostné nastavenie je DefaultRoot. Pokiaľ nieje nastavené alebo je nastavené na off tak užívatelia budú mať voľný prístup k celému systému.</description>
+    </item>
+  </channel>
+</rss>

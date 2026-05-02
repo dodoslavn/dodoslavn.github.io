@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Websphere on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/websphere/</link>
+    <description>Recent content in Websphere on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/websphere/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IBM WebSphere AS - Network Deployemnt</title>
+      <link>https://dodoslavn.github.io/clanky/ibm-websphere-as---network-deployemnt/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-websphere-as---network-deployemnt/</guid>
+      <description>IBM Installation Manager: Vylistovanie balikov v repozitari:&#xA;./imcl listAvailablePackages -repositories /cesta/k/zlozke/s/repository.conf/&#xA;Ako získať login do WebSphere DMGR: Príklad cesty k súboru:&#xA;find /opt/IBM/WebSphere* -name soap.client.props | grep -v eTempl | grep -v \/temp\/ | grep \/profiles\/ | grep -i dmgr&#xA;Meno a heslo by tam malo byť, heslo dešifrujeme pomocou:&#xA;http://strelitzia.net/wasXORdecoder/wasXORdecoder.html&#xA;Ako získať port na ktorom beži DMGR: Príklad cesty k súboru. Je to ten v DMGR profile:&#xA;find /opt/IBM/WebSphere* -name serverindex.</description>
+    </item>
+  </channel>
+</rss>

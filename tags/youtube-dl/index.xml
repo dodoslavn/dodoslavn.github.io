@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Youtube-Dl on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/youtube-dl/</link>
+    <description>Recent content in Youtube-Dl on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sat, 20 Aug 2016 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/youtube-dl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux inštalácia youtube-dl</title>
+      <link>https://dodoslavn.github.io/clanky/linux-in%C5%A1tal%C3%A1cia-youtube-dl/</link>
+      <pubDate>Sat, 20 Aug 2016 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux-in%C5%A1tal%C3%A1cia-youtube-dl/</guid>
+      <description>Inštalácia:&#xA;sudo apt install youtube-dl&#xA;Kontrola nainštalovanej verzie:&#xA;youtube-dl --version&#xA;V repozitároch môže byť ale často verzia stará, preto existuej alternatívny spôsob:&#xA;wget -O - https://yt-dl.org/downloads/latest/youtube-dl | sudo tee /usr/sbin/youtube-dl &amp;gt;/dev/null sudo chmod a+x /usr/sbin/youtube-dl&#xA;Skontrolujeme že máme novšiu verziu:&#xA;/usr/sbin/youtube-dl --version&#xA;Pár príkladov použitia: Príkaz na stiahnute a automatické prekonverovanie YouTUbe videa do mp3&#xA;youtube-dl --extract-audio --audio-quality 0 --audio-format mp3 -ti https://www.youtube.com/watch?v=XXX&#xA;Ziskanie nazvov videi z playlistu:&#xA;youtube-dl --ignore-errors -o &amp;quot;%(title)s.</description>
+    </item>
+  </channel>
+</rss>

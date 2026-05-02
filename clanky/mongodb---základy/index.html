@@ -125,27 +125,26 @@ use db_nazov;\</p>
 <h4 id="zobraziť-dáta">Zobraziť dáta</h4>
 <blockquote>
 <p>db.products.find().pretty()<br>
-db.products.find({ cena: 20})<br>
-db.products.find({ cena: { $gt: 20 }})<br>
-db.products.find({}, {pole:1})\</p>
+db.products.find()<br>
+db.products.find(})<br>
+db.products.find(, )\</p>
 </blockquote>
 <h4 id="vložiť-dáta">Vložiť dáta</h4>
 <blockquote>
-<p>db.products.insertOne( { name: &quot;tricko&quot;, price: 110, details: { memory: 10, cpu: 2} })</p>
+<p>db.products.insertOne(  })</p>
 </blockquote>
 <p>insertMany - vloží sa po jednom, ak jeden failne, nasledovné už sa nevložia. Pokračuje aj po faile:</p>
 <blockquote>
-<p>{ordered: false}</p>
 </blockquote>
 <h4 id="zmazať-dáta">Zmazať dáta</h4>
 <blockquote>
-<p>db.products.deleteMany({})<br>
-db.products.deleteOne({ price: 110 })\</p>
+<p>db.products.deleteMany()<br>
+db.products.deleteOne()\</p>
 </blockquote>
 <h4 id="upraviť-dáta">Upraviť dáta</h4>
 <blockquote>
-<p>db.products.updateOne({ price: 100 }, {$set: { price: &quot;99 &quot;}})<br>
-db.products.updateOne({ }, {$set: { price: &quot;99 &quot;}})\</p>
+<p>db.products.updateOne(, })<br>
+db.products.updateOne(, })\</p>
 </blockquote>
 
     </article>

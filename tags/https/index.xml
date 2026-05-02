@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Https on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/https/</link>
+    <description>Recent content in Https on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Fri, 26 Jan 2024 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/https/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSL/TLS a certifikačné autority</title>
+      <link>https://dodoslavn.github.io/clanky/ssl_tls-a-certifika%C4%8Dn%C3%A9-autority/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ssl_tls-a-certifika%C4%8Dn%C3%A9-autority/</guid>
+      <description>Úvod Funguje to asi takto, najskôr si musíme vygenerovať privátny kľúč ktorý sa použije pre samotnú certifikačnú autoritu. Pomocou verejného kľúča certifikačnej autority sa potom budú kontrolovať certifikáty na strane užívateľov.&#xA;Ďalší krok je vytvoriť certifikačnú autoritu z tohoto privátneho kľúča. Pri tvorbe sa vyberú aj nejaké meta dáta a popis. To je celé.&#xA;Potom už len generujeme privátne kľúče pre konkrétne systémy alebo domény zvlášť,&#xA;z nich následne vytvoríme CSR (Certificate Signign Request) kde zase nastavíme nejaké meta dáta ako je napríklad konkrétna doména pre ktorú to má byť použité.</description>
+    </item>
+    <item>
+      <title>JWT - JsonWebToken ručne</title>
+      <link>https://dodoslavn.github.io/clanky/jwt---jsonwebtoken-ru%C4%8Dne/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/jwt---jsonwebtoken-ru%C4%8Dne/</guid>
+      <description>Popis Kód kde sa podpisovanie/kontrola robí ručne kde sa dá pochopiť jak to funguje.&#xA;Skript #!/bin/bash&#xA;#subor ktory obsahuje tvoj JWT&#xA;file=&amp;quot;payload.txt&amp;quot;&#xA;echo &amp;quot;########### &amp;quot;Vloz JWT podpisany Googlom:&#xA;read content&#xA;echo&#xA;echo $content &amp;gt; $file&#xA;echo&#xA;#funkcia na upravu base64, standartne sa zaokruhluje, u JWT nie&#xA;decode_base64_url() {&#xA;local len=$(($ % 4))&#xA;local result=&amp;quot;$1&amp;quot;&#xA;if [ $len -eq 2 ]; then result=&amp;quot;$1&amp;quot;&#39;==&#39;&#xA;elif [ $len -eq 3 ]; then result=&amp;quot;$1&amp;quot;&#39;=&#39;</description>
+    </item>
+    <item>
+      <title>Ako na HTTPS s Lets Enrypt</title>
+      <link>https://dodoslavn.github.io/clanky/ako-na-https-s-lets-enrypt/</link>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-na-https-s-lets-enrypt/</guid>
+      <description>Nainštalujeme nástroj:&#xA;sudo apt install python-certbot-apache&#xA;Spustíme ho, vybereme ktorý virtual host chceme použiť, musíme mať len jeden v každom súbore&#xA;certbot --authenticator webroot --installer apache&#xA;Tiež musíme zadať cestu do DocumentRoot adresára, preto pokiaľ používame virtualhost iba na Redirect alebo Proxy, musíme to na chvíľu vypnúť a nastaviť ho. Po skončení skriptu môžme daľej pokračovať v používaní predošlej konfigurácie, s tým čo nam pridal skript.&#xA;Pokiaľ nám prehliadač stále píše že pripojenie nieje plne zabezpečené, je potreba pozrieť všetky linky, niekde je asi použitá plná cesta s http:// .</description>
+    </item>
+  </channel>
+</rss>

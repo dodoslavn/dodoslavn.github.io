@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ubuntu on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/ubuntu/</link>
+    <description>Recent content in Ubuntu on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Fri, 18 Jan 2019 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/ubuntu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Obnovenie certifikátov pre repozitáre</title>
+      <link>https://dodoslavn.github.io/clanky/obnovenie-certifik%C3%A1tov-pre-repozit%C3%A1re/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/obnovenie-certifik%C3%A1tov-pre-repozit%C3%A1re/</guid>
+      <description>sudo apt-key list | \\ grep &amp;quot;expired: &amp;quot; | \\ sed -ne &#39;s|pub .*/\([^ ]*\) .*|\1|gp&#39; | \\ xargs -n1 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys</description>
+    </item>
+    <item>
+      <title>Virtualbox - zaheslovanie VRDE prístupu</title>
+      <link>https://dodoslavn.github.io/clanky/virtualbox---zaheslovanie-vrde-pr%C3%ADstupu/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/virtualbox---zaheslovanie-vrde-pr%C3%ADstupu/</guid>
+      <description>Povolíme knižnicu:&#xA;VBoxManage setproperty vrdeauthlibrary &amp;quot;VBoxAuthSimple&amp;quot;&#xA;Nastavíme premennú do ktorej vložíme názov virtuálneho stroja:&#xA;VM=WinXP_01&#xA;Nastavíme spôsob prihlásenia:&#xA;VBoxManage modifyvm &amp;quot;$VM&amp;quot; --vrdeauthtype external&#xA;Vygenerujeme hash z hesla:&#xA;VBoxManage internalcommands passwordhash &amp;quot;hesloheslo&amp;quot;&#xA;To nám vrátilo dlhý reťazec znakov - hash. Teraz ho použijeme pri nastavení prihlasovacieho mena a hesla:&#xA;VBoxManage setextradata &amp;quot;$VM&amp;quot; &amp;quot;VBoxAuthSimple/users/meno_uzivtela&amp;quot; hash_z_predchadzajuceho_kroku&#xA;Dôležitá poznámka je, že pri používaní &amp;quot;Remote Desktop Connection&amp;quot; z OS Windows, musíme hneď pod pole kde zadávame adresu servera ,zaškrknúť checkbox pre umožnenie uloženia mena a hesla.</description>
+    </item>
+    <item>
+      <title>Debian - Inštalácia ProFTPd servera</title>
+      <link>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-proftpd-servera/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-proftpd-servera/</guid>
+      <description>Ako prvé si samotnú aplikáciu nainštalujeme:&#xA;apt-get install proftpd&#xA;Po úspešnej inštalacií, môžme začať s konfiguráciou. Na začiatok vložíme do /etc/shells riadok, /bin/false&#xA;echo &amp;quot;/bin/false&amp;quot; &amp;gt;&amp;gt; /bin/false&#xA;Teraz sa môžme pustiť do samotnej konfigurácie. Konfiguračný súbor , proftpd.conf , nájdeme v typickom adresáre /etc/proftpd/. Takže zadáme&#xA;nano /etc/proftpd/proftpd.conf&#xA;Tu si môžem nastaviť základne parametre servera ako jeho názov, port, TimoOut-y. Napr. jedno veľmi dôležité bezpečnostné nastavenie je DefaultRoot. Pokiaľ nieje nastavené alebo je nastavené na off tak užívatelia budú mať voľný prístup k celému systému.</description>
+    </item>
+    <item>
+      <title>Debian - Základné designové úpravy</title>
+      <link>https://dodoslavn.github.io/clanky/debian---z%C3%A1kladn%C3%A9-designov%C3%A9-%C3%BApravy/</link>
+      <pubDate>Mon, 30 Jan 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---z%C3%A1kladn%C3%A9-designov%C3%A9-%C3%BApravy/</guid>
+      <description>Tu si ukážeme ako zmeniť:&#xA;- pozadie GRUB zavádzača - téma pri prihlasovaní - pozadie pri prihlasovaní Pozadie GRUB zavádzača Možno budete prekvapený ako jednoducho sa dá zmeniť pozadie GRUB zavádzača, a že pozadie môže byť aj klasický obrázok, s väčším rozlíšením a aj s farbamy viacej ako 256 farieb čo je možno prekvapujúce. Jedná sa o veľmi jednoduchú úpravu, kedže iba nahradíme obrázok pôvodný, našim novým. Najskôr si náš obrázok premenujeme na:</description>
+    </item>
+  </channel>
+</rss>

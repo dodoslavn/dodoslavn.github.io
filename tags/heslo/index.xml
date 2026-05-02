@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Heslo on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/heslo/</link>
+    <description>Recent content in Heslo on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Fri, 05 May 2017 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/heslo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Virtualbox - zaheslovanie VRDE prístupu</title>
+      <link>https://dodoslavn.github.io/clanky/virtualbox---zaheslovanie-vrde-pr%C3%ADstupu/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/virtualbox---zaheslovanie-vrde-pr%C3%ADstupu/</guid>
+      <description>Povolíme knižnicu:&#xA;VBoxManage setproperty vrdeauthlibrary &amp;quot;VBoxAuthSimple&amp;quot;&#xA;Nastavíme premennú do ktorej vložíme názov virtuálneho stroja:&#xA;VM=WinXP_01&#xA;Nastavíme spôsob prihlásenia:&#xA;VBoxManage modifyvm &amp;quot;$VM&amp;quot; --vrdeauthtype external&#xA;Vygenerujeme hash z hesla:&#xA;VBoxManage internalcommands passwordhash &amp;quot;hesloheslo&amp;quot;&#xA;To nám vrátilo dlhý reťazec znakov - hash. Teraz ho použijeme pri nastavení prihlasovacieho mena a hesla:&#xA;VBoxManage setextradata &amp;quot;$VM&amp;quot; &amp;quot;VBoxAuthSimple/users/meno_uzivtela&amp;quot; hash_z_predchadzajuceho_kroku&#xA;Dôležitá poznámka je, že pri používaní &amp;quot;Remote Desktop Connection&amp;quot; z OS Windows, musíme hneď pod pole kde zadávame adresu servera ,zaškrknúť checkbox pre umožnenie uloženia mena a hesla.</description>
+    </item>
+    <item>
+      <title>Zmena hesla na Cisco routeroch</title>
+      <link>https://dodoslavn.github.io/clanky/zmena-hesla-na-cisco-routeroch/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/zmena-hesla-na-cisco-routeroch/</guid>
+      <description>Potrebujete upraviť nastavenie na routri, no ani za nič si nedokážete spomenúť heslo kt. ste použili. Čím si môžete byt istý je(teda podľa mňa), že budete musieť zresetovať celí router a tým aj stratíte všetky nastavenia. Teraz ste si možno pomysleli že aký návod ked môžem jednoducho stlačiť tlačítko Reset a je to! Možno by ste sa čudovali keby ste na svojom routri nenašli nič ani len podobné resetu, a niečo ako vybrat baterku, vyskratovať pamať, chvíľu počkať a mám zariadenie zresetovaná ako pri BIOSe u PC nepripadá do úvahy.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bi on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/bi/</link>
+    <description>Recent content in Bi on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/bi/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inštalácia Airflow</title>
+      <link>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-airflow/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-airflow/</guid>
+      <description>Inštalácia systémových balíkov apt install -y default-libmysqlclient-dev build-essential&#xA;Inštalácia samotného Airflow cd /niekam/ python3 -m venv . ./bin/pip3 install apache-airflow[mysql] ./airflow db init&#xA;Úprava konfigurácie Otvoríme súbor&#xA;vi ../home/airflow/airflow.cfg&#xA;a nastavíme v nom&#xA;sql_alchemy_conn = mysql+mysqldb://airflow_user:your_secure_password@localhost:3306/airflow_db executor = LocalExecutor&#xA;Inicializácia databáze ./airflow db init&#xA;Pridanie účtu ./airflow users create your_username --firstname first_name --lastname last_name --role Admin --email username@example.com</description>
+    </item>
+    <item>
+      <title>IBM Datastage - inštalácia na linuxe </title>
+      <link>https://dodoslavn.github.io/clanky/ibm-datastage---in%C5%A1tal%C3%A1cia-na-linuxe-/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-datastage---in%C5%A1tal%C3%A1cia-na-linuxe-/</guid>
+      <description>Pridáme skupinu&#xA;groupadd dsodb\&#xA;Vytvoríme užívateľov&#xA;useradd -g dsodb -m dsodb;&#xA;useradd -g db2fenc1 -m db2fenc1;&#xA;useradd -g db2inst1 -m db2inst1;&#xA;useradd -g srduser -m srduser;&#xA;useradd -g iauser -m iauser;&#xA;useradd -g xmetasr -m xmetasr;&#xA;useradd -g dsadm -m dsadm;&#xA;useradd -g xmeta -m xmeta;&#xA;useradd -g dsodb -m dsodb;\&#xA;Nainštalujeme balík nástrojov&#xA;yum groupinstall &amp;quot;Development Tools&amp;quot;\&#xA;Nainštalujeme knižnice&#xA;yum install -y libXp libXtst glibc libXp libXau libXext libX11 libxcb libXmu nss compat-libstdc* glibc libXp libXtst</description>
+    </item>
+  </channel>
+</rss>

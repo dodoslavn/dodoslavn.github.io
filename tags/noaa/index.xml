@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Noaa on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/noaa/</link>
+    <description>Recent content in Noaa on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Mon, 29 Jul 2024 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/noaa/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Frekvenčné pásma</title>
+      <link>https://dodoslavn.github.io/clanky/frekven%C4%8Dn%C3%A9-p%C3%A1sma/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/frekven%C4%8Dn%C3%A9-p%C3%A1sma/</guid>
+      <description>:::&#xA;1. Extrémne nízka frekvencia (ELF) Frekvenčné pásmo: 3 Hz až 30 Hz&#xA;Použitie: Komunikácia so ponorkami, geologické prieskumy. :::&#xA;:::&#xA;2. Super nízka frekvencia (SLF) Frekvenčné pásmo: 30 Hz až 300 Hz&#xA;Použitie: Komunikácia so ponorkami, špecifické aplikácie v oblasti komunikácie. :::&#xA;:::&#xA;3. Ultra nízka frekvencia (ULF) Frekvenčné pásmo: 300 Hz až 3 kHz&#xA;Použitie: Komunikácia so ponorkami, geologické prieskumy, niektoré vojenské aplikácie. :::&#xA;:::&#xA;4. Veľmi nízka frekvencia (VLF) Frekvenčné pásmo: 3 kHz až 30 kHz</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ntop on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/ntop/</link>
+    <description>Recent content in Ntop on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Mon, 02 Sep 2024 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/ntop/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>NtopNG - inštalácia na Debian</title>
+      <link>https://dodoslavn.github.io/clanky/ntopng---in%C5%A1tal%C3%A1cia-na-debian/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ntopng---in%C5%A1tal%C3%A1cia-na-debian/</guid>
+      <description>Stiahnutie balíka $ wget https://packages.ntop.org/apt/$(lsb_release -cs)/all/apt-ntop.deb -O /tmp/apt-ntop.deb&#xA;Inštalácia repozitára # apt install /tmp/apt-ntop.deb&#xA;# apt update&#xA;Inštalácia # apt install ntopng&#xA;Nastavenie Vytvoríme nový konfiguračný súbor v zložke kde sa načítavajú konfigurácie automaticky.&#xA;# vi /etc/ntopng/ntopng.conf.d/my_own.conf&#xA;Obsah môže vyzerať napríklad takto, pozor - port má rovnaký ako používa Grafana.&#xA;# port&#xA;-w=3001&#xA;# interface&#xA;-i=enp8s0&#xA;#&#xA;#--local-networks &amp;quot;192.168.0.0/24&amp;quot;&#xA;Zapnúť službu: # systemctl restart ntopng.service&#xA;Proxy Pristupovať na webové rozhranie cez Apache Reverse-Proxy je jednoduché, a nevyžaduje žiadne špeciálne pravidlá.</description>
+    </item>
+  </channel>
+</rss>

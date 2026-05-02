@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Counter-Strike on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/counter-strike/</link>
+    <description>Recent content in Counter-Strike on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 15 Dec 2011 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/counter-strike/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inštalácia Counter-Strike 1.6  servera</title>
+      <link>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-counter-strike-1.6--servera/</link>
+      <pubDate>Thu, 15 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-counter-strike-1.6--servera/</guid>
+      <description>Budeme k tomu potrebovať niekoľko zásadných vecí, ako je pripojenie k internetu, a oprávnenie na inštaláciu softwéru. Najskôr is stiahneme HLDS Update Tool, ktorý následne na to nainštalujeme. Tento nástroj slúži na stiahnutie oficiálnych dedikovaných serverov. Teraz ho stačí už len spustiť, a to pod určitými parametrami. Predpokladá sa že ste nemenili adresár inštalácie. Teda by mal byť:&#xA;C:Program Files\Valve\HLServer&#xA;Môžme teda začať inštalovať. Najskôr sa presunieme do, už spomínaného adresára, príkazom:</description>
+    </item>
+  </channel>
+</rss>

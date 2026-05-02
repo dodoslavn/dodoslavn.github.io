@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yt on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/yt/</link>
+    <description>Recent content in Yt on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Tue, 16 Aug 2011 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/yt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ako stahovať videá z YouTube.com</title>
+      <link>https://dodoslavn.github.io/clanky/ako-stahova%C5%A5-vide%C3%A1-z-youtube.com/</link>
+      <pubDate>Tue, 16 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-stahova%C5%A5-vide%C3%A1-z-youtube.com/</guid>
+      <description>No musíme mať:&#xA;1.) OS Windows XP (na ostatných to nemám odskúšané)&#xA;2.) Intnernet Explorer (je to súčasť kazdeho Windowsu, akúkoľvek verziu, daľej už len IE)\&#xA;Krok 1 - Video ktoré chceme stiahnuť, si cez IE pozrieme (nemusíme ho pozerať ale musíme ho nechať načítať celé)&#xA;Krok 2 - Zobrazíme si súbory ktoré si stahuje náš IE.&#xA;C:\Documents and Settings\Administrator\Local Settings\Temporary\Internet Files&#xA;..červená farba znamená partrícia na ktorom máme spustený Windows a zelená farba znamená názov užívateľa pod ktorým sme práve prihlásený ale musíme mať Windows samozrejme v jazyku ENG, každy jayzk ma tu cestu tiež preloženu, alebo možme použiť inú cestu:</description>
+    </item>
+  </channel>
+</rss>

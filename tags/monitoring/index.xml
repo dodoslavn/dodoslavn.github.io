@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Monitoring on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/monitoring/</link>
+    <description>Recent content in Monitoring on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 19 Sep 2024 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/monitoring/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zabbix - vlastné skripty</title>
+      <link>https://dodoslavn.github.io/clanky/zabbix---vlastn%C3%A9-skripty/</link>
+      <pubDate>Thu, 19 Sep 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/zabbix---vlastn%C3%A9-skripty/</guid>
+      <description>Zabbix agent konfigurácia Na strane Zabbix agenta je potreba povoliť aby Custom Skript-y vôbec fungovali, a potom je potreba každý jeden príkaz osobitne pridať, a priradiť k nemu ako sa tem &amp;quot;item&amp;quot; bude volať.&#xA;Povolenie podpory Custom Script-ov Upravíme konfiguračný súbor pre Zabbix agent, a pridáme povolenie pre vlastné skripty. Kedysi sa toto nastavenie volalo &amp;quot;EnableRemoteCommands&amp;quot;.&#xA;# vi /etc/zabbix/zabbix_agentd.conf&#xA;Upravíme nastavenie:&#xA;AllowKey=system.run[*]&#xA;Založenie vlasntého Item-u Pridáme samotný príkaz ktorý chceme spúštať, a pridelíme mu názov:</description>
+    </item>
+    <item>
+      <title>Zabbix monitoring - manuál ako na to</title>
+      <link>https://dodoslavn.github.io/clanky/zabbix-monitoring---manu%C3%A1l-ako-na-to/</link>
+      <pubDate>Mon, 27 May 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/zabbix-monitoring---manu%C3%A1l-ako-na-to/</guid>
+      <description>Návod pre Debian 9, prípadne Debian 9 v Dockeri.&#xA;Priprava Otvoríme v prehliadači tento odkaz kde si nájdeme akyuálnu verziu balíku, a skopríjeme jeho odkaz. Balík následne na servere stiahneme cez wget. https://repo.zabbix.com/zabbix/4.2/debian/pool/main/z/zabbix-release/&#xA;Inštalácia základných vecí.&#xA;apt install dialog apt-utils wget vim&#xA;Stiahneme Zabbix balík:&#xA;wget https://repo.zabbix.com/zabbix/4.2/debian/pool/main/z/zabbix-release/zabbix-release_4.2-1%2Bstretch_all.deb&#xA;Nainštalujeme ho:&#xA;dpkg -i zabbix-release_4.2-1+stretch_all.deb&#xA;Obnovíme zoznam balíkov:&#xA;apt update&#xA;Server Inštalácia nástrojov na monitoring server.&#xA;Inštalácia MariaDB servera:&#xA;apt install mysql-server mysql-client</description>
+    </item>
+  </channel>
+</rss>

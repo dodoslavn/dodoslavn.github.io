@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debian on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/debian/</link>
+    <description>Recent content in Debian on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Tue, 27 Jan 2026 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/debian/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Unbound DNS resolver na Debian-e 13</title>
+      <link>https://dodoslavn.github.io/clanky/unbound-dns-resolver-na-debian-e-13/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/unbound-dns-resolver-na-debian-e-13/</guid>
+      <description>Ako nainštalovať DNS-cache server na Debian, konkrétne Unbound.&#xA;Inštalácia apt install bind9-dnsutils net-tools dns-root-data iproute2&#xA;apt install unbound&#xA;Nastavenie ovládania Remote-control tu vypínam, zakomentované riadky niesú podporované v tejto verzií Unbound.&#xA;echo &#39;remote-control:&#xA;control-enable: no&#xA;control-interface: /run/unbound.socket&#xA;#control-use-cert: yes&#xA;#control-perms: 600&#xA;#control-owner: root&#xA;#control-group: root&#39; &amp;gt; /etc/unbound/unbound.conf.d/remote-control.conf&#xA;Základné nastavenia Tu si dať pozor na ten access-control a pridať tam svoju sieť ak je iná.&#xA;echo &#39; server:&#xA;interface: 0.0.0.0&#xA;interface: ::0</description>
+    </item>
+    <item>
+      <title>Vlastná Systemd služba a časovač k nej</title>
+      <link>https://dodoslavn.github.io/clanky/vlastn%C3%A1-systemd-slu%C5%BEba-a-%C4%8Dasova%C4%8D-k-nej/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/vlastn%C3%A1-systemd-slu%C5%BEba-a-%C4%8Dasova%C4%8D-k-nej/</guid>
+      <description>Príklad umiestnenia definície služby /etc/systemd/system/custom-service.service&#xA;Príklad samotnej definície služby [Unit]&#xA;Description=My Custom App&#xA;After=network.target&#xA;Requires=network.target&#xA;[Service]&#xA;Type=simple&#xA;ExecStart=/usr/bin/myapp --flag1 --flag2&#xA;WorkingDirectory=/opt/myapp&#xA;User=www-data&#xA;Group=www-data&#xA;Environment=&amp;quot;ENV_VAR=value&amp;quot;&#xA;EnvironmentFile=/etc/myapp.env&#xA;Restart=on-failure&#xA;RestartSec=5s&#xA;TimeoutStartSec=30&#xA;TimeoutStopSec=10&#xA;StandardOutput=journal&#xA;StandardError=journal&#xA;[Install]&#xA;WantedBy=multi-user.target\&#xA;Typy služby simple &amp;ndash; Základný. Spustí ExecStart priamo forking &amp;ndash; Forkuje oneshot &amp;ndash; Pre scripty čo sa spustia a skončia notify &amp;ndash; Notifikácia pre systém že je pripravený. idle &amp;ndash; Spustí ked systém nič nerobí Príklad umiestnenia časovača pre službu Cesta musí byť rovnaká akorát ako pre službu, akorát na konci názvu nebude .</description>
+    </item>
+    <item>
+      <title>Samba server na Debian</title>
+      <link>https://dodoslavn.github.io/clanky/samba-server-na-debian/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/samba-server-na-debian/</guid>
+      <description>Porty to používa 139 a 445.&#xA;Inštalácia apt install samba&#xA;Konfigurácia vi /etc/samba/smb.conf&#xA;Príklad [share]&#xA;read only = no&#xA;path = /data&#xA;guest ok = yes&#xA;browsable = yes\</description>
+    </item>
+    <item>
+      <title>Debian a upgrady na vyššie verzie</title>
+      <link>https://dodoslavn.github.io/clanky/debian-a-upgrady-na-vy%C5%A1%C5%A1ie-verzie/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian-a-upgrady-na-vy%C5%A1%C5%A1ie-verzie/</guid>
+      <description>Upgrade z Debian 11 na 12 Postup ktorý mi fungoval z verzie Debian 11 Bullseye na Debian 12 Bookworm.&#xA;apt update&#xA;apt upgrade&#xA;sed -i &#39;s/bullseye/bookworm/g&#39; /etc/apt/sources.list&#xA;apt update&#xA;apt upgrade --without-new-pkgs&#xA;apt full-upgrade&#xA;reboot\</description>
+    </item>
+    <item>
+      <title>Unbound DNS resolver na Debian-e 11</title>
+      <link>https://dodoslavn.github.io/clanky/unbound-dns-resolver-na-debian-e-11/</link>
+      <pubDate>Thu, 21 Apr 2022 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/unbound-dns-resolver-na-debian-e-11/</guid>
+      <description>Ako nainštalovať DNS-cache server na Debian, konkrétne Unbound.&#xA;Inštalácia apt-get install bind9-utils dnsutils net-tools apt-get install unbound&#xA;Konfigurácia server:&#xA;# the working directory.&#xA;directory: &amp;quot;/etc/unbound&amp;quot;&#xA;# run as the unbound user&#xA;username: unbound&#xA;verbosity: 2 # uncomment and increase to get more logging.&#xA;# listen on all interfaces, answer queries from the local subnet.&#xA;interface: 0.0.0.0&#xA;# comment out the following line if your system doesn&#39;t have IPv6.&#xA;interface: ::0</description>
+    </item>
+    <item>
+      <title>Linux - tipy a triky na Bash</title>
+      <link>https://dodoslavn.github.io/clanky/linux---tipy-a-triky-na-bash/</link>
+      <pubDate>Mon, 27 May 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux---tipy-a-triky-na-bash/</guid>
+      <description>Vysvetlenie príkazu stat&#xA;There are 3 kind of &amp;quot;timestamps&amp;quot;:&#xA;Access - the last time the file was read&#xA;Modify - the last time the file was modified (content has been modified)&#xA;Change - the last time meta data of the file was changed (e.g. permissions)\&#xA;Presunitie sa v skripte do adresára skriptu:&#xA;cd &amp;quot;$(dirname &amp;quot;$0&amp;quot;)&amp;quot;&#xA;Získanie názvu skriptu v skripte samotnom:&#xA;echo $(basename &amp;quot;$0&amp;quot;)&#xA;Prehľadávanie súbora po riadkoch. Premenná IFS (Internal Field Separator) sa použije na nastavenie znaku na základe ktorého sa obsah súboru rozseká do premennej v cykle typu for .</description>
+    </item>
+    <item>
+      <title>Základ konfiguráce Postgre pod Debian 9</title>
+      <link>https://dodoslavn.github.io/clanky/z%C3%A1klad-konfigur%C3%A1ce-postgre-pod-debian-9/</link>
+      <pubDate>Sun, 10 Jun 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/z%C3%A1klad-konfigur%C3%A1ce-postgre-pod-debian-9/</guid>
+      <description>Samotná inštalácia Postgre:&#xA;apt install postgresql&#xA;Týmto príkazom vstúpime do príkazovej riadky Postgre ako užívateľ postgres ktorý má najväčšie oprávnenie, no dá sa použiť v základnom nastavení len z príkazovej riadky a z OS účtu postgres:&#xA;su - postgres -c psql&#xA;Predošlí príkaz využijeme a vytvoríme si nového užívateľa pre nejakú aplikáciu:&#xA;su - postgres -c &amp;quot;psql -c \&amp;quot;create user uzivatel with encrypted password &#39;heslo&#39;;\&amp;quot;&amp;quot;&#xA;Pre pokračovanie, musíme vytvoriť ešte databázu k tomuto užívateľovi:</description>
+    </item>
+    <item>
+      <title>Základ konfiguráce MariaDB pod Debian 9</title>
+      <link>https://dodoslavn.github.io/clanky/z%C3%A1klad-konfigur%C3%A1ce-mariadb-pod-debian-9/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/z%C3%A1klad-konfigur%C3%A1ce-mariadb-pod-debian-9/</guid>
+      <description>Najskôr nainštalujeme klienta:&#xA;apt install mysql-client&#xA;Potom samotný server,&#xA;apt install mysql-server&#xA;Dalej môžme doplniť o samotný PHPMyAdmin&#xA;apt install phpmyadmin&#xA;Problém nastáva ked sa chceme prihlásiť cez web do PHPMyAdmin. Tam totiž root účet nefunguje. Je tam síce phpmyadmin účet, ten ale nemá oprávnenie menežovať všetko.&#xA;Z príkazového riadku pod root-om týmto príkazom dáme všetky oprávnenia účtu phpmyadmin&#xA;mysql -e &amp;quot;GRANT ALL PRIVILEGES ON * . * TO &#39;phpmyadmin&#39;@&#39;localhost&#39; WITH GRANT OPTION&amp;quot;;</description>
+    </item>
+    <item>
+      <title>Exportovanie FileSystému cez virtualbox</title>
+      <link>https://dodoslavn.github.io/clanky/exportovanie-filesyst%C3%A9mu-cez-virtualbox/</link>
+      <pubDate>Wed, 16 May 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/exportovanie-filesyst%C3%A9mu-cez-virtualbox/</guid>
+      <description>Ako prerekvizitu použijeme klasický postup na exportovanie adresára medzi systémami.&#xA;\&#xA;Povedzme že máme host systém, na ktorom beží VM. Z neho bude zdielaný nejaký adresár. Do súbora /etc/exports vložíme:&#xA;/data/Virtual_machine_1 127.0.0.1(rw,sync,no_subtree_check,no_root_squash,insecure)&#xA;Vo VM, sa pozrieme aká je DefaultGateway&#xA;route | grep default | awk &#39;&#39;&#xA;zase pridáme do /etc/fstab pričom ako IP použijeme zistenú DefaultGateway&#xA;10.0.2.2:/data/Virtual_machine_1 /mnt nfs defaults 0 0</description>
+    </item>
+    <item>
+      <title>Ako na HTTPS s Lets Enrypt</title>
+      <link>https://dodoslavn.github.io/clanky/ako-na-https-s-lets-enrypt/</link>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-na-https-s-lets-enrypt/</guid>
+      <description>Nainštalujeme nástroj:&#xA;sudo apt install python-certbot-apache&#xA;Spustíme ho, vybereme ktorý virtual host chceme použiť, musíme mať len jeden v každom súbore&#xA;certbot --authenticator webroot --installer apache&#xA;Tiež musíme zadať cestu do DocumentRoot adresára, preto pokiaľ používame virtualhost iba na Redirect alebo Proxy, musíme to na chvíľu vypnúť a nastaviť ho. Po skončení skriptu môžme daľej pokračovať v používaní predošlej konfigurácie, s tým čo nam pridal skript.&#xA;Pokiaľ nám prehliadač stále píše že pripojenie nieje plne zabezpečené, je potreba pozrieť všetky linky, niekde je asi použitá plná cesta s http:// .</description>
+    </item>
+    <item>
+      <title>Nastavenie sudoers</title>
+      <link>https://dodoslavn.github.io/clanky/nastavenie-sudoers/</link>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/nastavenie-sudoers/</guid>
+      <description>Užívateľom v skupine www-data pridáme opravnenie no zistenie teploty pevného disku. Užívatelia budu musieť zavola tento príkaz pomocou &amp;quot;sudo&amp;quot; ale heslo nemusia zadávať:&#xA;%www-data ALL=(ALL) NOPASSWD: /usr/sbin/hddtemp&#xA;dodoslav ALL=NOPASSWD: /usr/bin/yum&#xA;Oprávnenie na používanie sudo&#xA;dodoslav ALL=(ALL:ALL) ALL&#xA;#&#xA;# This file MUST be edited with the &#39;visudo&#39; command as root.&#xA;#&#xA;# Please consider adding local content in /etc/sudoers.d/ instead of&#xA;# directly modifying this file.&#xA;#&#xA;# See the man page for details on how to write a sudoers file.</description>
+    </item>
+    <item>
+      <title>Ako presunúť PHPMyAdmin do subdomény</title>
+      <link>https://dodoslavn.github.io/clanky/ako-presun%C3%BA%C5%A5-phpmyadmin-do-subdom%C3%A9ny/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-presun%C3%BA%C5%A5-phpmyadmin-do-subdom%C3%A9ny/</guid>
+      <description>Vypneme aktuálny virtualhost:&#xA;sudo a2disconf phpmyadmin&#xA;Vytvoríme nový PHPMyAdmin konfiguračný súbor virtualhostu:&#xA;vi /etc/apache2/sites-enabled/new_phpmyadmin.conf&#xA;Vložíme doň obsah súboru phpmyadmin.conf a upravíme doménu podľa seba.&#xA;Povolíme ho:&#xA;sudo a2enconf&#xA;Reštartujeme apache2&#xA;sudo systemctl reload apache2.service</description>
+    </item>
+    <item>
+      <title>Zdielanie FS na Debiane</title>
+      <link>https://dodoslavn.github.io/clanky/zdielanie-fs-na-debiane/</link>
+      <pubDate>Mon, 14 Aug 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/zdielanie-fs-na-debiane/</guid>
+      <description>Návod sa skladá z dvoch častí, a to časť pre server a pre klient. Hneď na začiatku si zistíme adresu oboch PC, najlepšie ked ich IP adresa v sieti bude statická.&#xA;Pre príklad, v tomto návode bude mať server adresu 192.168.1.2 a klient bude mať 192.168.1.111 . Pokiaľ sa chceme vyhnúť problému s opravnením, musíme buď používať LDAP autetifikáciu, alebo vytvárať lokálnych užívateľoch na všetkých zariadeniach ktoré budú používať rovnaký zdielaný adresár tak, aby mali rovnaké ID.</description>
+    </item>
+    <item>
+      <title>Inštalácia MySQL servera na Debian 9</title>
+      <link>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-mysql-servera-na-debian-9/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-mysql-servera-na-debian-9/</guid>
+      <description>Najskôr musíme stiahnuť officiálny balík zo stránok MySQL ktorý nám nakonfiguruje repozitár. Buď navštívime stáránku a stiahneme najnovší z https://dev.mysql.com/downloads/repo/apt/ .&#xA;Alebo tu je link na balík z doby písania článku:&#xA;wget https://dev.mysql.com/get/mysql-apt-config_0.8.7-1_all.deb&#xA;Po stiahnutí balíka ho môžme nainštalovať:&#xA;sudo dpkg -i mysql-apt-config_0.8.7-1_all.deb&#xA;Po inštalácií spravíme update, v ktorom by sme mali vidieť mysql repozitár:&#xA;sudo apt update&#xA;A teraz uz môžme nainštalovať samotný MySQL server priamo z repozitára:&#xA;sudo apt install mysql-server</description>
+    </item>
+    <item>
+      <title>Vytvorenie RAM drive na Linuxe</title>
+      <link>https://dodoslavn.github.io/clanky/vytvorenie-ram-drive-na-linuxe/</link>
+      <pubDate>Fri, 23 Jun 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/vytvorenie-ram-drive-na-linuxe/</guid>
+      <description>Toto je spôsob ako vytvoriť RAM drive. Dá sa to dobre automatizovať ked dáme tieto príkazy do skriptu, a skript dáme na spustenie po štarte systému.&#xA;Vytvorenie adresára:&#xA;mkdir /tmp/ramdisk ;&#xA;Nastavenie oprávnenia:&#xA;chmod 777 /tmp/ramdisk ;&#xA;Vytvorenie samotného RAM drive:&#xA;mount -t tmpfs -o size=10000M tmpfs /tmp/ramdisk/ ;</description>
+    </item>
+    <item>
+      <title>Virtualbox - zaheslovanie VRDE prístupu</title>
+      <link>https://dodoslavn.github.io/clanky/virtualbox---zaheslovanie-vrde-pr%C3%ADstupu/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/virtualbox---zaheslovanie-vrde-pr%C3%ADstupu/</guid>
+      <description>Povolíme knižnicu:&#xA;VBoxManage setproperty vrdeauthlibrary &amp;quot;VBoxAuthSimple&amp;quot;&#xA;Nastavíme premennú do ktorej vložíme názov virtuálneho stroja:&#xA;VM=WinXP_01&#xA;Nastavíme spôsob prihlásenia:&#xA;VBoxManage modifyvm &amp;quot;$VM&amp;quot; --vrdeauthtype external&#xA;Vygenerujeme hash z hesla:&#xA;VBoxManage internalcommands passwordhash &amp;quot;hesloheslo&amp;quot;&#xA;To nám vrátilo dlhý reťazec znakov - hash. Teraz ho použijeme pri nastavení prihlasovacieho mena a hesla:&#xA;VBoxManage setextradata &amp;quot;$VM&amp;quot; &amp;quot;VBoxAuthSimple/users/meno_uzivtela&amp;quot; hash_z_predchadzajuceho_kroku&#xA;Dôležitá poznámka je, že pri používaní &amp;quot;Remote Desktop Connection&amp;quot; z OS Windows, musíme hneď pod pole kde zadávame adresu servera ,zaškrknúť checkbox pre umožnenie uloženia mena a hesla.</description>
+    </item>
+    <item>
+      <title>Firewall iptables - základné nastavenia</title>
+      <link>https://dodoslavn.github.io/clanky/firewall-iptables---z%C3%A1kladn%C3%A9-nastavenia/</link>
+      <pubDate>Sat, 04 Mar 2017 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/firewall-iptables---z%C3%A1kladn%C3%A9-nastavenia/</guid>
+      <description>Zmažeme všetky nastavenia, na toto pozor, lebo to všetku komunikáciu zablokuje:&#xA;iptables -F;&#xA;Nastavíme všeobecné pravidlá, že sa všetka prichádzajúca komunikácia bude blokovať:&#xA;iptables -P FORWARD DROP;&#xA;iptables -P INPUT DROP;&#xA;iptables -P OUTPUT ACCEPT;&#xA;Pre povolenie prichádzajúcich paketov prijatých vytvorených spojení:&#xA;iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT&#xA;Povolenie všetkého na localhost-e:&#xA;iptables -A INPUT -s 127.0.0.0/8 -d 127.0.0.0/8 -i lo -j ACCEPT&#xA;Otvorenie samotného portu, napr. 22 pre SSH server, alebo 80 pre HTTP server:</description>
+    </item>
+    <item>
+      <title>Debian a jeho nový editor VI</title>
+      <link>https://dodoslavn.github.io/clanky/debian-a-jeho-nov%C3%BD-editor-vi/</link>
+      <pubDate>Fri, 09 Dec 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian-a-jeho-nov%C3%BD-editor-vi/</guid>
+      <description>Pre každého užévateľa v systéme budeme dávať príkazy.&#xA;Aby nam fungovali šipky:&#xA;echo &amp;quot;set nocompatible&amp;quot; &amp;gt;&amp;gt; ~/.vimrc&#xA;Vypnutie VISUAL módu kvôli ktorému myška funguje inak:&#xA;echo &amp;quot;set mouse-=a &amp;quot; &amp;gt;&amp;gt; ~/.vimrc</description>
+    </item>
+    <item>
+      <title>Linux a Bash $PS1</title>
+      <link>https://dodoslavn.github.io/clanky/linux-a-bash-ps1/</link>
+      <pubDate>Sat, 19 Nov 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux-a-bash-ps1/</guid>
+      <description>\w - aktuálny adresár s plnou cestou&#xA;\W - názov aktuálneho adresára&#xA;\h - hostname&#xA;\u - meno užívateľa&#xA;\e[1m - tučné písmo&#xA;Píklad:&#xA;PS1=&amp;quot;[\u@\h:\w]\\$ &amp;quot;&#xA;Farby:&#xA;[ PS1=&amp;quot;\[\033[38;5;0m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;1m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;2m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;3m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;4m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;5m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;6m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;7m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;8m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]\</description>
+    </item>
+    <item>
+      <title>Návod na VirtualBox v konzole</title>
+      <link>https://dodoslavn.github.io/clanky/n%C3%A1vod-na-virtualbox-v-konzole/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/n%C3%A1vod-na-virtualbox-v-konzole/</guid>
+      <description>Príprava Z dôvodu že sa konfigurácia ukladá do domovského adresára užívateľa, nedá sa virtuálny stroj spustiť pod iným užívateľom. Preto je vhodné na to vytvoriť nového.&#xA;sudo adduser virtualbox&#xA;Pridáme repozitár na nainštalovanie VirtualBoxu (pod root-om)&#xA;echo &amp;quot;deb http://download.virtualbox.org/virtualbox/debian jessie contrib&amp;quot; &amp;gt;&amp;gt; /etc/apt/sources.list&#xA;Pridanie kľúča:&#xA;wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc&#xA;apt-key add oracle_vbox_2016.asc&#xA;Inštalácia VirtualBoxu&#xA;sudo apt-get update; sudo apt-get -y --force-yes install virtualbox-5.1&#xA;Ak niesu nainštalované doplnky&#xA;sudo VBoxManage list extpacks&#xA;Sú vhodne ked sa chceme napríklad pripojiť pomocou VNC alebo Remote Desktop.</description>
+    </item>
+    <item>
+      <title>Linux inštalácia youtube-dl</title>
+      <link>https://dodoslavn.github.io/clanky/linux-in%C5%A1tal%C3%A1cia-youtube-dl/</link>
+      <pubDate>Sat, 20 Aug 2016 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux-in%C5%A1tal%C3%A1cia-youtube-dl/</guid>
+      <description>Inštalácia:&#xA;sudo apt install youtube-dl&#xA;Kontrola nainštalovanej verzie:&#xA;youtube-dl --version&#xA;V repozitároch môže byť ale často verzia stará, preto existuej alternatívny spôsob:&#xA;wget -O - https://yt-dl.org/downloads/latest/youtube-dl | sudo tee /usr/sbin/youtube-dl &amp;gt;/dev/null sudo chmod a+x /usr/sbin/youtube-dl&#xA;Skontrolujeme že máme novšiu verziu:&#xA;/usr/sbin/youtube-dl --version&#xA;Pár príkladov použitia: Príkaz na stiahnute a automatické prekonverovanie YouTUbe videa do mp3&#xA;youtube-dl --extract-audio --audio-quality 0 --audio-format mp3 -ti https://www.youtube.com/watch?v=XXX&#xA;Ziskanie nazvov videi z playlistu:&#xA;youtube-dl --ignore-errors -o &amp;quot;%(title)s.</description>
+    </item>
+    <item>
+      <title>Instalacia QT Creator na Debian 8</title>
+      <link>https://dodoslavn.github.io/clanky/instalacia-qt-creator-na-debian-8/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/instalacia-qt-creator-na-debian-8/</guid>
+      <description>nebolo tot ake izi&#xA;apt-get install gcc qt5-default qtcreator build-essential g++</description>
+    </item>
+    <item>
+      <title>Viacero inštancií apache2 servera</title>
+      <link>https://dodoslavn.github.io/clanky/viacero-in%C5%A1tanci%C3%AD-apache2-servera/</link>
+      <pubDate>Thu, 25 Sep 2014 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/viacero-in%C5%A1tanci%C3%AD-apache2-servera/</guid>
+      <description>Počas celého procesu budeme použíať jeden ľubovolný tag ktorým budeme odlišovať novú inštanciu od pôvodnej. Ja som si zvolil skuska. Ako prvé si vytvoríme kópiu celého priečinka /etc/apache.&#xA;NAME=skuska&#xA;cp -r /etc/apache2 /etc/apache2-$NAME&#xA;V dalšom kroku vytvoríme kópiu súborov ktoré následne upravíme&#xA;cp /usr/sbin/a2ensite /usr/sbin/a2ensite-$NAME&#xA;cp /usr/sbin/a2dissite /usr/sbin/a2dissite-$NAME&#xA;cp /usr/sbin/a2enmod /usr/sbin/a2enmod-$NAME&#xA;cp /usr/sbin/a2dismod /usr/sbin/a2dismod-$NAME\&#xA;Vo všetkých týchto súboroch nasledujúci riadok&#xA;: &amp;quot;/etc/apache2$dir_suffix/envvars&amp;quot;&#xA;upravíme na&#xA;: &amp;quot;/etc/apache2-skuska$dir_suffix/envvars&amp;quot;&#xA;Malo by sa to nachádzať niekde okolo 27.</description>
+    </item>
+    <item>
+      <title>Debian - Inštalácia TeamSpeak3 servera</title>
+      <link>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-teamspeak3-servera/</link>
+      <pubDate>Sun, 22 Dec 2013 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-teamspeak3-servera/</guid>
+      <description>Vytvoríme užívateľa pod ktorým bude TeamSpeak bežať.&#xA;Nazveme ho &amp;quot;teamspeak3&amp;quot;.&#xA;sudo adduser --home /opt/ts3 --disabled-login teamspeak3&#xA;Nstavíme mu heslo.&#xA;sudo passwd nejake_heslo&#xA;Prepneme sa do našeho teamspeak užívateľa a všetky nasledujúce kroky budu prebiehať pod ním&#xA;su - teamspeak3&#xA;Pokiaľ prepnutie nefunguje, tak to nieje nutné. Netreba zabudnúť na krok pri konci. Presunieme sa do domovského adresára&#xA;cd /opt/ts3&#xA;Stiahneme samotný TeamSpeak server, v tomto odkaze je 32-bitova verzia&#xA;wget http://dl.</description>
+    </item>
+    <item>
+      <title>Debian - Inštalácia ProFTPd servera</title>
+      <link>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-proftpd-servera/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-proftpd-servera/</guid>
+      <description>Ako prvé si samotnú aplikáciu nainštalujeme:&#xA;apt-get install proftpd&#xA;Po úspešnej inštalacií, môžme začať s konfiguráciou. Na začiatok vložíme do /etc/shells riadok, /bin/false&#xA;echo &amp;quot;/bin/false&amp;quot; &amp;gt;&amp;gt; /bin/false&#xA;Teraz sa môžme pustiť do samotnej konfigurácie. Konfiguračný súbor , proftpd.conf , nájdeme v typickom adresáre /etc/proftpd/. Takže zadáme&#xA;nano /etc/proftpd/proftpd.conf&#xA;Tu si môžem nastaviť základne parametre servera ako jeho názov, port, TimoOut-y. Napr. jedno veľmi dôležité bezpečnostné nastavenie je DefaultRoot. Pokiaľ nieje nastavené alebo je nastavené na off tak užívatelia budú mať voľný prístup k celému systému.</description>
+    </item>
+    <item>
+      <title>Flash na Debian 6 s amd64</title>
+      <link>https://dodoslavn.github.io/clanky/flash-na-debian-6-s-amd64/</link>
+      <pubDate>Tue, 21 Feb 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/flash-na-debian-6-s-amd64/</guid>
+      <description>Prvé čo musím ale pripomenúť je, že to funguje len pre prehliadače:&#xA;- Mozilla Firefox - Opera Ešte dodám že Mozilla Firefox je na Debian-e nazvaný Iceweasel.&#xA;Ako prvé si stiahneme Flash knižnicu. K tomuto návodu bude najlepšie ked stiahnutý súbor uložíte na svoju pracovnú plochu&#xA;www.macromedia.com/..&#xA;Daľej si otvoríme užívateľský terminál, upozornujem že nie terminál root-a, tam by potom tento návod &amp;quot;krok-za-krokom&amp;quot; úplne neplatil. Predpokaldám že sa v ňom nachádzate v domovskom adresári.</description>
+    </item>
+    <item>
+      <title>Debian - Základné designové úpravy</title>
+      <link>https://dodoslavn.github.io/clanky/debian---z%C3%A1kladn%C3%A9-designov%C3%A9-%C3%BApravy/</link>
+      <pubDate>Mon, 30 Jan 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---z%C3%A1kladn%C3%A9-designov%C3%A9-%C3%BApravy/</guid>
+      <description>Tu si ukážeme ako zmeniť:&#xA;- pozadie GRUB zavádzača - téma pri prihlasovaní - pozadie pri prihlasovaní Pozadie GRUB zavádzača Možno budete prekvapený ako jednoducho sa dá zmeniť pozadie GRUB zavádzača, a že pozadie môže byť aj klasický obrázok, s väčším rozlíšením a aj s farbamy viacej ako 256 farieb čo je možno prekvapujúce. Jedná sa o veľmi jednoduchú úpravu, kedže iba nahradíme obrázok pôvodný, našim novým. Najskôr si náš obrázok premenujeme na:</description>
+    </item>
+  </channel>
+</rss>

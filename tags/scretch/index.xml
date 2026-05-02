@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Scretch on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/scretch/</link>
+    <description>Recent content in Scretch on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sat, 12 Aug 2017 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/scretch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inštalácia MySQL servera na Debian 9</title>
+      <link>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-mysql-servera-na-debian-9/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-mysql-servera-na-debian-9/</guid>
+      <description>Najskôr musíme stiahnuť officiálny balík zo stránok MySQL ktorý nám nakonfiguruje repozitár. Buď navštívime stáránku a stiahneme najnovší z https://dev.mysql.com/downloads/repo/apt/ .&#xA;Alebo tu je link na balík z doby písania článku:&#xA;wget https://dev.mysql.com/get/mysql-apt-config_0.8.7-1_all.deb&#xA;Po stiahnutí balíka ho môžme nainštalovať:&#xA;sudo dpkg -i mysql-apt-config_0.8.7-1_all.deb&#xA;Po inštalácií spravíme update, v ktorom by sme mali vidieť mysql repozitár:&#xA;sudo apt update&#xA;A teraz uz môžme nainštalovať samotný MySQL server priamo z repozitára:&#xA;sudo apt install mysql-server</description>
+    </item>
+  </channel>
+</rss>

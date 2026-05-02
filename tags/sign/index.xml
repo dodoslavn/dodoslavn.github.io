@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sign on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/sign/</link>
+    <description>Recent content in Sign on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 07 Feb 2024 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/sign/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ako na podpisovanie gitových komitov</title>
+      <link>https://dodoslavn.github.io/clanky/ako-na-podpisovanie-gitov%C3%BDch-komitov/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-na-podpisovanie-gitov%C3%BDch-komitov/</guid>
+      <description>1. generate GPG key gpg --gen-key 2. Verify if its there and gpg --list-keys 3. if its not trusted as Ultimate gpg --list-secret-keys --keyid-format LONG gpg --edit-key trust save 4. save it to github in your profile gpg --list-secret-keys --keyid-format LONG gpg --armor --export 5. set the key as &amp;ldquo;global&amp;rdquo; or &amp;ldquo;local&amp;rdquo;, it requires your name in the email as ID, not ID of your GPG !!! git config --global user.</description>
+    </item>
+  </channel>
+</rss>

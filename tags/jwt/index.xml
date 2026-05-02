@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jwt on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/jwt/</link>
+    <description>Recent content in Jwt on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Tue, 25 Jul 2023 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/jwt/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JWT - JsonWebToken ručne</title>
+      <link>https://dodoslavn.github.io/clanky/jwt---jsonwebtoken-ru%C4%8Dne/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/jwt---jsonwebtoken-ru%C4%8Dne/</guid>
+      <description>Popis Kód kde sa podpisovanie/kontrola robí ručne kde sa dá pochopiť jak to funguje.&#xA;Skript #!/bin/bash&#xA;#subor ktory obsahuje tvoj JWT&#xA;file=&amp;quot;payload.txt&amp;quot;&#xA;echo &amp;quot;########### &amp;quot;Vloz JWT podpisany Googlom:&#xA;read content&#xA;echo&#xA;echo $content &amp;gt; $file&#xA;echo&#xA;#funkcia na upravu base64, standartne sa zaokruhluje, u JWT nie&#xA;decode_base64_url() {&#xA;local len=$(($ % 4))&#xA;local result=&amp;quot;$1&amp;quot;&#xA;if [ $len -eq 2 ]; then result=&amp;quot;$1&amp;quot;&#39;==&#39;&#xA;elif [ $len -eq 3 ]; then result=&amp;quot;$1&amp;quot;&#39;=&#39;</description>
+    </item>
+  </channel>
+</rss>

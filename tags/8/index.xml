@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>8 on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/8/</link>
+    <description>Recent content in 8 on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sat, 13 Feb 2016 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Instalacia QT Creator na Debian 8</title>
+      <link>https://dodoslavn.github.io/clanky/instalacia-qt-creator-na-debian-8/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/instalacia-qt-creator-na-debian-8/</guid>
+      <description>nebolo tot ake izi&#xA;apt-get install gcc qt5-default qtcreator build-essential g++</description>
+    </item>
+  </channel>
+</rss>

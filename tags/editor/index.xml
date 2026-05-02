@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Editor on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/editor/</link>
+    <description>Recent content in Editor on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Tue, 09 Apr 2024 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/editor/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Texotvý editor VI a manuál k nemu</title>
+      <link>https://dodoslavn.github.io/clanky/texotv%C3%BD-editor-vi-a-manu%C3%A1l-k-nemu/</link>
+      <pubDate>Tue, 09 Apr 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/texotv%C3%BD-editor-vi-a-manu%C3%A1l-k-nemu/</guid>
+      <description>Ako zmazať celý obsah súboru gg&#xA;dG</description>
+    </item>
+    <item>
+      <title>Debian a jeho nový editor VI</title>
+      <link>https://dodoslavn.github.io/clanky/debian-a-jeho-nov%C3%BD-editor-vi/</link>
+      <pubDate>Fri, 09 Dec 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian-a-jeho-nov%C3%BD-editor-vi/</guid>
+      <description>Pre každého užévateľa v systéme budeme dávať príkazy.&#xA;Aby nam fungovali šipky:&#xA;echo &amp;quot;set nocompatible&amp;quot; &amp;gt;&amp;gt; ~/.vimrc&#xA;Vypnutie VISUAL módu kvôli ktorému myška funguje inak:&#xA;echo &amp;quot;set mouse-=a &amp;quot; &amp;gt;&amp;gt; ~/.vimrc</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Install on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/install/</link>
+    <description>Recent content in Install on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sat, 13 Feb 2016 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/install/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Instalacia QT Creator na Debian 8</title>
+      <link>https://dodoslavn.github.io/clanky/instalacia-qt-creator-na-debian-8/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/instalacia-qt-creator-na-debian-8/</guid>
+      <description>nebolo tot ake izi&#xA;apt-get install gcc qt5-default qtcreator build-essential g++</description>
+    </item>
+    <item>
+      <title>Debian - Inštalácia TeamSpeak3 servera</title>
+      <link>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-teamspeak3-servera/</link>
+      <pubDate>Sun, 22 Dec 2013 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-teamspeak3-servera/</guid>
+      <description>Vytvoríme užívateľa pod ktorým bude TeamSpeak bežať.&#xA;Nazveme ho &amp;quot;teamspeak3&amp;quot;.&#xA;sudo adduser --home /opt/ts3 --disabled-login teamspeak3&#xA;Nstavíme mu heslo.&#xA;sudo passwd nejake_heslo&#xA;Prepneme sa do našeho teamspeak užívateľa a všetky nasledujúce kroky budu prebiehať pod ním&#xA;su - teamspeak3&#xA;Pokiaľ prepnutie nefunguje, tak to nieje nutné. Netreba zabudnúť na krok pri konci. Presunieme sa do domovského adresára&#xA;cd /opt/ts3&#xA;Stiahneme samotný TeamSpeak server, v tomto odkaze je 32-bitova verzia&#xA;wget http://dl.</description>
+    </item>
+    <item>
+      <title>Debian - Inštalácia ProFTPd servera</title>
+      <link>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-proftpd-servera/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-proftpd-servera/</guid>
+      <description>Ako prvé si samotnú aplikáciu nainštalujeme:&#xA;apt-get install proftpd&#xA;Po úspešnej inštalacií, môžme začať s konfiguráciou. Na začiatok vložíme do /etc/shells riadok, /bin/false&#xA;echo &amp;quot;/bin/false&amp;quot; &amp;gt;&amp;gt; /bin/false&#xA;Teraz sa môžme pustiť do samotnej konfigurácie. Konfiguračný súbor , proftpd.conf , nájdeme v typickom adresáre /etc/proftpd/. Takže zadáme&#xA;nano /etc/proftpd/proftpd.conf&#xA;Tu si môžem nastaviť základne parametre servera ako jeho názov, port, TimoOut-y. Napr. jedno veľmi dôležité bezpečnostné nastavenie je DefaultRoot. Pokiaľ nieje nastavené alebo je nastavené na off tak užívatelia budú mať voľný prístup k celému systému.</description>
+    </item>
+    <item>
+      <title>Flash na Debian 6 s amd64</title>
+      <link>https://dodoslavn.github.io/clanky/flash-na-debian-6-s-amd64/</link>
+      <pubDate>Tue, 21 Feb 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/flash-na-debian-6-s-amd64/</guid>
+      <description>Prvé čo musím ale pripomenúť je, že to funguje len pre prehliadače:&#xA;- Mozilla Firefox - Opera Ešte dodám že Mozilla Firefox je na Debian-e nazvaný Iceweasel.&#xA;Ako prvé si stiahneme Flash knižnicu. K tomuto návodu bude najlepšie ked stiahnutý súbor uložíte na svoju pracovnú plochu&#xA;www.macromedia.com/..&#xA;Daľej si otvoríme užívateľský terminál, upozornujem že nie terminál root-a, tam by potom tento návod &amp;quot;krok-za-krokom&amp;quot; úplne neplatil. Predpokaldám že sa v ňom nachádzate v domovskom adresári.</description>
+    </item>
+  </channel>
+</rss>

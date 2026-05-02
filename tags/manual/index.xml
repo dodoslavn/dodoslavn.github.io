@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Manual on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/manual/</link>
+    <description>Recent content in Manual on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/manual/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IBM WebSphere AS - Network Deployemnt</title>
+      <link>https://dodoslavn.github.io/clanky/ibm-websphere-as---network-deployemnt/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-websphere-as---network-deployemnt/</guid>
+      <description>IBM Installation Manager: Vylistovanie balikov v repozitari:&#xA;./imcl listAvailablePackages -repositories /cesta/k/zlozke/s/repository.conf/&#xA;Ako získať login do WebSphere DMGR: Príklad cesty k súboru:&#xA;find /opt/IBM/WebSphere* -name soap.client.props | grep -v eTempl | grep -v \/temp\/ | grep \/profiles\/ | grep -i dmgr&#xA;Meno a heslo by tam malo byť, heslo dešifrujeme pomocou:&#xA;http://strelitzia.net/wasXORdecoder/wasXORdecoder.html&#xA;Ako získať port na ktorom beži DMGR: Príklad cesty k súboru. Je to ten v DMGR profile:&#xA;find /opt/IBM/WebSphere* -name serverindex.</description>
+    </item>
+    <item>
+      <title>Firewall iptables - základné nastavenia</title>
+      <link>https://dodoslavn.github.io/clanky/firewall-iptables---z%C3%A1kladn%C3%A9-nastavenia/</link>
+      <pubDate>Sat, 04 Mar 2017 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/firewall-iptables---z%C3%A1kladn%C3%A9-nastavenia/</guid>
+      <description>Zmažeme všetky nastavenia, na toto pozor, lebo to všetku komunikáciu zablokuje:&#xA;iptables -F;&#xA;Nastavíme všeobecné pravidlá, že sa všetka prichádzajúca komunikácia bude blokovať:&#xA;iptables -P FORWARD DROP;&#xA;iptables -P INPUT DROP;&#xA;iptables -P OUTPUT ACCEPT;&#xA;Pre povolenie prichádzajúcich paketov prijatých vytvorených spojení:&#xA;iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT&#xA;Povolenie všetkého na localhost-e:&#xA;iptables -A INPUT -s 127.0.0.0/8 -d 127.0.0.0/8 -i lo -j ACCEPT&#xA;Otvorenie samotného portu, napr. 22 pre SSH server, alebo 80 pre HTTP server:</description>
+    </item>
+  </channel>
+</rss>

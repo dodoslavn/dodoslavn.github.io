@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ts3 on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/ts3/</link>
+    <description>Recent content in Ts3 on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sun, 22 Dec 2013 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/ts3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debian - Inštalácia TeamSpeak3 servera</title>
+      <link>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-teamspeak3-servera/</link>
+      <pubDate>Sun, 22 Dec 2013 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-teamspeak3-servera/</guid>
+      <description>Vytvoríme užívateľa pod ktorým bude TeamSpeak bežať.&#xA;Nazveme ho &amp;quot;teamspeak3&amp;quot;.&#xA;sudo adduser --home /opt/ts3 --disabled-login teamspeak3&#xA;Nstavíme mu heslo.&#xA;sudo passwd nejake_heslo&#xA;Prepneme sa do našeho teamspeak užívateľa a všetky nasledujúce kroky budu prebiehať pod ním&#xA;su - teamspeak3&#xA;Pokiaľ prepnutie nefunguje, tak to nieje nutné. Netreba zabudnúť na krok pri konci. Presunieme sa do domovského adresára&#xA;cd /opt/ts3&#xA;Stiahneme samotný TeamSpeak server, v tomto odkaze je 32-bitova verzia&#xA;wget http://dl.</description>
+    </item>
+  </channel>
+</rss>

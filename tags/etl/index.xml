@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Etl on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/etl/</link>
+    <description>Recent content in Etl on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/etl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inštalácia Airflow</title>
+      <link>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-airflow/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-airflow/</guid>
+      <description>Inštalácia systémových balíkov apt install -y default-libmysqlclient-dev build-essential&#xA;Inštalácia samotného Airflow cd /niekam/ python3 -m venv . ./bin/pip3 install apache-airflow[mysql] ./airflow db init&#xA;Úprava konfigurácie Otvoríme súbor&#xA;vi ../home/airflow/airflow.cfg&#xA;a nastavíme v nom&#xA;sql_alchemy_conn = mysql+mysqldb://airflow_user:your_secure_password@localhost:3306/airflow_db executor = LocalExecutor&#xA;Inicializácia databáze ./airflow db init&#xA;Pridanie účtu ./airflow users create your_username --firstname first_name --lastname last_name --role Admin --email username@example.com</description>
+    </item>
+    <item>
+      <title>IBM Datastage manual</title>
+      <link>https://dodoslavn.github.io/clanky/ibm-datastage-manual/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-datastage-manual/</guid>
+      <description>Status Name Status Code Explanation DSJS.RUNNING 0 Job is actually running DSJS.RUNOK 1 Job finished a normal run with no warnings DSJS.RUNWARN 2 Job finished a normal run with warnings DSJS.RUNFAILED 3 Job finished a normal run with a fatal error DSJS.QUEUED 4 Job queued waiting for resource allocation DSJS.VALOK 11 Job finished a validation run with no warnings DSJS.VALWARN 12 Job finished a validation run with warnings DSJS.VALFAILED 13 Job failed a validation run DSJS.</description>
+    </item>
+    <item>
+      <title>Pentaho slave server</title>
+      <link>https://dodoslavn.github.io/clanky/pentaho-slave-server/</link>
+      <pubDate>Thu, 05 Jul 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/pentaho-slave-server/</guid>
+      <description>$ cat data-integration/configuration.xml Slave01 0.0.0.0 9081 10000 1440 1440</description>
+    </item>
+  </channel>
+</rss>

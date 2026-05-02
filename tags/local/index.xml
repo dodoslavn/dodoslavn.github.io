@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Local on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/local/</link>
+    <description>Recent content in Local on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/local/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ako na domáce home.arpa domény v Unbound</title>
+      <link>https://dodoslavn.github.io/clanky/ako-na-dom%C3%A1ce-home.arpa-dom%C3%A9ny-v-unbound/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-na-dom%C3%A1ce-home.arpa-dom%C3%A9ny-v-unbound/</guid>
+      <description>Vytvorenie zóny:&#xA;echo &#39;server:&#xA;local-zone: &amp;quot;home.arpa.&amp;quot; nodefault&#xA;auth-zone:&#xA;name: &amp;quot;home.arpa.&amp;quot;&#xA;zonefile: &amp;quot;/etc/unbound/unbound.conf.d/home-arpa.zone&amp;quot;&#xA;for-downstream: yes&#xA;for-upstream: no&#xA;&#39; &amp;gt; /etc/unbound/unbound.conf.d/home-arpa.conf&#xA;Vytvorenie záznamov:&#xA;echo &#39;$TTL 30&#xA;$ORIGIN home.arpa.&#xA;@ IN SOA ns1.home.arpa. hostmaster.home.arpa. (&#xA;2026022701 ; serial (YYYYMMDDnn)&#xA;3600 ; refresh&#xA;900 ; retry&#xA;1209600 ; expire&#xA;300 ) ; negative cache&#xA;IN NS ns1.home.arpa.&#xA;# adresa resolvera&#xA;ns1 IN A 192.168.0.2&#xA;; --- Your requested records ---&#xA;router IN A 192.168.0.1</description>
+    </item>
+  </channel>
+</rss>

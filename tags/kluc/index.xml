@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kluc on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/kluc/</link>
+    <description>Recent content in Kluc on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 14 Sep 2023 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/kluc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Putty a SSH kľúče</title>
+      <link>https://dodoslavn.github.io/clanky/putty-a-ssh-k%C4%BE%C3%BA%C4%8De/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/putty-a-ssh-k%C4%BE%C3%BA%C4%8De/</guid>
+      <description>Putty Najskôr potrebujeme nainštalovať samotné Putty, nie &amp;quot;portable&amp;quot; verziu. A to z dôvodu že klasický inštalátor nam dodá aj daľsie nástroje ktoré nám ulahčia život (napr. PuTTYgen).&#xA;Vygenerovanie SSH kľúčov Na vygenerovanie SSH kľučov je potrebný nástroj &amp;quot;PuTTYgen&amp;quot;. Ten spustíme, dole vyberieme aký typ šifry sa použije, štandartne sa používa RSA, aspoň 2048. Potom už len klikneme na &amp;quot;Generate&amp;quot;. Z dôvodu nedôvery voči funkciám ktoré generujú pseudo-nahodne čísla, sa takéto funkcie nepoužívajú z bezpečnostných dôvodov.</description>
+    </item>
+  </channel>
+</rss>

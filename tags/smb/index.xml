@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Smb on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/smb/</link>
+    <description>Recent content in Smb on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Mon, 27 May 2024 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/smb/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Samba server na Debian</title>
+      <link>https://dodoslavn.github.io/clanky/samba-server-na-debian/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/samba-server-na-debian/</guid>
+      <description>Porty to používa 139 a 445.&#xA;Inštalácia apt install samba&#xA;Konfigurácia vi /etc/samba/smb.conf&#xA;Príklad [share]&#xA;read only = no&#xA;path = /data&#xA;guest ok = yes&#xA;browsable = yes\</description>
+    </item>
+  </channel>
+</rss>

@@ -149,16 +149,16 @@ The default PIN code is 123456. The default PUK code is 12345678.<br>
 The default 3DES management key (9B) is 010203040506070801020304050607080102030405060708.<br>
 # Management key<br>
 key=$(export LC_CTYPE=C; dd if=/dev/urandom 2&gt;/dev/null | tr -d [:lower:] | tr -cd [:xdigit:] | fold -w48 | head -1)<br>
-echo ${key}<br>
-yubico-piv-tool -aset-mgm-key -n${key}<br>
+echo $<br>
+yubico-piv-tool -aset-mgm-key -n$<br>
 1234567890ASDFASDFASDFASDFASDFASDFASDFASDFASDFAS<br>
 # PIN and PUK<br>
 pin=$(export LC_CTYPE=C; dd if=/dev/urandom 2&gt;/dev/null | tr -cd [:digit:] | fold -w6 | head -1)<br>
-echo ${pin}<br>
+echo $<br>
 puk=$(export LC_CTYPE=C; dd if=/dev/urandom 2&gt;/dev/null | tr -cd [:digit:] | fold -w8 | head -1)<br>
-echo ${puk}<br>
-yubico-piv-tool -achange-pin -P123456 -N${pin}<br>
-yubico-piv-tool -achange-puk -P12345678 -N${puk}<br>
+echo $<br>
+yubico-piv-tool -achange-pin -P123456 -N$<br>
+yubico-piv-tool -achange-puk -P12345678 -N$<br>
 111111<br>
 22222222<br>
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br>
@@ -185,7 +185,7 @@ ssh-add -s /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so<br>
 #!/bin/sh<br>
 #export SSH_ASKPASS=/usr/bin/ksshaskpass<br>
 export SSH_ASKPASS=/usr/bin/ssh-askpass<br>
-/usr/bin/ssh-add ${HOME}/.ssh/id_rsa
+/usr/bin/ssh-add $/.ssh/id_rsa
 /usr/bin/ssh-add -e /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so
 /usr/bin/ssh-add -s /usr/lib/x86_64-linux-gnu/pkcs11/opensc-pkcs11.so
 #=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=<br>

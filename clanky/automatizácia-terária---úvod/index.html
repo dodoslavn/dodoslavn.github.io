@@ -104,7 +104,7 @@
       
       <h4 id="moje-prevedenie">Moje prevedenie</h4>
 <p>Moje riešenie vypadá asi takto. Mám takúto webovú stránku prístupnú odkiaľkoľvek cez internet. Môžem si tu zobraziť aktuálny stav teploty a relatívnej vlhkosti v teráriu. Viem si tu zobraziť priebeh za celý deň, poslednú hodinu, týždeň alebo aj mesiac..</p>
-<p><img src="/files/terapi/zabbix.png" alt="">{width=&ldquo;700px&rdquo; heigh=&ldquo;484&rdquo;}</p>
+<p><img src="/files/terapi/zabbix.png" alt=""></p>
 <p><br>
 Ak sa úroveň vlhkosti alebo teploty dostane cez mnou stanovený limit, príde mi notifikácia na mobil. V mojom prípade konkrétne cez emaily. Ak sa teplota alebo vlhkosť dostane cez nejakú úroveň tak sa mi automaticky spustí mlhovac, čerpadlo na zavlažovanie, vetranie alebo vyhrievanie terária. Pravidelne spínanie svetla ráno a vypínanie večer, prípadne pravidelne ovládanie ďalších zariadení môžem nastaviť tiež, takže potreba kupovania mechanických spínačov odpadá. Je tam aj možnosť ovládania na diaľku, alebo je tam aj možnosť si zobraziť fotku terária, ktorá sa robí každú minútu. Stačí USB webkamera a stiahnuť už niekým napísaný malý skrípt ktorý to vždy odfotí a uloží do webovej stránky.</p>
 <h4 id="ale">Ale..</h4>
@@ -123,21 +123,21 @@ Ak sa úroveň vlhkosti alebo teploty dostane cez mnou stanovený limit, príde 
 <h5 id="napajanie">Napajanie</h5>
 <p>RPi musime niecim napajat. Trochu vtipne sa na to pouziva obycajna nabyjacka na telefon. Musi splnat 2 parametre. Musi mat microSUB konektor, co je dnes asi este stale najpouzivanejsi konektor na nabijanie telefonu. A musi mat nejaky vykon. Vieme ze su nabijacky ktore vedia nabit telefon rychlejsie alebo pomalsie. Kazde RPi ma inu spotrebu. Ja tu mam pre priklad RPi 1B ktore ma spotrebu 5W, teda ma odber elektrickeho prudu 1A (1000mA) pri klasickom napati na USB coz je 5V. To aku ma spotrebu ine RPi alebo aky ma odber prudu sa da vzdy dohladat. Pokial si vezmem tu nabijacku do ruky tak tam najdem napisane nejakym malym pismom INPUT (vstup) a OUTPUT (vystup). Nas zaujima ten vystup. Pokial mam nabijacku kde je napisane 5V a 700mA tak je to v mojom pripade s RPi 1B malo. Pokial najdem nabijacku kde je 1200mA (1,2A) tak jelikoz je to viac ako potrebujem tak ju mozem urcite bezpecne pouzit.</p>
 <p>Nabijacka je teda nieco co mozte mat doma po starom telefone, takze ziadny vydaj navyse. Pokial by ste nemali tak nabijacka co vie dodat 1A moze stat 200KC. 2A nabijacka moze zase stat aj 400KC.</p>
-<p><img src="/files/terapi/nabijecka.jpg" alt="">{width=&ldquo;400px&rdquo; height=&ldquo;360px&rdquo;}</p>
+<p><img src="/files/terapi/nabijecka.jpg" alt=""></p>
 <h5 id="pamatova-karta">Pamatova karta</h5>
 <p>Ako som uz hovoril v RPi je pamatovka na miesto pevneho disku. V RPi 1 sa pouziva este ten velky klasicky slot SD, v ostatnych je uz vsade microSD slot. Pokial mam RPi tam samozrejme mozem pouzit aj SD adapter na pamatovu kartu microSD. Nie vsetky pamatove karty funguju, cim novsie RPi je tym menej problemov by malo mat. Osobne som naposledy kupil v najblizsom obchode na telefonu obycajnu pamatovu kartu, bola znacky Kingstone a fungovala bez problemov.</p>
 <p>Ohladne velkosti tej pamatovej akrty, tak 8GB je asi malo. 16GB sa da urcite pouzit a s 32GB je to istota ze budem mat dost. Dobre je myslet aj na rychlost pamatovej karty, casto sa oznacuje slovickom CLASS, cim vacsie cislo tam je napisane tym rychlejsie je. CLASS 10 by malo znamenat rychlost 10MB/s . Po CLASS 10 sa uz pouziva oznacenie UTF, tie su este rychlejsie. Rychlost pocitime hlavne pri instalacii a konfiguracii. Napriklad ze sa nam nejaky program nainstaluje o 10sekund rychlejsie. Po instalacii sa to moc ani pocitit neda. Ja sosobne teda na rychlost moc nehladim.</p>
 <p>Pamatovka je teda nieco co urcite mozte najst doma po starom telefone alebo fotaku. Inak napriklad 32GB karta sa da kupit za 200KC.</p>
-<p><img src="/files/terapi/vse.jpg" alt="">{width=&ldquo;400px&rdquo; height=&ldquo;360px&rdquo;}</p>
+<p><img src="/files/terapi/vse.jpg" alt=""></p>
 <h5 id="kabel-na-internet">Kabel na internet</h5>
 <p>Kto bude pripajat RPi na internet cez kabel tak ten kabel bude logicky potrebovat. Da sa kupit do 100KC. Kto ma doma problem s internetom, tak internet je vyslovene potrebny iba pri instalacii. Pokial to chcete pouzivat iba v ramci domacnosti a nechcete pristupovat z intenetu tak po instalacii internet nieje potreba. RPi musi byt umiestnene hned u teraria kde chceme merat. A to z dovodu ze sa senzor ktory na RPi bude pripojeny nemoze mat priliz dlhy kabel. Ako dlhy kabel byt moze neviem, pouzil som asi 30cm a este funguje vporiadku.</p>
-<p><img src="/files/terapi/kabel.jpg" alt="">{width=&ldquo;400px&rdquo; height=&ldquo;360px&rdquo;}</p>
+<p><img src="/files/terapi/kabel.jpg" alt=""></p>
 <h5 id="senzor">Senzor</h5>
 <p>Na meranie teploty a relativnej vlhkosti mozme pouzit napriklad senzor
 DHT11. Je to senzor ktory vie merat oboje. Mozno niekto kto sa vyzna si bude mysliet preco odporucam tak strasny senzor ako je DHT11. A ked sa nad tym zamyslim tak ten senzor je naozaj najhorsi zo vsetkych co poznam. Odporucam ho ale preto lebo bude pravdepodobne lepsi nez to co drtiva vacsina ludi co doma nieco v terarku chova. DHT11 ma problem s meranim vlhkosti nad 80% kde ta presnost klesa. Aj cez to vsetko si ale myslim ze je to dobra volba hlvne na zaciatok. Pokial by sa clovek chcel posunut a nieco lepsie by chcel, tak DHT22 je podstatne lepsi senzor. Na DHT22 sa pouziva rovnaky program na citanie nameranej hodnoty ako na DHT11, a aj zapojenie je skoro rovnake. Oba tieto senzory su nachylne na priamy kontakt s vodou, takze urcite ho mat nejakym sposobom zakryty.</p>
 <p>DHT11 stoji na eBay 22KC, a priamo v CZ sa da kupit za 60KC. DHT22 sa da kupti za 150KC na eBay a za 250KC v CZ. Ak kupujete napriklad DHT11 cez eBay tak ucite si dokupne aj tie napajacie kabliky, casto to ponukaju priamo s nimi. a Urcite aj viac kusov. Jelikoz po kontakte s vodou vedia rychlost prestat fungovat tak aby ste mali nahradny po ruke. Z eBay to moze trvat 2 mesiace kym pride.</p>
-<p><img src="/files/terapi/dht11.jpg" alt="">{width=&ldquo;400px&rdquo; height=&ldquo;360px&rdquo;}
-<img src="/files/terapi/dht22.jpg" alt="">{style=&ldquo;float: right;&rdquo; width=&ldquo;400px&rdquo; height=&ldquo;360px&rdquo;}</p>
+<p><img src="/files/terapi/dht11.jpg" alt="">
+<img src="/files/terapi/dht22.jpg" alt=""></p>
 <p>Zhnutie ceny:</p>
 <ul>
 <li>RPi - do 500-KC</li>

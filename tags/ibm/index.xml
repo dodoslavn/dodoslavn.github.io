@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ibm on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/ibm/</link>
+    <description>Recent content in Ibm on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 11 Sep 2019 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/ibm/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IBM Datastage manual</title>
+      <link>https://dodoslavn.github.io/clanky/ibm-datastage-manual/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-datastage-manual/</guid>
+      <description>Status Name Status Code Explanation DSJS.RUNNING 0 Job is actually running DSJS.RUNOK 1 Job finished a normal run with no warnings DSJS.RUNWARN 2 Job finished a normal run with warnings DSJS.RUNFAILED 3 Job finished a normal run with a fatal error DSJS.QUEUED 4 Job queued waiting for resource allocation DSJS.VALOK 11 Job finished a validation run with no warnings DSJS.VALWARN 12 Job finished a validation run with warnings DSJS.VALFAILED 13 Job failed a validation run DSJS.</description>
+    </item>
+    <item>
+      <title>IBM Datastage - inštalácia na linuxe </title>
+      <link>https://dodoslavn.github.io/clanky/ibm-datastage---in%C5%A1tal%C3%A1cia-na-linuxe-/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-datastage---in%C5%A1tal%C3%A1cia-na-linuxe-/</guid>
+      <description>Pridáme skupinu&#xA;groupadd dsodb\&#xA;Vytvoríme užívateľov&#xA;useradd -g dsodb -m dsodb;&#xA;useradd -g db2fenc1 -m db2fenc1;&#xA;useradd -g db2inst1 -m db2inst1;&#xA;useradd -g srduser -m srduser;&#xA;useradd -g iauser -m iauser;&#xA;useradd -g xmetasr -m xmetasr;&#xA;useradd -g dsadm -m dsadm;&#xA;useradd -g xmeta -m xmeta;&#xA;useradd -g dsodb -m dsodb;\&#xA;Nainštalujeme balík nástrojov&#xA;yum groupinstall &amp;quot;Development Tools&amp;quot;\&#xA;Nainštalujeme knižnice&#xA;yum install -y libXp libXtst glibc libXp libXau libXext libX11 libxcb libXmu nss compat-libstdc* glibc libXp libXtst</description>
+    </item>
+    <item>
+      <title>IBM Datastage - debug mód</title>
+      <link>https://dodoslavn.github.io/clanky/ibm-datastage---debug-m%C3%B3d/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-datastage---debug-m%C3%B3d/</guid>
+      <description>http://www-01.ibm.com/support/docview.wss?uid=swg21509567&#xA;Service management File: /opt/IBM/InformationServer/IIS115/Server/DSODB/bin/DSAppWatcher.sh Variable: APW_DEBUG&#xA;Populating DSODB File: /opt/IBM/InformationServer/IIS115/Server/DSODB/DSODBConfig.cfg Variable: TraceMax=1000&#xA;File: /opt/IBM/InformationServer/IIS115/Server/DSODB/DSODBTuning.cfg Variable: com.ibm.datastage.jlog.DSFileHandler.level=DEBUG</description>
+    </item>
+    <item>
+      <title>IBM IS Datastage - inštalácia FixPack-u</title>
+      <link>https://dodoslavn.github.io/clanky/ibm-is-datastage---in%C5%A1tal%C3%A1cia-fixpack-u/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-is-datastage---in%C5%A1tal%C3%A1cia-fixpack-u/</guid>
+      <description>Príprava: http://www-01.ibm.com/support/docview.wss?uid=swg24044633&#xA;Procedúra: http://www.ibm.com/support/docview.wss?uid=swg22014102&#xA;http://www-01.ibm.com/support/docview.wss?uid=swg27046499&amp;amp;aid=1&#xA;\&#xA;Create folders: mkdir /data/IS&#xA;mkdir /data/IS/BACKUP&#xA;Move installation file to the server: is-update-linux64-11.7.0.106.tar&#xA;fixpack_FP2_IS115_linux64_11500-11501.ispkg\&#xA;Increase size of /tmp FS to have at least 2.5GB of free space&#xA;--- Procedure ---&#xA;1.) connect to the server&#xA;#verify health and status&#xA;#create maintenance flag for monitoring&#xA;2.) stop Datastage&#xA;3.) perform DB2 XMETA database offline backup to folder: /data/IS/BACKUP&#xA;//DB2 part&#xA;Note: permission issue, 1.2GB, lasted few seconds</description>
+    </item>
+    <item>
+      <title>IBM IS Datastage - zmena hesiel</title>
+      <link>https://dodoslavn.github.io/clanky/ibm-is-datastage---zmena-hesiel/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-is-datastage---zmena-hesiel/</guid>
+      <description>Note: this is procedure to update password for OS accounts which are used by Datastage.&#xA;User &amp;quot;xmeta&amp;quot;:&#xA;KB link:&#xA;https://www.ibm.com/support/knowledgecenter/en/SSYQ72_10.0.4/com.ibm.help.suiteinstall1004.reportconfig.doc/T_ResettingPasswordForXMetaAndCognos.html&#xA;1.) switch to main DS user&#xA;su - dsadm&#xA;2.) move to the folder&#xA;cd /opt/IBM/InformationServer/IIS115/ASBServer/bin&#xA;3.) update the password via script&#xA;./AppServerAdmin.sh -db -user xmeta -password&#xA;4.) verify the password via command&#xA;./AppServerAdmin.sh -w&#xA;User &amp;quot;xmetasr&amp;quot;:&#xA;KB link: http://www-01.ibm.com/support/docview.wss?uid=swg21640075&#xA;1.) switch to main DS user&#xA;su - dsadm&#xA;2.) move to the folder</description>
+    </item>
+  </channel>
+</rss>

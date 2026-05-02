@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ciliat on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/ciliat/</link>
+    <description>Recent content in Ciliat on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sat, 13 Mar 2021 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/ciliat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Automatizácia terária - Úvod</title>
+      <link>https://dodoslavn.github.io/clanky/automatiz%C3%A1cia-ter%C3%A1ria---%C3%BAvod/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/automatiz%C3%A1cia-ter%C3%A1ria---%C3%BAvod/</guid>
+      <description>Moje prevedenie Moje riešenie vypadá asi takto. Mám takúto webovú stránku prístupnú odkiaľkoľvek cez internet. Môžem si tu zobraziť aktuálny stav teploty a relatívnej vlhkosti v teráriu. Viem si tu zobraziť priebeh za celý deň, poslednú hodinu, týždeň alebo aj mesiac..&#xA;Ak sa úroveň vlhkosti alebo teploty dostane cez mnou stanovený limit, príde mi notifikácia na mobil. V mojom prípade konkrétne cez emaily. Ak sa teplota alebo vlhkosť dostane cez nejakú úroveň tak sa mi automaticky spustí mlhovac, čerpadlo na zavlažovanie, vetranie alebo vyhrievanie terária.</description>
+    </item>
+  </channel>
+</rss>

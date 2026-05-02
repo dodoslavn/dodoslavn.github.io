@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Speed on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/speed/</link>
+    <description>Recent content in Speed on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 01 Feb 2024 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/speed/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Diagnostika výkonu diskov na Linux-e</title>
+      <link>https://dodoslavn.github.io/clanky/diagnostika-v%C3%BDkonu-diskov-na-linux-e/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/diagnostika-v%C3%BDkonu-diskov-na-linux-e/</guid>
+      <description>Úvod Najskôr sa pozrieme na nástroje ktoré slúžia na zobrazenie aktuálneho vytaženia diskov. Potom na nástroje ktoré tie disky vedia zaťažiť.&#xA;sar Nástroj ktorý zobrazí základné metriky, všetky dokopy. Popis výstupu:&#xA;sar -b -p 1&#xA;tps - Celkový počet dokončených transakcí za sekundu (čítanie aj zápis) rtps - počet dokončených transakcí na čítanie wtps - to isté akorát zápis bread/s - počet prečítaných blokov zo všetkých blokových zariadení za sekundu bwrtn/s - to isté akorat zápis iostat Zobrazí vytťaženie diskov, pre každý disk zvlášť.</description>
+    </item>
+  </channel>
+</rss>

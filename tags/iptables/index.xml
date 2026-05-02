@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Iptables on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/iptables/</link>
+    <description>Recent content in Iptables on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sat, 04 Mar 2017 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/iptables/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Firewall iptables - základné nastavenia</title>
+      <link>https://dodoslavn.github.io/clanky/firewall-iptables---z%C3%A1kladn%C3%A9-nastavenia/</link>
+      <pubDate>Sat, 04 Mar 2017 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/firewall-iptables---z%C3%A1kladn%C3%A9-nastavenia/</guid>
+      <description>Zmažeme všetky nastavenia, na toto pozor, lebo to všetku komunikáciu zablokuje:&#xA;iptables -F;&#xA;Nastavíme všeobecné pravidlá, že sa všetka prichádzajúca komunikácia bude blokovať:&#xA;iptables -P FORWARD DROP;&#xA;iptables -P INPUT DROP;&#xA;iptables -P OUTPUT ACCEPT;&#xA;Pre povolenie prichádzajúcich paketov prijatých vytvorených spojení:&#xA;iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT&#xA;Povolenie všetkého na localhost-e:&#xA;iptables -A INPUT -s 127.0.0.0/8 -d 127.0.0.0/8 -i lo -j ACCEPT&#xA;Otvorenie samotného portu, napr. 22 pre SSH server, alebo 80 pre HTTP server:</description>
+    </item>
+  </channel>
+</rss>

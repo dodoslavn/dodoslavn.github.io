@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Postgre on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/postgre/</link>
+    <description>Recent content in Postgre on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sun, 10 Jun 2018 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/postgre/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Základ konfiguráce Postgre pod Debian 9</title>
+      <link>https://dodoslavn.github.io/clanky/z%C3%A1klad-konfigur%C3%A1ce-postgre-pod-debian-9/</link>
+      <pubDate>Sun, 10 Jun 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/z%C3%A1klad-konfigur%C3%A1ce-postgre-pod-debian-9/</guid>
+      <description>Samotná inštalácia Postgre:&#xA;apt install postgresql&#xA;Týmto príkazom vstúpime do príkazovej riadky Postgre ako užívateľ postgres ktorý má najväčšie oprávnenie, no dá sa použiť v základnom nastavení len z príkazovej riadky a z OS účtu postgres:&#xA;su - postgres -c psql&#xA;Predošlí príkaz využijeme a vytvoríme si nového užívateľa pre nejakú aplikáciu:&#xA;su - postgres -c &amp;quot;psql -c \&amp;quot;create user uzivatel with encrypted password &#39;heslo&#39;;\&amp;quot;&amp;quot;&#xA;Pre pokračovanie, musíme vytvoriť ešte databázu k tomuto užívateľovi:</description>
+    </item>
+  </channel>
+</rss>

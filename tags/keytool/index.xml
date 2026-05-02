@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Keytool on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/keytool/</link>
+    <description>Recent content in Keytool on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 25 Mar 2021 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/keytool/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Certifikáty SSL/TLS a podobné</title>
+      <link>https://dodoslavn.github.io/clanky/certifik%C3%A1ty-ssl_tls-a-podobn%C3%A9/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/certifik%C3%A1ty-ssl_tls-a-podobn%C3%A9/</guid>
+      <description>JKS Zobraziť obsah JKS súboru (všetky aliasy)&#xA;keytool -v -list -keystore subor.jks&#xA;Zobraziť jeden konkrétny alias z JKS&#xA;keytool -list -keystore subor.jks -alias alias_nazov&#xA;Konvertovanie JKS do P12 Všetky aliasy z JKS do P12&#xA;keytool -importkeystore -srckeystore vstupny.jks -destkeystore vystupny.p12 -srcstoretype jks deststoretype pkcs12&#xA;Jeden konkrétny alias z JKS do PEM&#xA;keytool -exportcert -alias nazov_aliasy -keystore vstupny.jks -rfc -file vystup.pem&#xA;Konvertovanie P12 do PEM openssl pkcs12 -in tvoj_subor.p12 -out tvoj_subor.pem</description>
+    </item>
+  </channel>
+</rss>

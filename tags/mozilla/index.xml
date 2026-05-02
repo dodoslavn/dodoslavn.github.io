@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mozilla on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/mozilla/</link>
+    <description>Recent content in Mozilla on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Tue, 21 Feb 2012 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/mozilla/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Flash na Debian 6 s amd64</title>
+      <link>https://dodoslavn.github.io/clanky/flash-na-debian-6-s-amd64/</link>
+      <pubDate>Tue, 21 Feb 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/flash-na-debian-6-s-amd64/</guid>
+      <description>Prvé čo musím ale pripomenúť je, že to funguje len pre prehliadače:&#xA;- Mozilla Firefox - Opera Ešte dodám že Mozilla Firefox je na Debian-e nazvaný Iceweasel.&#xA;Ako prvé si stiahneme Flash knižnicu. K tomuto návodu bude najlepšie ked stiahnutý súbor uložíte na svoju pracovnú plochu&#xA;www.macromedia.com/..&#xA;Daľej si otvoríme užívateľský terminál, upozornujem že nie terminál root-a, tam by potom tento návod &amp;quot;krok-za-krokom&amp;quot; úplne neplatil. Predpokaldám že sa v ňom nachádzate v domovskom adresári.</description>
+    </item>
+  </channel>
+</rss>

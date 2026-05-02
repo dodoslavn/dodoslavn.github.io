@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Export on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/export/</link>
+    <description>Recent content in Export on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 16 May 2018 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/export/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Exportovanie FileSystému cez virtualbox</title>
+      <link>https://dodoslavn.github.io/clanky/exportovanie-filesyst%C3%A9mu-cez-virtualbox/</link>
+      <pubDate>Wed, 16 May 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/exportovanie-filesyst%C3%A9mu-cez-virtualbox/</guid>
+      <description>Ako prerekvizitu použijeme klasický postup na exportovanie adresára medzi systémami.&#xA;\&#xA;Povedzme že máme host systém, na ktorom beží VM. Z neho bude zdielaný nejaký adresár. Do súbora /etc/exports vložíme:&#xA;/data/Virtual_machine_1 127.0.0.1(rw,sync,no_subtree_check,no_root_squash,insecure)&#xA;Vo VM, sa pozrieme aká je DefaultGateway&#xA;route | grep default | awk &#39;&#39;&#xA;zase pridáme do /etc/fstab pričom ako IP použijeme zistenú DefaultGateway&#xA;10.0.2.2:/data/Virtual_machine_1 /mnt nfs defaults 0 0</description>
+    </item>
+  </channel>
+</rss>

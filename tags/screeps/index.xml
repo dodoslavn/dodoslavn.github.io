@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Screeps on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/screeps/</link>
+    <description>Recent content in Screeps on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 14 Nov 2018 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/screeps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Screeps - inštalácia privátneho servera</title>
+      <link>https://dodoslavn.github.io/clanky/screeps---in%C5%A1tal%C3%A1cia-priv%C3%A1tneho-servera/</link>
+      <pubDate>Wed, 14 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/screeps---in%C5%A1tal%C3%A1cia-priv%C3%A1tneho-servera/</guid>
+      <description>Pridáme repozitáre:&#xA;echo &amp;quot;deb http://ftp.cz.debian.org/debian/ stretch main non-free&#xA;deb-src http://ftp.cz.debian.org/debian/ stretch main non-free&#xA;deb http://security.debian.org/debian-security stretch/updates main contrib non-free&#xA;deb-src http://security.debian.org/debian-security stretch/updates main contrib non-free&#xA;# stretch-updates, previously known as &#39;volatile&#39;&#xA;deb http://ftp.cz.debian.org/debian/ stretch-updates main contrib&#xA;deb-src http://ftp.cz.debian.org/debian/ stretch-updates main contrib&#xA;&amp;quot; &amp;gt; /etc/apt/sources.list&#xA;Nainštalujeme pár základných balíčkov&#xA;apt-get clean ;&#xA;apt update ;&#xA;apt install -y apt-utils ;&#xA;apt install -y dialog ;&#xA;apt install -y libterm-ui-perl ;&#xA;apt upgrade -y ;</description>
+    </item>
+  </channel>
+</rss>

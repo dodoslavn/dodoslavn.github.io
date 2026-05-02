@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Turbo on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/turbo/</link>
+    <description>Recent content in Turbo on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sun, 29 Apr 2012 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/turbo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Delphi - Ako pracovať s MySQL </title>
+      <link>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql-/</link>
+      <pubDate>Sun, 29 Apr 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql-/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Delphi - Ako pracovať s MySQL - Prípravy</title>
+      <link>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql---pr%C3%ADpravy/</link>
+      <pubDate>Mon, 23 Apr 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql---pr%C3%ADpravy/</guid>
+      <description>Ešte pred tým ako začneme, sa uistíme či máme všetko potrebné.&#xA;Bude potrebovať: - MySQL server - MySQL ODBC connector - komponenta ADO k Delphi MySQL server, si môžte stiahnuť z oficiálnej stránky (mysql.com/downloads/) a k nemu ODBC connector, ktorý zase stiahnete odtiaľto (mysql.com/downloads/). Ďalej čo sa týka Delphi a jeho komponentov, budeme potrebovať triedu komponentov ADO. Vo verzie Delphi 7 Enterprise sa už nachádza, no vlastníkov verzie Delphi 5 asi moc nepoteším, kedže sa v zozname pred inštalovaných nenachádza.</description>
+    </item>
+  </channel>
+</rss>

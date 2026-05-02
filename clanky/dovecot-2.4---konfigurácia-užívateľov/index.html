@@ -133,9 +133,9 @@ userdb static {<br>
 fields {<br>
 uid = vmail<br>
 gid = vmail<br>
-home = /var/vmail/%{user}<br>
+home = /var/vmail/%<br>
 mail_driver = maildir<br>
-mail_path = /var/vmail/%{user}/Maildir # full mail location<br>
+mail_path = /var/vmail/%/Maildir # full mail location<br>
 }<br>
 }\</p>
 </blockquote>
@@ -148,7 +148,7 @@ mail_path = /var/vmail/%{user}/Maildir # full mail location<br>
 <p>Vygenerované hash-e následne vložíme do statického súbora</p>
 <blockquote>
 <p>cat /etc/dovecot/passdb<br>
-<a href="mailto:user@example.com">user@example.com</a>:{SHA512-CRYPT}$6$ziZNc.6ZnITxQooC$8v2fltMQXFiTql04uGGszwwICwtJ1s27RxJaiW9wb1rm.4NUsKN7DLJ1A/joHifadEHGM.D2JIOwfphgI/WWF.</p>
+<a href="mailto:user@example.com">user@example.com</a>:$6$ziZNc.6ZnITxQooC$8v2fltMQXFiTql04uGGszwwICwtJ1s27RxJaiW9wb1rm.4NUsKN7DLJ1A/joHifadEHGM.D2JIOwfphgI/WWF.</p>
 </blockquote>
 
     </article>

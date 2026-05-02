@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/windows/</link>
+    <description>Recent content in Windows on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Mon, 27 May 2024 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Samba server na Debian</title>
+      <link>https://dodoslavn.github.io/clanky/samba-server-na-debian/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/samba-server-na-debian/</guid>
+      <description>Porty to používa 139 a 445.&#xA;Inštalácia apt install samba&#xA;Konfigurácia vi /etc/samba/smb.conf&#xA;Príklad [share]&#xA;read only = no&#xA;path = /data&#xA;guest ok = yes&#xA;browsable = yes\</description>
+    </item>
+    <item>
+      <title>Putty a SSH kľúče</title>
+      <link>https://dodoslavn.github.io/clanky/putty-a-ssh-k%C4%BE%C3%BA%C4%8De/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/putty-a-ssh-k%C4%BE%C3%BA%C4%8De/</guid>
+      <description>Putty Najskôr potrebujeme nainštalovať samotné Putty, nie &amp;quot;portable&amp;quot; verziu. A to z dôvodu že klasický inštalátor nam dodá aj daľsie nástroje ktoré nám ulahčia život (napr. PuTTYgen).&#xA;Vygenerovanie SSH kľúčov Na vygenerovanie SSH kľučov je potrebný nástroj &amp;quot;PuTTYgen&amp;quot;. Ten spustíme, dole vyberieme aký typ šifry sa použije, štandartne sa používa RSA, aspoň 2048. Potom už len klikneme na &amp;quot;Generate&amp;quot;. Z dôvodu nedôvery voči funkciám ktoré generujú pseudo-nahodne čísla, sa takéto funkcie nepoužívajú z bezpečnostných dôvodov.</description>
+    </item>
+    <item>
+      <title>Windows - tipy a triky</title>
+      <link>https://dodoslavn.github.io/clanky/windows---tipy-a-triky/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/windows---tipy-a-triky/</guid>
+      <description>Nastavenie premennej v rgistroch cez Command Line:&#xA;&amp;quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\LanmanServer\Parameters&amp;quot; /f /v &amp;quot;SMB1&amp;quot; /t REG_DWORD /d &amp;quot;1&amp;quot;&#xA;Nastavenie premennej v rgistroch cez PowerShell:&#xA;Set-ItemProperty -Path &amp;quot;HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters&amp;quot; SMB1 -Type DWORD -Value 1 -Force&#xA;Ako spustiť PowerShell skript z Command Line:&#xA;C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File C:\Windows\moj_skript.ps1</description>
+    </item>
+    <item>
+      <title>Linux a Dual Boot</title>
+      <link>https://dodoslavn.github.io/clanky/linux-a-dual-boot/</link>
+      <pubDate>Mon, 05 Mar 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux-a-dual-boot/</guid>
+      <description>Je niekoľko spôsobov ako to dosiahnuť. Pokiaľ máme nainštalovaný Linux ale spúšta sa nám iba priamo MS Windows, nabootujeme nejaku Live distribúciu z USB alebo cez CD/DVD-ROM. Osobne používam Ubuntu. Na verzi nezáleží, takže môžme použiť aj staršiu inštalačku, musíme však dodržať architektúru.&#xA;Po nabootovaní Linuxu otvoríme terminál a pripojime disk kde máme uz nainštalovaný Linux do &amp;quot;/mnt&amp;quot;.&#xA;sudo mount /dev/sda1 /mnt ;&#xA;Nabindujeme pár potrebných adresárov&#xA;sudo mount --bind /dev /mnt/dev ;</description>
+    </item>
+    <item>
+      <title>Inštalácia Counter-Strike 1.6  servera</title>
+      <link>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-counter-strike-1.6--servera/</link>
+      <pubDate>Thu, 15 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-counter-strike-1.6--servera/</guid>
+      <description>Budeme k tomu potrebovať niekoľko zásadných vecí, ako je pripojenie k internetu, a oprávnenie na inštaláciu softwéru. Najskôr is stiahneme HLDS Update Tool, ktorý následne na to nainštalujeme. Tento nástroj slúži na stiahnutie oficiálnych dedikovaných serverov. Teraz ho stačí už len spustiť, a to pod určitými parametrami. Predpokladá sa že ste nemenili adresár inštalácie. Teda by mal byť:&#xA;C:Program Files\Valve\HLServer&#xA;Môžme teda začať inštalovať. Najskôr sa presunieme do, už spomínaného adresára, príkazom:</description>
+    </item>
+    <item>
+      <title>Event okno na Windows Server 2003</title>
+      <link>https://dodoslavn.github.io/clanky/event-okno-na-windows-server-2003/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/event-okno-na-windows-server-2003/</guid>
+      <description>Celé je to veľmi jednoduchá a rýchla vec, takže bez zbytočných obkecov ideme na to!&#xA;Takže najskôr si otvoríme takzvaný:&#xA;Group Policy Object Editor&#xA;Ten spustíme tak že pôjdeme na:&#xA;START -&amp;gt; RUN / SPUSTIT&#xA;a tam napíšeme:&#xA;gpedit.msc&#xA;..a potvrdíme. Objavilo sa nám okno, a teraz na paneli (na ľavej strane) sa budeme postupne preklikávať:&#xA;Computer Configuration -&amp;gt; Administrative Templates -&amp;gt; System&#xA;Na pravej strane máme zoznam položiek, v kt.</description>
+    </item>
+    <item>
+      <title>Ako blokovať webovú stránku na Windowse</title>
+      <link>https://dodoslavn.github.io/clanky/ako-blokova%C5%A5-webov%C3%BA-str%C3%A1nku-na-windowse/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-blokova%C5%A5-webov%C3%BA-str%C3%A1nku-na-windowse/</guid>
+      <description>Takže bez zpytočných obkecov začneme.&#xA;Presunieme sa na adresár:&#xA;C:\WINDOWS\system32\drivers\etc&#xA;V tomto adresáre sa nachádza súbor&#xA;hosts&#xA;Otvoríme ho v nejakom textovom editore ako napríklad Notepad alebo aj v Poznámkovom bloku. Do tohto súboru budeme na úplny spodok vkladať domény stránok ktoré chceme zabokovať. Vždy na nový riadok napíšeme svoju IP adresu localhostu. Tá je vždy:&#xA;127.0.0.1&#xA;a o medzeru(na velkosti medzere nezáleží) za nu napíšeme jednu doménu stránky ktorú chceme zablokovať.</description>
+    </item>
+    <item>
+      <title>Ako zrýchliť Windows XP</title>
+      <link>https://dodoslavn.github.io/clanky/ako-zr%C3%BDchli%C5%A5-windows-xp/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-zr%C3%BDchli%C5%A5-windows-xp/</guid>
+      <description>Začneme s vypínaním nepotrebých služieb. Budeme otvárať nasledujúce zložky:&#xA;START -&amp;gt; OVLADACI PANEL -&amp;gt; ADMINISTRATIVNE NASTROJE -&amp;gt; SLUZBY&#xA;alebo kto to má po anglicky:&#xA;START -&amp;gt; CONTROL PANEL -&amp;gt; ADMINISTRATIVE TOOLS -&amp;gt; SERVICES&#xA;a teraz už budeme len vypínat nepotrebné služby, a tu je ich zoznam:&#xA;- Adapér výkonu služby WMI\&#xA;Automatická konfigurácia bezdrótových zariadení - ak máte WiFi sieť tak to nechajte\ Automatické aktualizáce - ak ich nepoužívate, zakážte\ Centrum Zabezpečenia - táto služba sa moc používat nedá, odporúčam zakazáť\ Témy - ak nechcete moc využívať vzhľad tak zakážte\ Nápoveda a odborná pomoc - dobrá kravina ZAKAZTE\ Podpora rozhrani NetBIOS nad protokolem TCP/IP - v skutočnosti predstavuje nebezpečie dúfam, že zakážete\ Server - ak nepoužívate zdielanie súborov, zakážte\ Služba rozpoznávania pomocou protokolu SSDP\ Vzdialený register - bezpečnostná diera, zakážte\ Webový klient - s webom nemá nič spolocčného, zakážte\ Zasilani sprav o chybách\ Kto nevie ako sa vypínaju tak, kliknite na službu pravým tlačidlom na myši a dajte&amp;quot;</description>
+    </item>
+    <item>
+      <title>Triky s prihlasovaním v registri</title>
+      <link>https://dodoslavn.github.io/clanky/triky-s-prihlasovan%C3%ADm-v-registri/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/triky-s-prihlasovan%C3%ADm-v-registri/</guid>
+      <description>Ak sa Vám sa zobrazuje pri spustení Windowsu pri prihlasovaní kto bol naposledy prihlásený, inak povedané políčko kde sa zadáva Login (Meno užívateľa) ostalo vyplnené?&#xA;Aj takáto vec sa dá riešiť cez register.&#xA;KROK 1 - Spusti Regedit&#xA;KROK 2 - Dostaň sa na adresár:&#xA;HKEY_LOCAL_MACHINE -&amp;gt; SOFTWARE -&amp;gt;Microsoft -&amp;gt; Windows-&amp;gt; CurrentVersion -&amp;gt; policies -&amp;gt; system&#xA;KROK 3 - Vytvor novú DWORD hodnotu &amp;quot;DontDisplayLastUserName&amp;quot; s hodnotou &amp;quot;1&amp;quot;.&#xA;Po reštarte by malo fugnovať.</description>
+    </item>
+    <item>
+      <title>Záloha registra na Windows XP</title>
+      <link>https://dodoslavn.github.io/clanky/z%C3%A1loha-registra-na-windows-xp/</link>
+      <pubDate>Tue, 16 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/z%C3%A1loha-registra-na-windows-xp/</guid>
+      <description>Stačí si spustiť Windowsovu utilitu Backup&#xA;START -&amp;gt; ALL PROGRAMS -&amp;gt; ACCESSORIES -&amp;gt; SYSTEM TOOLS -&amp;gt; BACKUP&#xA;alebo kto to má po slovensky tak&#xA;START -&amp;gt; PROGRAMY -&amp;gt; PRISLUSENSTVO -&amp;gt; SYSTEMOVE NASTROJE -&amp;gt; BACK UP&#xA;Takato záloha registru síce zaberá niekedy 500MB niekedy viacej. To záleží ako je preplnený. Takúto zálohu si môžete potom aj napáliť na disk a pri instalácií nového Windowsu len cez Reagedit importovať.&#xA;A teraz samotný návod:</description>
+    </item>
+  </channel>
+</rss>

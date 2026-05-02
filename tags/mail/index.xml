@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mail on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/mail/</link>
+    <description>Recent content in Mail on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 11 Dec 2025 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/mail/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Postfix a Dovecot - email servery</title>
+      <link>https://dodoslavn.github.io/clanky/postfix-a-dovecot---email-servery/</link>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/postfix-a-dovecot---email-servery/</guid>
+      <description>postconf&#xA;dovecot -n</description>
+    </item>
+    <item>
+      <title>Dovecot 2.4 - Konfigurácia užívateľov</title>
+      <link>https://dodoslavn.github.io/clanky/dovecot-2.4---konfigur%C3%A1cia-u%C5%BE%C3%ADvate%C4%BEov/</link>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/dovecot-2.4---konfigur%C3%A1cia-u%C5%BE%C3%ADvate%C4%BEov/</guid>
+      <description>Výber autentifikácie Zakomentovať alebo vybrať jeden správny spôsob autentifikácie v /etc/dovecot-conf.d/10-auth.conf&#xA;#!include auth-deny.conf.ext&#xA;#!include auth-master.conf.ext&#xA;#!include auth-oauth2.conf.ext&#xA;#!include auth-system.conf.ext&#xA;#!include auth-sql.conf.ext&#xA;#!include auth-ldap.conf.ext&#xA;#!include auth-passwdfile.conf.ext&#xA;!include auth-static.conf.ext\&#xA;Nastavenie autentifikácie Konfigurácia statického súbora /etc/dovecot-conf.d/conf.d/auth-static.conf.ext&#xA;auth_mechanisms = plain login&#xA;auth_allow_cleartext = no&#xA;passdb passwd-file {&#xA;passwd_file_path = /etc/dovecot/passdb&#xA;# passdb_default_password_scheme = SHA512-CRYPT&#xA;}&#xA;userdb static {&#xA;fields {&#xA;uid = vmail&#xA;gid = vmail&#xA;home = /var/vmail/%&#xA;mail_driver = maildir&#xA;mail_path = /var/vmail/%/Maildir # full mail location</description>
+    </item>
+  </channel>
+</rss>

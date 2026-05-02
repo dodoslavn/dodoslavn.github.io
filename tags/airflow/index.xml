@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Airflow on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/airflow/</link>
+    <description>Recent content in Airflow on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/airflow/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inštalácia Airflow</title>
+      <link>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-airflow/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-airflow/</guid>
+      <description>Inštalácia systémových balíkov apt install -y default-libmysqlclient-dev build-essential&#xA;Inštalácia samotného Airflow cd /niekam/ python3 -m venv . ./bin/pip3 install apache-airflow[mysql] ./airflow db init&#xA;Úprava konfigurácie Otvoríme súbor&#xA;vi ../home/airflow/airflow.cfg&#xA;a nastavíme v nom&#xA;sql_alchemy_conn = mysql+mysqldb://airflow_user:your_secure_password@localhost:3306/airflow_db executor = LocalExecutor&#xA;Inicializácia databáze ./airflow db init&#xA;Pridanie účtu ./airflow users create your_username --firstname first_name --lastname last_name --role Admin --email username@example.com</description>
+    </item>
+  </channel>
+</rss>

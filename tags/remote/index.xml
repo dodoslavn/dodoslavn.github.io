@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Remote on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/remote/</link>
+    <description>Recent content in Remote on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Fri, 05 May 2017 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/remote/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Virtualbox - zaheslovanie VRDE prístupu</title>
+      <link>https://dodoslavn.github.io/clanky/virtualbox---zaheslovanie-vrde-pr%C3%ADstupu/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/virtualbox---zaheslovanie-vrde-pr%C3%ADstupu/</guid>
+      <description>Povolíme knižnicu:&#xA;VBoxManage setproperty vrdeauthlibrary &amp;quot;VBoxAuthSimple&amp;quot;&#xA;Nastavíme premennú do ktorej vložíme názov virtuálneho stroja:&#xA;VM=WinXP_01&#xA;Nastavíme spôsob prihlásenia:&#xA;VBoxManage modifyvm &amp;quot;$VM&amp;quot; --vrdeauthtype external&#xA;Vygenerujeme hash z hesla:&#xA;VBoxManage internalcommands passwordhash &amp;quot;hesloheslo&amp;quot;&#xA;To nám vrátilo dlhý reťazec znakov - hash. Teraz ho použijeme pri nastavení prihlasovacieho mena a hesla:&#xA;VBoxManage setextradata &amp;quot;$VM&amp;quot; &amp;quot;VBoxAuthSimple/users/meno_uzivtela&amp;quot; hash_z_predchadzajuceho_kroku&#xA;Dôležitá poznámka je, že pri používaní &amp;quot;Remote Desktop Connection&amp;quot; z OS Windows, musíme hneď pod pole kde zadávame adresu servera ,zaškrknúť checkbox pre umožnenie uloženia mena a hesla.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>How on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/how/</link>
+    <description>Recent content in How on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Tue, 03 Jul 2012 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/how/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debian - Inštalácia ProFTPd servera</title>
+      <link>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-proftpd-servera/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-proftpd-servera/</guid>
+      <description>Ako prvé si samotnú aplikáciu nainštalujeme:&#xA;apt-get install proftpd&#xA;Po úspešnej inštalacií, môžme začať s konfiguráciou. Na začiatok vložíme do /etc/shells riadok, /bin/false&#xA;echo &amp;quot;/bin/false&amp;quot; &amp;gt;&amp;gt; /bin/false&#xA;Teraz sa môžme pustiť do samotnej konfigurácie. Konfiguračný súbor , proftpd.conf , nájdeme v typickom adresáre /etc/proftpd/. Takže zadáme&#xA;nano /etc/proftpd/proftpd.conf&#xA;Tu si môžem nastaviť základne parametre servera ako jeho názov, port, TimoOut-y. Napr. jedno veľmi dôležité bezpečnostné nastavenie je DefaultRoot. Pokiaľ nieje nastavené alebo je nastavené na off tak užívatelia budú mať voľný prístup k celému systému.</description>
+    </item>
+    <item>
+      <title>Delphi - Ako pracovať s MySQL </title>
+      <link>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql-/</link>
+      <pubDate>Sun, 29 Apr 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql-/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Delphi - Ako pracovať s MySQL - Prípravy</title>
+      <link>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql---pr%C3%ADpravy/</link>
+      <pubDate>Mon, 23 Apr 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql---pr%C3%ADpravy/</guid>
+      <description>Ešte pred tým ako začneme, sa uistíme či máme všetko potrebné.&#xA;Bude potrebovať: - MySQL server - MySQL ODBC connector - komponenta ADO k Delphi MySQL server, si môžte stiahnuť z oficiálnej stránky (mysql.com/downloads/) a k nemu ODBC connector, ktorý zase stiahnete odtiaľto (mysql.com/downloads/). Ďalej čo sa týka Delphi a jeho komponentov, budeme potrebovať triedu komponentov ADO. Vo verzie Delphi 7 Enterprise sa už nachádza, no vlastníkov verzie Delphi 5 asi moc nepoteším, kedže sa v zozname pred inštalovaných nenachádza.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apache on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/apache/</link>
+    <description>Recent content in Apache on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sun, 08 Apr 2018 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/apache/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ako na HTTPS s Lets Enrypt</title>
+      <link>https://dodoslavn.github.io/clanky/ako-na-https-s-lets-enrypt/</link>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-na-https-s-lets-enrypt/</guid>
+      <description>Nainštalujeme nástroj:&#xA;sudo apt install python-certbot-apache&#xA;Spustíme ho, vybereme ktorý virtual host chceme použiť, musíme mať len jeden v každom súbore&#xA;certbot --authenticator webroot --installer apache&#xA;Tiež musíme zadať cestu do DocumentRoot adresára, preto pokiaľ používame virtualhost iba na Redirect alebo Proxy, musíme to na chvíľu vypnúť a nastaviť ho. Po skončení skriptu môžme daľej pokračovať v používaní predošlej konfigurácie, s tým čo nam pridal skript.&#xA;Pokiaľ nám prehliadač stále píše že pripojenie nieje plne zabezpečené, je potreba pozrieť všetky linky, niekde je asi použitá plná cesta s http:// .</description>
+    </item>
+    <item>
+      <title>Ako pridať ďalší Apache server</title>
+      <link>https://dodoslavn.github.io/clanky/ako-prida%C5%A5-%C4%8Fal%C5%A1%C3%AD-apache-server/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-prida%C5%A5-%C4%8Fal%C5%A1%C3%AD-apache-server/</guid>
+      <description>Nainštalujeme samotný Apache&#xA;apt install apache2&#xA;Spustíme ho a pozreme sa či funguje, a to tak že otvoríme nejaký prehliadač ako je Mozilla a skúsime adresu localhost&#xA;systemctl start apache2&#xA;Tvorba novej inštalácie a jej príprava Pridáme ďalšiu inštaláciu, ktorá sa bude volať apache2-rizek&#xA;cd /usr/share/doc/apache2/examples&#xA;bash setup-instance rizek&#xA;systemctl enable apache2@rizek.service&#xA;Kúzlo ďalšej inštalácie je že môže bežať pod iným užívateľom, takže jedného pridáme&#xA;adduser --home /var/www-rizek www-rizek&#xA;Upravíme pod ktorým užívateľom to ma bežať</description>
+    </item>
+    <item>
+      <title>Viacero inštancií apache2 servera</title>
+      <link>https://dodoslavn.github.io/clanky/viacero-in%C5%A1tanci%C3%AD-apache2-servera/</link>
+      <pubDate>Thu, 25 Sep 2014 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/viacero-in%C5%A1tanci%C3%AD-apache2-servera/</guid>
+      <description>Počas celého procesu budeme použíať jeden ľubovolný tag ktorým budeme odlišovať novú inštanciu od pôvodnej. Ja som si zvolil skuska. Ako prvé si vytvoríme kópiu celého priečinka /etc/apache.&#xA;NAME=skuska&#xA;cp -r /etc/apache2 /etc/apache2-$NAME&#xA;V dalšom kroku vytvoríme kópiu súborov ktoré následne upravíme&#xA;cp /usr/sbin/a2ensite /usr/sbin/a2ensite-$NAME&#xA;cp /usr/sbin/a2dissite /usr/sbin/a2dissite-$NAME&#xA;cp /usr/sbin/a2enmod /usr/sbin/a2enmod-$NAME&#xA;cp /usr/sbin/a2dismod /usr/sbin/a2dismod-$NAME\&#xA;Vo všetkých týchto súboroch nasledujúci riadok&#xA;: &amp;quot;/etc/apache2$dir_suffix/envvars&amp;quot;&#xA;upravíme na&#xA;: &amp;quot;/etc/apache2-skuska$dir_suffix/envvars&amp;quot;&#xA;Malo by sa to nachádzať niekde okolo 27.</description>
+    </item>
+  </channel>
+</rss>

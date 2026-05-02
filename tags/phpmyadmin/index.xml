@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Phpmyadmin on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/phpmyadmin/</link>
+    <description>Recent content in Phpmyadmin on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/phpmyadmin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ako presunúť PHPMyAdmin do subdomény</title>
+      <link>https://dodoslavn.github.io/clanky/ako-presun%C3%BA%C5%A5-phpmyadmin-do-subdom%C3%A9ny/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-presun%C3%BA%C5%A5-phpmyadmin-do-subdom%C3%A9ny/</guid>
+      <description>Vypneme aktuálny virtualhost:&#xA;sudo a2disconf phpmyadmin&#xA;Vytvoríme nový PHPMyAdmin konfiguračný súbor virtualhostu:&#xA;vi /etc/apache2/sites-enabled/new_phpmyadmin.conf&#xA;Vložíme doň obsah súboru phpmyadmin.conf a upravíme doménu podľa seba.&#xA;Povolíme ho:&#xA;sudo a2enconf&#xA;Reštartujeme apache2&#xA;sudo systemctl reload apache2.service</description>
+    </item>
+  </channel>
+</rss>

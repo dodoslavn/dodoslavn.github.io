@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Client on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/client/</link>
+    <description>Recent content in Client on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Tue, 03 Jul 2012 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/client/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debian - Inštalácia ProFTPd servera</title>
+      <link>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-proftpd-servera/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-proftpd-servera/</guid>
+      <description>Ako prvé si samotnú aplikáciu nainštalujeme:&#xA;apt-get install proftpd&#xA;Po úspešnej inštalacií, môžme začať s konfiguráciou. Na začiatok vložíme do /etc/shells riadok, /bin/false&#xA;echo &amp;quot;/bin/false&amp;quot; &amp;gt;&amp;gt; /bin/false&#xA;Teraz sa môžme pustiť do samotnej konfigurácie. Konfiguračný súbor , proftpd.conf , nájdeme v typickom adresáre /etc/proftpd/. Takže zadáme&#xA;nano /etc/proftpd/proftpd.conf&#xA;Tu si môžem nastaviť základne parametre servera ako jeho názov, port, TimoOut-y. Napr. jedno veľmi dôležité bezpečnostné nastavenie je DefaultRoot. Pokiaľ nieje nastavené alebo je nastavené na off tak užívatelia budú mať voľný prístup k celému systému.</description>
+    </item>
+    <item>
+      <title>Torrent klient Transmission na Debian</title>
+      <link>https://dodoslavn.github.io/clanky/torrent-klient-transmission-na-debian/</link>
+      <pubDate>Sun, 11 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/torrent-klient-transmission-na-debian/</guid>
+      <description>Nainštalujeme samotný Transmission:&#xA;apt install transmission-cli transmission-common transmission-daemon&#xA;Môžme sa pozrieť že beží:&#xA;systemctl status transmission-daemon.service&#xA;GUI je vo forme webovej stránky, štandartne prístupná iba z localhost a to beží na:&#xA;http://localhost:9091&#xA;Prihlasovacie meno je rovnaké ako heslo:&#xA;transmission&#xA;Pokiaľ chceme niečo konfigurovať, musíme celý klient najskôr vypnúť:&#xA;systemctl stop transmission-daemon.service&#xA;Konfiguráciu nastavíme spôsobom:&#xA;sudo vi /etc/transmission-daemon/settings.json&#xA;Zmena hesla do GUI prebiehe spôsobom že namiesto hashu ako je tento:&#xA;&amp;quot;rpc-password&amp;quot;: &amp;quot;{93ddee5728888a0568c7d151cbf541fe738b7674mJ8y6YJi&amp;quot;,</description>
+    </item>
+  </channel>
+</rss>

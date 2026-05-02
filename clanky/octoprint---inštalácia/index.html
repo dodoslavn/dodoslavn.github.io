@@ -139,11 +139,11 @@ After=network.target<br>
 <br>
 [Service]<br>
 Type=simple<br>
-User=${OCTO_USER}<br>
-Group=${OCTO_USER}<br>
-WorkingDirectory=/home/${OCTO_USER}<br>
+User=$<br>
+Group=$<br>
+WorkingDirectory=/home/$<br>
 <br>
-ExecStart=/home/${OCTO_USER}/venv/bin/octoprint serve --host=127.0.0.1 --port=5000<br>
+ExecStart=/home/$/venv/bin/octoprint serve --host=127.0.0.1 --port=5000<br>
 <br>
 Restart=always<br>
 RestartSec=5<br>

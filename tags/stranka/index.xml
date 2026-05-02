@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Stranka on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/stranka/</link>
+    <description>Recent content in Stranka on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 17 Aug 2011 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/stranka/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ako blokovať webovú stránku na Windowse</title>
+      <link>https://dodoslavn.github.io/clanky/ako-blokova%C5%A5-webov%C3%BA-str%C3%A1nku-na-windowse/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-blokova%C5%A5-webov%C3%BA-str%C3%A1nku-na-windowse/</guid>
+      <description>Takže bez zpytočných obkecov začneme.&#xA;Presunieme sa na adresár:&#xA;C:\WINDOWS\system32\drivers\etc&#xA;V tomto adresáre sa nachádza súbor&#xA;hosts&#xA;Otvoríme ho v nejakom textovom editore ako napríklad Notepad alebo aj v Poznámkovom bloku. Do tohto súboru budeme na úplny spodok vkladať domény stránok ktoré chceme zabokovať. Vždy na nový riadok napíšeme svoju IP adresu localhostu. Tá je vždy:&#xA;127.0.0.1&#xA;a o medzeru(na velkosti medzere nezáleží) za nu napíšeme jednu doménu stránky ktorú chceme zablokovať.</description>
+    </item>
+  </channel>
+</rss>

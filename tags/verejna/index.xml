@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Verejna on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/verejna/</link>
+    <description>Recent content in Verejna on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sun, 14 Mar 2021 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/verejna/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IP adresy</title>
+      <link>https://dodoslavn.github.io/clanky/ip-adresy/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ip-adresy/</guid>
+      <description>IPv4 IP adresy verzie 4 sa skladajú zo 4 čísiel oddelených bodkou. Každé číslo je od 0 do 255 (v bežnej desiatkovej sústave). Presnejšie 4, jedno bajtové čísla oddelené bodkou. Jeden B (bajt) sa skladá z 8 b (bitov). Osem bitov sa dá tiež nazvať ako jeden oktet. Jeden bit je buď 0 alebo 1. Takže sa dá IP adresa vyjadriť aj v bitoch, to zanmená že budú 4 osem-ciferné čisla(alebo 4 oktety) oddelené bodkou, kde každá cifra bude 0 alebo 1.</description>
+    </item>
+  </channel>
+</rss>

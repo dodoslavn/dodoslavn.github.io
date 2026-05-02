@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Jessie on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/jessie/</link>
+    <description>Recent content in Jessie on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Fri, 09 Dec 2016 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/jessie/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debian a jeho nový editor VI</title>
+      <link>https://dodoslavn.github.io/clanky/debian-a-jeho-nov%C3%BD-editor-vi/</link>
+      <pubDate>Fri, 09 Dec 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian-a-jeho-nov%C3%BD-editor-vi/</guid>
+      <description>Pre každého užévateľa v systéme budeme dávať príkazy.&#xA;Aby nam fungovali šipky:&#xA;echo &amp;quot;set nocompatible&amp;quot; &amp;gt;&amp;gt; ~/.vimrc&#xA;Vypnutie VISUAL módu kvôli ktorému myška funguje inak:&#xA;echo &amp;quot;set mouse-=a &amp;quot; &amp;gt;&amp;gt; ~/.vimrc</description>
+    </item>
+    <item>
+      <title>Návod na VirtualBox v konzole</title>
+      <link>https://dodoslavn.github.io/clanky/n%C3%A1vod-na-virtualbox-v-konzole/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/n%C3%A1vod-na-virtualbox-v-konzole/</guid>
+      <description>Príprava Z dôvodu že sa konfigurácia ukladá do domovského adresára užívateľa, nedá sa virtuálny stroj spustiť pod iným užívateľom. Preto je vhodné na to vytvoriť nového.&#xA;sudo adduser virtualbox&#xA;Pridáme repozitár na nainštalovanie VirtualBoxu (pod root-om)&#xA;echo &amp;quot;deb http://download.virtualbox.org/virtualbox/debian jessie contrib&amp;quot; &amp;gt;&amp;gt; /etc/apt/sources.list&#xA;Pridanie kľúča:&#xA;wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc&#xA;apt-key add oracle_vbox_2016.asc&#xA;Inštalácia VirtualBoxu&#xA;sudo apt-get update; sudo apt-get -y --force-yes install virtualbox-5.1&#xA;Ak niesu nainštalované doplnky&#xA;sudo VBoxManage list extpacks&#xA;Sú vhodne ked sa chceme napríklad pripojiť pomocou VNC alebo Remote Desktop.</description>
+    </item>
+    <item>
+      <title>Instalacia QT Creator na Debian 8</title>
+      <link>https://dodoslavn.github.io/clanky/instalacia-qt-creator-na-debian-8/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/instalacia-qt-creator-na-debian-8/</guid>
+      <description>nebolo tot ake izi&#xA;apt-get install gcc qt5-default qtcreator build-essential g++</description>
+    </item>
+  </channel>
+</rss>

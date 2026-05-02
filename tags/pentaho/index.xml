@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pentaho on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/pentaho/</link>
+    <description>Recent content in Pentaho on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 05 Jul 2018 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/pentaho/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pentaho slave server</title>
+      <link>https://dodoslavn.github.io/clanky/pentaho-slave-server/</link>
+      <pubDate>Thu, 05 Jul 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/pentaho-slave-server/</guid>
+      <description>$ cat data-integration/configuration.xml Slave01 0.0.0.0 9081 10000 1440 1440</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Key on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/key/</link>
+    <description>Recent content in Key on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 07 Feb 2024 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/key/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ako na podpisovanie gitových komitov</title>
+      <link>https://dodoslavn.github.io/clanky/ako-na-podpisovanie-gitov%C3%BDch-komitov/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-na-podpisovanie-gitov%C3%BDch-komitov/</guid>
+      <description>1. generate GPG key gpg --gen-key 2. Verify if its there and gpg --list-keys 3. if its not trusted as Ultimate gpg --list-secret-keys --keyid-format LONG gpg --edit-key trust save 4. save it to github in your profile gpg --list-secret-keys --keyid-format LONG gpg --armor --export 5. set the key as &amp;ldquo;global&amp;rdquo; or &amp;ldquo;local&amp;rdquo;, it requires your name in the email as ID, not ID of your GPG !!! git config --global user.</description>
+    </item>
+    <item>
+      <title>SSL/TLS a certifikačné autority</title>
+      <link>https://dodoslavn.github.io/clanky/ssl_tls-a-certifika%C4%8Dn%C3%A9-autority/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ssl_tls-a-certifika%C4%8Dn%C3%A9-autority/</guid>
+      <description>Úvod Funguje to asi takto, najskôr si musíme vygenerovať privátny kľúč ktorý sa použije pre samotnú certifikačnú autoritu. Pomocou verejného kľúča certifikačnej autority sa potom budú kontrolovať certifikáty na strane užívateľov.&#xA;Ďalší krok je vytvoriť certifikačnú autoritu z tohoto privátneho kľúča. Pri tvorbe sa vyberú aj nejaké meta dáta a popis. To je celé.&#xA;Potom už len generujeme privátne kľúče pre konkrétne systémy alebo domény zvlášť,&#xA;z nich následne vytvoríme CSR (Certificate Signign Request) kde zase nastavíme nejaké meta dáta ako je napríklad konkrétna doména pre ktorú to má byť použité.</description>
+    </item>
+    <item>
+      <title>Putty a SSH kľúče</title>
+      <link>https://dodoslavn.github.io/clanky/putty-a-ssh-k%C4%BE%C3%BA%C4%8De/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/putty-a-ssh-k%C4%BE%C3%BA%C4%8De/</guid>
+      <description>Putty Najskôr potrebujeme nainštalovať samotné Putty, nie &amp;quot;portable&amp;quot; verziu. A to z dôvodu že klasický inštalátor nam dodá aj daľsie nástroje ktoré nám ulahčia život (napr. PuTTYgen).&#xA;Vygenerovanie SSH kľúčov Na vygenerovanie SSH kľučov je potrebný nástroj &amp;quot;PuTTYgen&amp;quot;. Ten spustíme, dole vyberieme aký typ šifry sa použije, štandartne sa používa RSA, aspoň 2048. Potom už len klikneme na &amp;quot;Generate&amp;quot;. Z dôvodu nedôvery voči funkciám ktoré generujú pseudo-nahodne čísla, sa takéto funkcie nepoužívajú z bezpečnostných dôvodov.</description>
+    </item>
+    <item>
+      <title>Nastavenie Yubikey na SSH v Linux-e</title>
+      <link>https://dodoslavn.github.io/clanky/nastavenie-yubikey-na-ssh-v-linux-e/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/nastavenie-yubikey-na-ssh-v-linux-e/</guid>
+      <description># YUBICO&#xA;# https://support.yubico.com/hc/en-us/articles/360016649039-Enabling-the-Yubico-PPA-on-Ubuntu&#xA;sudo add-apt-repository ppa:yubico/stable &amp;amp;&amp;amp; sudo apt-get update&#xA;sudo apt install yubikey-manager&#xA;sudo apt install yubikey-personalization-gui&#xA;sudo apt install yubico-piv-tool&#xA;sudo apt install libpam-yubico&#xA;sudo apt install libpam-u2f&#xA;# check service&#xA;sudo systemctl start pcscd&#xA;sudo systemctl enable pcscd&#xA;systemctl status pcscd&#xA;#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=&#xA;To get yubikey-manager-qt for Ubuntu 20.04/20.10 follow steps (you will have to&#xA;build it yourself):&#xA;git clone https://github.com/Yubico/yubikey-manager-qt&#xA;cd yubikey-manager-qt&#xA;sudo apt install devscripts equivs</description>
+    </item>
+    <item>
+      <title>Obnovenie certifikátov pre repozitáre</title>
+      <link>https://dodoslavn.github.io/clanky/obnovenie-certifik%C3%A1tov-pre-repozit%C3%A1re/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/obnovenie-certifik%C3%A1tov-pre-repozit%C3%A1re/</guid>
+      <description>sudo apt-key list | \\ grep &amp;quot;expired: &amp;quot; | \\ sed -ne &#39;s|pub .*/\([^ ]*\) .*|\1|gp&#39; | \\ xargs -n1 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys</description>
+    </item>
+    <item>
+      <title>SSH kľúče, tipy a triky</title>
+      <link>https://dodoslavn.github.io/clanky/ssh-k%C4%BE%C3%BA%C4%8De-tipy-a-triky/</link>
+      <pubDate>Wed, 07 Sep 2016 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ssh-k%C4%BE%C3%BA%C4%8De-tipy-a-triky/</guid>
+      <description>Vygenerovanie SSH kľúča Kľúč sa vygeneruje v &amp;quot;~/.ssh&amp;quot;. Kde sa vygeneruje verejný aj súkromný kľúč. Použijeme heslo ktoré sa zadá vždy pri prvom použití po prihlásení do systému.&#xA;ssh-keygen -t rsa&#xA;Skopírovanie verejného kľúča na server Tento príkaz skopíruje verejný kľúč na server.&#xA;ssh-copy-id uzivatel@server&#xA;Ignorovanie overovania fingerprint-ov pri pripojení -o StrictHostKeychecking=no</description>
+    </item>
+  </channel>
+</rss>

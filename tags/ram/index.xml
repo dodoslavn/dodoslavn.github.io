@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ram on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/ram/</link>
+    <description>Recent content in Ram on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Fri, 23 Jun 2017 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/ram/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vytvorenie RAM drive na Linuxe</title>
+      <link>https://dodoslavn.github.io/clanky/vytvorenie-ram-drive-na-linuxe/</link>
+      <pubDate>Fri, 23 Jun 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/vytvorenie-ram-drive-na-linuxe/</guid>
+      <description>Toto je spôsob ako vytvoriť RAM drive. Dá sa to dobre automatizovať ked dáme tieto príkazy do skriptu, a skript dáme na spustenie po štarte systému.&#xA;Vytvorenie adresára:&#xA;mkdir /tmp/ramdisk ;&#xA;Nastavenie oprávnenia:&#xA;chmod 777 /tmp/ramdisk ;&#xA;Vytvorenie samotného RAM drive:&#xA;mount -t tmpfs -o size=10000M tmpfs /tmp/ramdisk/ ;</description>
+    </item>
+  </channel>
+</rss>

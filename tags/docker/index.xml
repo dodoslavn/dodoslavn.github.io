@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docker on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/docker/</link>
+    <description>Recent content in Docker on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Fri, 20 Apr 2018 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/docker/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Docker - inštalácia a prvé kroky</title>
+      <link>https://dodoslavn.github.io/clanky/docker---in%C5%A1tal%C3%A1cia-a-prv%C3%A9-kroky/</link>
+      <pubDate>Fri, 20 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/docker---in%C5%A1tal%C3%A1cia-a-prv%C3%A9-kroky/</guid>
+      <description>Inštalácia Nainštalujeme pár základných vecí:&#xA;apt install apt-transport-https dirmngr&#xA;Pridáme repozitár:&#xA;echo &#39;deb https://apt.dockerproject.org/repo debian-stretch main&#39; &amp;gt;&amp;gt; /etc/apt/sources.list&#xA;Pridáme kľúč:&#xA;apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys F76221572C52609D&#xA;Spravíme update balíkov:&#xA;apt update&#xA;Nainštalujeme samotný Docker:&#xA;apt install docker-engine&#xA;Používanie Stiahneme nejaký Image&#xA;docker pull debian&#xA;Spustíme ho, a to tak že bežiaci kontajner sa bude volať smazak, bude vytvorený z obrazu debian ktorý sme prave stiahli, a spustíme na ňom /bin/bash</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vyhladavac on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/vyhladavac/</link>
+    <description>Recent content in Vyhladavac on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sun, 02 Oct 2011 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/vyhladavac/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SEO - viditeľné faktory</title>
+      <link>https://dodoslavn.github.io/clanky/seo---vidite%C4%BEn%C3%A9-faktory/</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/seo---vidite%C4%BEn%C3%A9-faktory/</guid>
+      <description>Tu sa budeme zaoberať týmito viditeľnýmy faktormy:&#xA;- titulka stránky - nadpis v stránke - text stránky - odchádzajúce odkazy - kľúčové slová v URL a v doméne - vnutorná štruktúra odkazov - tematické zameranie webu ako takého Tititulka stránky Titulka stránky je textový retazec definovaný obsahom elementu:&#xA;&amp;lt; title &amp;gt; &amp;lt; /title &amp;gt;&#xA;v HTML elemente &amp;lt; head &amp;gt;. Titulka je viditeľná v okne prehliadača a tiež vo výsledkoch vyhľadávania.</description>
+    </item>
+  </channel>
+</rss>

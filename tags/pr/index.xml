@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pr on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/pr/</link>
+    <description>Recent content in Pr on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 17 Aug 2011 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/pr/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Triky s prihlasovaním v registri</title>
+      <link>https://dodoslavn.github.io/clanky/triky-s-prihlasovan%C3%ADm-v-registri/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/triky-s-prihlasovan%C3%ADm-v-registri/</guid>
+      <description>Ak sa Vám sa zobrazuje pri spustení Windowsu pri prihlasovaní kto bol naposledy prihlásený, inak povedané políčko kde sa zadáva Login (Meno užívateľa) ostalo vyplnené?&#xA;Aj takáto vec sa dá riešiť cez register.&#xA;KROK 1 - Spusti Regedit&#xA;KROK 2 - Dostaň sa na adresár:&#xA;HKEY_LOCAL_MACHINE -&amp;gt; SOFTWARE -&amp;gt;Microsoft -&amp;gt; Windows-&amp;gt; CurrentVersion -&amp;gt; policies -&amp;gt; system&#xA;KROK 3 - Vytvor novú DWORD hodnotu &amp;quot;DontDisplayLastUserName&amp;quot; s hodnotou &amp;quot;1&amp;quot;.&#xA;Po reštarte by malo fugnovať.</description>
+    </item>
+  </channel>
+</rss>

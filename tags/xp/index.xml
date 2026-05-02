@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>XP on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/xp/</link>
+    <description>Recent content in XP on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 17 Aug 2011 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/xp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ako zrýchliť Windows XP</title>
+      <link>https://dodoslavn.github.io/clanky/ako-zr%C3%BDchli%C5%A5-windows-xp/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-zr%C3%BDchli%C5%A5-windows-xp/</guid>
+      <description>Začneme s vypínaním nepotrebých služieb. Budeme otvárať nasledujúce zložky:&#xA;START -&amp;gt; OVLADACI PANEL -&amp;gt; ADMINISTRATIVNE NASTROJE -&amp;gt; SLUZBY&#xA;alebo kto to má po anglicky:&#xA;START -&amp;gt; CONTROL PANEL -&amp;gt; ADMINISTRATIVE TOOLS -&amp;gt; SERVICES&#xA;a teraz už budeme len vypínat nepotrebné služby, a tu je ich zoznam:&#xA;- Adapér výkonu služby WMI\&#xA;Automatická konfigurácia bezdrótových zariadení - ak máte WiFi sieť tak to nechajte\ Automatické aktualizáce - ak ich nepoužívate, zakážte\ Centrum Zabezpečenia - táto služba sa moc používat nedá, odporúčam zakazáť\ Témy - ak nechcete moc využívať vzhľad tak zakážte\ Nápoveda a odborná pomoc - dobrá kravina ZAKAZTE\ Podpora rozhrani NetBIOS nad protokolem TCP/IP - v skutočnosti predstavuje nebezpečie dúfam, že zakážete\ Server - ak nepoužívate zdielanie súborov, zakážte\ Služba rozpoznávania pomocou protokolu SSDP\ Vzdialený register - bezpečnostná diera, zakážte\ Webový klient - s webom nemá nič spolocčného, zakážte\ Zasilani sprav o chybách\ Kto nevie ako sa vypínaju tak, kliknite na službu pravým tlačidlom na myši a dajte&amp;quot;</description>
+    </item>
+    <item>
+      <title>Triky s prihlasovaním v registri</title>
+      <link>https://dodoslavn.github.io/clanky/triky-s-prihlasovan%C3%ADm-v-registri/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/triky-s-prihlasovan%C3%ADm-v-registri/</guid>
+      <description>Ak sa Vám sa zobrazuje pri spustení Windowsu pri prihlasovaní kto bol naposledy prihlásený, inak povedané políčko kde sa zadáva Login (Meno užívateľa) ostalo vyplnené?&#xA;Aj takáto vec sa dá riešiť cez register.&#xA;KROK 1 - Spusti Regedit&#xA;KROK 2 - Dostaň sa na adresár:&#xA;HKEY_LOCAL_MACHINE -&amp;gt; SOFTWARE -&amp;gt;Microsoft -&amp;gt; Windows-&amp;gt; CurrentVersion -&amp;gt; policies -&amp;gt; system&#xA;KROK 3 - Vytvor novú DWORD hodnotu &amp;quot;DontDisplayLastUserName&amp;quot; s hodnotou &amp;quot;1&amp;quot;.&#xA;Po reštarte by malo fugnovať.</description>
+    </item>
+    <item>
+      <title>Záloha registra na Windows XP</title>
+      <link>https://dodoslavn.github.io/clanky/z%C3%A1loha-registra-na-windows-xp/</link>
+      <pubDate>Tue, 16 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/z%C3%A1loha-registra-na-windows-xp/</guid>
+      <description>Stačí si spustiť Windowsovu utilitu Backup&#xA;START -&amp;gt; ALL PROGRAMS -&amp;gt; ACCESSORIES -&amp;gt; SYSTEM TOOLS -&amp;gt; BACKUP&#xA;alebo kto to má po slovensky tak&#xA;START -&amp;gt; PROGRAMY -&amp;gt; PRISLUSENSTVO -&amp;gt; SYSTEMOVE NASTROJE -&amp;gt; BACK UP&#xA;Takato záloha registru síce zaberá niekedy 500MB niekedy viacej. To záleží ako je preplnený. Takúto zálohu si môžete potom aj napáliť na disk a pri instalácií nového Windowsu len cez Reagedit importovať.&#xA;A teraz samotný návod:</description>
+    </item>
+  </channel>
+</rss>

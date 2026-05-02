@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Audio on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/audio/</link>
+    <description>Recent content in Audio on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 16 Jun 2021 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/audio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Audio zosilovač - 2x 15W z TDA7297</title>
+      <link>https://dodoslavn.github.io/clanky/audio-zosilova%C4%8D---2x-15w-z-tda7297/</link>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/audio-zosilova%C4%8D---2x-15w-z-tda7297/</guid>
+      <description>Veci som objednával väčšinou z www.gme.cz, lebo ich mám hned oproti domu. Musel som ešte prikúpiť step-down, a použil som starý, malý vetrák na uchladenie toho TDA.&#xA;Krabička Proste krabička s rozmermi, aby sa zmestilo všetko.&#xA;Odkaz: https://www.gme.cz/krabicka-plastova-kp09-bez-otvoru-z-2p Cena: 99KC Konektor na 230V Pre jednoduchosť a univerzálnosť som použil klasický Euro-konektor. Dá sa jednoducho prišróbovať ku krabici.&#xA;Odkaz: https://www.gme.cz/napajeci-euro-konektor-schurter-6100-3200 Cena: 27KC Konektor na repro Klasicky reprokonektor, 2kusy pre lavy a pravy kanal.</description>
+    </item>
+  </channel>
+</rss>

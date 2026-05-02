@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vnutrne on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/vnutrne/</link>
+    <description>Recent content in Vnutrne on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Tue, 18 Oct 2011 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/vnutrne/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SEO - vnútorné faktory časť 1.</title>
+      <link>https://dodoslavn.github.io/clanky/seo---vn%C3%BAtorn%C3%A9-faktory-%C4%8Das%C5%A5-1./</link>
+      <pubDate>Tue, 18 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/seo---vn%C3%BAtorn%C3%A9-faktory-%C4%8Das%C5%A5-1./</guid>
+      <description>V týchto dieloch si budeme preberať tieto dieli:&#xA;- množstvo, kvalita a relevancia prichádzajúcich odkazov - vírenie odkazov - miera pribúdania odkazov - text odkazov a okolného textu - vzájomné odkazy - počet odkazov na stránke - semantické súvislosti medzi odkazmy na stránke - IP adresa vzájomne sa odkazujúcich webov - TLD doménoveho mena odkazov - poloha odkazu - platnosť podľa webových štandardov - škodlivé faktory Množstvo prichádzajúcich odkazov Web na ktorý odchádza veľmi veľa odkazov, bude asi významny, kedže mu dalo vela ludí svoj hlas a dalo si jeho odkaz na svoj web.</description>
+    </item>
+  </channel>
+</rss>

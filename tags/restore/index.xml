@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Restore on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/restore/</link>
+    <description>Recent content in Restore on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <atom:link href="https://dodoslavn.github.io/tags/restore/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>MySQL - záloha a obnova databáze</title>
+      <link>https://dodoslavn.github.io/clanky/mysql---z%C3%A1loha-a-obnova-datab%C3%A1ze/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/mysql---z%C3%A1loha-a-obnova-datab%C3%A1ze/</guid>
+      <description>Vyzálohovanie vsštkých databáz:&#xA;/usr/bin/mysqldump --all-databases | gzip -c -9 &amp;gt; /opt/backup/sql/dump_$(date &#39;+%Y-%m-%d&#39;).sql.gz&#xA;Nahranie zálohy na server:&#xA;mysql -h $SERVER -u $USER -p &amp;lt; &amp;quot;dump_&amp;quot;$DATUM&amp;quot;.sql.gz&amp;quot;&#xA;Aby to fungovalo, musíme ešte do MySQL konzole zadať príkaz na spracovanie privilegií:&#xA;FLUSH PRIVILEGES</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bluehat on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/bluehat/</link>
+    <description>Recent content in Bluehat on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/bluehat/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux RedHat - typy a triky</title>
+      <link>https://dodoslavn.github.io/clanky/linux-redhat---typy-a-triky/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux-redhat---typy-a-triky/</guid>
+      <description>Alo vyresetovať užívateľovi heslo:&#xA;pam_tally2 --user=uzivatel01 --reset&#xA;sswd | grep czz07390 vi /etc/sysconfig/iptables&#xA;systemctl reload iptables\</description>
+    </item>
+  </channel>
+</rss>

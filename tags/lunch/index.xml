@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lunch on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/lunch/</link>
+    <description>Recent content in Lunch on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sat, 29 Oct 2011 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/lunch/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Delphi - spúštanie aplikacií</title>
+      <link>https://dodoslavn.github.io/clanky/delphi---sp%C3%BA%C5%A1tanie-aplikaci%C3%AD/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/delphi---sp%C3%BA%C5%A1tanie-aplikaci%C3%AD/</guid>
+      <description>..clanok bude neskor napisany</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,2364 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/</link>
+    <description>Recent content in Tags on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Arpa</title>
+      <link>https://dodoslavn.github.io/tags/arpa/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/arpa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dns</title>
+      <link>https://dodoslavn.github.io/tags/dns/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/dns/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Home.arpa</title>
+      <link>https://dodoslavn.github.io/tags/home.arpa/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/home.arpa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Local</title>
+      <link>https://dodoslavn.github.io/tags/local/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/local/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Unbound</title>
+      <link>https://dodoslavn.github.io/tags/unbound/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/unbound/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>3d</title>
+      <link>https://dodoslavn.github.io/tags/3d/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/3d/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Octo</title>
+      <link>https://dodoslavn.github.io/tags/octo/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/octo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Octoprint</title>
+      <link>https://dodoslavn.github.io/tags/octoprint/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/octoprint/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Print</title>
+      <link>https://dodoslavn.github.io/tags/print/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/print/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Printer</title>
+      <link>https://dodoslavn.github.io/tags/printer/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/printer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tiskarna</title>
+      <link>https://dodoslavn.github.io/tags/tiskarna/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/tiskarna/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tlaciaren</title>
+      <link>https://dodoslavn.github.io/tags/tlaciaren/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/tlaciaren/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cache</title>
+      <link>https://dodoslavn.github.io/tags/cache/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/cache/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debian</title>
+      <link>https://dodoslavn.github.io/tags/debian/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/debian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Resolver</title>
+      <link>https://dodoslavn.github.io/tags/resolver/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/resolver/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dovecot</title>
+      <link>https://dodoslavn.github.io/tags/dovecot/</link>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/dovecot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Email</title>
+      <link>https://dodoslavn.github.io/tags/email/</link>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/email/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mail</title>
+      <link>https://dodoslavn.github.io/tags/mail/</link>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/mail/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Postfix</title>
+      <link>https://dodoslavn.github.io/tags/postfix/</link>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/postfix/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Imap</title>
+      <link>https://dodoslavn.github.io/tags/imap/</link>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/imap/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fronty</title>
+      <link>https://dodoslavn.github.io/tags/fronty/</link>
+      <pubDate>Tue, 11 Nov 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/fronty/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Queue</title>
+      <link>https://dodoslavn.github.io/tags/queue/</link>
+      <pubDate>Tue, 11 Nov 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/queue/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rabbitmq</title>
+      <link>https://dodoslavn.github.io/tags/rabbitmq/</link>
+      <pubDate>Tue, 11 Nov 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/rabbitmq/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Elastic</title>
+      <link>https://dodoslavn.github.io/tags/elastic/</link>
+      <pubDate>Tue, 09 Sep 2025 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/elastic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kibana</title>
+      <link>https://dodoslavn.github.io/tags/kibana/</link>
+      <pubDate>Tue, 09 Sep 2025 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/kibana/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Logstash</title>
+      <link>https://dodoslavn.github.io/tags/logstash/</link>
+      <pubDate>Tue, 09 Sep 2025 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/logstash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Daemon</title>
+      <link>https://dodoslavn.github.io/tags/daemon/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/daemon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://dodoslavn.github.io/tags/linux/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Service</title>
+      <link>https://dodoslavn.github.io/tags/service/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/service/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sluzba</title>
+      <link>https://dodoslavn.github.io/tags/sluzba/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/sluzba/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Systemd</title>
+      <link>https://dodoslavn.github.io/tags/systemd/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/systemd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Timer</title>
+      <link>https://dodoslavn.github.io/tags/timer/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/timer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Airflow</title>
+      <link>https://dodoslavn.github.io/tags/airflow/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/airflow/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bi</title>
+      <link>https://dodoslavn.github.io/tags/bi/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/bi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Database</title>
+      <link>https://dodoslavn.github.io/tags/database/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/database/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Databaza</title>
+      <link>https://dodoslavn.github.io/tags/databaza/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/databaza/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Db</title>
+      <link>https://dodoslavn.github.io/tags/db/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/db/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dwh</title>
+      <link>https://dodoslavn.github.io/tags/dwh/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/dwh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Etl</title>
+      <link>https://dodoslavn.github.io/tags/etl/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/etl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sql</title>
+      <link>https://dodoslavn.github.io/tags/sql/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/sql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Custom</title>
+      <link>https://dodoslavn.github.io/tags/custom/</link>
+      <pubDate>Thu, 19 Sep 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/custom/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Monitoring</title>
+      <link>https://dodoslavn.github.io/tags/monitoring/</link>
+      <pubDate>Thu, 19 Sep 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/monitoring/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Script</title>
+      <link>https://dodoslavn.github.io/tags/script/</link>
+      <pubDate>Thu, 19 Sep 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/script/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Skript</title>
+      <link>https://dodoslavn.github.io/tags/skript/</link>
+      <pubDate>Thu, 19 Sep 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/skript/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zabbix</title>
+      <link>https://dodoslavn.github.io/tags/zabbix/</link>
+      <pubDate>Thu, 19 Sep 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/zabbix/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Network</title>
+      <link>https://dodoslavn.github.io/tags/network/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/network/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ntop</title>
+      <link>https://dodoslavn.github.io/tags/ntop/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ntop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ntopng</title>
+      <link>https://dodoslavn.github.io/tags/ntopng/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ntopng/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Security</title>
+      <link>https://dodoslavn.github.io/tags/security/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/security/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Frekvencie</title>
+      <link>https://dodoslavn.github.io/tags/frekvencie/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/frekvencie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Noaa</title>
+      <link>https://dodoslavn.github.io/tags/noaa/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/noaa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pasmo</title>
+      <link>https://dodoslavn.github.io/tags/pasmo/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/pasmo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rtl</title>
+      <link>https://dodoslavn.github.io/tags/rtl/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/rtl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rtl-Sdr</title>
+      <link>https://dodoslavn.github.io/tags/rtl-sdr/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/rtl-sdr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Satelite</title>
+      <link>https://dodoslavn.github.io/tags/satelite/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/satelite/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>SDR</title>
+      <link>https://dodoslavn.github.io/tags/sdr/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/sdr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Antena</title>
+      <link>https://dodoslavn.github.io/tags/antena/</link>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/antena/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Radio</title>
+      <link>https://dodoslavn.github.io/tags/radio/</link>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/radio/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cifs</title>
+      <link>https://dodoslavn.github.io/tags/cifs/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/cifs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Defined</title>
+      <link>https://dodoslavn.github.io/tags/defined/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/defined/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nooa</title>
+      <link>https://dodoslavn.github.io/tags/nooa/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/nooa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Samba</title>
+      <link>https://dodoslavn.github.io/tags/samba/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/samba/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Smb</title>
+      <link>https://dodoslavn.github.io/tags/smb/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/smb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Software</title>
+      <link>https://dodoslavn.github.io/tags/software/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/software/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Windows</title>
+      <link>https://dodoslavn.github.io/tags/windows/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/windows/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cli</title>
+      <link>https://dodoslavn.github.io/tags/cli/</link>
+      <pubDate>Tue, 09 Apr 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/cli/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Editor</title>
+      <link>https://dodoslavn.github.io/tags/editor/</link>
+      <pubDate>Tue, 09 Apr 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/editor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tet</title>
+      <link>https://dodoslavn.github.io/tags/tet/</link>
+      <pubDate>Tue, 09 Apr 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/tet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vi</title>
+      <link>https://dodoslavn.github.io/tags/vi/</link>
+      <pubDate>Tue, 09 Apr 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/vi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vim</title>
+      <link>https://dodoslavn.github.io/tags/vim/</link>
+      <pubDate>Tue, 09 Apr 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/vim/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apt</title>
+      <link>https://dodoslavn.github.io/tags/apt/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/apt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apt-Get</title>
+      <link>https://dodoslavn.github.io/tags/apt-get/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/apt-get/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Commit</title>
+      <link>https://dodoslavn.github.io/tags/commit/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/commit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Git</title>
+      <link>https://dodoslavn.github.io/tags/git/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/git/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gpg</title>
+      <link>https://dodoslavn.github.io/tags/gpg/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/gpg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Key</title>
+      <link>https://dodoslavn.github.io/tags/key/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/key/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Komit</title>
+      <link>https://dodoslavn.github.io/tags/komit/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/komit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Podpis</title>
+      <link>https://dodoslavn.github.io/tags/podpis/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/podpis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sign</title>
+      <link>https://dodoslavn.github.io/tags/sign/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/sign/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Signature</title>
+      <link>https://dodoslavn.github.io/tags/signature/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/signature/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Upgrade</title>
+      <link>https://dodoslavn.github.io/tags/upgrade/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/upgrade/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Disk</title>
+      <link>https://dodoslavn.github.io/tags/disk/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/disk/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hdd</title>
+      <link>https://dodoslavn.github.io/tags/hdd/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/hdd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Iops</title>
+      <link>https://dodoslavn.github.io/tags/iops/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/iops/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Performance</title>
+      <link>https://dodoslavn.github.io/tags/performance/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/performance/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rychlost</title>
+      <link>https://dodoslavn.github.io/tags/rychlost/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/rychlost/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Speed</title>
+      <link>https://dodoslavn.github.io/tags/speed/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/speed/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssd</title>
+      <link>https://dodoslavn.github.io/tags/ssd/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ssd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vykon</title>
+      <link>https://dodoslavn.github.io/tags/vykon/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/vykon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zapis</title>
+      <link>https://dodoslavn.github.io/tags/zapis/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/zapis/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cert</title>
+      <link>https://dodoslavn.github.io/tags/cert/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/cert/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certificate</title>
+      <link>https://dodoslavn.github.io/tags/certificate/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/certificate/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certifikacne</title>
+      <link>https://dodoslavn.github.io/tags/certifikacne/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/certifikacne/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Certifikat</title>
+      <link>https://dodoslavn.github.io/tags/certifikat/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/certifikat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Https</title>
+      <link>https://dodoslavn.github.io/tags/https/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/https/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pem</title>
+      <link>https://dodoslavn.github.io/tags/pem/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/pem/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssl</title>
+      <link>https://dodoslavn.github.io/tags/ssl/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ssl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tls</title>
+      <link>https://dodoslavn.github.io/tags/tls/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/tls/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kluc</title>
+      <link>https://dodoslavn.github.io/tags/kluc/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/kluc/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Private</title>
+      <link>https://dodoslavn.github.io/tags/private/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/private/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Public</title>
+      <link>https://dodoslavn.github.io/tags/public/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/public/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Putty</title>
+      <link>https://dodoslavn.github.io/tags/putty/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/putty/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ssh</title>
+      <link>https://dodoslavn.github.io/tags/ssh/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sukromny</title>
+      <link>https://dodoslavn.github.io/tags/sukromny/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/sukromny/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Verejny</title>
+      <link>https://dodoslavn.github.io/tags/verejny/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/verejny/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mongo</title>
+      <link>https://dodoslavn.github.io/tags/mongo/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/mongo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mongodb</title>
+      <link>https://dodoslavn.github.io/tags/mongodb/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/mongodb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nosql</title>
+      <link>https://dodoslavn.github.io/tags/nosql/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/nosql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vbox</title>
+      <link>https://dodoslavn.github.io/tags/vbox/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/vbox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtualbox</title>
+      <link>https://dodoslavn.github.io/tags/virtualbox/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/virtualbox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Auth</title>
+      <link>https://dodoslavn.github.io/tags/auth/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/auth/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bearer</title>
+      <link>https://dodoslavn.github.io/tags/bearer/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/bearer/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Http</title>
+      <link>https://dodoslavn.github.io/tags/http/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/http/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jwt</title>
+      <link>https://dodoslavn.github.io/tags/jwt/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/jwt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Klic</title>
+      <link>https://dodoslavn.github.io/tags/klic/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/klic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yubikey</title>
+      <link>https://dodoslavn.github.io/tags/yubikey/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/yubikey/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Elektro</title>
+      <link>https://dodoslavn.github.io/tags/elektro/</link>
+      <pubDate>Sat, 26 Nov 2022 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/elektro/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tranzistor</title>
+      <link>https://dodoslavn.github.io/tags/tranzistor/</link>
+      <pubDate>Sat, 26 Nov 2022 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/tranzistor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nginx</title>
+      <link>https://dodoslavn.github.io/tags/nginx/</link>
+      <pubDate>Thu, 24 Nov 2022 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/nginx/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Server</title>
+      <link>https://dodoslavn.github.io/tags/server/</link>
+      <pubDate>Thu, 24 Nov 2022 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/server/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Web</title>
+      <link>https://dodoslavn.github.io/tags/web/</link>
+      <pubDate>Thu, 24 Nov 2022 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/web/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Audio</title>
+      <link>https://dodoslavn.github.io/tags/audio/</link>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/audio/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Electro</title>
+      <link>https://dodoslavn.github.io/tags/electro/</link>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/electro/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Centos</title>
+      <link>https://dodoslavn.github.io/tags/centos/</link>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/centos/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pkg</title>
+      <link>https://dodoslavn.github.io/tags/pkg/</link>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/pkg/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Redhat</title>
+      <link>https://dodoslavn.github.io/tags/redhat/</link>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/redhat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rpm</title>
+      <link>https://dodoslavn.github.io/tags/rpm/</link>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/rpm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yum</title>
+      <link>https://dodoslavn.github.io/tags/yum/</link>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/yum/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Adresa</title>
+      <link>https://dodoslavn.github.io/tags/adresa/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/adresa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dhcp</title>
+      <link>https://dodoslavn.github.io/tags/dhcp/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/dhcp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ip</title>
+      <link>https://dodoslavn.github.io/tags/ip/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ip/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Router</title>
+      <link>https://dodoslavn.github.io/tags/router/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/router/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wifi</title>
+      <link>https://dodoslavn.github.io/tags/wifi/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/wifi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Keytool</title>
+      <link>https://dodoslavn.github.io/tags/keytool/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/keytool/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Openssl</title>
+      <link>https://dodoslavn.github.io/tags/openssl/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/openssl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Amqp</title>
+      <link>https://dodoslavn.github.io/tags/amqp/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/amqp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Automatization</title>
+      <link>https://dodoslavn.github.io/tags/automatization/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/automatization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mq</title>
+      <link>https://dodoslavn.github.io/tags/mq/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/mq/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mqqt</title>
+      <link>https://dodoslavn.github.io/tags/mqqt/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/mqqt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Puppet</title>
+      <link>https://dodoslavn.github.io/tags/puppet/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/puppet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rmq</title>
+      <link>https://dodoslavn.github.io/tags/rmq/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/rmq/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Os</title>
+      <link>https://dodoslavn.github.io/tags/os/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/os/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Raspberrypi</title>
+      <link>https://dodoslavn.github.io/tags/raspberrypi/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/raspberrypi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Raspbian</title>
+      <link>https://dodoslavn.github.io/tags/raspbian/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/raspbian/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terarium</title>
+      <link>https://dodoslavn.github.io/tags/terarium/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/terarium/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Address</title>
+      <link>https://dodoslavn.github.io/tags/address/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/address/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dynamicka</title>
+      <link>https://dodoslavn.github.io/tags/dynamicka/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/dynamicka/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ipv4</title>
+      <link>https://dodoslavn.github.io/tags/ipv4/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ipv4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Staticka</title>
+      <link>https://dodoslavn.github.io/tags/staticka/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/staticka/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sukromna</title>
+      <link>https://dodoslavn.github.io/tags/sukromna/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/sukromna/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Verejna</title>
+      <link>https://dodoslavn.github.io/tags/verejna/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/verejna/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ciliat</title>
+      <link>https://dodoslavn.github.io/tags/ciliat/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ciliat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kvm</title>
+      <link>https://dodoslavn.github.io/tags/kvm/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/kvm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virsh</title>
+      <link>https://dodoslavn.github.io/tags/virsh/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/virsh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtualization</title>
+      <link>https://dodoslavn.github.io/tags/virtualization/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/virtualization/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ciliaty</title>
+      <link>https://dodoslavn.github.io/tags/ciliaty/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ciliaty/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pagekon</title>
+      <link>https://dodoslavn.github.io/tags/pagekon/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/pagekon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tera</title>
+      <link>https://dodoslavn.github.io/tags/tera/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/tera/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Datastage</title>
+      <link>https://dodoslavn.github.io/tags/datastage/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/datastage/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ibm</title>
+      <link>https://dodoslavn.github.io/tags/ibm/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ibm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Oracle</title>
+      <link>https://dodoslavn.github.io/tags/oracle/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/oracle/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Query</title>
+      <link>https://dodoslavn.github.io/tags/query/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/query/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bash</title>
+      <link>https://dodoslavn.github.io/tags/bash/</link>
+      <pubDate>Mon, 27 May 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/bash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ubuntu</title>
+      <link>https://dodoslavn.github.io/tags/ubuntu/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ubuntu/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debug</title>
+      <link>https://dodoslavn.github.io/tags/debug/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/debug/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dediacted</title>
+      <link>https://dodoslavn.github.io/tags/dediacted/</link>
+      <pubDate>Wed, 14 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/dediacted/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Game</title>
+      <link>https://dodoslavn.github.io/tags/game/</link>
+      <pubDate>Wed, 14 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/game/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Screeps</title>
+      <link>https://dodoslavn.github.io/tags/screeps/</link>
+      <pubDate>Wed, 14 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/screeps/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apliakcny</title>
+      <link>https://dodoslavn.github.io/tags/apliakcny/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/apliakcny/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Application</title>
+      <link>https://dodoslavn.github.io/tags/application/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/application/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Bluehat</title>
+      <link>https://dodoslavn.github.io/tags/bluehat/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/bluehat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Db2</title>
+      <link>https://dodoslavn.github.io/tags/db2/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/db2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Edge</title>
+      <link>https://dodoslavn.github.io/tags/edge/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/edge/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Hat</title>
+      <link>https://dodoslavn.github.io/tags/hat/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/hat/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Manual</title>
+      <link>https://dodoslavn.github.io/tags/manual/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/manual/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Microsoft</title>
+      <link>https://dodoslavn.github.io/tags/microsoft/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/microsoft/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Red</title>
+      <link>https://dodoslavn.github.io/tags/red/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/red/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tips</title>
+      <link>https://dodoslavn.github.io/tags/tips/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/tips/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tricks</title>
+      <link>https://dodoslavn.github.io/tags/tricks/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/tricks/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Was</title>
+      <link>https://dodoslavn.github.io/tags/was/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/was/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Websphere</title>
+      <link>https://dodoslavn.github.io/tags/websphere/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/websphere/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pentaho</title>
+      <link>https://dodoslavn.github.io/tags/pentaho/</link>
+      <pubDate>Thu, 05 Jul 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/pentaho/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Postgre</title>
+      <link>https://dodoslavn.github.io/tags/postgre/</link>
+      <pubDate>Sun, 10 Jun 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/postgre/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mariadb</title>
+      <link>https://dodoslavn.github.io/tags/mariadb/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/mariadb/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mysql</title>
+      <link>https://dodoslavn.github.io/tags/mysql/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/mysql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Export</title>
+      <link>https://dodoslavn.github.io/tags/export/</link>
+      <pubDate>Wed, 16 May 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/export/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Docker</title>
+      <link>https://dodoslavn.github.io/tags/docker/</link>
+      <pubDate>Fri, 20 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apache</title>
+      <link>https://dodoslavn.github.io/tags/apache/</link>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/apache/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Apache2</title>
+      <link>https://dodoslavn.github.io/tags/apache2/</link>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/apache2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sudo</title>
+      <link>https://dodoslavn.github.io/tags/sudo/</link>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/sudo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Sudoers</title>
+      <link>https://dodoslavn.github.io/tags/sudoers/</link>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/sudoers/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Visudo</title>
+      <link>https://dodoslavn.github.io/tags/visudo/</link>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/visudo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Boot</title>
+      <link>https://dodoslavn.github.io/tags/boot/</link>
+      <pubDate>Mon, 05 Mar 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/boot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Debain</title>
+      <link>https://dodoslavn.github.io/tags/debain/</link>
+      <pubDate>Mon, 05 Mar 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/debain/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dual</title>
+      <link>https://dodoslavn.github.io/tags/dual/</link>
+      <pubDate>Mon, 05 Mar 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/dual/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Dualboot</title>
+      <link>https://dodoslavn.github.io/tags/dualboot/</link>
+      <pubDate>Mon, 05 Mar 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/dualboot/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Grub</title>
+      <link>https://dodoslavn.github.io/tags/grub/</link>
+      <pubDate>Mon, 05 Mar 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/grub/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Php</title>
+      <link>https://dodoslavn.github.io/tags/php/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/php/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Phpmyadmin</title>
+      <link>https://dodoslavn.github.io/tags/phpmyadmin/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/phpmyadmin/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Fs</title>
+      <link>https://dodoslavn.github.io/tags/fs/</link>
+      <pubDate>Mon, 14 Aug 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/fs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Nfs</title>
+      <link>https://dodoslavn.github.io/tags/nfs/</link>
+      <pubDate>Mon, 14 Aug 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/nfs/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scratch</title>
+      <link>https://dodoslavn.github.io/tags/scratch/</link>
+      <pubDate>Mon, 14 Aug 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/scratch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Share</title>
+      <link>https://dodoslavn.github.io/tags/share/</link>
+      <pubDate>Mon, 14 Aug 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/share/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>9</title>
+      <link>https://dodoslavn.github.io/tags/9/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/9/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Scretch</title>
+      <link>https://dodoslavn.github.io/tags/scretch/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/scretch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>C&#43;&#43;</title>
+      <link>https://dodoslavn.github.io/tags/c&#43;&#43;/</link>
+      <pubDate>Sat, 24 Jun 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cpp</title>
+      <link>https://dodoslavn.github.io/tags/cpp/</link>
+      <pubDate>Sat, 24 Jun 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/cpp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Creator</title>
+      <link>https://dodoslavn.github.io/tags/creator/</link>
+      <pubDate>Sat, 24 Jun 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/creator/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gl</title>
+      <link>https://dodoslavn.github.io/tags/gl/</link>
+      <pubDate>Sat, 24 Jun 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/gl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Glut</title>
+      <link>https://dodoslavn.github.io/tags/glut/</link>
+      <pubDate>Sat, 24 Jun 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/glut/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Opengl</title>
+      <link>https://dodoslavn.github.io/tags/opengl/</link>
+      <pubDate>Sat, 24 Jun 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/opengl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Qt</title>
+      <link>https://dodoslavn.github.io/tags/qt/</link>
+      <pubDate>Sat, 24 Jun 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/qt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Drive</title>
+      <link>https://dodoslavn.github.io/tags/drive/</link>
+      <pubDate>Fri, 23 Jun 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/drive/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ram</title>
+      <link>https://dodoslavn.github.io/tags/ram/</link>
+      <pubDate>Fri, 23 Jun 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ram/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Desktop</title>
+      <link>https://dodoslavn.github.io/tags/desktop/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/desktop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Heslo</title>
+      <link>https://dodoslavn.github.io/tags/heslo/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/heslo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lonux</title>
+      <link>https://dodoslavn.github.io/tags/lonux/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/lonux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Password</title>
+      <link>https://dodoslavn.github.io/tags/password/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/password/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Rdesktop</title>
+      <link>https://dodoslavn.github.io/tags/rdesktop/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/rdesktop/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Remote</title>
+      <link>https://dodoslavn.github.io/tags/remote/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/remote/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vrde</title>
+      <link>https://dodoslavn.github.io/tags/vrde/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/vrde/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Firewall</title>
+      <link>https://dodoslavn.github.io/tags/firewall/</link>
+      <pubDate>Sat, 04 Mar 2017 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/firewall/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Iptables</title>
+      <link>https://dodoslavn.github.io/tags/iptables/</link>
+      <pubDate>Sat, 04 Mar 2017 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/iptables/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Jessie</title>
+      <link>https://dodoslavn.github.io/tags/jessie/</link>
+      <pubDate>Fri, 09 Dec 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/jessie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>$PS1</title>
+      <link>https://dodoslavn.github.io/tags/ps1/</link>
+      <pubDate>Sat, 19 Nov 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ps1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Konzola</title>
+      <link>https://dodoslavn.github.io/tags/konzola/</link>
+      <pubDate>Sat, 19 Nov 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/konzola/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Prikazovy</title>
+      <link>https://dodoslavn.github.io/tags/prikazovy/</link>
+      <pubDate>Sat, 19 Nov 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/prikazovy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ps1</title>
+      <link>https://dodoslavn.github.io/tags/ps1/</link>
+      <pubDate>Sat, 19 Nov 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ps1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Riadok</title>
+      <link>https://dodoslavn.github.io/tags/riadok/</link>
+      <pubDate>Sat, 19 Nov 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/riadok/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vm</title>
+      <link>https://dodoslavn.github.io/tags/vm/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/vm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gen</title>
+      <link>https://dodoslavn.github.io/tags/gen/</link>
+      <pubDate>Wed, 07 Sep 2016 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/gen/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Youtube</title>
+      <link>https://dodoslavn.github.io/tags/youtube/</link>
+      <pubDate>Sat, 20 Aug 2016 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/youtube/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Youtube-Dl</title>
+      <link>https://dodoslavn.github.io/tags/youtube-dl/</link>
+      <pubDate>Sat, 20 Aug 2016 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/youtube-dl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>8</title>
+      <link>https://dodoslavn.github.io/tags/8/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Install</title>
+      <link>https://dodoslavn.github.io/tags/install/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/install/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Instalacia</title>
+      <link>https://dodoslavn.github.io/tags/instalacia/</link>
+      <pubDate>Sun, 22 Dec 2013 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/instalacia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Speak</title>
+      <link>https://dodoslavn.github.io/tags/speak/</link>
+      <pubDate>Sun, 22 Dec 2013 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/speak/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Team</title>
+      <link>https://dodoslavn.github.io/tags/team/</link>
+      <pubDate>Sun, 22 Dec 2013 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/team/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ts</title>
+      <link>https://dodoslavn.github.io/tags/ts/</link>
+      <pubDate>Sun, 22 Dec 2013 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ts/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ts3</title>
+      <link>https://dodoslavn.github.io/tags/ts3/</link>
+      <pubDate>Sun, 22 Dec 2013 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ts3/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Voice</title>
+      <link>https://dodoslavn.github.io/tags/voice/</link>
+      <pubDate>Sun, 22 Dec 2013 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/voice/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Client</title>
+      <link>https://dodoslavn.github.io/tags/client/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/client/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Conf</title>
+      <link>https://dodoslavn.github.io/tags/conf/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/conf/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Configure</title>
+      <link>https://dodoslavn.github.io/tags/configure/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/configure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ftp</title>
+      <link>https://dodoslavn.github.io/tags/ftp/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ftp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>How</title>
+      <link>https://dodoslavn.github.io/tags/how/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/how/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Instal</title>
+      <link>https://dodoslavn.github.io/tags/instal/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/instal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Kliet</title>
+      <link>https://dodoslavn.github.io/tags/kliet/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/kliet/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Konfiguracia</title>
+      <link>https://dodoslavn.github.io/tags/konfiguracia/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/konfiguracia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Proftpd</title>
+      <link>https://dodoslavn.github.io/tags/proftpd/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/proftpd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>To</title>
+      <link>https://dodoslavn.github.io/tags/to/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/to/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ako</title>
+      <link>https://dodoslavn.github.io/tags/ako/</link>
+      <pubDate>Sun, 29 Apr 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ako/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Databazy</title>
+      <link>https://dodoslavn.github.io/tags/databazy/</link>
+      <pubDate>Sun, 29 Apr 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/databazy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Delphi</title>
+      <link>https://dodoslavn.github.io/tags/delphi/</link>
+      <pubDate>Sun, 29 Apr 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/delphi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pascal</title>
+      <link>https://dodoslavn.github.io/tags/pascal/</link>
+      <pubDate>Sun, 29 Apr 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/pascal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Turbo</title>
+      <link>https://dodoslavn.github.io/tags/turbo/</link>
+      <pubDate>Sun, 29 Apr 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/turbo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Amd</title>
+      <link>https://dodoslavn.github.io/tags/amd/</link>
+      <pubDate>Tue, 21 Feb 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/amd/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Amd64</title>
+      <link>https://dodoslavn.github.io/tags/amd64/</link>
+      <pubDate>Tue, 21 Feb 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/amd64/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Firefox</title>
+      <link>https://dodoslavn.github.io/tags/firefox/</link>
+      <pubDate>Tue, 21 Feb 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/firefox/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flash</title>
+      <link>https://dodoslavn.github.io/tags/flash/</link>
+      <pubDate>Tue, 21 Feb 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/flash/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Flesh</title>
+      <link>https://dodoslavn.github.io/tags/flesh/</link>
+      <pubDate>Tue, 21 Feb 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/flesh/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Iceweasel</title>
+      <link>https://dodoslavn.github.io/tags/iceweasel/</link>
+      <pubDate>Tue, 21 Feb 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/iceweasel/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mozilla</title>
+      <link>https://dodoslavn.github.io/tags/mozilla/</link>
+      <pubDate>Tue, 21 Feb 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/mozilla/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Opera</title>
+      <link>https://dodoslavn.github.io/tags/opera/</link>
+      <pubDate>Tue, 21 Feb 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/opera/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Tutorial</title>
+      <link>https://dodoslavn.github.io/tags/tutorial/</link>
+      <pubDate>Tue, 21 Feb 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Background</title>
+      <link>https://dodoslavn.github.io/tags/background/</link>
+      <pubDate>Mon, 30 Jan 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/background/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Design</title>
+      <link>https://dodoslavn.github.io/tags/design/</link>
+      <pubDate>Mon, 30 Jan 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/design/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Edit</title>
+      <link>https://dodoslavn.github.io/tags/edit/</link>
+      <pubDate>Mon, 30 Jan 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/edit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Gnome</title>
+      <link>https://dodoslavn.github.io/tags/gnome/</link>
+      <pubDate>Mon, 30 Jan 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/gnome/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pozdie</title>
+      <link>https://dodoslavn.github.io/tags/pozdie/</link>
+      <pubDate>Mon, 30 Jan 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/pozdie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Uprava</title>
+      <link>https://dodoslavn.github.io/tags/uprava/</link>
+      <pubDate>Mon, 30 Jan 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/uprava/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Wallpaper</title>
+      <link>https://dodoslavn.github.io/tags/wallpaper/</link>
+      <pubDate>Mon, 30 Jan 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/wallpaper/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>1.6</title>
+      <link>https://dodoslavn.github.io/tags/1.6/</link>
+      <pubDate>Thu, 15 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/1.6/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Counter-Strike</title>
+      <link>https://dodoslavn.github.io/tags/counter-strike/</link>
+      <pubDate>Thu, 15 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/counter-strike/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Konfi</title>
+      <link>https://dodoslavn.github.io/tags/konfi/</link>
+      <pubDate>Thu, 15 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/konfi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Deamon</title>
+      <link>https://dodoslavn.github.io/tags/deamon/</link>
+      <pubDate>Sun, 11 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/deamon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Klient</title>
+      <link>https://dodoslavn.github.io/tags/klient/</link>
+      <pubDate>Sun, 11 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/klient/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terminal</title>
+      <link>https://dodoslavn.github.io/tags/terminal/</link>
+      <pubDate>Sun, 11 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/terminal/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Terminalovy</title>
+      <link>https://dodoslavn.github.io/tags/terminalovy/</link>
+      <pubDate>Sun, 11 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/terminalovy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Torrent</title>
+      <link>https://dodoslavn.github.io/tags/torrent/</link>
+      <pubDate>Sun, 11 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/torrent/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Transmission</title>
+      <link>https://dodoslavn.github.io/tags/transmission/</link>
+      <pubDate>Sun, 11 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/tags/transmission/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aplic</title>
+      <link>https://dodoslavn.github.io/tags/aplic/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/aplic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aplik</title>
+      <link>https://dodoslavn.github.io/tags/aplik/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/aplik/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Aplikacia</title>
+      <link>https://dodoslavn.github.io/tags/aplikacia/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/aplikacia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Canon</title>
+      <link>https://dodoslavn.github.io/tags/canon/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/canon/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Com</title>
+      <link>https://dodoslavn.github.io/tags/com/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/com/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lunch</title>
+      <link>https://dodoslavn.github.io/tags/lunch/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/lunch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Ovlad</title>
+      <link>https://dodoslavn.github.io/tags/ovlad/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/ovlad/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Paralelneho</title>
+      <link>https://dodoslavn.github.io/tags/paralelneho/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/paralelneho/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Paralelni</title>
+      <link>https://dodoslavn.github.io/tags/paralelni/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/paralelni/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Paralelny</title>
+      <link>https://dodoslavn.github.io/tags/paralelny/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/paralelny/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Port</title>
+      <link>https://dodoslavn.github.io/tags/port/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/port/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Serial</title>
+      <link>https://dodoslavn.github.io/tags/serial/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/serial/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Seriovi</title>
+      <link>https://dodoslavn.github.io/tags/seriovi/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/seriovi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Seriovy</title>
+      <link>https://dodoslavn.github.io/tags/seriovy/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/seriovy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Spustne</title>
+      <link>https://dodoslavn.github.io/tags/spustne/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/spustne/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Start</title>
+      <link>https://dodoslavn.github.io/tags/start/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/start/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>W</title>
+      <link>https://dodoslavn.github.io/tags/w/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/w/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Faktor</title>
+      <link>https://dodoslavn.github.io/tags/faktor/</link>
+      <pubDate>Tue, 18 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/faktor/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Faktory</title>
+      <link>https://dodoslavn.github.io/tags/faktory/</link>
+      <pubDate>Tue, 18 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/faktory/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Optimalizacia</title>
+      <link>https://dodoslavn.github.io/tags/optimalizacia/</link>
+      <pubDate>Tue, 18 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/optimalizacia/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Seo</title>
+      <link>https://dodoslavn.github.io/tags/seo/</link>
+      <pubDate>Tue, 18 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/seo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vnutrne</title>
+      <link>https://dodoslavn.github.io/tags/vnutrne/</link>
+      <pubDate>Tue, 18 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/vnutrne/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Neviditelne</title>
+      <link>https://dodoslavn.github.io/tags/neviditelne/</link>
+      <pubDate>Mon, 10 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/neviditelne/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vyhladav</title>
+      <link>https://dodoslavn.github.io/tags/vyhladav/</link>
+      <pubDate>Mon, 10 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/vyhladav/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Na</title>
+      <link>https://dodoslavn.github.io/tags/na/</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/na/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Perl</title>
+      <link>https://dodoslavn.github.io/tags/perl/</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/perl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Program</title>
+      <link>https://dodoslavn.github.io/tags/program/</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/program/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stranke</title>
+      <link>https://dodoslavn.github.io/tags/stranke/</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/stranke/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Viditelne</title>
+      <link>https://dodoslavn.github.io/tags/viditelne/</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/viditelne/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vyhladavac</title>
+      <link>https://dodoslavn.github.io/tags/vyhladavac/</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/vyhladavac/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zaciname</title>
+      <link>https://dodoslavn.github.io/tags/zaciname/</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/zaciname/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>03</title>
+      <link>https://dodoslavn.github.io/tags/03/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/03/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>2003</title>
+      <link>https://dodoslavn.github.io/tags/2003/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/2003/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Cisco</title>
+      <link>https://dodoslavn.github.io/tags/cisco/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/cisco/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Event</title>
+      <link>https://dodoslavn.github.io/tags/event/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/event/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Group</title>
+      <link>https://dodoslavn.github.io/tags/group/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/group/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Okno</title>
+      <link>https://dodoslavn.github.io/tags/okno/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/okno/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pass</title>
+      <link>https://dodoslavn.github.io/tags/pass/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/pass/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Policy</title>
+      <link>https://dodoslavn.github.io/tags/policy/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/policy/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Switch</title>
+      <link>https://dodoslavn.github.io/tags/switch/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/switch/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Win</title>
+      <link>https://dodoslavn.github.io/tags/win/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/win/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zmena</title>
+      <link>https://dodoslavn.github.io/tags/zmena/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/zmena/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Blokovanie</title>
+      <link>https://dodoslavn.github.io/tags/blokovanie/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/blokovanie/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Faster</title>
+      <link>https://dodoslavn.github.io/tags/faster/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/faster/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Pr</title>
+      <link>https://dodoslavn.github.io/tags/pr/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/pr/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Regedit</title>
+      <link>https://dodoslavn.github.io/tags/regedit/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/regedit/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Register</title>
+      <link>https://dodoslavn.github.io/tags/register/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/register/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Stranka</title>
+      <link>https://dodoslavn.github.io/tags/stranka/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/stranka/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>XP</title>
+      <link>https://dodoslavn.github.io/tags/xp/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/xp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Zrýchliť</title>
+      <link>https://dodoslavn.github.io/tags/zr%C3%BDchli%C5%A5/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/zr%C3%BDchli%C5%A5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Videa</title>
+      <link>https://dodoslavn.github.io/tags/videa/</link>
+      <pubDate>Tue, 16 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/videa/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Youtube.com</title>
+      <link>https://dodoslavn.github.io/tags/youtube.com/</link>
+      <pubDate>Tue, 16 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/youtube.com/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Yt</title>
+      <link>https://dodoslavn.github.io/tags/yt/</link>
+      <pubDate>Tue, 16 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/yt/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Backup</title>
+      <link>https://dodoslavn.github.io/tags/backup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dodoslavn.github.io/tags/backup/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Restore</title>
+      <link>https://dodoslavn.github.io/tags/restore/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dodoslavn.github.io/tags/restore/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Systemd on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/systemd/</link>
+    <description>Recent content in Systemd on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/systemd/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Vlastná Systemd služba a časovač k nej</title>
+      <link>https://dodoslavn.github.io/clanky/vlastn%C3%A1-systemd-slu%C5%BEba-a-%C4%8Dasova%C4%8D-k-nej/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/vlastn%C3%A1-systemd-slu%C5%BEba-a-%C4%8Dasova%C4%8D-k-nej/</guid>
+      <description>Príklad umiestnenia definície služby /etc/systemd/system/custom-service.service&#xA;Príklad samotnej definície služby [Unit]&#xA;Description=My Custom App&#xA;After=network.target&#xA;Requires=network.target&#xA;[Service]&#xA;Type=simple&#xA;ExecStart=/usr/bin/myapp --flag1 --flag2&#xA;WorkingDirectory=/opt/myapp&#xA;User=www-data&#xA;Group=www-data&#xA;Environment=&amp;quot;ENV_VAR=value&amp;quot;&#xA;EnvironmentFile=/etc/myapp.env&#xA;Restart=on-failure&#xA;RestartSec=5s&#xA;TimeoutStartSec=30&#xA;TimeoutStopSec=10&#xA;StandardOutput=journal&#xA;StandardError=journal&#xA;[Install]&#xA;WantedBy=multi-user.target\&#xA;Typy služby simple &amp;ndash; Základný. Spustí ExecStart priamo forking &amp;ndash; Forkuje oneshot &amp;ndash; Pre scripty čo sa spustia a skončia notify &amp;ndash; Notifikácia pre systém že je pripravený. idle &amp;ndash; Spustí ked systém nič nerobí Príklad umiestnenia časovača pre službu Cesta musí byť rovnaká akorát ako pre službu, akorát na konci názvu nebude .</description>
+    </item>
+  </channel>
+</rss>

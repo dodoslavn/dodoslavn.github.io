@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Neviditelne on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/neviditelne/</link>
+    <description>Recent content in Neviditelne on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Mon, 10 Oct 2011 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/neviditelne/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SEO - neviditeľné faktory</title>
+      <link>https://dodoslavn.github.io/clanky/seo---nevidite%C4%BEn%C3%A9-faktory/</link>
+      <pubDate>Mon, 10 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/seo---nevidite%C4%BEn%C3%A9-faktory/</guid>
+      <description>Ako sme si už v úvodnom článku hovorili, neviditeľné faktory sú tie ktoré niesú užívateľom alebo inak povedané, čitateľom, vidieť. Zaradujeme medzi nich napríklad:&#xA;- popis v elemente &amp;lt; meta &amp;gt; - kľúčové slová v elemente &amp;lt; meta &amp;gt; - parametre alt a title - štruktúra stránky Popis v elemente &amp;lt; meta &amp;gt; Popis v elemente &amp;lt; meta &amp;gt; je dôležitý preto, že ho vyhľadávače môžu použiť pre prezentáciu stránky vo výsledkoch vyhľadávania, namiesto používania útržkov zo stránky.</description>
+    </item>
+  </channel>
+</rss>

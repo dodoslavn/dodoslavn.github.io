@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Radio on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/radio/</link>
+    <description>Recent content in Radio on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Mon, 01 Jul 2024 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/radio/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Verejné meterologické satelity</title>
+      <link>https://dodoslavn.github.io/clanky/verejn%C3%A9-meterologick%C3%A9-satelity/</link>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/verejn%C3%A9-meterologick%C3%A9-satelity/</guid>
+      <description>Tieto satelity obiehajú na orbite okolo Zeme, s tým že prelietavajú nad konkrétnou časťou Zeme v podobnú časť dňa, napríklad nad Európou z pravidla len večer. NOAA satelity sú momentalne aktívne len 3, z toho NOAA 15 už skôr dosluhuje a v roku 2024 ma skončiť. V minulosti boli aj iné, z technických dôvodov ale ukončili prevádzku.&#xA;NOAA satelity vysielajú z pravidla 2 spôsobmi, APT a HRPT.&#xA;Automatic Picture Transmission APT funguje na frekvencií okolo 130MHz a signál je analógový.</description>
+    </item>
+    <item>
+      <title>Univerzálny rádiový príjmač</title>
+      <link>https://dodoslavn.github.io/clanky/univerz%C3%A1lny-r%C3%A1diov%C3%BD-pr%C3%ADjma%C4%8D/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/univerz%C3%A1lny-r%C3%A1diov%C3%BD-pr%C3%ADjma%C4%8D/</guid>
+      <description>Software defined radio Je to zariadenie ktoré má nejaký, zpravidla veľký frekvenčný rozsah signálu ktorý vie prijať, a pomocou ADC (Analog to Digital Converter) prevodníku poslať daľej do počítača v digitalnej forme, kde si ho cez nejaký software viem rôzne spracovať.&#xA;Výpočet veľkosti vlny Rýchlosť svetla je 300 000 000 m/s.&#xA;Veľkosť vlny sa počíta vydelením: rýchlost svetla v m/s deleno frekvencia v Hz .&#xA;Antény a rádiove vlny U anténty vo výške 2-násobku veľkosti vlny, alebo akejkoľvek väčšej výšky, môžme ignorovať odrazy signálu od zeme.</description>
+    </item>
+  </channel>
+</rss>

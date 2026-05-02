@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Php on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/php/</link>
+    <description>Recent content in Php on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sun, 17 Sep 2017 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/php/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ako presunúť PHPMyAdmin do subdomény</title>
+      <link>https://dodoslavn.github.io/clanky/ako-presun%C3%BA%C5%A5-phpmyadmin-do-subdom%C3%A9ny/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-presun%C3%BA%C5%A5-phpmyadmin-do-subdom%C3%A9ny/</guid>
+      <description>Vypneme aktuálny virtualhost:&#xA;sudo a2disconf phpmyadmin&#xA;Vytvoríme nový PHPMyAdmin konfiguračný súbor virtualhostu:&#xA;vi /etc/apache2/sites-enabled/new_phpmyadmin.conf&#xA;Vložíme doň obsah súboru phpmyadmin.conf a upravíme doménu podľa seba.&#xA;Povolíme ho:&#xA;sudo a2enconf&#xA;Reštartujeme apache2&#xA;sudo systemctl reload apache2.service</description>
+    </item>
+    <item>
+      <title>SEO - Faktory na stránke</title>
+      <link>https://dodoslavn.github.io/clanky/seo---faktory-na-str%C3%A1nke/</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/seo---faktory-na-str%C3%A1nke/</guid>
+      <description>Faktory na stránke sa dajú rozdeliť do dvoch skupín. Na viditeľné a neviditeľné. Viditeľné sú dnes o mnoho podstatnejšie ako tie neviditeľné. Veľmi veľa odborníkov na optimalizáciu pre vyhľadávače verí, že neviditeľním dávajú vyhľadávače tak malý význam, že sa neoplatí nimy zaoberať. Dôvod je jednoduchý. A to preto že sa veľmi jednoducho dajú ovplyvniť, aby to ovplivnilo akokoľvek vzhlad stránky. preto vyhľadávače im nedávajú veľkú dôveru. V stručnosti sa algoritmy vyhladávačov sa na viditeľné faktory spoliehajú viacej, kedže je to to, čo užívateľ aj naozaj uvidí.</description>
+    </item>
+  </channel>
+</rss>

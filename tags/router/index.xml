@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Router on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/router/</link>
+    <description>Recent content in Router on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sat, 08 May 2021 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/router/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ako pridať daľší WiFi router </title>
+      <link>https://dodoslavn.github.io/clanky/ako-prida%C5%A5-da%C4%BE%C5%A1%C3%AD-wifi-router-/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-prida%C5%A5-da%C4%BE%C5%A1%C3%AD-wifi-router-/</guid>
+      <description>WiFI router je hrozny nazov V prvom rade by som chcel povedat preco je &amp;quot;WiFi router&amp;quot; nestastny nazov. Slovicko &amp;quot;router&amp;quot; sa da prelozit ako slovo smerovac. Smerovac je zariadenie ktore sluzi na to aby zariadenia v roznych IP sietach mohli spolu komunikovat. Napriklad vsetky servery/zariadenia na internete, a zariadenia ktore mam u seba doma. Takze router je zariadenie ktore sluzi na smerovanie komunikacie medzi mojou domacnostou a internetom. Slovicko WiFi zanema ze to podporuje WiFi a ze to bude vediet spravit WiFi siet na ktoru sa budem moct pripojit.</description>
+    </item>
+    <item>
+      <title>Zmena hesla na Cisco routeroch</title>
+      <link>https://dodoslavn.github.io/clanky/zmena-hesla-na-cisco-routeroch/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/zmena-hesla-na-cisco-routeroch/</guid>
+      <description>Potrebujete upraviť nastavenie na routri, no ani za nič si nedokážete spomenúť heslo kt. ste použili. Čím si môžete byt istý je(teda podľa mňa), že budete musieť zresetovať celí router a tým aj stratíte všetky nastavenia. Teraz ste si možno pomysleli že aký návod ked môžem jednoducho stlačiť tlačítko Reset a je to! Možno by ste sa čudovali keby ste na svojom routri nenašli nič ani len podobné resetu, a niečo ako vybrat baterku, vyskratovať pamať, chvíľu počkať a mám zariadenie zresetovaná ako pri BIOSe u PC nepripadá do úvahy.</description>
+    </item>
+  </channel>
+</rss>

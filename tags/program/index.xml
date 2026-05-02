@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Program on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/program/</link>
+    <description>Recent content in Program on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sun, 02 Oct 2011 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/program/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Začíname s Perl časť 1.</title>
+      <link>https://dodoslavn.github.io/clanky/za%C4%8D%C3%ADname-s-perl-%C4%8Das%C5%A5-1./</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/za%C4%8D%C3%ADname-s-perl-%C4%8Das%C5%A5-1./</guid>
+      <description>Interpretovaný vs. kompilovaný kód Programy v Perl môžeme ukladať dvoma spôsobmy. Bud interpretované v scripte alebo ako binárne verzie (kompilovaný). Obidva spôsoby majú svoje výhody a nevýhody. Kompilovaný je o trochu pomalši a jeho súčastou je celí zdrojový kód, všetky knižnice a veľa iných vecí. Veľkost je tak neporovnateľne väčšia, no veľkosť je tam väčšia hlavne kvôli knižniciam. Neskôr ked program dorábame už sa jeho velkosť zvačšuje tak isto ako pri nekompilovanom.</description>
+    </item>
+    <item>
+      <title>Začíname s Perl časť 2.</title>
+      <link>https://dodoslavn.github.io/clanky/za%C4%8D%C3%ADname-s-perl-%C4%8Das%C5%A5-2./</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/za%C4%8D%C3%ADname-s-perl-%C4%8Das%C5%A5-2./</guid>
+      <description>Čítanie zo vstupu K získaniu vstupných dát sa v programoch Perl používa konštrukcia nazvanú diamantový operátor. Ten vypadá takto:&#xA;&amp;lt; &amp;gt;&#xA;Diamantový operátor môžeme jednoducho priradiť k premennej ako ich hodnotu. Pri behu programu potom bude úžívateľ zadávat hodnoty, ktoré zadá z klávesnice.&#xA;Diamantový operátor vo vyžšie uvedenej podobe síce plní svoju funkciu, ale umožnuje užívateľovi tiež jednu vec, ktorá sa nám nemusí vždy páčiť. Ide o predávanie hodnôt nie z klávesnice, ale z daľších súborov, ktoré pri spúštaní programu zadáme ako parameter.</description>
+    </item>
+  </channel>
+</rss>

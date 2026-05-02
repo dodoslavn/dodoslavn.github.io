@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Octoprint on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/octoprint/</link>
+    <description>Recent content in Octoprint on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 26 Feb 2026 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/octoprint/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Octoprint - inštalácia</title>
+      <link>https://dodoslavn.github.io/clanky/octoprint---in%C5%A1tal%C3%A1cia/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/octoprint---in%C5%A1tal%C3%A1cia/</guid>
+      <description>Nastavenie OS užívateľa pod ktorým bude Octoprint bežať:&#xA;OCTO_USER=&amp;quot;octoprint&amp;quot;&#xA;Inštalácia potrebných OS balíkov:&#xA;apt install -y python3 python3-venv python3-pip build-essential python3-dev libyaml-dev git curl&#xA;Vytvorenie OS užívateľa:&#xA;useradd -m -s /usr/sbin/nologin &amp;quot;$OCTO_USER&amp;quot;&#xA;usermod -aG dialout &amp;quot;$OCTO_USER&amp;quot;&#xA;Inštalácia samotného Octoprintu cez PIP:&#xA;sudo -u &amp;quot;$OCTO_USER&amp;quot; python3 -m venv /home/$OCTO_USER/venv&#xA;sudo -u &amp;quot;$OCTO_USER&amp;quot; /home/$OCTO_USER/venv/bin/pip install --upgrade pip&#xA;sudo -u &amp;quot;$OCTO_USER&amp;quot; /home/$OCTO_USER/venv/bin/pip install octoprint&#xA;Nastavenie Systemd služby:&#xA;echo &amp;quot;[Unit]&#xA;Description=OctoPrint&#xA;After=network.target&#xA;[Service]&#xA;Type=simple</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Dhcp on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/dhcp/</link>
+    <description>Recent content in Dhcp on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sat, 08 May 2021 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/dhcp/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ako pridať daľší WiFi router </title>
+      <link>https://dodoslavn.github.io/clanky/ako-prida%C5%A5-da%C4%BE%C5%A1%C3%AD-wifi-router-/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-prida%C5%A5-da%C4%BE%C5%A1%C3%AD-wifi-router-/</guid>
+      <description>WiFI router je hrozny nazov V prvom rade by som chcel povedat preco je &amp;quot;WiFi router&amp;quot; nestastny nazov. Slovicko &amp;quot;router&amp;quot; sa da prelozit ako slovo smerovac. Smerovac je zariadenie ktore sluzi na to aby zariadenia v roznych IP sietach mohli spolu komunikovat. Napriklad vsetky servery/zariadenia na internete, a zariadenia ktore mam u seba doma. Takze router je zariadenie ktore sluzi na smerovanie komunikacie medzi mojou domacnostou a internetom. Slovicko WiFi zanema ze to podporuje WiFi a ze to bude vediet spravit WiFi siet na ktoru sa budem moct pripojit.</description>
+    </item>
+  </channel>
+</rss>

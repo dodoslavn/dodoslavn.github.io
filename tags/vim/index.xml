@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vim on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/vim/</link>
+    <description>Recent content in Vim on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Tue, 09 Apr 2024 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/vim/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Texotvý editor VI a manuál k nemu</title>
+      <link>https://dodoslavn.github.io/clanky/texotv%C3%BD-editor-vi-a-manu%C3%A1l-k-nemu/</link>
+      <pubDate>Tue, 09 Apr 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/texotv%C3%BD-editor-vi-a-manu%C3%A1l-k-nemu/</guid>
+      <description>Ako zmazať celý obsah súboru gg&#xA;dG</description>
+    </item>
+  </channel>
+</rss>

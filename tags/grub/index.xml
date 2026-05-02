@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Grub on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/grub/</link>
+    <description>Recent content in Grub on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Mon, 05 Mar 2018 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/grub/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux a Dual Boot</title>
+      <link>https://dodoslavn.github.io/clanky/linux-a-dual-boot/</link>
+      <pubDate>Mon, 05 Mar 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux-a-dual-boot/</guid>
+      <description>Je niekoľko spôsobov ako to dosiahnuť. Pokiaľ máme nainštalovaný Linux ale spúšta sa nám iba priamo MS Windows, nabootujeme nejaku Live distribúciu z USB alebo cez CD/DVD-ROM. Osobne používam Ubuntu. Na verzi nezáleží, takže môžme použiť aj staršiu inštalačku, musíme však dodržať architektúru.&#xA;Po nabootovaní Linuxu otvoríme terminál a pripojime disk kde máme uz nainštalovaný Linux do &amp;quot;/mnt&amp;quot;.&#xA;sudo mount /dev/sda1 /mnt ;&#xA;Nabindujeme pár potrebných adresárov&#xA;sudo mount --bind /dev /mnt/dev ;</description>
+    </item>
+    <item>
+      <title>Debian - Základné designové úpravy</title>
+      <link>https://dodoslavn.github.io/clanky/debian---z%C3%A1kladn%C3%A9-designov%C3%A9-%C3%BApravy/</link>
+      <pubDate>Mon, 30 Jan 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---z%C3%A1kladn%C3%A9-designov%C3%A9-%C3%BApravy/</guid>
+      <description>Tu si ukážeme ako zmeniť:&#xA;- pozadie GRUB zavádzača - téma pri prihlasovaní - pozadie pri prihlasovaní Pozadie GRUB zavádzača Možno budete prekvapený ako jednoducho sa dá zmeniť pozadie GRUB zavádzača, a že pozadie môže byť aj klasický obrázok, s väčším rozlíšením a aj s farbamy viacej ako 256 farieb čo je možno prekvapujúce. Jedná sa o veľmi jednoduchú úpravu, kedže iba nahradíme obrázok pôvodný, našim novým. Najskôr si náš obrázok premenujeme na:</description>
+    </item>
+  </channel>
+</rss>

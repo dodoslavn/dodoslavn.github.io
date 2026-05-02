@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Apt-Get on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/apt-get/</link>
+    <description>Recent content in Apt-Get on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 07 Feb 2024 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/apt-get/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Debian a upgrady na vyššie verzie</title>
+      <link>https://dodoslavn.github.io/clanky/debian-a-upgrady-na-vy%C5%A1%C5%A1ie-verzie/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian-a-upgrady-na-vy%C5%A1%C5%A1ie-verzie/</guid>
+      <description>Upgrade z Debian 11 na 12 Postup ktorý mi fungoval z verzie Debian 11 Bullseye na Debian 12 Bookworm.&#xA;apt update&#xA;apt upgrade&#xA;sed -i &#39;s/bullseye/bookworm/g&#39; /etc/apt/sources.list&#xA;apt update&#xA;apt upgrade --without-new-pkgs&#xA;apt full-upgrade&#xA;reboot\</description>
+    </item>
+    <item>
+      <title>Obnovenie certifikátov pre repozitáre</title>
+      <link>https://dodoslavn.github.io/clanky/obnovenie-certifik%C3%A1tov-pre-repozit%C3%A1re/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/obnovenie-certifik%C3%A1tov-pre-repozit%C3%A1re/</guid>
+      <description>sudo apt-key list | \\ grep &amp;quot;expired: &amp;quot; | \\ sed -ne &#39;s|pub .*/\([^ ]*\) .*|\1|gp&#39; | \\ xargs -n1 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys</description>
+    </item>
+  </channel>
+</rss>

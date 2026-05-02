@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Sudo on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/sudo/</link>
+    <description>Recent content in Sudo on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Mon, 02 Apr 2018 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/sudo/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nastavenie sudoers</title>
+      <link>https://dodoslavn.github.io/clanky/nastavenie-sudoers/</link>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/nastavenie-sudoers/</guid>
+      <description>Užívateľom v skupine www-data pridáme opravnenie no zistenie teploty pevného disku. Užívatelia budu musieť zavola tento príkaz pomocou &amp;quot;sudo&amp;quot; ale heslo nemusia zadávať:&#xA;%www-data ALL=(ALL) NOPASSWD: /usr/sbin/hddtemp&#xA;dodoslav ALL=NOPASSWD: /usr/bin/yum&#xA;Oprávnenie na používanie sudo&#xA;dodoslav ALL=(ALL:ALL) ALL&#xA;#&#xA;# This file MUST be edited with the &#39;visudo&#39; command as root.&#xA;#&#xA;# Please consider adding local content in /etc/sudoers.d/ instead of&#xA;# directly modifying this file.&#xA;#&#xA;# See the man page for details on how to write a sudoers file.</description>
+    </item>
+  </channel>
+</rss>

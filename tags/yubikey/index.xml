@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Yubikey on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/yubikey/</link>
+    <description>Recent content in Yubikey on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Fri, 13 Jan 2023 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/yubikey/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nastavenie Yubikey na SSH v Linux-e</title>
+      <link>https://dodoslavn.github.io/clanky/nastavenie-yubikey-na-ssh-v-linux-e/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/nastavenie-yubikey-na-ssh-v-linux-e/</guid>
+      <description># YUBICO&#xA;# https://support.yubico.com/hc/en-us/articles/360016649039-Enabling-the-Yubico-PPA-on-Ubuntu&#xA;sudo add-apt-repository ppa:yubico/stable &amp;amp;&amp;amp; sudo apt-get update&#xA;sudo apt install yubikey-manager&#xA;sudo apt install yubikey-personalization-gui&#xA;sudo apt install yubico-piv-tool&#xA;sudo apt install libpam-yubico&#xA;sudo apt install libpam-u2f&#xA;# check service&#xA;sudo systemctl start pcscd&#xA;sudo systemctl enable pcscd&#xA;systemctl status pcscd&#xA;#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=&#xA;To get yubikey-manager-qt for Ubuntu 20.04/20.10 follow steps (you will have to&#xA;build it yourself):&#xA;git clone https://github.com/Yubico/yubikey-manager-qt&#xA;cd yubikey-manager-qt&#xA;sudo apt install devscripts equivs</description>
+    </item>
+  </channel>
+</rss>

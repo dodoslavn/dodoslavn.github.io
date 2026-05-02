@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Database on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/database/</link>
+    <description>Recent content in Database on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 13 Feb 2025 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/database/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Inštalácia Airflow</title>
+      <link>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-airflow/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-airflow/</guid>
+      <description>Inštalácia systémových balíkov apt install -y default-libmysqlclient-dev build-essential&#xA;Inštalácia samotného Airflow cd /niekam/ python3 -m venv . ./bin/pip3 install apache-airflow[mysql] ./airflow db init&#xA;Úprava konfigurácie Otvoríme súbor&#xA;vi ../home/airflow/airflow.cfg&#xA;a nastavíme v nom&#xA;sql_alchemy_conn = mysql+mysqldb://airflow_user:your_secure_password@localhost:3306/airflow_db executor = LocalExecutor&#xA;Inicializácia databáze ./airflow db init&#xA;Pridanie účtu ./airflow users create your_username --firstname first_name --lastname last_name --role Admin --email username@example.com</description>
+    </item>
+    <item>
+      <title>Oracle databáza - základna syntax</title>
+      <link>https://dodoslavn.github.io/clanky/oracle-datab%C3%A1za---z%C3%A1kladna-syntax/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/oracle-datab%C3%A1za---z%C3%A1kladna-syntax/</guid>
+      <description>SELECT&#xA;table_name, owner FROM user_tables;&#xA;SELECT table_name, owner FROM all_tables ORDER BY owner, table_name;&#xA;select username from dba_users;&#xA;CREATE USER books_admin IDENTIFIED BY MyPassword;&#xA;GRANT CONNECT TO books_admin;&#xA;GRANT CONNECT, RESOURCE, DBA TO books_admin;&#xA;GRANT CREATE SESSION GRANT ANY PRIVILEGE TO books_admin;&#xA;GRANT UNLIMITED TABLESPACE TO books_admin;&#xA;SQL&amp;gt; select USERNAME,ACCOUNT_STATUS from dba_users where ORACLE_MAINTAINED &amp;lt;&amp;gt; &#39;Y&#39;;&#xA;SQL&amp;gt; select USERNAME,ACCOUNT_STATUS from dba_users where USERNAME like &#39;%XM%&#39;;&#xA;SQL&amp;gt; r&#xA;1* SELECT username, status, osuser, process, machine, terminal, logon_time FROM v$session where MACHINE &amp;lt;&amp;gt; &#39;hostname&#39;</description>
+    </item>
+    <item>
+      <title>DB2 manuál</title>
+      <link>https://dodoslavn.github.io/clanky/db2-manu%C3%A1l/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/db2-manu%C3%A1l/</guid>
+      <description>Spustí samotný DB server:&#xA;db2start&#xA;Vypne DB server:&#xA;db2stop&#xA;Zobrazí zoznam databáz:&#xA;db2 list db directory&#xA;Zobrazí zoznam práve aktívnych databáz:&#xA;db2 list active databases&#xA;Deaktivuje databázu:&#xA;db2 deactivate db databaza1&#xA;Aktivuje databázu:&#xA;db2 activate db databaza1&#xA;Zobrazí aktívne pripojenia do všetkých databáz:&#xA;db2 list applications&#xA;Zobrazí aktívne pripojenia do databáze:&#xA;db2 list applications for DB databaza1&#xA;Zobrazí práve bežiace utility, napríklad prebiehajúca záloha alebo obnovenie:&#xA;db2 list utilities&#xA;Rovnako ako v predošlom prípade, akorát detailne:</description>
+    </item>
+    <item>
+      <title>Základ konfiguráce Postgre pod Debian 9</title>
+      <link>https://dodoslavn.github.io/clanky/z%C3%A1klad-konfigur%C3%A1ce-postgre-pod-debian-9/</link>
+      <pubDate>Sun, 10 Jun 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/z%C3%A1klad-konfigur%C3%A1ce-postgre-pod-debian-9/</guid>
+      <description>Samotná inštalácia Postgre:&#xA;apt install postgresql&#xA;Týmto príkazom vstúpime do príkazovej riadky Postgre ako užívateľ postgres ktorý má najväčšie oprávnenie, no dá sa použiť v základnom nastavení len z príkazovej riadky a z OS účtu postgres:&#xA;su - postgres -c psql&#xA;Predošlí príkaz využijeme a vytvoríme si nového užívateľa pre nejakú aplikáciu:&#xA;su - postgres -c &amp;quot;psql -c \&amp;quot;create user uzivatel with encrypted password &#39;heslo&#39;;\&amp;quot;&amp;quot;&#xA;Pre pokračovanie, musíme vytvoriť ešte databázu k tomuto užívateľovi:</description>
+    </item>
+    <item>
+      <title>Základ konfiguráce MariaDB pod Debian 9</title>
+      <link>https://dodoslavn.github.io/clanky/z%C3%A1klad-konfigur%C3%A1ce-mariadb-pod-debian-9/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/z%C3%A1klad-konfigur%C3%A1ce-mariadb-pod-debian-9/</guid>
+      <description>Najskôr nainštalujeme klienta:&#xA;apt install mysql-client&#xA;Potom samotný server,&#xA;apt install mysql-server&#xA;Dalej môžme doplniť o samotný PHPMyAdmin&#xA;apt install phpmyadmin&#xA;Problém nastáva ked sa chceme prihlásiť cez web do PHPMyAdmin. Tam totiž root účet nefunguje. Je tam síce phpmyadmin účet, ten ale nemá oprávnenie menežovať všetko.&#xA;Z príkazového riadku pod root-om týmto príkazom dáme všetky oprávnenia účtu phpmyadmin&#xA;mysql -e &amp;quot;GRANT ALL PRIVILEGES ON * . * TO &#39;phpmyadmin&#39;@&#39;localhost&#39; WITH GRANT OPTION&amp;quot;;</description>
+    </item>
+    <item>
+      <title>Delphi - Ako pracovať s MySQL </title>
+      <link>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql-/</link>
+      <pubDate>Sun, 29 Apr 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql-/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Delphi - Ako pracovať s MySQL - Prípravy</title>
+      <link>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql---pr%C3%ADpravy/</link>
+      <pubDate>Mon, 23 Apr 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql---pr%C3%ADpravy/</guid>
+      <description>Ešte pred tým ako začneme, sa uistíme či máme všetko potrebné.&#xA;Bude potrebovať: - MySQL server - MySQL ODBC connector - komponenta ADO k Delphi MySQL server, si môžte stiahnuť z oficiálnej stránky (mysql.com/downloads/) a k nemu ODBC connector, ktorý zase stiahnete odtiaľto (mysql.com/downloads/). Ďalej čo sa týka Delphi a jeho komponentov, budeme potrebovať triedu komponentov ADO. Vo verzie Delphi 7 Enterprise sa už nachádza, no vlastníkov verzie Delphi 5 asi moc nepoteším, kedže sa v zozname pred inštalovaných nenachádza.</description>
+    </item>
+    <item>
+      <title>MySQL - záloha a obnova databáze</title>
+      <link>https://dodoslavn.github.io/clanky/mysql---z%C3%A1loha-a-obnova-datab%C3%A1ze/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/mysql---z%C3%A1loha-a-obnova-datab%C3%A1ze/</guid>
+      <description>Vyzálohovanie vsštkých databáz:&#xA;/usr/bin/mysqldump --all-databases | gzip -c -9 &amp;gt; /opt/backup/sql/dump_$(date &#39;+%Y-%m-%d&#39;).sql.gz&#xA;Nahranie zálohy na server:&#xA;mysql -h $SERVER -u $USER -p &amp;lt; &amp;quot;dump_&amp;quot;$DATUM&amp;quot;.sql.gz&amp;quot;&#xA;Aby to fungovalo, musíme ešte do MySQL konzole zadať príkaz na spracovanie privilegií:&#xA;FLUSH PRIVILEGES</description>
+    </item>
+  </channel>
+</rss>

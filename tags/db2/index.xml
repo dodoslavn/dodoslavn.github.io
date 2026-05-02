@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Db2 on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/db2/</link>
+    <description>Recent content in Db2 on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 07 Nov 2018 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/db2/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DB2 manuál</title>
+      <link>https://dodoslavn.github.io/clanky/db2-manu%C3%A1l/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/db2-manu%C3%A1l/</guid>
+      <description>Spustí samotný DB server:&#xA;db2start&#xA;Vypne DB server:&#xA;db2stop&#xA;Zobrazí zoznam databáz:&#xA;db2 list db directory&#xA;Zobrazí zoznam práve aktívnych databáz:&#xA;db2 list active databases&#xA;Deaktivuje databázu:&#xA;db2 deactivate db databaza1&#xA;Aktivuje databázu:&#xA;db2 activate db databaza1&#xA;Zobrazí aktívne pripojenia do všetkých databáz:&#xA;db2 list applications&#xA;Zobrazí aktívne pripojenia do databáze:&#xA;db2 list applications for DB databaza1&#xA;Zobrazí práve bežiace utility, napríklad prebiehajúca záloha alebo obnovenie:&#xA;db2 list utilities&#xA;Rovnako ako v predošlom prípade, akorát detailne:</description>
+    </item>
+  </channel>
+</rss>

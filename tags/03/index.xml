@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>03 on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/03/</link>
+    <description>Recent content in 03 on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Tue, 13 Sep 2011 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/03/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Event okno na Windows Server 2003</title>
+      <link>https://dodoslavn.github.io/clanky/event-okno-na-windows-server-2003/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/event-okno-na-windows-server-2003/</guid>
+      <description>Celé je to veľmi jednoduchá a rýchla vec, takže bez zbytočných obkecov ideme na to!&#xA;Takže najskôr si otvoríme takzvaný:&#xA;Group Policy Object Editor&#xA;Ten spustíme tak že pôjdeme na:&#xA;START -&amp;gt; RUN / SPUSTIT&#xA;a tam napíšeme:&#xA;gpedit.msc&#xA;..a potvrdíme. Objavilo sa nám okno, a teraz na paneli (na ľavej strane) sa budeme postupne preklikávať:&#xA;Computer Configuration -&amp;gt; Administrative Templates -&amp;gt; System&#xA;Na pravej strane máme zoznam položiek, v kt.</description>
+    </item>
+  </channel>
+</rss>

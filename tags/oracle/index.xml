@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Oracle on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/oracle/</link>
+    <description>Recent content in Oracle on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Mon, 15 Jul 2019 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/oracle/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Oracle databáza - základna syntax</title>
+      <link>https://dodoslavn.github.io/clanky/oracle-datab%C3%A1za---z%C3%A1kladna-syntax/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/oracle-datab%C3%A1za---z%C3%A1kladna-syntax/</guid>
+      <description>SELECT&#xA;table_name, owner FROM user_tables;&#xA;SELECT table_name, owner FROM all_tables ORDER BY owner, table_name;&#xA;select username from dba_users;&#xA;CREATE USER books_admin IDENTIFIED BY MyPassword;&#xA;GRANT CONNECT TO books_admin;&#xA;GRANT CONNECT, RESOURCE, DBA TO books_admin;&#xA;GRANT CREATE SESSION GRANT ANY PRIVILEGE TO books_admin;&#xA;GRANT UNLIMITED TABLESPACE TO books_admin;&#xA;SQL&amp;gt; select USERNAME,ACCOUNT_STATUS from dba_users where ORACLE_MAINTAINED &amp;lt;&amp;gt; &#39;Y&#39;;&#xA;SQL&amp;gt; select USERNAME,ACCOUNT_STATUS from dba_users where USERNAME like &#39;%XM%&#39;;&#xA;SQL&amp;gt; r&#xA;1* SELECT username, status, osuser, process, machine, terminal, logon_time FROM v$session where MACHINE &amp;lt;&amp;gt; &#39;hostname&#39;</description>
+    </item>
+    <item>
+      <title>Návod na VirtualBox v konzole</title>
+      <link>https://dodoslavn.github.io/clanky/n%C3%A1vod-na-virtualbox-v-konzole/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/n%C3%A1vod-na-virtualbox-v-konzole/</guid>
+      <description>Príprava Z dôvodu že sa konfigurácia ukladá do domovského adresára užívateľa, nedá sa virtuálny stroj spustiť pod iným užívateľom. Preto je vhodné na to vytvoriť nového.&#xA;sudo adduser virtualbox&#xA;Pridáme repozitár na nainštalovanie VirtualBoxu (pod root-om)&#xA;echo &amp;quot;deb http://download.virtualbox.org/virtualbox/debian jessie contrib&amp;quot; &amp;gt;&amp;gt; /etc/apt/sources.list&#xA;Pridanie kľúča:&#xA;wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc&#xA;apt-key add oracle_vbox_2016.asc&#xA;Inštalácia VirtualBoxu&#xA;sudo apt-get update; sudo apt-get -y --force-yes install virtualbox-5.1&#xA;Ak niesu nainštalované doplnky&#xA;sudo VBoxManage list extpacks&#xA;Sú vhodne ked sa chceme napríklad pripojiť pomocou VNC alebo Remote Desktop.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Gen on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/gen/</link>
+    <description>Recent content in Gen on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 07 Sep 2016 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/gen/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSH kľúče, tipy a triky</title>
+      <link>https://dodoslavn.github.io/clanky/ssh-k%C4%BE%C3%BA%C4%8De-tipy-a-triky/</link>
+      <pubDate>Wed, 07 Sep 2016 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ssh-k%C4%BE%C3%BA%C4%8De-tipy-a-triky/</guid>
+      <description>Vygenerovanie SSH kľúča Kľúč sa vygeneruje v &amp;quot;~/.ssh&amp;quot;. Kde sa vygeneruje verejný aj súkromný kľúč. Použijeme heslo ktoré sa zadá vždy pri prvom použití po prihlásení do systému.&#xA;ssh-keygen -t rsa&#xA;Skopírovanie verejného kľúča na server Tento príkaz skopíruje verejný kľúč na server.&#xA;ssh-copy-id uzivatel@server&#xA;Ignorovanie overovania fingerprint-ov pri pripojení -o StrictHostKeychecking=no</description>
+    </item>
+  </channel>
+</rss>

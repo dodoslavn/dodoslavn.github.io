@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cert on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/cert/</link>
+    <description>Recent content in Cert on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Fri, 26 Jan 2024 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/cert/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SSL/TLS a certifikačné autority</title>
+      <link>https://dodoslavn.github.io/clanky/ssl_tls-a-certifika%C4%8Dn%C3%A9-autority/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ssl_tls-a-certifika%C4%8Dn%C3%A9-autority/</guid>
+      <description>Úvod Funguje to asi takto, najskôr si musíme vygenerovať privátny kľúč ktorý sa použije pre samotnú certifikačnú autoritu. Pomocou verejného kľúča certifikačnej autority sa potom budú kontrolovať certifikáty na strane užívateľov.&#xA;Ďalší krok je vytvoriť certifikačnú autoritu z tohoto privátneho kľúča. Pri tvorbe sa vyberú aj nejaké meta dáta a popis. To je celé.&#xA;Potom už len generujeme privátne kľúče pre konkrétne systémy alebo domény zvlášť,&#xA;z nich následne vytvoríme CSR (Certificate Signign Request) kde zase nastavíme nejaké meta dáta ako je napríklad konkrétna doména pre ktorú to má byť použité.</description>
+    </item>
+  </channel>
+</rss>

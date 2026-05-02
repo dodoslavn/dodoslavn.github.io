@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fs on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/fs/</link>
+    <description>Recent content in Fs on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Mon, 14 Aug 2017 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/fs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Zdielanie FS na Debiane</title>
+      <link>https://dodoslavn.github.io/clanky/zdielanie-fs-na-debiane/</link>
+      <pubDate>Mon, 14 Aug 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/zdielanie-fs-na-debiane/</guid>
+      <description>Návod sa skladá z dvoch častí, a to časť pre server a pre klient. Hneď na začiatku si zistíme adresu oboch PC, najlepšie ked ich IP adresa v sieti bude statická.&#xA;Pre príklad, v tomto návode bude mať server adresu 192.168.1.2 a klient bude mať 192.168.1.111 . Pokiaľ sa chceme vyhnúť problému s opravnením, musíme buď používať LDAP autetifikáciu, alebo vytvárať lokálnych užívateľoch na všetkých zariadeniach ktoré budú používať rovnaký zdielaný adresár tak, aby mali rovnaké ID.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Nginx on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/nginx/</link>
+    <description>Recent content in Nginx on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 24 Nov 2022 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/nginx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx - tipy a triky</title>
+      <link>https://dodoslavn.github.io/clanky/nginx---tipy-a-triky/</link>
+      <pubDate>Thu, 24 Nov 2022 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/nginx---tipy-a-triky/</guid>
+      <description>Typy header-ov client -&amp;gt; nginx: the client request headers&#xA;nginx -&amp;gt; upstream: the upstream request headers&#xA;upstream -&amp;gt; nginx: the upstream response headers&#xA;nginx -&amp;gt; client: the client response headers\</description>
+    </item>
+  </channel>
+</rss>

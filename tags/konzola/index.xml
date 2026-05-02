@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Konzola on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/konzola/</link>
+    <description>Recent content in Konzola on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sat, 19 Nov 2016 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/konzola/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux a Bash $PS1</title>
+      <link>https://dodoslavn.github.io/clanky/linux-a-bash-ps1/</link>
+      <pubDate>Sat, 19 Nov 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux-a-bash-ps1/</guid>
+      <description>\w - aktuálny adresár s plnou cestou&#xA;\W - názov aktuálneho adresára&#xA;\h - hostname&#xA;\u - meno užívateľa&#xA;\e[1m - tučné písmo&#xA;Píklad:&#xA;PS1=&amp;quot;[\u@\h:\w]\\$ &amp;quot;&#xA;Farby:&#xA;[ PS1=&amp;quot;\[\033[38;5;0m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;1m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;2m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;3m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;4m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;5m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;6m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;7m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;8m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]\</description>
+    </item>
+  </channel>
+</rss>

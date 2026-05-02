@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/web/</link>
+    <description>Recent content in Web on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 24 Nov 2022 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Nginx - tipy a triky</title>
+      <link>https://dodoslavn.github.io/clanky/nginx---tipy-a-triky/</link>
+      <pubDate>Thu, 24 Nov 2022 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/nginx---tipy-a-triky/</guid>
+      <description>Typy header-ov client -&amp;gt; nginx: the client request headers&#xA;nginx -&amp;gt; upstream: the upstream request headers&#xA;upstream -&amp;gt; nginx: the upstream response headers&#xA;nginx -&amp;gt; client: the client response headers\</description>
+    </item>
+    <item>
+      <title>Ako pridať ďalší Apache server</title>
+      <link>https://dodoslavn.github.io/clanky/ako-prida%C5%A5-%C4%8Fal%C5%A1%C3%AD-apache-server/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-prida%C5%A5-%C4%8Fal%C5%A1%C3%AD-apache-server/</guid>
+      <description>Nainštalujeme samotný Apache&#xA;apt install apache2&#xA;Spustíme ho a pozreme sa či funguje, a to tak že otvoríme nejaký prehliadač ako je Mozilla a skúsime adresu localhost&#xA;systemctl start apache2&#xA;Tvorba novej inštalácie a jej príprava Pridáme ďalšiu inštaláciu, ktorá sa bude volať apache2-rizek&#xA;cd /usr/share/doc/apache2/examples&#xA;bash setup-instance rizek&#xA;systemctl enable apache2@rizek.service&#xA;Kúzlo ďalšej inštalácie je že môže bežať pod iným užívateľom, takže jedného pridáme&#xA;adduser --home /var/www-rizek www-rizek&#xA;Upravíme pod ktorým užívateľom to ma bežať</description>
+    </item>
+    <item>
+      <title>SEO - neviditeľné faktory</title>
+      <link>https://dodoslavn.github.io/clanky/seo---nevidite%C4%BEn%C3%A9-faktory/</link>
+      <pubDate>Mon, 10 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/seo---nevidite%C4%BEn%C3%A9-faktory/</guid>
+      <description>Ako sme si už v úvodnom článku hovorili, neviditeľné faktory sú tie ktoré niesú užívateľom alebo inak povedané, čitateľom, vidieť. Zaradujeme medzi nich napríklad:&#xA;- popis v elemente &amp;lt; meta &amp;gt; - kľúčové slová v elemente &amp;lt; meta &amp;gt; - parametre alt a title - štruktúra stránky Popis v elemente &amp;lt; meta &amp;gt; Popis v elemente &amp;lt; meta &amp;gt; je dôležitý preto, že ho vyhľadávače môžu použiť pre prezentáciu stránky vo výsledkoch vyhľadávania, namiesto používania útržkov zo stránky.</description>
+    </item>
+    <item>
+      <title>SEO - Faktory na stránke</title>
+      <link>https://dodoslavn.github.io/clanky/seo---faktory-na-str%C3%A1nke/</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/seo---faktory-na-str%C3%A1nke/</guid>
+      <description>Faktory na stránke sa dajú rozdeliť do dvoch skupín. Na viditeľné a neviditeľné. Viditeľné sú dnes o mnoho podstatnejšie ako tie neviditeľné. Veľmi veľa odborníkov na optimalizáciu pre vyhľadávače verí, že neviditeľním dávajú vyhľadávače tak malý význam, že sa neoplatí nimy zaoberať. Dôvod je jednoduchý. A to preto že sa veľmi jednoducho dajú ovplyvniť, aby to ovplivnilo akokoľvek vzhlad stránky. preto vyhľadávače im nedávajú veľkú dôveru. V stručnosti sa algoritmy vyhladávačov sa na viditeľné faktory spoliehajú viacej, kedže je to to, čo užívateľ aj naozaj uvidí.</description>
+    </item>
+    <item>
+      <title>SEO - viditeľné faktory</title>
+      <link>https://dodoslavn.github.io/clanky/seo---vidite%C4%BEn%C3%A9-faktory/</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/seo---vidite%C4%BEn%C3%A9-faktory/</guid>
+      <description>Tu sa budeme zaoberať týmito viditeľnýmy faktormy:&#xA;- titulka stránky - nadpis v stránke - text stránky - odchádzajúce odkazy - kľúčové slová v URL a v doméne - vnutorná štruktúra odkazov - tematické zameranie webu ako takého Tititulka stránky Titulka stránky je textový retazec definovaný obsahom elementu:&#xA;&amp;lt; title &amp;gt; &amp;lt; /title &amp;gt;&#xA;v HTML elemente &amp;lt; head &amp;gt;. Titulka je viditeľná v okne prehliadača a tiež vo výsledkoch vyhľadávania.</description>
+    </item>
+    <item>
+      <title>Ako blokovať webovú stránku na Windowse</title>
+      <link>https://dodoslavn.github.io/clanky/ako-blokova%C5%A5-webov%C3%BA-str%C3%A1nku-na-windowse/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-blokova%C5%A5-webov%C3%BA-str%C3%A1nku-na-windowse/</guid>
+      <description>Takže bez zpytočných obkecov začneme.&#xA;Presunieme sa na adresár:&#xA;C:\WINDOWS\system32\drivers\etc&#xA;V tomto adresáre sa nachádza súbor&#xA;hosts&#xA;Otvoríme ho v nejakom textovom editore ako napríklad Notepad alebo aj v Poznámkovom bloku. Do tohto súboru budeme na úplny spodok vkladať domény stránok ktoré chceme zabokovať. Vždy na nový riadok napíšeme svoju IP adresu localhostu. Tá je vždy:&#xA;127.0.0.1&#xA;a o medzeru(na velkosti medzere nezáleží) za nu napíšeme jednu doménu stránky ktorú chceme zablokovať.</description>
+    </item>
+  </channel>
+</rss>

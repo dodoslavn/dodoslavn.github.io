@@ -1,0 +1,782 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Clankies on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/clanky/</link>
+    <description>Recent content in Clankies on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/clanky/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ako na domáce home.arpa domény v Unbound</title>
+      <link>https://dodoslavn.github.io/clanky/ako-na-dom%C3%A1ce-home.arpa-dom%C3%A9ny-v-unbound/</link>
+      <pubDate>Fri, 27 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-na-dom%C3%A1ce-home.arpa-dom%C3%A9ny-v-unbound/</guid>
+      <description>Vytvorenie zóny:&#xA;echo &#39;server:&#xA;local-zone: &amp;quot;home.arpa.&amp;quot; nodefault&#xA;auth-zone:&#xA;name: &amp;quot;home.arpa.&amp;quot;&#xA;zonefile: &amp;quot;/etc/unbound/unbound.conf.d/home-arpa.zone&amp;quot;&#xA;for-downstream: yes&#xA;for-upstream: no&#xA;&#39; &amp;gt; /etc/unbound/unbound.conf.d/home-arpa.conf&#xA;Vytvorenie záznamov:&#xA;echo &#39;$TTL 30&#xA;$ORIGIN home.arpa.&#xA;@ IN SOA ns1.home.arpa. hostmaster.home.arpa. (&#xA;2026022701 ; serial (YYYYMMDDnn)&#xA;3600 ; refresh&#xA;900 ; retry&#xA;1209600 ; expire&#xA;300 ) ; negative cache&#xA;IN NS ns1.home.arpa.&#xA;# adresa resolvera&#xA;ns1 IN A 192.168.0.2&#xA;; --- Your requested records ---&#xA;router IN A 192.168.0.1</description>
+    </item>
+    <item>
+      <title>Octoprint - inštalácia</title>
+      <link>https://dodoslavn.github.io/clanky/octoprint---in%C5%A1tal%C3%A1cia/</link>
+      <pubDate>Thu, 26 Feb 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/octoprint---in%C5%A1tal%C3%A1cia/</guid>
+      <description>Nastavenie OS užívateľa pod ktorým bude Octoprint bežať:&#xA;OCTO_USER=&amp;quot;octoprint&amp;quot;&#xA;Inštalácia potrebných OS balíkov:&#xA;apt install -y python3 python3-venv python3-pip build-essential python3-dev libyaml-dev git curl&#xA;Vytvorenie OS užívateľa:&#xA;useradd -m -s /usr/sbin/nologin &amp;quot;$OCTO_USER&amp;quot;&#xA;usermod -aG dialout &amp;quot;$OCTO_USER&amp;quot;&#xA;Inštalácia samotného Octoprintu cez PIP:&#xA;sudo -u &amp;quot;$OCTO_USER&amp;quot; python3 -m venv /home/$OCTO_USER/venv&#xA;sudo -u &amp;quot;$OCTO_USER&amp;quot; /home/$OCTO_USER/venv/bin/pip install --upgrade pip&#xA;sudo -u &amp;quot;$OCTO_USER&amp;quot; /home/$OCTO_USER/venv/bin/pip install octoprint&#xA;Nastavenie Systemd služby:&#xA;echo &amp;quot;[Unit]&#xA;Description=OctoPrint&#xA;After=network.target&#xA;[Service]&#xA;Type=simple</description>
+    </item>
+    <item>
+      <title>Unbound DNS resolver na Debian-e 13</title>
+      <link>https://dodoslavn.github.io/clanky/unbound-dns-resolver-na-debian-e-13/</link>
+      <pubDate>Tue, 27 Jan 2026 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/unbound-dns-resolver-na-debian-e-13/</guid>
+      <description>Ako nainštalovať DNS-cache server na Debian, konkrétne Unbound.&#xA;Inštalácia apt install bind9-dnsutils net-tools dns-root-data iproute2&#xA;apt install unbound&#xA;Nastavenie ovládania Remote-control tu vypínam, zakomentované riadky niesú podporované v tejto verzií Unbound.&#xA;echo &#39;remote-control:&#xA;control-enable: no&#xA;control-interface: /run/unbound.socket&#xA;#control-use-cert: yes&#xA;#control-perms: 600&#xA;#control-owner: root&#xA;#control-group: root&#39; &amp;gt; /etc/unbound/unbound.conf.d/remote-control.conf&#xA;Základné nastavenia Tu si dať pozor na ten access-control a pridať tam svoju sieť ak je iná.&#xA;echo &#39; server:&#xA;interface: 0.0.0.0&#xA;interface: ::0</description>
+    </item>
+    <item>
+      <title>Postfix a Dovecot - email servery</title>
+      <link>https://dodoslavn.github.io/clanky/postfix-a-dovecot---email-servery/</link>
+      <pubDate>Thu, 11 Dec 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/postfix-a-dovecot---email-servery/</guid>
+      <description>postconf&#xA;dovecot -n</description>
+    </item>
+    <item>
+      <title>Dovecot 2.4 - Konfigurácia užívateľov</title>
+      <link>https://dodoslavn.github.io/clanky/dovecot-2.4---konfigur%C3%A1cia-u%C5%BE%C3%ADvate%C4%BEov/</link>
+      <pubDate>Mon, 08 Dec 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/dovecot-2.4---konfigur%C3%A1cia-u%C5%BE%C3%ADvate%C4%BEov/</guid>
+      <description>Výber autentifikácie Zakomentovať alebo vybrať jeden správny spôsob autentifikácie v /etc/dovecot-conf.d/10-auth.conf&#xA;#!include auth-deny.conf.ext&#xA;#!include auth-master.conf.ext&#xA;#!include auth-oauth2.conf.ext&#xA;#!include auth-system.conf.ext&#xA;#!include auth-sql.conf.ext&#xA;#!include auth-ldap.conf.ext&#xA;#!include auth-passwdfile.conf.ext&#xA;!include auth-static.conf.ext\&#xA;Nastavenie autentifikácie Konfigurácia statického súbora /etc/dovecot-conf.d/conf.d/auth-static.conf.ext&#xA;auth_mechanisms = plain login&#xA;auth_allow_cleartext = no&#xA;passdb passwd-file {&#xA;passwd_file_path = /etc/dovecot/passdb&#xA;# passdb_default_password_scheme = SHA512-CRYPT&#xA;}&#xA;userdb static {&#xA;fields {&#xA;uid = vmail&#xA;gid = vmail&#xA;home = /var/vmail/%&#xA;mail_driver = maildir&#xA;mail_path = /var/vmail/%/Maildir # full mail location</description>
+    </item>
+    <item>
+      <title>RabbitMQ - Quorum Queue optimalizacia</title>
+      <link>https://dodoslavn.github.io/clanky/rabbitmq---quorum-queue-optimalizacia/</link>
+      <pubDate>Tue, 11 Nov 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/rabbitmq---quorum-queue-optimalizacia/</guid>
+      <description>Raft log je zoradeny zoznam prikazov co sa ma stat (pridat sprava do fronty/..) kazdy zaznam v raft logu ma&#xA;term - prakticky to znamena kolko krat sa menilo zostavenie leader/follower, a je to cislo definujuce aktualny vhlasovanie leader/follower index - cislo sa stale zvacsuje, kazdy zaznam ma svoje (64bit unsigned integer) command - co sa stalo (pridala sa sprava/odobrala sa) a aj so samotnou spravou CRC indexy kazdy node indexy ktora ukazuju na raft log last_index - ake je cislo aktualne posledneho pridaneho zaznamu do raft logu commit_index - posledne cislo raft zaznamu ktore je oznacene ako comitnute a bezpecne prijate v ramci clustru - klient dostal ack last_applied - posledne cislo raft zaznamu ktore je aplikovane na tomto node match_index - leader si sleduje ake je posledne cislo zaznamu ktore follower spracoval first_index - najstarsi index ktory je stale uchovany snapshot raz za cas sa spusti &amp;quot;comapction&amp;quot; ktory zmaze vsetky zaznamy z raft logu, aby sme zbytocne neuchovavali tieto zaznamy, spravi sa snapshot v zlozke napriklad /var/lib/rabbitmq/mnesia//quorum//snapshot-00001200.</description>
+    </item>
+    <item>
+      <title>ELK - poznámky</title>
+      <link>https://dodoslavn.github.io/clanky/elk---pozn%C3%A1mky/</link>
+      <pubDate>Tue, 09 Sep 2025 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/elk---pozn%C3%A1mky/</guid>
+      <description>Elasticsearch Není sice databázový systém ale používá se na ukladanie dát v JSON formáte, je postavený na Lucene, ktorý je od Apache postavený na Jave. Ma RestAPI.&#xA;Logstash Slúži na sber, naslednu filtraciu a smerovanie dát, a vkladanie dát do Elasticsearch. Podporuje veľa protokolov, push a pull model.&#xA;Kibana Webová vyzualizácia toho čo je v Elasticsearch.&#xA;Filebeat Agent ktorý posiela dáta to Logstash. Typicky logy aplikacií.&#xA;Postupnoť dát Filebeat -&amp;gt; Logstash -&amp;gt; Elasticsearch &amp;lt;- Kibana</description>
+    </item>
+    <item>
+      <title>Vlastná Systemd služba a časovač k nej</title>
+      <link>https://dodoslavn.github.io/clanky/vlastn%C3%A1-systemd-slu%C5%BEba-a-%C4%8Dasova%C4%8D-k-nej/</link>
+      <pubDate>Mon, 17 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/vlastn%C3%A1-systemd-slu%C5%BEba-a-%C4%8Dasova%C4%8D-k-nej/</guid>
+      <description>Príklad umiestnenia definície služby /etc/systemd/system/custom-service.service&#xA;Príklad samotnej definície služby [Unit]&#xA;Description=My Custom App&#xA;After=network.target&#xA;Requires=network.target&#xA;[Service]&#xA;Type=simple&#xA;ExecStart=/usr/bin/myapp --flag1 --flag2&#xA;WorkingDirectory=/opt/myapp&#xA;User=www-data&#xA;Group=www-data&#xA;Environment=&amp;quot;ENV_VAR=value&amp;quot;&#xA;EnvironmentFile=/etc/myapp.env&#xA;Restart=on-failure&#xA;RestartSec=5s&#xA;TimeoutStartSec=30&#xA;TimeoutStopSec=10&#xA;StandardOutput=journal&#xA;StandardError=journal&#xA;[Install]&#xA;WantedBy=multi-user.target\&#xA;Typy služby simple &amp;ndash; Základný. Spustí ExecStart priamo forking &amp;ndash; Forkuje oneshot &amp;ndash; Pre scripty čo sa spustia a skončia notify &amp;ndash; Notifikácia pre systém že je pripravený. idle &amp;ndash; Spustí ked systém nič nerobí Príklad umiestnenia časovača pre službu Cesta musí byť rovnaká akorát ako pre službu, akorát na konci názvu nebude .</description>
+    </item>
+    <item>
+      <title>Inštalácia Airflow</title>
+      <link>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-airflow/</link>
+      <pubDate>Thu, 13 Feb 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-airflow/</guid>
+      <description>Inštalácia systémových balíkov apt install -y default-libmysqlclient-dev build-essential&#xA;Inštalácia samotného Airflow cd /niekam/ python3 -m venv . ./bin/pip3 install apache-airflow[mysql] ./airflow db init&#xA;Úprava konfigurácie Otvoríme súbor&#xA;vi ../home/airflow/airflow.cfg&#xA;a nastavíme v nom&#xA;sql_alchemy_conn = mysql+mysqldb://airflow_user:your_secure_password@localhost:3306/airflow_db executor = LocalExecutor&#xA;Inicializácia databáze ./airflow db init&#xA;Pridanie účtu ./airflow users create your_username --firstname first_name --lastname last_name --role Admin --email username@example.com</description>
+    </item>
+    <item>
+      <title>Backblaze - zalohovanie</title>
+      <link>https://dodoslavn.github.io/clanky/backblaze---zalohovanie/</link>
+      <pubDate>Sat, 05 Oct 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/backblaze---zalohovanie/</guid>
+      <description>backblaze-b2 authorize-account&#xA;backblaze-b2 sync /data/ b2://bucket_001/&#xA;export PYTHONIOENCODING=utf-16</description>
+    </item>
+    <item>
+      <title>Zabbix - vlastné skripty</title>
+      <link>https://dodoslavn.github.io/clanky/zabbix---vlastn%C3%A9-skripty/</link>
+      <pubDate>Thu, 19 Sep 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/zabbix---vlastn%C3%A9-skripty/</guid>
+      <description>Zabbix agent konfigurácia Na strane Zabbix agenta je potreba povoliť aby Custom Skript-y vôbec fungovali, a potom je potreba každý jeden príkaz osobitne pridať, a priradiť k nemu ako sa tem &amp;quot;item&amp;quot; bude volať.&#xA;Povolenie podpory Custom Script-ov Upravíme konfiguračný súbor pre Zabbix agent, a pridáme povolenie pre vlastné skripty. Kedysi sa toto nastavenie volalo &amp;quot;EnableRemoteCommands&amp;quot;.&#xA;# vi /etc/zabbix/zabbix_agentd.conf&#xA;Upravíme nastavenie:&#xA;AllowKey=system.run[*]&#xA;Založenie vlasntého Item-u Pridáme samotný príkaz ktorý chceme spúštať, a pridelíme mu názov:</description>
+    </item>
+    <item>
+      <title>NtopNG - inštalácia na Debian</title>
+      <link>https://dodoslavn.github.io/clanky/ntopng---in%C5%A1tal%C3%A1cia-na-debian/</link>
+      <pubDate>Mon, 02 Sep 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ntopng---in%C5%A1tal%C3%A1cia-na-debian/</guid>
+      <description>Stiahnutie balíka $ wget https://packages.ntop.org/apt/$(lsb_release -cs)/all/apt-ntop.deb -O /tmp/apt-ntop.deb&#xA;Inštalácia repozitára # apt install /tmp/apt-ntop.deb&#xA;# apt update&#xA;Inštalácia # apt install ntopng&#xA;Nastavenie Vytvoríme nový konfiguračný súbor v zložke kde sa načítavajú konfigurácie automaticky.&#xA;# vi /etc/ntopng/ntopng.conf.d/my_own.conf&#xA;Obsah môže vyzerať napríklad takto, pozor - port má rovnaký ako používa Grafana.&#xA;# port&#xA;-w=3001&#xA;# interface&#xA;-i=enp8s0&#xA;#&#xA;#--local-networks &amp;quot;192.168.0.0/24&amp;quot;&#xA;Zapnúť službu: # systemctl restart ntopng.service&#xA;Proxy Pristupovať na webové rozhranie cez Apache Reverse-Proxy je jednoduché, a nevyžaduje žiadne špeciálne pravidlá.</description>
+    </item>
+    <item>
+      <title>Frekvenčné pásma</title>
+      <link>https://dodoslavn.github.io/clanky/frekven%C4%8Dn%C3%A9-p%C3%A1sma/</link>
+      <pubDate>Mon, 29 Jul 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/frekven%C4%8Dn%C3%A9-p%C3%A1sma/</guid>
+      <description>:::&#xA;1. Extrémne nízka frekvencia (ELF) Frekvenčné pásmo: 3 Hz až 30 Hz&#xA;Použitie: Komunikácia so ponorkami, geologické prieskumy. :::&#xA;:::&#xA;2. Super nízka frekvencia (SLF) Frekvenčné pásmo: 30 Hz až 300 Hz&#xA;Použitie: Komunikácia so ponorkami, špecifické aplikácie v oblasti komunikácie. :::&#xA;:::&#xA;3. Ultra nízka frekvencia (ULF) Frekvenčné pásmo: 300 Hz až 3 kHz&#xA;Použitie: Komunikácia so ponorkami, geologické prieskumy, niektoré vojenské aplikácie. :::&#xA;:::&#xA;4. Veľmi nízka frekvencia (VLF) Frekvenčné pásmo: 3 kHz až 30 kHz</description>
+    </item>
+    <item>
+      <title>Verejné meterologické satelity</title>
+      <link>https://dodoslavn.github.io/clanky/verejn%C3%A9-meterologick%C3%A9-satelity/</link>
+      <pubDate>Mon, 01 Jul 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/verejn%C3%A9-meterologick%C3%A9-satelity/</guid>
+      <description>Tieto satelity obiehajú na orbite okolo Zeme, s tým že prelietavajú nad konkrétnou časťou Zeme v podobnú časť dňa, napríklad nad Európou z pravidla len večer. NOAA satelity sú momentalne aktívne len 3, z toho NOAA 15 už skôr dosluhuje a v roku 2024 ma skončiť. V minulosti boli aj iné, z technických dôvodov ale ukončili prevádzku.&#xA;NOAA satelity vysielajú z pravidla 2 spôsobmi, APT a HRPT.&#xA;Automatic Picture Transmission APT funguje na frekvencií okolo 130MHz a signál je analógový.</description>
+    </item>
+    <item>
+      <title>Samba server na Debian</title>
+      <link>https://dodoslavn.github.io/clanky/samba-server-na-debian/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/samba-server-na-debian/</guid>
+      <description>Porty to používa 139 a 445.&#xA;Inštalácia apt install samba&#xA;Konfigurácia vi /etc/samba/smb.conf&#xA;Príklad [share]&#xA;read only = no&#xA;path = /data&#xA;guest ok = yes&#xA;browsable = yes\</description>
+    </item>
+    <item>
+      <title>Univerzálny rádiový príjmač</title>
+      <link>https://dodoslavn.github.io/clanky/univerz%C3%A1lny-r%C3%A1diov%C3%BD-pr%C3%ADjma%C4%8D/</link>
+      <pubDate>Mon, 27 May 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/univerz%C3%A1lny-r%C3%A1diov%C3%BD-pr%C3%ADjma%C4%8D/</guid>
+      <description>Software defined radio Je to zariadenie ktoré má nejaký, zpravidla veľký frekvenčný rozsah signálu ktorý vie prijať, a pomocou ADC (Analog to Digital Converter) prevodníku poslať daľej do počítača v digitalnej forme, kde si ho cez nejaký software viem rôzne spracovať.&#xA;Výpočet veľkosti vlny Rýchlosť svetla je 300 000 000 m/s.&#xA;Veľkosť vlny sa počíta vydelením: rýchlost svetla v m/s deleno frekvencia v Hz .&#xA;Antény a rádiove vlny U anténty vo výške 2-násobku veľkosti vlny, alebo akejkoľvek väčšej výšky, môžme ignorovať odrazy signálu od zeme.</description>
+    </item>
+    <item>
+      <title>Texotvý editor VI a manuál k nemu</title>
+      <link>https://dodoslavn.github.io/clanky/texotv%C3%BD-editor-vi-a-manu%C3%A1l-k-nemu/</link>
+      <pubDate>Tue, 09 Apr 2024 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/texotv%C3%BD-editor-vi-a-manu%C3%A1l-k-nemu/</guid>
+      <description>Ako zmazať celý obsah súboru gg&#xA;dG</description>
+    </item>
+    <item>
+      <title>Ako na podpisovanie gitových komitov</title>
+      <link>https://dodoslavn.github.io/clanky/ako-na-podpisovanie-gitov%C3%BDch-komitov/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-na-podpisovanie-gitov%C3%BDch-komitov/</guid>
+      <description>1. generate GPG key gpg --gen-key 2. Verify if its there and gpg --list-keys 3. if its not trusted as Ultimate gpg --list-secret-keys --keyid-format LONG gpg --edit-key trust save 4. save it to github in your profile gpg --list-secret-keys --keyid-format LONG gpg --armor --export 5. set the key as &amp;ldquo;global&amp;rdquo; or &amp;ldquo;local&amp;rdquo;, it requires your name in the email as ID, not ID of your GPG !!! git config --global user.</description>
+    </item>
+    <item>
+      <title>Debian a upgrady na vyššie verzie</title>
+      <link>https://dodoslavn.github.io/clanky/debian-a-upgrady-na-vy%C5%A1%C5%A1ie-verzie/</link>
+      <pubDate>Wed, 07 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian-a-upgrady-na-vy%C5%A1%C5%A1ie-verzie/</guid>
+      <description>Upgrade z Debian 11 na 12 Postup ktorý mi fungoval z verzie Debian 11 Bullseye na Debian 12 Bookworm.&#xA;apt update&#xA;apt upgrade&#xA;sed -i &#39;s/bullseye/bookworm/g&#39; /etc/apt/sources.list&#xA;apt update&#xA;apt upgrade --without-new-pkgs&#xA;apt full-upgrade&#xA;reboot\</description>
+    </item>
+    <item>
+      <title>Diagnostika výkonu diskov na Linux-e</title>
+      <link>https://dodoslavn.github.io/clanky/diagnostika-v%C3%BDkonu-diskov-na-linux-e/</link>
+      <pubDate>Thu, 01 Feb 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/diagnostika-v%C3%BDkonu-diskov-na-linux-e/</guid>
+      <description>Úvod Najskôr sa pozrieme na nástroje ktoré slúžia na zobrazenie aktuálneho vytaženia diskov. Potom na nástroje ktoré tie disky vedia zaťažiť.&#xA;sar Nástroj ktorý zobrazí základné metriky, všetky dokopy. Popis výstupu:&#xA;sar -b -p 1&#xA;tps - Celkový počet dokončených transakcí za sekundu (čítanie aj zápis) rtps - počet dokončených transakcí na čítanie wtps - to isté akorát zápis bread/s - počet prečítaných blokov zo všetkých blokových zariadení za sekundu bwrtn/s - to isté akorat zápis iostat Zobrazí vytťaženie diskov, pre každý disk zvlášť.</description>
+    </item>
+    <item>
+      <title>SSL/TLS a certifikačné autority</title>
+      <link>https://dodoslavn.github.io/clanky/ssl_tls-a-certifika%C4%8Dn%C3%A9-autority/</link>
+      <pubDate>Fri, 26 Jan 2024 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ssl_tls-a-certifika%C4%8Dn%C3%A9-autority/</guid>
+      <description>Úvod Funguje to asi takto, najskôr si musíme vygenerovať privátny kľúč ktorý sa použije pre samotnú certifikačnú autoritu. Pomocou verejného kľúča certifikačnej autority sa potom budú kontrolovať certifikáty na strane užívateľov.&#xA;Ďalší krok je vytvoriť certifikačnú autoritu z tohoto privátneho kľúča. Pri tvorbe sa vyberú aj nejaké meta dáta a popis. To je celé.&#xA;Potom už len generujeme privátne kľúče pre konkrétne systémy alebo domény zvlášť,&#xA;z nich následne vytvoríme CSR (Certificate Signign Request) kde zase nastavíme nejaké meta dáta ako je napríklad konkrétna doména pre ktorú to má byť použité.</description>
+    </item>
+    <item>
+      <title>Git - tipy a triky</title>
+      <link>https://dodoslavn.github.io/clanky/git---tipy-a-triky/</link>
+      <pubDate>Tue, 31 Oct 2023 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/git---tipy-a-triky/</guid>
+      <description>Zmazanie lokálnych &amp;quot;komitov&amp;quot; git reset --hard origin/master&#xA;Zobrazenie lokálnych, nepushnutých &amp;quot;komitov&amp;quot; git log origin/master..HEAD</description>
+    </item>
+    <item>
+      <title>Putty a SSH kľúče</title>
+      <link>https://dodoslavn.github.io/clanky/putty-a-ssh-k%C4%BE%C3%BA%C4%8De/</link>
+      <pubDate>Thu, 14 Sep 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/putty-a-ssh-k%C4%BE%C3%BA%C4%8De/</guid>
+      <description>Putty Najskôr potrebujeme nainštalovať samotné Putty, nie &amp;quot;portable&amp;quot; verziu. A to z dôvodu že klasický inštalátor nam dodá aj daľsie nástroje ktoré nám ulahčia život (napr. PuTTYgen).&#xA;Vygenerovanie SSH kľúčov Na vygenerovanie SSH kľučov je potrebný nástroj &amp;quot;PuTTYgen&amp;quot;. Ten spustíme, dole vyberieme aký typ šifry sa použije, štandartne sa používa RSA, aspoň 2048. Potom už len klikneme na &amp;quot;Generate&amp;quot;. Z dôvodu nedôvery voči funkciám ktoré generujú pseudo-nahodne čísla, sa takéto funkcie nepoužívajú z bezpečnostných dôvodov.</description>
+    </item>
+    <item>
+      <title>MongoDB - základy</title>
+      <link>https://dodoslavn.github.io/clanky/mongodb---z%C3%A1klady/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/mongodb---z%C3%A1klady/</guid>
+      <description>Slovník pojmou Na ľavej strane pojem z relačnej DB a na pravej MongoDB&#xA;Databáza = Databáza&#xA;Tabulka = Kolekcia&#xA;Zaznam = Dokument&#xA;Stĺpec = Pole\&#xA;Zobraziť show dbs;&#xA;show databases;&#xA;use db_nazov;\&#xA;Zobraziť dáta db.products.find().pretty()&#xA;db.products.find()&#xA;db.products.find(})&#xA;db.products.find(, )\&#xA;Vložiť dáta db.products.insertOne( })&#xA;insertMany - vloží sa po jednom, ak jeden failne, nasledovné už sa nevložia. Pokračuje aj po faile:&#xA;Zmazať dáta db.products.deleteMany()&#xA;db.products.deleteOne()\&#xA;Upraviť dáta db.products.updateOne(, })&#xA;db.products.updateOne(, })\</description>
+    </item>
+    <item>
+      <title>Virtualbox - sietarina</title>
+      <link>https://dodoslavn.github.io/clanky/virtualbox---sietarina/</link>
+      <pubDate>Sun, 20 Aug 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/virtualbox---sietarina/</guid>
+      <description>Typ sietového adaptéru: Host-only Adapter&#xA;VM môžu medzi sebou, a môžu Host strojom&#xA;Príklad názvu siete: vboxnet0&#xA;Typ sietového adaptéru: NAT Network&#xA;VM môžu medzi sebou, ale nemôžu Host strojom hned. Musí sa spraviť NAT.&#xA;Príklad názvu siete:&#xA;Nastavenie internej siete&#xA;VM=NazovVirtualky&#xA;VBoxManage modifyvm $VM --nic1 intnet&#xA;VBoxManage modifyvm $VM --intnet1 &amp;quot;nazov_internej_siete&amp;quot;&#xA;VBoxManage modifyvm $VM --natpf1 delete &amp;quot;guestssh&amp;quot;&#xA;VBoxManage modifyvm $VM --natpf1 &amp;quot;guestssh,tcp,,2222,10.0.2.19,22&amp;quot;&#xA;http://www.itzgeek.com/how-tos/mini-howtos/how-to-install-virtualbox-extension.html&#xA;http://www.howopensource.com/2011/06/how-to-use-virtualbox-in-terminal-commandline/&#xA;https://forums.virtualbox.org/viewtopic.php?f=7&amp;amp;t=58560&#xA;https://www.virtualbox.org/manual/ch06.html\</description>
+    </item>
+    <item>
+      <title>JWT - JsonWebToken ručne</title>
+      <link>https://dodoslavn.github.io/clanky/jwt---jsonwebtoken-ru%C4%8Dne/</link>
+      <pubDate>Tue, 25 Jul 2023 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/jwt---jsonwebtoken-ru%C4%8Dne/</guid>
+      <description>Popis Kód kde sa podpisovanie/kontrola robí ručne kde sa dá pochopiť jak to funguje.&#xA;Skript #!/bin/bash&#xA;#subor ktory obsahuje tvoj JWT&#xA;file=&amp;quot;payload.txt&amp;quot;&#xA;echo &amp;quot;########### &amp;quot;Vloz JWT podpisany Googlom:&#xA;read content&#xA;echo&#xA;echo $content &amp;gt; $file&#xA;echo&#xA;#funkcia na upravu base64, standartne sa zaokruhluje, u JWT nie&#xA;decode_base64_url() {&#xA;local len=$(($ % 4))&#xA;local result=&amp;quot;$1&amp;quot;&#xA;if [ $len -eq 2 ]; then result=&amp;quot;$1&amp;quot;&#39;==&#39;&#xA;elif [ $len -eq 3 ]; then result=&amp;quot;$1&amp;quot;&#39;=&#39;</description>
+    </item>
+    <item>
+      <title>Nastavenie Yubikey na SSH v Linux-e</title>
+      <link>https://dodoslavn.github.io/clanky/nastavenie-yubikey-na-ssh-v-linux-e/</link>
+      <pubDate>Fri, 13 Jan 2023 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/nastavenie-yubikey-na-ssh-v-linux-e/</guid>
+      <description># YUBICO&#xA;# https://support.yubico.com/hc/en-us/articles/360016649039-Enabling-the-Yubico-PPA-on-Ubuntu&#xA;sudo add-apt-repository ppa:yubico/stable &amp;amp;&amp;amp; sudo apt-get update&#xA;sudo apt install yubikey-manager&#xA;sudo apt install yubikey-personalization-gui&#xA;sudo apt install yubico-piv-tool&#xA;sudo apt install libpam-yubico&#xA;sudo apt install libpam-u2f&#xA;# check service&#xA;sudo systemctl start pcscd&#xA;sudo systemctl enable pcscd&#xA;systemctl status pcscd&#xA;#=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=&#xA;To get yubikey-manager-qt for Ubuntu 20.04/20.10 follow steps (you will have to&#xA;build it yourself):&#xA;git clone https://github.com/Yubico/yubikey-manager-qt&#xA;cd yubikey-manager-qt&#xA;sudo apt install devscripts equivs</description>
+    </item>
+    <item>
+      <title>Polovodiče, integrované obvody a iné</title>
+      <link>https://dodoslavn.github.io/clanky/polovodi%C4%8De-integrovan%C3%A9-obvody-a-in%C3%A9/</link>
+      <pubDate>Sat, 26 Nov 2022 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/polovodi%C4%8De-integrovan%C3%A9-obvody-a-in%C3%A9/</guid>
+      <description>BC517 /\ C B E</description>
+    </item>
+    <item>
+      <title>Nginx - tipy a triky</title>
+      <link>https://dodoslavn.github.io/clanky/nginx---tipy-a-triky/</link>
+      <pubDate>Thu, 24 Nov 2022 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/nginx---tipy-a-triky/</guid>
+      <description>Typy header-ov client -&amp;gt; nginx: the client request headers&#xA;nginx -&amp;gt; upstream: the upstream request headers&#xA;upstream -&amp;gt; nginx: the upstream response headers&#xA;nginx -&amp;gt; client: the client response headers\</description>
+    </item>
+    <item>
+      <title>DHCP server na Debian</title>
+      <link>https://dodoslavn.github.io/clanky/dhcp-server-na-debian/</link>
+      <pubDate>Thu, 21 Apr 2022 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/dhcp-server-na-debian/</guid>
+      <description>Krátky návod ako nainštalovať DHCP server na Debian. Je potom už jednoduché dorobiť boot-ovanie po sieti cez PXE.&#xA;Inštalácia apt install isc-dhcp-server&#xA;Konfigurácia # option definitions common to all supported networks...&#xA;option domain-name &amp;quot;fordo.sk&amp;quot;;&#xA;option domain-name-servers ns1.example.org, ns2.example.org;&#xA;default-lease-time 600;&#xA;max-lease-time 7200;&#xA;# The ddns-updates-style parameter controls whether or not the server will&#xA;# attempt to do a DNS update when a lease is confirmed. We default to the&#xA;# behavior of the version 2 packages (&#39;none&#39;, since DHCP v2 didn&#39;t</description>
+    </item>
+    <item>
+      <title>Unbound DNS resolver na Debian-e 11</title>
+      <link>https://dodoslavn.github.io/clanky/unbound-dns-resolver-na-debian-e-11/</link>
+      <pubDate>Thu, 21 Apr 2022 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/unbound-dns-resolver-na-debian-e-11/</guid>
+      <description>Ako nainštalovať DNS-cache server na Debian, konkrétne Unbound.&#xA;Inštalácia apt-get install bind9-utils dnsutils net-tools apt-get install unbound&#xA;Konfigurácia server:&#xA;# the working directory.&#xA;directory: &amp;quot;/etc/unbound&amp;quot;&#xA;# run as the unbound user&#xA;username: unbound&#xA;verbosity: 2 # uncomment and increase to get more logging.&#xA;# listen on all interfaces, answer queries from the local subnet.&#xA;interface: 0.0.0.0&#xA;# comment out the following line if your system doesn&#39;t have IPv6.&#xA;interface: ::0</description>
+    </item>
+    <item>
+      <title>Audio zosilovač - 2x 15W z TDA7297</title>
+      <link>https://dodoslavn.github.io/clanky/audio-zosilova%C4%8D---2x-15w-z-tda7297/</link>
+      <pubDate>Wed, 16 Jun 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/audio-zosilova%C4%8D---2x-15w-z-tda7297/</guid>
+      <description>Veci som objednával väčšinou z www.gme.cz, lebo ich mám hned oproti domu. Musel som ešte prikúpiť step-down, a použil som starý, malý vetrák na uchladenie toho TDA.&#xA;Krabička Proste krabička s rozmermi, aby sa zmestilo všetko.&#xA;Odkaz: https://www.gme.cz/krabicka-plastova-kp09-bez-otvoru-z-2p Cena: 99KC Konektor na 230V Pre jednoduchosť a univerzálnosť som použil klasický Euro-konektor. Dá sa jednoducho prišróbovať ku krabici.&#xA;Odkaz: https://www.gme.cz/napajeci-euro-konektor-schurter-6100-3200 Cena: 27KC Konektor na repro Klasicky reprokonektor, 2kusy pre lavy a pravy kanal.</description>
+    </item>
+    <item>
+      <title>Yum - tipy a triky</title>
+      <link>https://dodoslavn.github.io/clanky/yum---tipy-a-triky/</link>
+      <pubDate>Thu, 03 Jun 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/yum---tipy-a-triky/</guid>
+      <description>Rozbity repozitar Ako fixnut rozbity repozitar yum-u. Stava sa to celkom casto.&#xA;mkdir /var/lib/rpm/backup&#xA;cp -a /var/lib/rpm/__db* /var/lib/rpm/backup/&#xA;/var/lib/rpm/__db&#xA;rm -f /var/lib/rpm/__db.[0-9][0-9][0-9]&#xA;rpm --quiet -qa&#xA;rpm --rebuilddb&#xA;yum clean all&#xA;Verzie Jak vylistovat vsetky verzie nejakeho baliku.&#xA;yum -v list package_name --show-duplicates&#xA;Balíky vs. súbory Ako zistiť aký balík mi nainštaluje konkrétny súbor.&#xA;rpm -q --whatprovides package_name&#xA;yum whatprovides package_name&#xA;Ako zistiť aké súbory mi nainštaluje konkrétny balík.&#xA;rpm -ql package_name</description>
+    </item>
+    <item>
+      <title>Ako pridať daľší WiFi router </title>
+      <link>https://dodoslavn.github.io/clanky/ako-prida%C5%A5-da%C4%BE%C5%A1%C3%AD-wifi-router-/</link>
+      <pubDate>Sat, 08 May 2021 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-prida%C5%A5-da%C4%BE%C5%A1%C3%AD-wifi-router-/</guid>
+      <description>WiFI router je hrozny nazov V prvom rade by som chcel povedat preco je &amp;quot;WiFi router&amp;quot; nestastny nazov. Slovicko &amp;quot;router&amp;quot; sa da prelozit ako slovo smerovac. Smerovac je zariadenie ktore sluzi na to aby zariadenia v roznych IP sietach mohli spolu komunikovat. Napriklad vsetky servery/zariadenia na internete, a zariadenia ktore mam u seba doma. Takze router je zariadenie ktore sluzi na smerovanie komunikacie medzi mojou domacnostou a internetom. Slovicko WiFi zanema ze to podporuje WiFi a ze to bude vediet spravit WiFi siet na ktoru sa budem moct pripojit.</description>
+    </item>
+    <item>
+      <title>Certifikáty SSL/TLS a podobné</title>
+      <link>https://dodoslavn.github.io/clanky/certifik%C3%A1ty-ssl_tls-a-podobn%C3%A9/</link>
+      <pubDate>Thu, 25 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/certifik%C3%A1ty-ssl_tls-a-podobn%C3%A9/</guid>
+      <description>JKS Zobraziť obsah JKS súboru (všetky aliasy)&#xA;keytool -v -list -keystore subor.jks&#xA;Zobraziť jeden konkrétny alias z JKS&#xA;keytool -list -keystore subor.jks -alias alias_nazov&#xA;Konvertovanie JKS do P12 Všetky aliasy z JKS do P12&#xA;keytool -importkeystore -srckeystore vstupny.jks -destkeystore vystupny.p12 -srcstoretype jks deststoretype pkcs12&#xA;Jeden konkrétny alias z JKS do PEM&#xA;keytool -exportcert -alias nazov_aliasy -keystore vstupny.jks -rfc -file vystup.pem&#xA;Konvertovanie P12 do PEM openssl pkcs12 -in tvoj_subor.p12 -out tvoj_subor.pem</description>
+    </item>
+    <item>
+      <title>Puppet - automatizácia infra.</title>
+      <link>https://dodoslavn.github.io/clanky/puppet---automatiz%C3%A1cia-infra./</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/puppet---automatiz%C3%A1cia-infra./</guid>
+      <description>Manifest Je samotny kod&#xA;Nazyva sa ako samotny PUPPET&#xA;Vsetko co je v nom je pre vsetky prostredia&#xA;Hiera Su cisto len data&#xA;Da sa rozdelit na prostredia&#xA;modul import apache; role import role::webserver; class or defined type defined in the top scope import ::apache</description>
+    </item>
+    <item>
+      <title>RabbitMQ manuál</title>
+      <link>https://dodoslavn.github.io/clanky/rabbitmq-manu%C3%A1l/</link>
+      <pubDate>Fri, 19 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/rabbitmq-manu%C3%A1l/</guid>
+      <description>Lazy queues Uchováva správy vo frontách, ukladá ich tam čo najrýchlejšie, primárne na disk. V pamäti sú iba pri spracovávaní. Veľmi šetrné k pamäti RAM.&#xA;durable Fronty a exchange ostávajú aj po reštarte. Inak budú zmazanaé aj s obsahom.&#xA;Quorum queue Nastavenie quorum queue cluster size v runtime&#xA;rabbitmqctl eval &#39;application:get_env(rabbit,quorum_cluster_size).&#39;&#xA;rabbitmqctl eval &#39;application:set_env(rabbit,quorum_cluster_size, 5).&#39;</description>
+    </item>
+    <item>
+      <title>Raspberry Pi - inštalácia OS</title>
+      <link>https://dodoslavn.github.io/clanky/raspberry-pi---in%C5%A1tal%C3%A1cia-os/</link>
+      <pubDate>Mon, 15 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/raspberry-pi---in%C5%A1tal%C3%A1cia-os/</guid>
+      <description>Officiálny systém na RPi je vydavany priamo výrobcom. Je odvodený od inej linuxovej distribúcie ktoré sa nazýva Debian. Povodny názov tohto systému pre RPi bol spojenie slov Raspberry a Debian, teda Raspbian. Neskô sa názov zjednodušil na Raspberry OS. Systém je samozrejme úplne zdarma aj na komerčné učely.&#xA;Čo je to GUI? Graphical User Interface znamená že po pripojení sa na RPi si môžme zobraziť toto grafické rozhranie. To znamená že budeme mat pracovnu plochu,môžme ovládať myš, budeme mat ikonky a okna.</description>
+    </item>
+    <item>
+      <title>IP adresy</title>
+      <link>https://dodoslavn.github.io/clanky/ip-adresy/</link>
+      <pubDate>Sun, 14 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ip-adresy/</guid>
+      <description>IPv4 IP adresy verzie 4 sa skladajú zo 4 čísiel oddelených bodkou. Každé číslo je od 0 do 255 (v bežnej desiatkovej sústave). Presnejšie 4, jedno bajtové čísla oddelené bodkou. Jeden B (bajt) sa skladá z 8 b (bitov). Osem bitov sa dá tiež nazvať ako jeden oktet. Jeden bit je buď 0 alebo 1. Takže sa dá IP adresa vyjadriť aj v bitoch, to zanmená že budú 4 osem-ciferné čisla(alebo 4 oktety) oddelené bodkou, kde každá cifra bude 0 alebo 1.</description>
+    </item>
+    <item>
+      <title>Automatizácia terária - Úvod</title>
+      <link>https://dodoslavn.github.io/clanky/automatiz%C3%A1cia-ter%C3%A1ria---%C3%BAvod/</link>
+      <pubDate>Sat, 13 Mar 2021 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/automatiz%C3%A1cia-ter%C3%A1ria---%C3%BAvod/</guid>
+      <description>Moje prevedenie Moje riešenie vypadá asi takto. Mám takúto webovú stránku prístupnú odkiaľkoľvek cez internet. Môžem si tu zobraziť aktuálny stav teploty a relatívnej vlhkosti v teráriu. Viem si tu zobraziť priebeh za celý deň, poslednú hodinu, týždeň alebo aj mesiac..&#xA;Ak sa úroveň vlhkosti alebo teploty dostane cez mnou stanovený limit, príde mi notifikácia na mobil. V mojom prípade konkrétne cez emaily. Ak sa teplota alebo vlhkosť dostane cez nejakú úroveň tak sa mi automaticky spustí mlhovac, čerpadlo na zavlažovanie, vetranie alebo vyhrievanie terária.</description>
+    </item>
+    <item>
+      <title>KVM a virsh v konzoli</title>
+      <link>https://dodoslavn.github.io/clanky/kvm-a-virsh-v-konzoli/</link>
+      <pubDate>Thu, 19 Nov 2020 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/kvm-a-virsh-v-konzoli/</guid>
+      <description>#!/bin/bash -x #fill values to your need VMNAME=aaaa MAC=&#39;52:54:00:09:11:03&#39; VNC_PORT=5952 VNC_PASSWORD=&#39;!PASSWORD!&#39; DISK=&#39;/path/to/filename.qcow2&#39; sudo virt-install \ --connect qemu:///system \ --import \ --name=$VMNAME \ --ram=2048 \ --vcpus=2 \ --disk $DISK,device=disk,bus=virtio,format=qcow2 \ --os-variant rhel6 \ --debug \ --network=bridge:br0,mac=$MAC \ --graphics=vnc,port=$VNC_PORT,password=$VNC_PASSWORD \ --autostart \ --noautoconsole \ --os-type=linux virsh list --all virsh undefine $VM virsh destroy $VM</description>
+    </item>
+    <item>
+      <title>Debian a 5.1 audio</title>
+      <link>https://dodoslavn.github.io/clanky/debian-a-5.1-audio/</link>
+      <pubDate>Fri, 03 Jan 2020 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian-a-5.1-audio/</guid>
+      <description>V súbore: /etc/pulse/daemon.conf nastaviť na &amp;quot;yes&amp;quot; pre prehrávanie stereo zvuku aj do ostatných kanálov:&#xA;enable-lfe-remixing = yes&#xA;V rovnakom súbore nastavit počet kanálov:&#xA;default-sample-channels=6</description>
+    </item>
+    <item>
+      <title>Malý návod ako spraviť vlastné terárium</title>
+      <link>https://dodoslavn.github.io/clanky/mal%C3%BD-n%C3%A1vod-ako-spravi%C5%A5-vlastn%C3%A9-ter%C3%A1rium/</link>
+      <pubDate>Thu, 02 Jan 2020 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/mal%C3%BD-n%C3%A1vod-ako-spravi%C5%A5-vlastn%C3%A9-ter%C3%A1rium/</guid>
+      <description>použít na osb proti vlhkosti lodný lak tloustka skla 4mm lignocel takze najprv namocit nechat uschnut a az potom lepit</description>
+    </item>
+    <item>
+      <title>Correlophus ciliatus - chov</title>
+      <link>https://dodoslavn.github.io/clanky/correlophus-ciliatus---chov/</link>
+      <pubDate>Wed, 01 Jan 2020 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/correlophus-ciliatus---chov/</guid>
+      <description>Krmenie (mlade): Mlade povazujeme tak do jedneho az jeden a pol roka coz je doba kedy este rastu. Mlade krmime idealne kazdy jeden den a to tolko kolko zozerie. Je dolezite aby mali dostatok vapniku a proteinov na svoj rast. Na to sa hodi krmny hmnyz ako su rozne druhy cvrckov (bananovy/cierny) posypany vapnikom a vitaminom D3. Cim su cvrcci kludnejsi a menej skakavy/behavy tym sa lahsie lovia. Cim viac ich zozere tym lepsie.</description>
+    </item>
+    <item>
+      <title>IBM Datastage manual</title>
+      <link>https://dodoslavn.github.io/clanky/ibm-datastage-manual/</link>
+      <pubDate>Wed, 11 Sep 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-datastage-manual/</guid>
+      <description>Status Name Status Code Explanation DSJS.RUNNING 0 Job is actually running DSJS.RUNOK 1 Job finished a normal run with no warnings DSJS.RUNWARN 2 Job finished a normal run with warnings DSJS.RUNFAILED 3 Job finished a normal run with a fatal error DSJS.QUEUED 4 Job queued waiting for resource allocation DSJS.VALOK 11 Job finished a validation run with no warnings DSJS.VALWARN 12 Job finished a validation run with warnings DSJS.VALFAILED 13 Job failed a validation run DSJS.</description>
+    </item>
+    <item>
+      <title>Virtualbox - inštalácia Guest additions</title>
+      <link>https://dodoslavn.github.io/clanky/virtualbox---in%C5%A1tal%C3%A1cia-guest-additions/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/virtualbox---in%C5%A1tal%C3%A1cia-guest-additions/</guid>
+      <description>Inštalácia potrebných OS balíkov apt install build-essential module-assistant dkms make&#xA;m-a prepare&#xA;Stiahnutie VBOXS=$(vboxmanage -v | cut -d&#39;r&#39; -f1)&#xA;VBOXL=$(vboxmanage -v | sed &#39;s/r/-/&#39; )&#xA;wget http://download.virtualbox.org/virtualbox/&amp;quot;$VBOXS&amp;quot;/VirtualBox-&amp;quot;$VBOXL&amp;quot;-Linux_amd64.run</description>
+    </item>
+    <item>
+      <title>Virtualbox - sietove nastavenia</title>
+      <link>https://dodoslavn.github.io/clanky/virtualbox---sietove-nastavenia/</link>
+      <pubDate>Wed, 17 Jul 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/virtualbox---sietove-nastavenia/</guid>
+      <description>VM=MDM_MDM [dodoslav@AW1:~]$ VBoxManage modifyvm $VM --nic1 intnet [dodoslav@AW1:~]$ VBoxManage modifyvm $VM --intnet1 &amp;quot;MDM_network&amp;quot;</description>
+    </item>
+    <item>
+      <title>Oracle databáza - základna syntax</title>
+      <link>https://dodoslavn.github.io/clanky/oracle-datab%C3%A1za---z%C3%A1kladna-syntax/</link>
+      <pubDate>Mon, 15 Jul 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/oracle-datab%C3%A1za---z%C3%A1kladna-syntax/</guid>
+      <description>SELECT&#xA;table_name, owner FROM user_tables;&#xA;SELECT table_name, owner FROM all_tables ORDER BY owner, table_name;&#xA;select username from dba_users;&#xA;CREATE USER books_admin IDENTIFIED BY MyPassword;&#xA;GRANT CONNECT TO books_admin;&#xA;GRANT CONNECT, RESOURCE, DBA TO books_admin;&#xA;GRANT CREATE SESSION GRANT ANY PRIVILEGE TO books_admin;&#xA;GRANT UNLIMITED TABLESPACE TO books_admin;&#xA;SQL&amp;gt; select USERNAME,ACCOUNT_STATUS from dba_users where ORACLE_MAINTAINED &amp;lt;&amp;gt; &#39;Y&#39;;&#xA;SQL&amp;gt; select USERNAME,ACCOUNT_STATUS from dba_users where USERNAME like &#39;%XM%&#39;;&#xA;SQL&amp;gt; r&#xA;1* SELECT username, status, osuser, process, machine, terminal, logon_time FROM v$session where MACHINE &amp;lt;&amp;gt; &#39;hostname&#39;</description>
+    </item>
+    <item>
+      <title>Linux - tipy a triky na Bash</title>
+      <link>https://dodoslavn.github.io/clanky/linux---tipy-a-triky-na-bash/</link>
+      <pubDate>Mon, 27 May 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux---tipy-a-triky-na-bash/</guid>
+      <description>Vysvetlenie príkazu stat&#xA;There are 3 kind of &amp;quot;timestamps&amp;quot;:&#xA;Access - the last time the file was read&#xA;Modify - the last time the file was modified (content has been modified)&#xA;Change - the last time meta data of the file was changed (e.g. permissions)\&#xA;Presunitie sa v skripte do adresára skriptu:&#xA;cd &amp;quot;$(dirname &amp;quot;$0&amp;quot;)&amp;quot;&#xA;Získanie názvu skriptu v skripte samotnom:&#xA;echo $(basename &amp;quot;$0&amp;quot;)&#xA;Prehľadávanie súbora po riadkoch. Premenná IFS (Internal Field Separator) sa použije na nastavenie znaku na základe ktorého sa obsah súboru rozseká do premennej v cykle typu for .</description>
+    </item>
+    <item>
+      <title>Zabbix monitoring - manuál ako na to</title>
+      <link>https://dodoslavn.github.io/clanky/zabbix-monitoring---manu%C3%A1l-ako-na-to/</link>
+      <pubDate>Mon, 27 May 2019 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/zabbix-monitoring---manu%C3%A1l-ako-na-to/</guid>
+      <description>Návod pre Debian 9, prípadne Debian 9 v Dockeri.&#xA;Priprava Otvoríme v prehliadači tento odkaz kde si nájdeme akyuálnu verziu balíku, a skopríjeme jeho odkaz. Balík následne na servere stiahneme cez wget. https://repo.zabbix.com/zabbix/4.2/debian/pool/main/z/zabbix-release/&#xA;Inštalácia základných vecí.&#xA;apt install dialog apt-utils wget vim&#xA;Stiahneme Zabbix balík:&#xA;wget https://repo.zabbix.com/zabbix/4.2/debian/pool/main/z/zabbix-release/zabbix-release_4.2-1%2Bstretch_all.deb&#xA;Nainštalujeme ho:&#xA;dpkg -i zabbix-release_4.2-1+stretch_all.deb&#xA;Obnovíme zoznam balíkov:&#xA;apt update&#xA;Server Inštalácia nástrojov na monitoring server.&#xA;Inštalácia MariaDB servera:&#xA;apt install mysql-server mysql-client</description>
+    </item>
+    <item>
+      <title>IBM Datastage - inštalácia na linuxe </title>
+      <link>https://dodoslavn.github.io/clanky/ibm-datastage---in%C5%A1tal%C3%A1cia-na-linuxe-/</link>
+      <pubDate>Thu, 31 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-datastage---in%C5%A1tal%C3%A1cia-na-linuxe-/</guid>
+      <description>Pridáme skupinu&#xA;groupadd dsodb\&#xA;Vytvoríme užívateľov&#xA;useradd -g dsodb -m dsodb;&#xA;useradd -g db2fenc1 -m db2fenc1;&#xA;useradd -g db2inst1 -m db2inst1;&#xA;useradd -g srduser -m srduser;&#xA;useradd -g iauser -m iauser;&#xA;useradd -g xmetasr -m xmetasr;&#xA;useradd -g dsadm -m dsadm;&#xA;useradd -g xmeta -m xmeta;&#xA;useradd -g dsodb -m dsodb;\&#xA;Nainštalujeme balík nástrojov&#xA;yum groupinstall &amp;quot;Development Tools&amp;quot;\&#xA;Nainštalujeme knižnice&#xA;yum install -y libXp libXtst glibc libXp libXau libXext libX11 libxcb libXmu nss compat-libstdc* glibc libXp libXtst</description>
+    </item>
+    <item>
+      <title>Obnovenie certifikátov pre repozitáre</title>
+      <link>https://dodoslavn.github.io/clanky/obnovenie-certifik%C3%A1tov-pre-repozit%C3%A1re/</link>
+      <pubDate>Fri, 18 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/obnovenie-certifik%C3%A1tov-pre-repozit%C3%A1re/</guid>
+      <description>sudo apt-key list | \\ grep &amp;quot;expired: &amp;quot; | \\ sed -ne &#39;s|pub .*/\([^ ]*\) .*|\1|gp&#39; | \\ xargs -n1 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys</description>
+    </item>
+    <item>
+      <title>IBM Datastage - debug mód</title>
+      <link>https://dodoslavn.github.io/clanky/ibm-datastage---debug-m%C3%B3d/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-datastage---debug-m%C3%B3d/</guid>
+      <description>http://www-01.ibm.com/support/docview.wss?uid=swg21509567&#xA;Service management File: /opt/IBM/InformationServer/IIS115/Server/DSODB/bin/DSAppWatcher.sh Variable: APW_DEBUG&#xA;Populating DSODB File: /opt/IBM/InformationServer/IIS115/Server/DSODB/DSODBConfig.cfg Variable: TraceMax=1000&#xA;File: /opt/IBM/InformationServer/IIS115/Server/DSODB/DSODBTuning.cfg Variable: com.ibm.datastage.jlog.DSFileHandler.level=DEBUG</description>
+    </item>
+    <item>
+      <title>IBM IS Datastage - inštalácia FixPack-u</title>
+      <link>https://dodoslavn.github.io/clanky/ibm-is-datastage---in%C5%A1tal%C3%A1cia-fixpack-u/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-is-datastage---in%C5%A1tal%C3%A1cia-fixpack-u/</guid>
+      <description>Príprava: http://www-01.ibm.com/support/docview.wss?uid=swg24044633&#xA;Procedúra: http://www.ibm.com/support/docview.wss?uid=swg22014102&#xA;http://www-01.ibm.com/support/docview.wss?uid=swg27046499&amp;amp;aid=1&#xA;\&#xA;Create folders: mkdir /data/IS&#xA;mkdir /data/IS/BACKUP&#xA;Move installation file to the server: is-update-linux64-11.7.0.106.tar&#xA;fixpack_FP2_IS115_linux64_11500-11501.ispkg\&#xA;Increase size of /tmp FS to have at least 2.5GB of free space&#xA;--- Procedure ---&#xA;1.) connect to the server&#xA;#verify health and status&#xA;#create maintenance flag for monitoring&#xA;2.) stop Datastage&#xA;3.) perform DB2 XMETA database offline backup to folder: /data/IS/BACKUP&#xA;//DB2 part&#xA;Note: permission issue, 1.2GB, lasted few seconds</description>
+    </item>
+    <item>
+      <title>IBM IS Datastage - zmena hesiel</title>
+      <link>https://dodoslavn.github.io/clanky/ibm-is-datastage---zmena-hesiel/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-is-datastage---zmena-hesiel/</guid>
+      <description>Note: this is procedure to update password for OS accounts which are used by Datastage.&#xA;User &amp;quot;xmeta&amp;quot;:&#xA;KB link:&#xA;https://www.ibm.com/support/knowledgecenter/en/SSYQ72_10.0.4/com.ibm.help.suiteinstall1004.reportconfig.doc/T_ResettingPasswordForXMetaAndCognos.html&#xA;1.) switch to main DS user&#xA;su - dsadm&#xA;2.) move to the folder&#xA;cd /opt/IBM/InformationServer/IIS115/ASBServer/bin&#xA;3.) update the password via script&#xA;./AppServerAdmin.sh -db -user xmeta -password&#xA;4.) verify the password via command&#xA;./AppServerAdmin.sh -w&#xA;User &amp;quot;xmetasr&amp;quot;:&#xA;KB link: http://www-01.ibm.com/support/docview.wss?uid=swg21640075&#xA;1.) switch to main DS user&#xA;su - dsadm&#xA;2.) move to the folder</description>
+    </item>
+    <item>
+      <title>Screeps - inštalácia privátneho servera</title>
+      <link>https://dodoslavn.github.io/clanky/screeps---in%C5%A1tal%C3%A1cia-priv%C3%A1tneho-servera/</link>
+      <pubDate>Wed, 14 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/screeps---in%C5%A1tal%C3%A1cia-priv%C3%A1tneho-servera/</guid>
+      <description>Pridáme repozitáre:&#xA;echo &amp;quot;deb http://ftp.cz.debian.org/debian/ stretch main non-free&#xA;deb-src http://ftp.cz.debian.org/debian/ stretch main non-free&#xA;deb http://security.debian.org/debian-security stretch/updates main contrib non-free&#xA;deb-src http://security.debian.org/debian-security stretch/updates main contrib non-free&#xA;# stretch-updates, previously known as &#39;volatile&#39;&#xA;deb http://ftp.cz.debian.org/debian/ stretch-updates main contrib&#xA;deb-src http://ftp.cz.debian.org/debian/ stretch-updates main contrib&#xA;&amp;quot; &amp;gt; /etc/apt/sources.list&#xA;Nainštalujeme pár základných balíčkov&#xA;apt-get clean ;&#xA;apt update ;&#xA;apt install -y apt-utils ;&#xA;apt install -y dialog ;&#xA;apt install -y libterm-ui-perl ;&#xA;apt upgrade -y ;</description>
+    </item>
+    <item>
+      <title>DB2 manuál</title>
+      <link>https://dodoslavn.github.io/clanky/db2-manu%C3%A1l/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/db2-manu%C3%A1l/</guid>
+      <description>Spustí samotný DB server:&#xA;db2start&#xA;Vypne DB server:&#xA;db2stop&#xA;Zobrazí zoznam databáz:&#xA;db2 list db directory&#xA;Zobrazí zoznam práve aktívnych databáz:&#xA;db2 list active databases&#xA;Deaktivuje databázu:&#xA;db2 deactivate db databaza1&#xA;Aktivuje databázu:&#xA;db2 activate db databaza1&#xA;Zobrazí aktívne pripojenia do všetkých databáz:&#xA;db2 list applications&#xA;Zobrazí aktívne pripojenia do databáze:&#xA;db2 list applications for DB databaza1&#xA;Zobrazí práve bežiace utility, napríklad prebiehajúca záloha alebo obnovenie:&#xA;db2 list utilities&#xA;Rovnako ako v predošlom prípade, akorát detailne:</description>
+    </item>
+    <item>
+      <title>Edge Loadbalancer manual</title>
+      <link>https://dodoslavn.github.io/clanky/edge-loadbalancer-manual/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/edge-loadbalancer-manual/</guid>
+      <description>Vypnutie:&#xA;dscontrol manager stop&#xA;dscontrol executor stop&#xA;dsserver stop&#xA;Zapnutie:&#xA;dsserver start&#xA;Kontrola:&#xA;dscontrol manager report&#xA;dscontrol highavailability status&#xA;Prepnutie zo StandBy do Primary:&#xA;dscontrol highavailability takeover</description>
+    </item>
+    <item>
+      <title>IBM WebSphere AS - Network Deployemnt</title>
+      <link>https://dodoslavn.github.io/clanky/ibm-websphere-as---network-deployemnt/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-websphere-as---network-deployemnt/</guid>
+      <description>IBM Installation Manager: Vylistovanie balikov v repozitari:&#xA;./imcl listAvailablePackages -repositories /cesta/k/zlozke/s/repository.conf/&#xA;Ako získať login do WebSphere DMGR: Príklad cesty k súboru:&#xA;find /opt/IBM/WebSphere* -name soap.client.props | grep -v eTempl | grep -v \/temp\/ | grep \/profiles\/ | grep -i dmgr&#xA;Meno a heslo by tam malo byť, heslo dešifrujeme pomocou:&#xA;http://strelitzia.net/wasXORdecoder/wasXORdecoder.html&#xA;Ako získať port na ktorom beži DMGR: Príklad cesty k súboru. Je to ten v DMGR profile:&#xA;find /opt/IBM/WebSphere* -name serverindex.</description>
+    </item>
+    <item>
+      <title>Informatica PowerCenter</title>
+      <link>https://dodoslavn.github.io/clanky/informatica-powercenter/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/informatica-powercenter/</guid>
+      <description>PowerCenter offers many logs to monitor the operation of its processes. The following description of logs follows a typical order of log verification that you would follow when debugging an issue:&#xA;Workflow Monitor&#xA;Session Log&#xA;Most granular of logs, contains information related to an individual session run&#xA;Source/Target Rows&#xA;Performance Statistics&#xA;Mapping and Session Level failures&#xA;Can be expanded to include verbose data if necessary for mapping debugging&#xA;Workflow Log</description>
+    </item>
+    <item>
+      <title>Linux RedHat - typy a triky</title>
+      <link>https://dodoslavn.github.io/clanky/linux-redhat---typy-a-triky/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux-redhat---typy-a-triky/</guid>
+      <description>Alo vyresetovať užívateľovi heslo:&#xA;pam_tally2 --user=uzivatel01 --reset&#xA;sswd | grep czz07390 vi /etc/sysconfig/iptables&#xA;systemctl reload iptables\</description>
+    </item>
+    <item>
+      <title>Windows - tipy a triky</title>
+      <link>https://dodoslavn.github.io/clanky/windows---tipy-a-triky/</link>
+      <pubDate>Wed, 07 Nov 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/windows---tipy-a-triky/</guid>
+      <description>Nastavenie premennej v rgistroch cez Command Line:&#xA;&amp;quot;HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\services\LanmanServer\Parameters&amp;quot; /f /v &amp;quot;SMB1&amp;quot; /t REG_DWORD /d &amp;quot;1&amp;quot;&#xA;Nastavenie premennej v rgistroch cez PowerShell:&#xA;Set-ItemProperty -Path &amp;quot;HKLM:\SYSTEM\CurrentControlSet\Services\LanmanServer\Parameters&amp;quot; SMB1 -Type DWORD -Value 1 -Force&#xA;Ako spustiť PowerShell skript z Command Line:&#xA;C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -File C:\Windows\moj_skript.ps1</description>
+    </item>
+    <item>
+      <title>Pentaho slave server</title>
+      <link>https://dodoslavn.github.io/clanky/pentaho-slave-server/</link>
+      <pubDate>Thu, 05 Jul 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/pentaho-slave-server/</guid>
+      <description>$ cat data-integration/configuration.xml Slave01 0.0.0.0 9081 10000 1440 1440</description>
+    </item>
+    <item>
+      <title>Základ konfiguráce Postgre pod Debian 9</title>
+      <link>https://dodoslavn.github.io/clanky/z%C3%A1klad-konfigur%C3%A1ce-postgre-pod-debian-9/</link>
+      <pubDate>Sun, 10 Jun 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/z%C3%A1klad-konfigur%C3%A1ce-postgre-pod-debian-9/</guid>
+      <description>Samotná inštalácia Postgre:&#xA;apt install postgresql&#xA;Týmto príkazom vstúpime do príkazovej riadky Postgre ako užívateľ postgres ktorý má najväčšie oprávnenie, no dá sa použiť v základnom nastavení len z príkazovej riadky a z OS účtu postgres:&#xA;su - postgres -c psql&#xA;Predošlí príkaz využijeme a vytvoríme si nového užívateľa pre nejakú aplikáciu:&#xA;su - postgres -c &amp;quot;psql -c \&amp;quot;create user uzivatel with encrypted password &#39;heslo&#39;;\&amp;quot;&amp;quot;&#xA;Pre pokračovanie, musíme vytvoriť ešte databázu k tomuto užívateľovi:</description>
+    </item>
+    <item>
+      <title>Základ konfiguráce MariaDB pod Debian 9</title>
+      <link>https://dodoslavn.github.io/clanky/z%C3%A1klad-konfigur%C3%A1ce-mariadb-pod-debian-9/</link>
+      <pubDate>Tue, 05 Jun 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/z%C3%A1klad-konfigur%C3%A1ce-mariadb-pod-debian-9/</guid>
+      <description>Najskôr nainštalujeme klienta:&#xA;apt install mysql-client&#xA;Potom samotný server,&#xA;apt install mysql-server&#xA;Dalej môžme doplniť o samotný PHPMyAdmin&#xA;apt install phpmyadmin&#xA;Problém nastáva ked sa chceme prihlásiť cez web do PHPMyAdmin. Tam totiž root účet nefunguje. Je tam síce phpmyadmin účet, ten ale nemá oprávnenie menežovať všetko.&#xA;Z príkazového riadku pod root-om týmto príkazom dáme všetky oprávnenia účtu phpmyadmin&#xA;mysql -e &amp;quot;GRANT ALL PRIVILEGES ON * . * TO &#39;phpmyadmin&#39;@&#39;localhost&#39; WITH GRANT OPTION&amp;quot;;</description>
+    </item>
+    <item>
+      <title>Exportovanie FileSystému cez virtualbox</title>
+      <link>https://dodoslavn.github.io/clanky/exportovanie-filesyst%C3%A9mu-cez-virtualbox/</link>
+      <pubDate>Wed, 16 May 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/exportovanie-filesyst%C3%A9mu-cez-virtualbox/</guid>
+      <description>Ako prerekvizitu použijeme klasický postup na exportovanie adresára medzi systémami.&#xA;\&#xA;Povedzme že máme host systém, na ktorom beží VM. Z neho bude zdielaný nejaký adresár. Do súbora /etc/exports vložíme:&#xA;/data/Virtual_machine_1 127.0.0.1(rw,sync,no_subtree_check,no_root_squash,insecure)&#xA;Vo VM, sa pozrieme aká je DefaultGateway&#xA;route | grep default | awk &#39;&#39;&#xA;zase pridáme do /etc/fstab pričom ako IP použijeme zistenú DefaultGateway&#xA;10.0.2.2:/data/Virtual_machine_1 /mnt nfs defaults 0 0</description>
+    </item>
+    <item>
+      <title>Docker - inštalácia a prvé kroky</title>
+      <link>https://dodoslavn.github.io/clanky/docker---in%C5%A1tal%C3%A1cia-a-prv%C3%A9-kroky/</link>
+      <pubDate>Fri, 20 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/docker---in%C5%A1tal%C3%A1cia-a-prv%C3%A9-kroky/</guid>
+      <description>Inštalácia Nainštalujeme pár základných vecí:&#xA;apt install apt-transport-https dirmngr&#xA;Pridáme repozitár:&#xA;echo &#39;deb https://apt.dockerproject.org/repo debian-stretch main&#39; &amp;gt;&amp;gt; /etc/apt/sources.list&#xA;Pridáme kľúč:&#xA;apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys F76221572C52609D&#xA;Spravíme update balíkov:&#xA;apt update&#xA;Nainštalujeme samotný Docker:&#xA;apt install docker-engine&#xA;Používanie Stiahneme nejaký Image&#xA;docker pull debian&#xA;Spustíme ho, a to tak že bežiaci kontajner sa bude volať smazak, bude vytvorený z obrazu debian ktorý sme prave stiahli, a spustíme na ňom /bin/bash</description>
+    </item>
+    <item>
+      <title>Ako na HTTPS s Lets Enrypt</title>
+      <link>https://dodoslavn.github.io/clanky/ako-na-https-s-lets-enrypt/</link>
+      <pubDate>Sun, 08 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-na-https-s-lets-enrypt/</guid>
+      <description>Nainštalujeme nástroj:&#xA;sudo apt install python-certbot-apache&#xA;Spustíme ho, vybereme ktorý virtual host chceme použiť, musíme mať len jeden v každom súbore&#xA;certbot --authenticator webroot --installer apache&#xA;Tiež musíme zadať cestu do DocumentRoot adresára, preto pokiaľ používame virtualhost iba na Redirect alebo Proxy, musíme to na chvíľu vypnúť a nastaviť ho. Po skončení skriptu môžme daľej pokračovať v používaní predošlej konfigurácie, s tým čo nam pridal skript.&#xA;Pokiaľ nám prehliadač stále píše že pripojenie nieje plne zabezpečené, je potreba pozrieť všetky linky, niekde je asi použitá plná cesta s http:// .</description>
+    </item>
+    <item>
+      <title>Nastavenie sudoers</title>
+      <link>https://dodoslavn.github.io/clanky/nastavenie-sudoers/</link>
+      <pubDate>Mon, 02 Apr 2018 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/nastavenie-sudoers/</guid>
+      <description>Užívateľom v skupine www-data pridáme opravnenie no zistenie teploty pevného disku. Užívatelia budu musieť zavola tento príkaz pomocou &amp;quot;sudo&amp;quot; ale heslo nemusia zadávať:&#xA;%www-data ALL=(ALL) NOPASSWD: /usr/sbin/hddtemp&#xA;dodoslav ALL=NOPASSWD: /usr/bin/yum&#xA;Oprávnenie na používanie sudo&#xA;dodoslav ALL=(ALL:ALL) ALL&#xA;#&#xA;# This file MUST be edited with the &#39;visudo&#39; command as root.&#xA;#&#xA;# Please consider adding local content in /etc/sudoers.d/ instead of&#xA;# directly modifying this file.&#xA;#&#xA;# See the man page for details on how to write a sudoers file.</description>
+    </item>
+    <item>
+      <title>Linux a Dual Boot</title>
+      <link>https://dodoslavn.github.io/clanky/linux-a-dual-boot/</link>
+      <pubDate>Mon, 05 Mar 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux-a-dual-boot/</guid>
+      <description>Je niekoľko spôsobov ako to dosiahnuť. Pokiaľ máme nainštalovaný Linux ale spúšta sa nám iba priamo MS Windows, nabootujeme nejaku Live distribúciu z USB alebo cez CD/DVD-ROM. Osobne používam Ubuntu. Na verzi nezáleží, takže môžme použiť aj staršiu inštalačku, musíme však dodržať architektúru.&#xA;Po nabootovaní Linuxu otvoríme terminál a pripojime disk kde máme uz nainštalovaný Linux do &amp;quot;/mnt&amp;quot;.&#xA;sudo mount /dev/sda1 /mnt ;&#xA;Nabindujeme pár potrebných adresárov&#xA;sudo mount --bind /dev /mnt/dev ;</description>
+    </item>
+    <item>
+      <title>Ako pridať ďalší Apache server</title>
+      <link>https://dodoslavn.github.io/clanky/ako-prida%C5%A5-%C4%8Fal%C5%A1%C3%AD-apache-server/</link>
+      <pubDate>Tue, 27 Feb 2018 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-prida%C5%A5-%C4%8Fal%C5%A1%C3%AD-apache-server/</guid>
+      <description>Nainštalujeme samotný Apache&#xA;apt install apache2&#xA;Spustíme ho a pozreme sa či funguje, a to tak že otvoríme nejaký prehliadač ako je Mozilla a skúsime adresu localhost&#xA;systemctl start apache2&#xA;Tvorba novej inštalácie a jej príprava Pridáme ďalšiu inštaláciu, ktorá sa bude volať apache2-rizek&#xA;cd /usr/share/doc/apache2/examples&#xA;bash setup-instance rizek&#xA;systemctl enable apache2@rizek.service&#xA;Kúzlo ďalšej inštalácie je že môže bežať pod iným užívateľom, takže jedného pridáme&#xA;adduser --home /var/www-rizek www-rizek&#xA;Upravíme pod ktorým užívateľom to ma bežať</description>
+    </item>
+    <item>
+      <title>Ako presunúť PHPMyAdmin do subdomény</title>
+      <link>https://dodoslavn.github.io/clanky/ako-presun%C3%BA%C5%A5-phpmyadmin-do-subdom%C3%A9ny/</link>
+      <pubDate>Sun, 17 Sep 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-presun%C3%BA%C5%A5-phpmyadmin-do-subdom%C3%A9ny/</guid>
+      <description>Vypneme aktuálny virtualhost:&#xA;sudo a2disconf phpmyadmin&#xA;Vytvoríme nový PHPMyAdmin konfiguračný súbor virtualhostu:&#xA;vi /etc/apache2/sites-enabled/new_phpmyadmin.conf&#xA;Vložíme doň obsah súboru phpmyadmin.conf a upravíme doménu podľa seba.&#xA;Povolíme ho:&#xA;sudo a2enconf&#xA;Reštartujeme apache2&#xA;sudo systemctl reload apache2.service</description>
+    </item>
+    <item>
+      <title>Zdielanie FS na Debiane</title>
+      <link>https://dodoslavn.github.io/clanky/zdielanie-fs-na-debiane/</link>
+      <pubDate>Mon, 14 Aug 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/zdielanie-fs-na-debiane/</guid>
+      <description>Návod sa skladá z dvoch častí, a to časť pre server a pre klient. Hneď na začiatku si zistíme adresu oboch PC, najlepšie ked ich IP adresa v sieti bude statická.&#xA;Pre príklad, v tomto návode bude mať server adresu 192.168.1.2 a klient bude mať 192.168.1.111 . Pokiaľ sa chceme vyhnúť problému s opravnením, musíme buď používať LDAP autetifikáciu, alebo vytvárať lokálnych užívateľoch na všetkých zariadeniach ktoré budú používať rovnaký zdielaný adresár tak, aby mali rovnaké ID.</description>
+    </item>
+    <item>
+      <title>Inštalácia MySQL servera na Debian 9</title>
+      <link>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-mysql-servera-na-debian-9/</link>
+      <pubDate>Sat, 12 Aug 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-mysql-servera-na-debian-9/</guid>
+      <description>Najskôr musíme stiahnuť officiálny balík zo stránok MySQL ktorý nám nakonfiguruje repozitár. Buď navštívime stáránku a stiahneme najnovší z https://dev.mysql.com/downloads/repo/apt/ .&#xA;Alebo tu je link na balík z doby písania článku:&#xA;wget https://dev.mysql.com/get/mysql-apt-config_0.8.7-1_all.deb&#xA;Po stiahnutí balíka ho môžme nainštalovať:&#xA;sudo dpkg -i mysql-apt-config_0.8.7-1_all.deb&#xA;Po inštalácií spravíme update, v ktorom by sme mali vidieť mysql repozitár:&#xA;sudo apt update&#xA;A teraz uz môžme nainštalovať samotný MySQL server priamo z repozitára:&#xA;sudo apt install mysql-server</description>
+    </item>
+    <item>
+      <title>C&#43;&#43; a OpenGL v QT Creator</title>
+      <link>https://dodoslavn.github.io/clanky/c&#43;&#43;-a-opengl-v-qt-creator/</link>
+      <pubDate>Sat, 24 Jun 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/c&#43;&#43;-a-opengl-v-qt-creator/</guid>
+      <description>Najskôr musíme glut nainštalovať:&#xA;apt install freeglut*&#xA;V QT Creator vytvoríme nový projekt ako konzolovú C++ aplikáciu a do súboru nazov_projektu.pro pridáme:&#xA;QT += core \\ opengl&#xA;LIBS += -lglut&#xA;Do main.cpp pridáme:&#xA;#include &amp;quot;GL/glut.h&amp;quot;&#xA;Hlavná funkcia main v main.cpp je stručná. Vložíme veci na inicializáciu okna v ktorom budeme vykreslovať pomocou OpenGL.&#xA;int main(int argc, char *argv[])&#xA;{&#xA;glutInit(&amp;amp;argc,argv);&#xA;glutInitDisplayMode(GLUT_RGBA|GLUT_SINGLE); //nastavenie okna&#xA;glutInitWindowSize(700, 500); //velkost okna&#xA;glutInitWindowPosition(100, 100); //pozicia kde sa okno otvori</description>
+    </item>
+    <item>
+      <title>Vytvorenie RAM drive na Linuxe</title>
+      <link>https://dodoslavn.github.io/clanky/vytvorenie-ram-drive-na-linuxe/</link>
+      <pubDate>Fri, 23 Jun 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/vytvorenie-ram-drive-na-linuxe/</guid>
+      <description>Toto je spôsob ako vytvoriť RAM drive. Dá sa to dobre automatizovať ked dáme tieto príkazy do skriptu, a skript dáme na spustenie po štarte systému.&#xA;Vytvorenie adresára:&#xA;mkdir /tmp/ramdisk ;&#xA;Nastavenie oprávnenia:&#xA;chmod 777 /tmp/ramdisk ;&#xA;Vytvorenie samotného RAM drive:&#xA;mount -t tmpfs -o size=10000M tmpfs /tmp/ramdisk/ ;</description>
+    </item>
+    <item>
+      <title>Virtualbox - zaheslovanie VRDE prístupu</title>
+      <link>https://dodoslavn.github.io/clanky/virtualbox---zaheslovanie-vrde-pr%C3%ADstupu/</link>
+      <pubDate>Fri, 05 May 2017 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/virtualbox---zaheslovanie-vrde-pr%C3%ADstupu/</guid>
+      <description>Povolíme knižnicu:&#xA;VBoxManage setproperty vrdeauthlibrary &amp;quot;VBoxAuthSimple&amp;quot;&#xA;Nastavíme premennú do ktorej vložíme názov virtuálneho stroja:&#xA;VM=WinXP_01&#xA;Nastavíme spôsob prihlásenia:&#xA;VBoxManage modifyvm &amp;quot;$VM&amp;quot; --vrdeauthtype external&#xA;Vygenerujeme hash z hesla:&#xA;VBoxManage internalcommands passwordhash &amp;quot;hesloheslo&amp;quot;&#xA;To nám vrátilo dlhý reťazec znakov - hash. Teraz ho použijeme pri nastavení prihlasovacieho mena a hesla:&#xA;VBoxManage setextradata &amp;quot;$VM&amp;quot; &amp;quot;VBoxAuthSimple/users/meno_uzivtela&amp;quot; hash_z_predchadzajuceho_kroku&#xA;Dôležitá poznámka je, že pri používaní &amp;quot;Remote Desktop Connection&amp;quot; z OS Windows, musíme hneď pod pole kde zadávame adresu servera ,zaškrknúť checkbox pre umožnenie uloženia mena a hesla.</description>
+    </item>
+    <item>
+      <title>Firewall iptables - základné nastavenia</title>
+      <link>https://dodoslavn.github.io/clanky/firewall-iptables---z%C3%A1kladn%C3%A9-nastavenia/</link>
+      <pubDate>Sat, 04 Mar 2017 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/firewall-iptables---z%C3%A1kladn%C3%A9-nastavenia/</guid>
+      <description>Zmažeme všetky nastavenia, na toto pozor, lebo to všetku komunikáciu zablokuje:&#xA;iptables -F;&#xA;Nastavíme všeobecné pravidlá, že sa všetka prichádzajúca komunikácia bude blokovať:&#xA;iptables -P FORWARD DROP;&#xA;iptables -P INPUT DROP;&#xA;iptables -P OUTPUT ACCEPT;&#xA;Pre povolenie prichádzajúcich paketov prijatých vytvorených spojení:&#xA;iptables -A INPUT -m state --state ESTABLISHED,RELATED -j ACCEPT&#xA;Povolenie všetkého na localhost-e:&#xA;iptables -A INPUT -s 127.0.0.0/8 -d 127.0.0.0/8 -i lo -j ACCEPT&#xA;Otvorenie samotného portu, napr. 22 pre SSH server, alebo 80 pre HTTP server:</description>
+    </item>
+    <item>
+      <title>Debian a jeho nový editor VI</title>
+      <link>https://dodoslavn.github.io/clanky/debian-a-jeho-nov%C3%BD-editor-vi/</link>
+      <pubDate>Fri, 09 Dec 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian-a-jeho-nov%C3%BD-editor-vi/</guid>
+      <description>Pre každého užévateľa v systéme budeme dávať príkazy.&#xA;Aby nam fungovali šipky:&#xA;echo &amp;quot;set nocompatible&amp;quot; &amp;gt;&amp;gt; ~/.vimrc&#xA;Vypnutie VISUAL módu kvôli ktorému myška funguje inak:&#xA;echo &amp;quot;set mouse-=a &amp;quot; &amp;gt;&amp;gt; ~/.vimrc</description>
+    </item>
+    <item>
+      <title>Linux a Bash $PS1</title>
+      <link>https://dodoslavn.github.io/clanky/linux-a-bash-ps1/</link>
+      <pubDate>Sat, 19 Nov 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux-a-bash-ps1/</guid>
+      <description>\w - aktuálny adresár s plnou cestou&#xA;\W - názov aktuálneho adresára&#xA;\h - hostname&#xA;\u - meno užívateľa&#xA;\e[1m - tučné písmo&#xA;Píklad:&#xA;PS1=&amp;quot;[\u@\h:\w]\\$ &amp;quot;&#xA;Farby:&#xA;[ PS1=&amp;quot;\[\033[38;5;0m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;1m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;2m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;3m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;4m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;5m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;6m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;7m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]&#xA;[ PS1=&amp;quot;\[\033[38;5;8m\][\u@\h:\w]\\$\[\033[0m\] &amp;quot; ]\</description>
+    </item>
+    <item>
+      <title>Návod na VirtualBox v konzole</title>
+      <link>https://dodoslavn.github.io/clanky/n%C3%A1vod-na-virtualbox-v-konzole/</link>
+      <pubDate>Mon, 14 Nov 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/n%C3%A1vod-na-virtualbox-v-konzole/</guid>
+      <description>Príprava Z dôvodu že sa konfigurácia ukladá do domovského adresára užívateľa, nedá sa virtuálny stroj spustiť pod iným užívateľom. Preto je vhodné na to vytvoriť nového.&#xA;sudo adduser virtualbox&#xA;Pridáme repozitár na nainštalovanie VirtualBoxu (pod root-om)&#xA;echo &amp;quot;deb http://download.virtualbox.org/virtualbox/debian jessie contrib&amp;quot; &amp;gt;&amp;gt; /etc/apt/sources.list&#xA;Pridanie kľúča:&#xA;wget http://download.virtualbox.org/virtualbox/debian/oracle_vbox_2016.asc&#xA;apt-key add oracle_vbox_2016.asc&#xA;Inštalácia VirtualBoxu&#xA;sudo apt-get update; sudo apt-get -y --force-yes install virtualbox-5.1&#xA;Ak niesu nainštalované doplnky&#xA;sudo VBoxManage list extpacks&#xA;Sú vhodne ked sa chceme napríklad pripojiť pomocou VNC alebo Remote Desktop.</description>
+    </item>
+    <item>
+      <title>SSH kľúče, tipy a triky</title>
+      <link>https://dodoslavn.github.io/clanky/ssh-k%C4%BE%C3%BA%C4%8De-tipy-a-triky/</link>
+      <pubDate>Wed, 07 Sep 2016 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ssh-k%C4%BE%C3%BA%C4%8De-tipy-a-triky/</guid>
+      <description>Vygenerovanie SSH kľúča Kľúč sa vygeneruje v &amp;quot;~/.ssh&amp;quot;. Kde sa vygeneruje verejný aj súkromný kľúč. Použijeme heslo ktoré sa zadá vždy pri prvom použití po prihlásení do systému.&#xA;ssh-keygen -t rsa&#xA;Skopírovanie verejného kľúča na server Tento príkaz skopíruje verejný kľúč na server.&#xA;ssh-copy-id uzivatel@server&#xA;Ignorovanie overovania fingerprint-ov pri pripojení -o StrictHostKeychecking=no</description>
+    </item>
+    <item>
+      <title>Linux inštalácia youtube-dl</title>
+      <link>https://dodoslavn.github.io/clanky/linux-in%C5%A1tal%C3%A1cia-youtube-dl/</link>
+      <pubDate>Sat, 20 Aug 2016 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux-in%C5%A1tal%C3%A1cia-youtube-dl/</guid>
+      <description>Inštalácia:&#xA;sudo apt install youtube-dl&#xA;Kontrola nainštalovanej verzie:&#xA;youtube-dl --version&#xA;V repozitároch môže byť ale často verzia stará, preto existuej alternatívny spôsob:&#xA;wget -O - https://yt-dl.org/downloads/latest/youtube-dl | sudo tee /usr/sbin/youtube-dl &amp;gt;/dev/null sudo chmod a+x /usr/sbin/youtube-dl&#xA;Skontrolujeme že máme novšiu verziu:&#xA;/usr/sbin/youtube-dl --version&#xA;Pár príkladov použitia: Príkaz na stiahnute a automatické prekonverovanie YouTUbe videa do mp3&#xA;youtube-dl --extract-audio --audio-quality 0 --audio-format mp3 -ti https://www.youtube.com/watch?v=XXX&#xA;Ziskanie nazvov videi z playlistu:&#xA;youtube-dl --ignore-errors -o &amp;quot;%(title)s.</description>
+    </item>
+    <item>
+      <title>Instalacia QT Creator na Debian 8</title>
+      <link>https://dodoslavn.github.io/clanky/instalacia-qt-creator-na-debian-8/</link>
+      <pubDate>Sat, 13 Feb 2016 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/instalacia-qt-creator-na-debian-8/</guid>
+      <description>nebolo tot ake izi&#xA;apt-get install gcc qt5-default qtcreator build-essential g++</description>
+    </item>
+    <item>
+      <title>Viacero inštancií apache2 servera</title>
+      <link>https://dodoslavn.github.io/clanky/viacero-in%C5%A1tanci%C3%AD-apache2-servera/</link>
+      <pubDate>Thu, 25 Sep 2014 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/viacero-in%C5%A1tanci%C3%AD-apache2-servera/</guid>
+      <description>Počas celého procesu budeme použíať jeden ľubovolný tag ktorým budeme odlišovať novú inštanciu od pôvodnej. Ja som si zvolil skuska. Ako prvé si vytvoríme kópiu celého priečinka /etc/apache.&#xA;NAME=skuska&#xA;cp -r /etc/apache2 /etc/apache2-$NAME&#xA;V dalšom kroku vytvoríme kópiu súborov ktoré následne upravíme&#xA;cp /usr/sbin/a2ensite /usr/sbin/a2ensite-$NAME&#xA;cp /usr/sbin/a2dissite /usr/sbin/a2dissite-$NAME&#xA;cp /usr/sbin/a2enmod /usr/sbin/a2enmod-$NAME&#xA;cp /usr/sbin/a2dismod /usr/sbin/a2dismod-$NAME\&#xA;Vo všetkých týchto súboroch nasledujúci riadok&#xA;: &amp;quot;/etc/apache2$dir_suffix/envvars&amp;quot;&#xA;upravíme na&#xA;: &amp;quot;/etc/apache2-skuska$dir_suffix/envvars&amp;quot;&#xA;Malo by sa to nachádzať niekde okolo 27.</description>
+    </item>
+    <item>
+      <title>Debian - Inštalácia TeamSpeak3 servera</title>
+      <link>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-teamspeak3-servera/</link>
+      <pubDate>Sun, 22 Dec 2013 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-teamspeak3-servera/</guid>
+      <description>Vytvoríme užívateľa pod ktorým bude TeamSpeak bežať.&#xA;Nazveme ho &amp;quot;teamspeak3&amp;quot;.&#xA;sudo adduser --home /opt/ts3 --disabled-login teamspeak3&#xA;Nstavíme mu heslo.&#xA;sudo passwd nejake_heslo&#xA;Prepneme sa do našeho teamspeak užívateľa a všetky nasledujúce kroky budu prebiehať pod ním&#xA;su - teamspeak3&#xA;Pokiaľ prepnutie nefunguje, tak to nieje nutné. Netreba zabudnúť na krok pri konci. Presunieme sa do domovského adresára&#xA;cd /opt/ts3&#xA;Stiahneme samotný TeamSpeak server, v tomto odkaze je 32-bitova verzia&#xA;wget http://dl.</description>
+    </item>
+    <item>
+      <title>Debian - Inštalácia ProFTPd servera</title>
+      <link>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-proftpd-servera/</link>
+      <pubDate>Tue, 03 Jul 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---in%C5%A1tal%C3%A1cia-proftpd-servera/</guid>
+      <description>Ako prvé si samotnú aplikáciu nainštalujeme:&#xA;apt-get install proftpd&#xA;Po úspešnej inštalacií, môžme začať s konfiguráciou. Na začiatok vložíme do /etc/shells riadok, /bin/false&#xA;echo &amp;quot;/bin/false&amp;quot; &amp;gt;&amp;gt; /bin/false&#xA;Teraz sa môžme pustiť do samotnej konfigurácie. Konfiguračný súbor , proftpd.conf , nájdeme v typickom adresáre /etc/proftpd/. Takže zadáme&#xA;nano /etc/proftpd/proftpd.conf&#xA;Tu si môžem nastaviť základne parametre servera ako jeho názov, port, TimoOut-y. Napr. jedno veľmi dôležité bezpečnostné nastavenie je DefaultRoot. Pokiaľ nieje nastavené alebo je nastavené na off tak užívatelia budú mať voľný prístup k celému systému.</description>
+    </item>
+    <item>
+      <title>Delphi - Ako pracovať s MySQL </title>
+      <link>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql-/</link>
+      <pubDate>Sun, 29 Apr 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql-/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Delphi - Ako pracovať s MySQL - Prípravy</title>
+      <link>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql---pr%C3%ADpravy/</link>
+      <pubDate>Mon, 23 Apr 2012 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/delphi---ako-pracova%C5%A5-s-mysql---pr%C3%ADpravy/</guid>
+      <description>Ešte pred tým ako začneme, sa uistíme či máme všetko potrebné.&#xA;Bude potrebovať: - MySQL server - MySQL ODBC connector - komponenta ADO k Delphi MySQL server, si môžte stiahnuť z oficiálnej stránky (mysql.com/downloads/) a k nemu ODBC connector, ktorý zase stiahnete odtiaľto (mysql.com/downloads/). Ďalej čo sa týka Delphi a jeho komponentov, budeme potrebovať triedu komponentov ADO. Vo verzie Delphi 7 Enterprise sa už nachádza, no vlastníkov verzie Delphi 5 asi moc nepoteším, kedže sa v zozname pred inštalovaných nenachádza.</description>
+    </item>
+    <item>
+      <title>Flash na Debian 6 s amd64</title>
+      <link>https://dodoslavn.github.io/clanky/flash-na-debian-6-s-amd64/</link>
+      <pubDate>Tue, 21 Feb 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/flash-na-debian-6-s-amd64/</guid>
+      <description>Prvé čo musím ale pripomenúť je, že to funguje len pre prehliadače:&#xA;- Mozilla Firefox - Opera Ešte dodám že Mozilla Firefox je na Debian-e nazvaný Iceweasel.&#xA;Ako prvé si stiahneme Flash knižnicu. K tomuto návodu bude najlepšie ked stiahnutý súbor uložíte na svoju pracovnú plochu&#xA;www.macromedia.com/..&#xA;Daľej si otvoríme užívateľský terminál, upozornujem že nie terminál root-a, tam by potom tento návod &amp;quot;krok-za-krokom&amp;quot; úplne neplatil. Predpokaldám že sa v ňom nachádzate v domovskom adresári.</description>
+    </item>
+    <item>
+      <title>Debian - Základné designové úpravy</title>
+      <link>https://dodoslavn.github.io/clanky/debian---z%C3%A1kladn%C3%A9-designov%C3%A9-%C3%BApravy/</link>
+      <pubDate>Mon, 30 Jan 2012 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/debian---z%C3%A1kladn%C3%A9-designov%C3%A9-%C3%BApravy/</guid>
+      <description>Tu si ukážeme ako zmeniť:&#xA;- pozadie GRUB zavádzača - téma pri prihlasovaní - pozadie pri prihlasovaní Pozadie GRUB zavádzača Možno budete prekvapený ako jednoducho sa dá zmeniť pozadie GRUB zavádzača, a že pozadie môže byť aj klasický obrázok, s väčším rozlíšením a aj s farbamy viacej ako 256 farieb čo je možno prekvapujúce. Jedná sa o veľmi jednoduchú úpravu, kedže iba nahradíme obrázok pôvodný, našim novým. Najskôr si náš obrázok premenujeme na:</description>
+    </item>
+    <item>
+      <title>Inštalácia Counter-Strike 1.6  servera</title>
+      <link>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-counter-strike-1.6--servera/</link>
+      <pubDate>Thu, 15 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/in%C5%A1tal%C3%A1cia-counter-strike-1.6--servera/</guid>
+      <description>Budeme k tomu potrebovať niekoľko zásadných vecí, ako je pripojenie k internetu, a oprávnenie na inštaláciu softwéru. Najskôr is stiahneme HLDS Update Tool, ktorý následne na to nainštalujeme. Tento nástroj slúži na stiahnutie oficiálnych dedikovaných serverov. Teraz ho stačí už len spustiť, a to pod určitými parametrami. Predpokladá sa že ste nemenili adresár inštalácie. Teda by mal byť:&#xA;C:Program Files\Valve\HLServer&#xA;Môžme teda začať inštalovať. Najskôr sa presunieme do, už spomínaného adresára, príkazom:</description>
+    </item>
+    <item>
+      <title>Torrent klient Transmission na Debian</title>
+      <link>https://dodoslavn.github.io/clanky/torrent-klient-transmission-na-debian/</link>
+      <pubDate>Sun, 11 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/torrent-klient-transmission-na-debian/</guid>
+      <description>Nainštalujeme samotný Transmission:&#xA;apt install transmission-cli transmission-common transmission-daemon&#xA;Môžme sa pozrieť že beží:&#xA;systemctl status transmission-daemon.service&#xA;GUI je vo forme webovej stránky, štandartne prístupná iba z localhost a to beží na:&#xA;http://localhost:9091&#xA;Prihlasovacie meno je rovnaké ako heslo:&#xA;transmission&#xA;Pokiaľ chceme niečo konfigurovať, musíme celý klient najskôr vypnúť:&#xA;systemctl stop transmission-daemon.service&#xA;Konfiguráciu nastavíme spôsobom:&#xA;sudo vi /etc/transmission-daemon/settings.json&#xA;Zmena hesla do GUI prebiehe spôsobom že namiesto hashu ako je tento:&#xA;&amp;quot;rpc-password&amp;quot;: &amp;quot;{93ddee5728888a0568c7d151cbf541fe738b7674mJ8y6YJi&amp;quot;,</description>
+    </item>
+    <item>
+      <title>Delphi - ovládanie paralelného portu LPT</title>
+      <link>https://dodoslavn.github.io/clanky/delphi---ovl%C3%A1danie-paraleln%C3%A9ho-portu-lpt/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/delphi---ovl%C3%A1danie-paraleln%C3%A9ho-portu-lpt/</guid>
+      <description>..clanok bude neskor napisany</description>
+    </item>
+    <item>
+      <title>Delphi - ovládanie seriového portu COM</title>
+      <link>https://dodoslavn.github.io/clanky/delphi---ovl%C3%A1danie-seriov%C3%A9ho-portu-com/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/delphi---ovl%C3%A1danie-seriov%C3%A9ho-portu-com/</guid>
+      <description>..clanok bude neskor napisany</description>
+    </item>
+    <item>
+      <title>Delphi - spúštanie aplikacií</title>
+      <link>https://dodoslavn.github.io/clanky/delphi---sp%C3%BA%C5%A1tanie-aplikaci%C3%AD/</link>
+      <pubDate>Sat, 29 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/delphi---sp%C3%BA%C5%A1tanie-aplikaci%C3%AD/</guid>
+      <description>..clanok bude neskor napisany</description>
+    </item>
+    <item>
+      <title>SEO - vnútorné faktory časť 1.</title>
+      <link>https://dodoslavn.github.io/clanky/seo---vn%C3%BAtorn%C3%A9-faktory-%C4%8Das%C5%A5-1./</link>
+      <pubDate>Tue, 18 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/seo---vn%C3%BAtorn%C3%A9-faktory-%C4%8Das%C5%A5-1./</guid>
+      <description>V týchto dieloch si budeme preberať tieto dieli:&#xA;- množstvo, kvalita a relevancia prichádzajúcich odkazov - vírenie odkazov - miera pribúdania odkazov - text odkazov a okolného textu - vzájomné odkazy - počet odkazov na stránke - semantické súvislosti medzi odkazmy na stránke - IP adresa vzájomne sa odkazujúcich webov - TLD doménoveho mena odkazov - poloha odkazu - platnosť podľa webových štandardov - škodlivé faktory Množstvo prichádzajúcich odkazov Web na ktorý odchádza veľmi veľa odkazov, bude asi významny, kedže mu dalo vela ludí svoj hlas a dalo si jeho odkaz na svoj web.</description>
+    </item>
+    <item>
+      <title>SEO - neviditeľné faktory</title>
+      <link>https://dodoslavn.github.io/clanky/seo---nevidite%C4%BEn%C3%A9-faktory/</link>
+      <pubDate>Mon, 10 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/seo---nevidite%C4%BEn%C3%A9-faktory/</guid>
+      <description>Ako sme si už v úvodnom článku hovorili, neviditeľné faktory sú tie ktoré niesú užívateľom alebo inak povedané, čitateľom, vidieť. Zaradujeme medzi nich napríklad:&#xA;- popis v elemente &amp;lt; meta &amp;gt; - kľúčové slová v elemente &amp;lt; meta &amp;gt; - parametre alt a title - štruktúra stránky Popis v elemente &amp;lt; meta &amp;gt; Popis v elemente &amp;lt; meta &amp;gt; je dôležitý preto, že ho vyhľadávače môžu použiť pre prezentáciu stránky vo výsledkoch vyhľadávania, namiesto používania útržkov zo stránky.</description>
+    </item>
+    <item>
+      <title>SEO - Faktory na stránke</title>
+      <link>https://dodoslavn.github.io/clanky/seo---faktory-na-str%C3%A1nke/</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/seo---faktory-na-str%C3%A1nke/</guid>
+      <description>Faktory na stránke sa dajú rozdeliť do dvoch skupín. Na viditeľné a neviditeľné. Viditeľné sú dnes o mnoho podstatnejšie ako tie neviditeľné. Veľmi veľa odborníkov na optimalizáciu pre vyhľadávače verí, že neviditeľním dávajú vyhľadávače tak malý význam, že sa neoplatí nimy zaoberať. Dôvod je jednoduchý. A to preto že sa veľmi jednoducho dajú ovplyvniť, aby to ovplivnilo akokoľvek vzhlad stránky. preto vyhľadávače im nedávajú veľkú dôveru. V stručnosti sa algoritmy vyhladávačov sa na viditeľné faktory spoliehajú viacej, kedže je to to, čo užívateľ aj naozaj uvidí.</description>
+    </item>
+    <item>
+      <title>SEO - viditeľné faktory</title>
+      <link>https://dodoslavn.github.io/clanky/seo---vidite%C4%BEn%C3%A9-faktory/</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/seo---vidite%C4%BEn%C3%A9-faktory/</guid>
+      <description>Tu sa budeme zaoberať týmito viditeľnýmy faktormy:&#xA;- titulka stránky - nadpis v stránke - text stránky - odchádzajúce odkazy - kľúčové slová v URL a v doméne - vnutorná štruktúra odkazov - tematické zameranie webu ako takého Tititulka stránky Titulka stránky je textový retazec definovaný obsahom elementu:&#xA;&amp;lt; title &amp;gt; &amp;lt; /title &amp;gt;&#xA;v HTML elemente &amp;lt; head &amp;gt;. Titulka je viditeľná v okne prehliadača a tiež vo výsledkoch vyhľadávania.</description>
+    </item>
+    <item>
+      <title>Začíname s Perl časť 1.</title>
+      <link>https://dodoslavn.github.io/clanky/za%C4%8D%C3%ADname-s-perl-%C4%8Das%C5%A5-1./</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/za%C4%8D%C3%ADname-s-perl-%C4%8Das%C5%A5-1./</guid>
+      <description>Interpretovaný vs. kompilovaný kód Programy v Perl môžeme ukladať dvoma spôsobmy. Bud interpretované v scripte alebo ako binárne verzie (kompilovaný). Obidva spôsoby majú svoje výhody a nevýhody. Kompilovaný je o trochu pomalši a jeho súčastou je celí zdrojový kód, všetky knižnice a veľa iných vecí. Veľkost je tak neporovnateľne väčšia, no veľkosť je tam väčšia hlavne kvôli knižniciam. Neskôr ked program dorábame už sa jeho velkosť zvačšuje tak isto ako pri nekompilovanom.</description>
+    </item>
+    <item>
+      <title>Začíname s Perl časť 2.</title>
+      <link>https://dodoslavn.github.io/clanky/za%C4%8D%C3%ADname-s-perl-%C4%8Das%C5%A5-2./</link>
+      <pubDate>Sun, 02 Oct 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/za%C4%8D%C3%ADname-s-perl-%C4%8Das%C5%A5-2./</guid>
+      <description>Čítanie zo vstupu K získaniu vstupných dát sa v programoch Perl používa konštrukcia nazvanú diamantový operátor. Ten vypadá takto:&#xA;&amp;lt; &amp;gt;&#xA;Diamantový operátor môžeme jednoducho priradiť k premennej ako ich hodnotu. Pri behu programu potom bude úžívateľ zadávat hodnoty, ktoré zadá z klávesnice.&#xA;Diamantový operátor vo vyžšie uvedenej podobe síce plní svoju funkciu, ale umožnuje užívateľovi tiež jednu vec, ktorá sa nám nemusí vždy páčiť. Ide o predávanie hodnôt nie z klávesnice, ale z daľších súborov, ktoré pri spúštaní programu zadáme ako parameter.</description>
+    </item>
+    <item>
+      <title>Event okno na Windows Server 2003</title>
+      <link>https://dodoslavn.github.io/clanky/event-okno-na-windows-server-2003/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/event-okno-na-windows-server-2003/</guid>
+      <description>Celé je to veľmi jednoduchá a rýchla vec, takže bez zbytočných obkecov ideme na to!&#xA;Takže najskôr si otvoríme takzvaný:&#xA;Group Policy Object Editor&#xA;Ten spustíme tak že pôjdeme na:&#xA;START -&amp;gt; RUN / SPUSTIT&#xA;a tam napíšeme:&#xA;gpedit.msc&#xA;..a potvrdíme. Objavilo sa nám okno, a teraz na paneli (na ľavej strane) sa budeme postupne preklikávať:&#xA;Computer Configuration -&amp;gt; Administrative Templates -&amp;gt; System&#xA;Na pravej strane máme zoznam položiek, v kt.</description>
+    </item>
+    <item>
+      <title>Zmena hesla na Cisco routeroch</title>
+      <link>https://dodoslavn.github.io/clanky/zmena-hesla-na-cisco-routeroch/</link>
+      <pubDate>Tue, 13 Sep 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/zmena-hesla-na-cisco-routeroch/</guid>
+      <description>Potrebujete upraviť nastavenie na routri, no ani za nič si nedokážete spomenúť heslo kt. ste použili. Čím si môžete byt istý je(teda podľa mňa), že budete musieť zresetovať celí router a tým aj stratíte všetky nastavenia. Teraz ste si možno pomysleli že aký návod ked môžem jednoducho stlačiť tlačítko Reset a je to! Možno by ste sa čudovali keby ste na svojom routri nenašli nič ani len podobné resetu, a niečo ako vybrat baterku, vyskratovať pamať, chvíľu počkať a mám zariadenie zresetovaná ako pri BIOSe u PC nepripadá do úvahy.</description>
+    </item>
+    <item>
+      <title>Ako blokovať webovú stránku na Windowse</title>
+      <link>https://dodoslavn.github.io/clanky/ako-blokova%C5%A5-webov%C3%BA-str%C3%A1nku-na-windowse/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-blokova%C5%A5-webov%C3%BA-str%C3%A1nku-na-windowse/</guid>
+      <description>Takže bez zpytočných obkecov začneme.&#xA;Presunieme sa na adresár:&#xA;C:\WINDOWS\system32\drivers\etc&#xA;V tomto adresáre sa nachádza súbor&#xA;hosts&#xA;Otvoríme ho v nejakom textovom editore ako napríklad Notepad alebo aj v Poznámkovom bloku. Do tohto súboru budeme na úplny spodok vkladať domény stránok ktoré chceme zabokovať. Vždy na nový riadok napíšeme svoju IP adresu localhostu. Tá je vždy:&#xA;127.0.0.1&#xA;a o medzeru(na velkosti medzere nezáleží) za nu napíšeme jednu doménu stránky ktorú chceme zablokovať.</description>
+    </item>
+    <item>
+      <title>Ako zrýchliť Windows XP</title>
+      <link>https://dodoslavn.github.io/clanky/ako-zr%C3%BDchli%C5%A5-windows-xp/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-zr%C3%BDchli%C5%A5-windows-xp/</guid>
+      <description>Začneme s vypínaním nepotrebých služieb. Budeme otvárať nasledujúce zložky:&#xA;START -&amp;gt; OVLADACI PANEL -&amp;gt; ADMINISTRATIVNE NASTROJE -&amp;gt; SLUZBY&#xA;alebo kto to má po anglicky:&#xA;START -&amp;gt; CONTROL PANEL -&amp;gt; ADMINISTRATIVE TOOLS -&amp;gt; SERVICES&#xA;a teraz už budeme len vypínat nepotrebné služby, a tu je ich zoznam:&#xA;- Adapér výkonu služby WMI\&#xA;Automatická konfigurácia bezdrótových zariadení - ak máte WiFi sieť tak to nechajte\ Automatické aktualizáce - ak ich nepoužívate, zakážte\ Centrum Zabezpečenia - táto služba sa moc používat nedá, odporúčam zakazáť\ Témy - ak nechcete moc využívať vzhľad tak zakážte\ Nápoveda a odborná pomoc - dobrá kravina ZAKAZTE\ Podpora rozhrani NetBIOS nad protokolem TCP/IP - v skutočnosti predstavuje nebezpečie dúfam, že zakážete\ Server - ak nepoužívate zdielanie súborov, zakážte\ Služba rozpoznávania pomocou protokolu SSDP\ Vzdialený register - bezpečnostná diera, zakážte\ Webový klient - s webom nemá nič spolocčného, zakážte\ Zasilani sprav o chybách\ Kto nevie ako sa vypínaju tak, kliknite na službu pravým tlačidlom na myši a dajte&amp;quot;</description>
+    </item>
+    <item>
+      <title>Triky s prihlasovaním v registri</title>
+      <link>https://dodoslavn.github.io/clanky/triky-s-prihlasovan%C3%ADm-v-registri/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/triky-s-prihlasovan%C3%ADm-v-registri/</guid>
+      <description>Ak sa Vám sa zobrazuje pri spustení Windowsu pri prihlasovaní kto bol naposledy prihlásený, inak povedané políčko kde sa zadáva Login (Meno užívateľa) ostalo vyplnené?&#xA;Aj takáto vec sa dá riešiť cez register.&#xA;KROK 1 - Spusti Regedit&#xA;KROK 2 - Dostaň sa na adresár:&#xA;HKEY_LOCAL_MACHINE -&amp;gt; SOFTWARE -&amp;gt;Microsoft -&amp;gt; Windows-&amp;gt; CurrentVersion -&amp;gt; policies -&amp;gt; system&#xA;KROK 3 - Vytvor novú DWORD hodnotu &amp;quot;DontDisplayLastUserName&amp;quot; s hodnotou &amp;quot;1&amp;quot;.&#xA;Po reštarte by malo fugnovať.</description>
+    </item>
+    <item>
+      <title>Ako stahovať videá z YouTube.com</title>
+      <link>https://dodoslavn.github.io/clanky/ako-stahova%C5%A5-vide%C3%A1-z-youtube.com/</link>
+      <pubDate>Tue, 16 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-stahova%C5%A5-vide%C3%A1-z-youtube.com/</guid>
+      <description>No musíme mať:&#xA;1.) OS Windows XP (na ostatných to nemám odskúšané)&#xA;2.) Intnernet Explorer (je to súčasť kazdeho Windowsu, akúkoľvek verziu, daľej už len IE)\&#xA;Krok 1 - Video ktoré chceme stiahnuť, si cez IE pozrieme (nemusíme ho pozerať ale musíme ho nechať načítať celé)&#xA;Krok 2 - Zobrazíme si súbory ktoré si stahuje náš IE.&#xA;C:\Documents and Settings\Administrator\Local Settings\Temporary\Internet Files&#xA;..červená farba znamená partrícia na ktorom máme spustený Windows a zelená farba znamená názov užívateľa pod ktorým sme práve prihlásený ale musíme mať Windows samozrejme v jazyku ENG, každy jayzk ma tu cestu tiež preloženu, alebo možme použiť inú cestu:</description>
+    </item>
+    <item>
+      <title>Záloha registra na Windows XP</title>
+      <link>https://dodoslavn.github.io/clanky/z%C3%A1loha-registra-na-windows-xp/</link>
+      <pubDate>Tue, 16 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/z%C3%A1loha-registra-na-windows-xp/</guid>
+      <description>Stačí si spustiť Windowsovu utilitu Backup&#xA;START -&amp;gt; ALL PROGRAMS -&amp;gt; ACCESSORIES -&amp;gt; SYSTEM TOOLS -&amp;gt; BACKUP&#xA;alebo kto to má po slovensky tak&#xA;START -&amp;gt; PROGRAMY -&amp;gt; PRISLUSENSTVO -&amp;gt; SYSTEMOVE NASTROJE -&amp;gt; BACK UP&#xA;Takato záloha registru síce zaberá niekedy 500MB niekedy viacej. To záleží ako je preplnený. Takúto zálohu si môžete potom aj napáliť na disk a pri instalácií nového Windowsu len cez Reagedit importovať.&#xA;A teraz samotný návod:</description>
+    </item>
+    <item>
+      <title>MySQL - záloha a obnova databáze</title>
+      <link>https://dodoslavn.github.io/clanky/mysql---z%C3%A1loha-a-obnova-datab%C3%A1ze/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/mysql---z%C3%A1loha-a-obnova-datab%C3%A1ze/</guid>
+      <description>Vyzálohovanie vsštkých databáz:&#xA;/usr/bin/mysqldump --all-databases | gzip -c -9 &amp;gt; /opt/backup/sql/dump_$(date &#39;+%Y-%m-%d&#39;).sql.gz&#xA;Nahranie zálohy na server:&#xA;mysql -h $SERVER -u $USER -p &amp;lt; &amp;quot;dump_&amp;quot;$DATUM&amp;quot;.sql.gz&amp;quot;&#xA;Aby to fungovalo, musíme ešte do MySQL konzole zadať príkaz na spracovanie privilegií:&#xA;FLUSH PRIVILEGES</description>
+    </item>
+  </channel>
+</rss>

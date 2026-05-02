@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Faster on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/faster/</link>
+    <description>Recent content in Faster on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Wed, 17 Aug 2011 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/faster/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ako zrýchliť Windows XP</title>
+      <link>https://dodoslavn.github.io/clanky/ako-zr%C3%BDchli%C5%A5-windows-xp/</link>
+      <pubDate>Wed, 17 Aug 2011 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ako-zr%C3%BDchli%C5%A5-windows-xp/</guid>
+      <description>Začneme s vypínaním nepotrebých služieb. Budeme otvárať nasledujúce zložky:&#xA;START -&amp;gt; OVLADACI PANEL -&amp;gt; ADMINISTRATIVNE NASTROJE -&amp;gt; SLUZBY&#xA;alebo kto to má po anglicky:&#xA;START -&amp;gt; CONTROL PANEL -&amp;gt; ADMINISTRATIVE TOOLS -&amp;gt; SERVICES&#xA;a teraz už budeme len vypínat nepotrebné služby, a tu je ich zoznam:&#xA;- Adapér výkonu služby WMI\&#xA;Automatická konfigurácia bezdrótových zariadení - ak máte WiFi sieť tak to nechajte\ Automatické aktualizáce - ak ich nepoužívate, zakážte\ Centrum Zabezpečenia - táto služba sa moc používat nedá, odporúčam zakazáť\ Témy - ak nechcete moc využívať vzhľad tak zakážte\ Nápoveda a odborná pomoc - dobrá kravina ZAKAZTE\ Podpora rozhrani NetBIOS nad protokolem TCP/IP - v skutočnosti predstavuje nebezpečie dúfam, že zakážete\ Server - ak nepoužívate zdielanie súborov, zakážte\ Služba rozpoznávania pomocou protokolu SSDP\ Vzdialený register - bezpečnostná diera, zakážte\ Webový klient - s webom nemá nič spolocčného, zakážte\ Zasilani sprav o chybách\ Kto nevie ako sa vypínaju tak, kliknite na službu pravým tlačidlom na myši a dajte&amp;quot;</description>
+    </item>
+  </channel>
+</rss>

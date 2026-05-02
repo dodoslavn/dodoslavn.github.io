@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Fronty on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/fronty/</link>
+    <description>Recent content in Fronty on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Tue, 11 Nov 2025 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/fronty/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RabbitMQ - Quorum Queue optimalizacia</title>
+      <link>https://dodoslavn.github.io/clanky/rabbitmq---quorum-queue-optimalizacia/</link>
+      <pubDate>Tue, 11 Nov 2025 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/rabbitmq---quorum-queue-optimalizacia/</guid>
+      <description>Raft log je zoradeny zoznam prikazov co sa ma stat (pridat sprava do fronty/..) kazdy zaznam v raft logu ma&#xA;term - prakticky to znamena kolko krat sa menilo zostavenie leader/follower, a je to cislo definujuce aktualny vhlasovanie leader/follower index - cislo sa stale zvacsuje, kazdy zaznam ma svoje (64bit unsigned integer) command - co sa stalo (pridala sa sprava/odobrala sa) a aj so samotnou spravou CRC indexy kazdy node indexy ktora ukazuju na raft log last_index - ake je cislo aktualne posledneho pridaneho zaznamu do raft logu commit_index - posledne cislo raft zaznamu ktore je oznacene ako comitnute a bezpecne prijate v ramci clustru - klient dostal ack last_applied - posledne cislo raft zaznamu ktore je aplikovane na tomto node match_index - leader si sleduje ake je posledne cislo zaznamu ktore follower spracoval first_index - najstarsi index ktory je stale uchovany snapshot raz za cas sa spusti &amp;quot;comapction&amp;quot; ktory zmaze vsetky zaznamy z raft logu, aby sme zbytocne neuchovavali tieto zaznamy, spravi sa snapshot v zlozke napriklad /var/lib/rabbitmq/mnesia//quorum//snapshot-00001200.</description>
+    </item>
+  </channel>
+</rss>

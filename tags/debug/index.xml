@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Debug on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/debug/</link>
+    <description>Recent content in Debug on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Mon, 14 Jan 2019 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/debug/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>IBM Datastage - debug mód</title>
+      <link>https://dodoslavn.github.io/clanky/ibm-datastage---debug-m%C3%B3d/</link>
+      <pubDate>Mon, 14 Jan 2019 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/ibm-datastage---debug-m%C3%B3d/</guid>
+      <description>http://www-01.ibm.com/support/docview.wss?uid=swg21509567&#xA;Service management File: /opt/IBM/InformationServer/IIS115/Server/DSODB/bin/DSAppWatcher.sh Variable: APW_DEBUG&#xA;Populating DSODB File: /opt/IBM/InformationServer/IIS115/Server/DSODB/DSODBConfig.cfg Variable: TraceMax=1000&#xA;File: /opt/IBM/InformationServer/IIS115/Server/DSODB/DSODBTuning.cfg Variable: com.ibm.datastage.jlog.DSFileHandler.level=DEBUG</description>
+    </item>
+  </channel>
+</rss>

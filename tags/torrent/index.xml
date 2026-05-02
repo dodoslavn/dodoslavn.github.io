@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Torrent on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/torrent/</link>
+    <description>Recent content in Torrent on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Sun, 11 Dec 2011 00:00:00 +0100</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/torrent/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Torrent klient Transmission na Debian</title>
+      <link>https://dodoslavn.github.io/clanky/torrent-klient-transmission-na-debian/</link>
+      <pubDate>Sun, 11 Dec 2011 00:00:00 +0100</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/torrent-klient-transmission-na-debian/</guid>
+      <description>Nainštalujeme samotný Transmission:&#xA;apt install transmission-cli transmission-common transmission-daemon&#xA;Môžme sa pozrieť že beží:&#xA;systemctl status transmission-daemon.service&#xA;GUI je vo forme webovej stránky, štandartne prístupná iba z localhost a to beží na:&#xA;http://localhost:9091&#xA;Prihlasovacie meno je rovnaké ako heslo:&#xA;transmission&#xA;Pokiaľ chceme niečo konfigurovať, musíme celý klient najskôr vypnúť:&#xA;systemctl stop transmission-daemon.service&#xA;Konfiguráciu nastavíme spôsobom:&#xA;sudo vi /etc/transmission-daemon/settings.json&#xA;Zmena hesla do GUI prebiehe spôsobom že namiesto hashu ako je tento:&#xA;&amp;quot;rpc-password&amp;quot;: &amp;quot;{93ddee5728888a0568c7d151cbf541fe738b7674mJ8y6YJi&amp;quot;,</description>
+    </item>
+  </channel>
+</rss>
