@@ -16,6 +16,12 @@
   <div class="site-subtitle">e-blog</div>
 </a>
 
+
+<div class="search-container">
+  <input type="text" id="search-input" placeholder="🔍 Hľadať články..." autocomplete="off">
+  <div id="search-results" class="search-results"></div>
+</div>
+
 <h3>Navigácia</h3>
 <ul>
   <li><a class="" href="/">🏠 Novinky</a></li>
@@ -141,5 +147,8 @@ VBoxManage modifyvm $VM --natpf1 &quot;guestssh,tcp,,2222,10.0.2.19,22&quot;<br>
 
     </article>
   </div>
+  <div id="search-overlay" class="search-overlay"></div>
+<script src="/search.js"></script>
+
 </body>
 </html>
