@@ -6,8 +6,15 @@
     <description>Recent content in Linux on Dodoslav - eBlog</description>
     <generator>Hugo</generator>
     <language>sk</language>
-    <lastBuildDate>Mon, 17 Feb 2025 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 00:00:00 +0200</lastBuildDate>
     <atom:link href="https://dodoslavn.github.io/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux cloud image a cloud-init</title>
+      <link>https://dodoslavn.github.io/clanky/linux-cloud-image-a-cloud-init/</link>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux-cloud-image-a-cloud-init/</guid>
+      <description>generic Funguje na väčšine virtualizačných platforiem (KVM, VirtualBox atď.), obsahuje cloud-init&#xA;genericcloud Odľahčenejší variant verzie generic, optimalizovaný pre verejné cloudy, bez zastaraných ovládačov určených len pre BIOS&#xA;nocloud Bez cloud-init; vhodné na lokálne testovanie/automatizáciu, kde si konfiguráciu vkladáte sami&#xA;Úprava inštrukcií #cloud-config&#xA;users:\&#xA;name: myuser&#xA;sudo: ALL=(ALL) NOPASSWD:ALL&#xA;groups: sudo&#xA;shell: /bin/bash&#xA;ssh_authorized_keys:\ ssh-rsa AAAA...your-public-key...&#xA;chpasswd:&#xA;expire: false&#xA;password_authentication: true&#xA;package_update: true\ Tvorba ISO apt install genisoimage&#xA;genisoimage -output seed.iso -volid cidata -joliet -rock user-data meta-data</description>
+    </item>
     <item>
       <title>Vlastná Systemd služba a časovač k nej</title>
       <link>https://dodoslavn.github.io/clanky/vlastn%C3%A1-systemd-slu%C5%BEba-a-%C4%8Dasova%C4%8D-k-nej/</link>

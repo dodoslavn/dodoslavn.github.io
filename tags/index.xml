@@ -6,8 +6,36 @@
     <description>Recent content in Tags on Dodoslav - eBlog</description>
     <generator>Hugo</generator>
     <language>sk</language>
-    <lastBuildDate>Fri, 27 Feb 2026 00:00:00 +0100</lastBuildDate>
+    <lastBuildDate>Thu, 23 Jul 2026 00:00:00 +0200</lastBuildDate>
     <atom:link href="https://dodoslavn.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud</title>
+      <link>https://dodoslavn.github.io/tags/cloud/</link>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/cloud/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>https://dodoslavn.github.io/tags/linux/</link>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Virtualmachine</title>
+      <link>https://dodoslavn.github.io/tags/virtualmachine/</link>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/virtualmachine/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Vm</title>
+      <link>https://dodoslavn.github.io/tags/vm/</link>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/tags/vm/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Arpa</title>
       <link>https://dodoslavn.github.io/tags/arpa/</link>
@@ -195,13 +223,6 @@
       <link>https://dodoslavn.github.io/tags/daemon/</link>
       <pubDate>Mon, 17 Feb 2025 00:00:00 +0100</pubDate>
       <guid>https://dodoslavn.github.io/tags/daemon/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>https://dodoslavn.github.io/tags/linux/</link>
-      <pubDate>Mon, 17 Feb 2025 00:00:00 +0100</pubDate>
-      <guid>https://dodoslavn.github.io/tags/linux/</guid>
       <description></description>
     </item>
     <item>
@@ -1609,13 +1630,6 @@
       <link>https://dodoslavn.github.io/tags/riadok/</link>
       <pubDate>Sat, 19 Nov 2016 00:00:00 +0100</pubDate>
       <guid>https://dodoslavn.github.io/tags/riadok/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Vm</title>
-      <link>https://dodoslavn.github.io/tags/vm/</link>
-      <pubDate>Mon, 14 Nov 2016 00:00:00 +0100</pubDate>
-      <guid>https://dodoslavn.github.io/tags/vm/</guid>
       <description></description>
     </item>
     <item>

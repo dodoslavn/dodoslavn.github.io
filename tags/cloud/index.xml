@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cloud on Dodoslav - eBlog</title>
+    <link>https://dodoslavn.github.io/tags/cloud/</link>
+    <description>Recent content in Cloud on Dodoslav - eBlog</description>
+    <generator>Hugo</generator>
+    <language>sk</language>
+    <lastBuildDate>Thu, 23 Jul 2026 00:00:00 +0200</lastBuildDate>
+    <atom:link href="https://dodoslavn.github.io/tags/cloud/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux cloud image a cloud-init</title>
+      <link>https://dodoslavn.github.io/clanky/linux-cloud-image-a-cloud-init/</link>
+      <pubDate>Thu, 23 Jul 2026 00:00:00 +0200</pubDate>
+      <guid>https://dodoslavn.github.io/clanky/linux-cloud-image-a-cloud-init/</guid>
+      <description>generic Funguje na väčšine virtualizačných platforiem (KVM, VirtualBox atď.), obsahuje cloud-init&#xA;genericcloud Odľahčenejší variant verzie generic, optimalizovaný pre verejné cloudy, bez zastaraných ovládačov určených len pre BIOS&#xA;nocloud Bez cloud-init; vhodné na lokálne testovanie/automatizáciu, kde si konfiguráciu vkladáte sami&#xA;Úprava inštrukcií #cloud-config&#xA;users:\&#xA;name: myuser&#xA;sudo: ALL=(ALL) NOPASSWD:ALL&#xA;groups: sudo&#xA;shell: /bin/bash&#xA;ssh_authorized_keys:\ ssh-rsa AAAA...your-public-key...&#xA;chpasswd:&#xA;expire: false&#xA;password_authentication: true&#xA;package_update: true\ Tvorba ISO apt install genisoimage&#xA;genisoimage -output seed.iso -volid cidata -joliet -rock user-data meta-data</description>
+    </item>
+  </channel>
+</rss>
