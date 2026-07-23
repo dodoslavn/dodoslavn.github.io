@@ -13,7 +13,7 @@
       <link>https://dodoslavn.github.io/clanky/linux-cloud-image-a-cloud-init/</link>
       <pubDate>Thu, 23 Jul 2026 00:00:00 +0200</pubDate>
       <guid>https://dodoslavn.github.io/clanky/linux-cloud-image-a-cloud-init/</guid>
-      <description>generic Funguje na väčšine virtualizačných platforiem (KVM, VirtualBox atď.), obsahuje cloud-init&#xA;genericcloud Odľahčenejší variant verzie generic, optimalizovaný pre verejné cloudy, bez zastaraných ovládačov určených len pre BIOS&#xA;nocloud Bez cloud-init; vhodné na lokálne testovanie/automatizáciu, kde si konfiguráciu vkladáte sami&#xA;Úprava inštrukcií #cloud-config&#xA;users:\&#xA;name: myuser&#xA;sudo: ALL=(ALL) NOPASSWD:ALL&#xA;groups: sudo&#xA;shell: /bin/bash&#xA;ssh_authorized_keys:\ ssh-rsa AAAA...your-public-key...&#xA;chpasswd:&#xA;expire: false&#xA;password_authentication: true&#xA;package_update: true\ Tvorba ISO apt install genisoimage&#xA;genisoimage -output seed.iso -volid cidata -joliet -rock user-data meta-data</description>
+      <description>generic Funguje na väčšine virtualizačných platforiem (KVM, VirtualBox atď.), obsahuje cloud-init a vyzaduje ho.&#xA;genericcloud Odľahčenejší variant verzie generic, optimalizovaný pre verejné cloudy, bez zastaraných ovládačov určených len pre BIOS&#xA;nocloud Bez cloud-init; vhodné na lokálne testovanie/automatizáciu, kde si konfiguráciu vkladáte sami&#xA;Úprava inštrukcií #cloud-config&#xA;users:\&#xA;name: myuser&#xA;sudo: ALL=(ALL) NOPASSWD:ALL&#xA;groups: sudo&#xA;shell: /bin/bash&#xA;ssh_authorized_keys:\ ssh-rsa AAAA...your-public-key...&#xA;chpasswd:&#xA;expire: false&#xA;password_authentication: true&#xA;package_update: true\ Tvorba ISO apt install genisoimage</description>
     </item>
   </channel>
 </rss>

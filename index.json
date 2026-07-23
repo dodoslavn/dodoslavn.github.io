@@ -5,7 +5,7 @@
     "date": "2026-07-23",
     "tags": ["linux","cloud","vm","virtualmachine"],
     "desc": "Jak funguje cloud-init - automatická inštalácia Linux stroja.\n",
-    "content": "generic Funguje na väčšine virtualizačných platforiem (KVM, VirtualBox atď.), obsahuje cloud-init\ngenericcloud Odľahčenejší variant verzie generic, optimalizovaný pre verejné cloudy, bez zastaraných ovládačov určených len pre BIOS\nnocloud Bez cloud-init; vhodné na lokálne testovanie/automatizáciu, kde si konfiguráciu vkladáte sami\nÚprava inštrukcií #cloud-config\nusers:\\\nname: myuser\nsudo: ALL=(ALL) NOPASSWD:ALL\ngroups: sudo\nshell: /bin/bash\nssh_authorized_keys:\\ ssh-rsa AAAA...your-public-key...\nchpasswd:\nexpire: false\npassword_authentication: true\npackage_update: true\\ Tvorba ISO apt install genisoimage\ngenisoimage -output seed.iso -volid cidata -joliet -rock user-data meta-data\n"
+    "content": "generic Funguje na väčšine virtualizačných platforiem (KVM, VirtualBox atď.), obsahuje cloud-init a vyzaduje ho.\ngenericcloud Odľahčenejší variant verzie generic, optimalizovaný pre verejné cloudy, bez zastaraných ovládačov určených len pre BIOS\nnocloud Bez cloud-init; vhodné na lokálne testovanie/automatizáciu, kde si konfiguráciu vkladáte sami\nÚprava inštrukcií #cloud-config\nusers:\\\nname: myuser\nsudo: ALL=(ALL) NOPASSWD:ALL\ngroups: sudo\nshell: /bin/bash\nssh_authorized_keys:\\ ssh-rsa AAAA...your-public-key...\nchpasswd:\nexpire: false\npassword_authentication: true\npackage_update: true\\ Tvorba ISO apt install genisoimage\ngenisoimage -output seed.iso -volid cidata -joliet -rock user-data meta-data\n"
   },
   {
     "title": "Ako na domáce home.arpa domény v Unbound",
